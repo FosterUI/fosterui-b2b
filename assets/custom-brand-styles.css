@@ -1,0 +1,25 @@
+/* assets/custom-brand-styles.css (Continued/Updated) */
+
+/* Remove or update old references to header-custom-cta-wrapper */
+
+/* Wrapper for the custom block item added via the editor */
+.header__custom-block-item {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    /* Adds spacing between the CTA and the icons (Search/Cart) */
+    margin-right: 1.5rem;
+}
+
+/* Ensure the CTA button inherits the correct styles (already defined earlier) */
+.header-cta-btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+}
+
+/* Hide the custom CTA on mobile/tablet, as the space is limited */
+@media screen and (max-width: 989px) {
+    .header__custom-block-item {
+        display: none;
+    }
+}
