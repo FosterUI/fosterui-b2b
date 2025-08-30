@@ -8,7 +8,8 @@
     --color-brand-text: #333333;
     --color-brand-background: #f8fafc;
     --color-brand-white: #ffffff;
-    --shadow-brand: 0 15px 30px rgba(3, 4, 94, 0.1);
+    --shadow-brand: 0 1.5rem 3rem rgba(3, 4, 94, 0.1);
+    /* Updated shadow */
 }
 
 /* Ensure smooth scrolling for anchor links */
@@ -17,18 +18,18 @@ html {
 }
 
 /* --- Custom Button Styles (Namespaced) --- */
-/* Use these classes (e.g., btn-brand btn-brand-primary) instead of Dawn's native .button */
-
 .btn-brand {
     display: inline-block;
-    padding: 14px 28px;
+    padding: 1.4rem 2.8rem;
+    /* Updated padding */
     text-decoration: none;
     border-radius: 6px;
     font-weight: 700;
     transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
     text-align: center;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 1.6rem;
+    /* Updated: 1.6rem = 16px */
     line-height: 1.2;
     border: none;
 }
@@ -58,34 +59,39 @@ html {
 
 /* Utility Kicker Style */
 .kicker-brand {
-    font-size: 1rem;
+    font-size: 1.6rem;
+    /* Updated: 1.6rem = 16px */
     font-weight: 700;
     color: var(--color-brand-accent);
     text-transform: uppercase;
     letter-spacing: 1px;
-    margin-bottom: 15px;
+    margin-bottom: 1.5rem;
+    /* Updated */
 }
 
 /* --- Overrides for Native Sections --- */
-/* This allows us to use native Dawn sections while matching the design. */
 /* INSTRUCTIONS: When using these native sections, add the class 'landing-page-customization' to the section's 'CSS class' setting in the Theme Editor. */
 
 /* 1. Multicolumn (used for Bottlenecks and Insights) */
 .landing-page-customization .multicolumn-list__item {
     background-color: var(--color-brand-white);
-    padding: 30px;
+    padding: 3rem;
+    /* Updated */
     border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.05);
+    /* Updated */
 }
 
 /* 2. Rich Text (used for Testimonials) */
 .landing-page-customization .rich-text blockquote,
 .landing-page-customization .rich-text__text blockquote {
-    font-size: 1.75rem;
+    font-size: 2.8rem;
+    /* Updated: 2.8rem = 28px */
     font-style: italic;
     color: var(--color-brand-primary-dark);
     line-height: 1.4;
-    margin: 30px 0;
+    margin: 3rem 0;
+    /* Updated */
     border: none;
     padding: 0;
 }
@@ -95,12 +101,12 @@ html {
     font-weight: 700;
     font-style: normal;
     display: block;
-    margin-top: 20px;
+    margin-top: 2rem;
+    /* Updated */
 }
 
 /* 3. Email Signup Banner (used for Newsletter) */
 .landing-page-customization.section-email-signup {
-    /* Ensure the section background is white/default before the box */
     background-color: var(--color-brand-white);
 }
 
@@ -108,9 +114,11 @@ html {
     background-color: var(--color-brand-primary-dark);
     color: var(--color-brand-white);
     border-radius: 8px;
-    padding: 40px;
+    padding: 4rem;
+    /* Updated */
     box-shadow: var(--shadow-brand);
-    margin-top: 40px;
+    margin-top: 4rem;
+    /* Updated */
 }
 
 .landing-page-customization .email-signup-banner__heading {
@@ -127,7 +135,51 @@ html {
     background-color: var(--color-brand-accent-hover);
 }
 
-/* Remove or update old references to header-custom-cta-wrapper */
+
+/* --- Header Customization (From previous steps) --- */
+
+/* Style the navigation links to match the brand */
+.header__menu-item span {
+    color: var(--color-brand-primary-dark);
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.header__menu-item:hover span {
+    color: var(--color-brand-accent);
+}
+
+/* Remove Dawn's default underline effect */
+.header__menu-item span::after {
+    display: none !important;
+}
+
+/* Center the Navigation Links using CSS Grid (Desktop) */
+@media screen and (min-width: 990px) {
+
+    /* Apply a 3-column grid layout to the header container */
+    .header.header--middle-left {
+        display: grid;
+        /* Col 1 (Logo) | Col 2 (Nav) | Col 3 (CTA/Icons) */
+        grid-template-columns: 1fr auto 1fr;
+    }
+
+    /* Align logo to the start (left) of the first column */
+    .header__heading {
+        justify-self: start;
+    }
+
+    /* Centers the menu in the middle column */
+    .header__inline-menu {
+        justify-self: center;
+        margin: 0 auto;
+    }
+
+    /* Align the CTA and icons to the end (right) of the third column */
+    .header__icons {
+        justify-content: flex-end;
+    }
+}
 
 /* Wrapper for the custom block item added via the editor */
 .header__custom-block-item {
@@ -138,10 +190,12 @@ html {
     margin-right: 1.5rem;
 }
 
-/* Ensure the CTA button inherits the correct styles (already defined earlier) */
+/* Style the Custom CTA Button */
 .header-cta-btn {
-    padding: 10px 20px;
-    font-size: 0.9rem;
+    padding: 1rem 2rem;
+    /* Updated padding */
+    font-size: 1.5rem;
+    /* Updated: 1.5rem = 15px (Fix for the user's issue) */
 }
 
 /* Hide the custom CTA on mobile/tablet, as the space is limited */
@@ -149,4 +203,38 @@ html {
     .header__custom-block-item {
         display: none;
     }
+}
+
+/* --- Footer Customization --- */
+.footer {
+    border-top: none;
+}
+
+.footer__content-top,
+.footer__content-bottom {
+    text-align: center;
+    justify-content: center;
+}
+
+.footer__blocks-wrapper {
+    justify-content: center;
+}
+
+.footer a,
+.policies-list__link,
+.footer__list-social li a {
+    color: var(--color-brand-accent);
+    text-decoration: none;
+}
+
+.footer a:hover,
+.policies-list__link:hover,
+.footer__list-social li a:hover {
+    color: var(--color-brand-accent-hover);
+    text-decoration: underline;
+}
+
+.footer__copyright {
+    font-size: 1.4rem;
+    /* Updated: 1.4rem = 14px */
 }
