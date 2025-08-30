@@ -25,37 +25,46 @@
         "visual_svg": "<svg width=\"100%\" height=\"200\" viewbox=\"0 0 300 200\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family: 'Inter', sans-serif;\"><line x1=\"30\" y1=\"180\" x2=\"280\" y2=\"180\" stroke=\"#ccc\" stroke-width=\"1\"></line><line x1=\"30\" y1=\"20\" x2=\"30\" y2=\"180\" stroke=\"#ccc\" stroke-width=\"1\"></line><text x=\"10\" y=\"25\" fill=\"#666\" font-size=\"12\">Revenue</text><path d=\"M30 140 Q 80 130, 130 135 Q 180 140, 230 138 Q 250 137, 280 138\" stroke=\"#03045E\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"5,5\"></path><text x=\"50\" y=\"125\" fill=\"#03045E\" font-size=\"12\" font-weight=\"bold\">Manual Wholesale</text><path d=\"M30 140 C 80 120, 130 90, 180 70 C 230 50, 280 40\" stroke=\"#00B4D8\" stroke-width=\"3\" fill=\"none\"></path><text x=\"180\" y=\"35\" fill=\"#00B4D8\" font-size=\"14\" font-weight=\"bold\">AI-Powered B2B</text></svg>"
       }
     },
-    "featured_collection": {
-      "type": "featured-collection",
+    "methodology_steps_EGJEVf": {
+      "type": "methodology-steps",
+      "blocks": {
+        "step_kXhctM": {
+          "type": "step",
+          "settings": {
+            "step_title": "Proprietary AI Audit System",
+            "step_text": "I leverage my proprietary audit system—using the latest AI models for analysis—to rapidly identify B2B bottlenecks."
+          }
+        },
+        "step_7FwHmK": {
+          "type": "step",
+          "settings": {
+            "step_title": "Proprietary AI Audit System",
+            "step_text": "I leverage my proprietary audit system—using the latest AI models for analysis—to rapidly identify B2B bottlenecks."
+          }
+        },
+        "step_af6pQ6": {
+          "type": "step",
+          "settings": {
+            "step_title": "Proprietary AI Audit System",
+            "step_text": "I leverage my proprietary audit system—using the latest AI models for analysis—to rapidly identify B2B bottlenecks."
+          }
+        }
+      },
+      "block_order": [
+        "step_kXhctM",
+        "step_7FwHmK",
+        "step_af6pQ6"
+      ],
+      "name": "B2B Methodology Steps",
       "settings": {
-        "collection": "all",
-        "products_to_show": 8,
-        "title": "Featured products",
-        "heading_size": "h2",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "columns_desktop": 4,
-        "enable_desktop_slider": false,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "color_scheme": "scheme-1",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "none",
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 44,
-        "padding_bottom": 36
+        "title": "My Methodology: Specialized Revenue Acceleration",
+        "text": "<p>I am not a generic “Shopify developer.” I am a specialized revenue accelerator focusing on the two most critical growth levers today: <strong>B2B expansion and AI integration.</strong></p><p>I don't just connect apps; <strong>I professionalize your entire wholesale channel.</strong></p>",
+        "execution_title": "How I Execute:"
       }
     }
   },
   "order": [
     "hero_b2b_ai_LgcCEn",
-    "featured_collection"
+    "methodology_steps_EGJEVf"
   ]
 }
