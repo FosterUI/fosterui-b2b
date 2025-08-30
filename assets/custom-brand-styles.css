@@ -215,6 +215,10 @@ body {
         max-width: 102rem;
     }
 
+    .header {
+        padding: 15px 0;
+    }
+
     /* Apply a 3-column grid layout to the header container */
     .header.header--middle-left {
         display: grid;
