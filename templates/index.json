@@ -210,6 +210,17 @@
         "title": "A Productized Approach to B2B Acceleration",
         "subtitle": "I partner with established Shopify Plus merchants ready to execute. This is my proven, structured process for unlocking growth."
       }
+    },
+    "about_principal_LKJFK6": {
+      "type": "about-principal",
+      "name": "B2B About Principal",
+      "settings": {
+        "intro_title": "Meet Your B2B Growth Partner",
+        "intro_subtitle": "A decade in the Shopify trenches.",
+        "bio_text": "<p>I am not a large agency where your project gets handed off to junior staff. I am a <strong>principal consultant</strong> and expert Shopify Developer.</p>",
+        "highlight_title": "My Advantage: Velocity and Precision",
+        "highlight_text": "<p>My advantage lies in hyper-specialization and execution velocity. I utilize my own advanced AI stack to analyze, architect, and execute strategies faster.</p>"
+      }
     }
   },
   "order": [
@@ -217,6 +228,7 @@
     "rich_text_KmpwiU",
     "multicolumn_w9J7pE",
     "methodology_steps_EGJEVf",
-    "service_tiers_8jzFQk"
+    "service_tiers_8jzFQk",
+    "about_principal_LKJFK6"
   ]
 }
