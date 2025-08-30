@@ -28,6 +28,14 @@ html {
     scroll-behavior: smooth;
 }
 
+/* --- Custom Heading Styles (Namespaced) --- */
+.methodology-intro h2 {
+    font-size: 3.6rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
 /* --- Custom Button Styles (Namespaced) --- */
 .btn-brand {
     display: inline-block;
