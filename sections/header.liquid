@@ -224,7 +224,7 @@
     {%- endif -%}
 
     <div class="header__icons{% if section.settings.enable_country_selector or section.settings.enable_language_selector %} header__icons--localization header-localization{% endif %}">
-      {% comment %} CUSTOM: Add custom blocks {% endcomment %}
+      {% comment %} CUSTOM: Add custom CTA block {% endcomment %}
       {%- for block in section.blocks -%}
         {%- case block.type -%}
           {%- when 'cta_button' -%}
