@@ -9,62 +9,38 @@
  */
 {
   "sections": {
-    "image_banner": {
-      "type": "image-banner",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Browse our latest products",
-            "heading_size": "h0"
-          }
-        },
-        "button": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify://collections/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "button"
-      ],
+    "hero_b2b_ai_LgcCEn": {
+      "type": "hero-b2b-ai",
+      "name": "B2B AI Hero",
       "settings": {
-        "image_overlay_opacity": 40,
-        "image_height": "large",
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
-        "image_behavior": "none",
-        "desktop_content_alignment": "center",
-        "color_scheme": "scheme-3",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": false
+        "kicker": "Specialized Consulting for Shopify Plus",
+        "title": "Transforming Shopify DTC Stores into AI-Powered B2B Powerhouses",
+        "text": "<p>Stop struggling with spreadsheets and patchwork solutions. I help established Shopify Plus brands ($1M-$15M GMV) unlock scalable wholesale revenue using the full Shopify B2B suite and strategic AI automation.</p><p><strong>This isn't agency delegation; it's a direct, senior-level partnership with a 10-year Shopify expert.</strong></p>",
+        "button_label_1": "Book the B2B & AI Roadmap →",
+        "button_link_1": "",
+        "button_label_2": "Request a Personalized Video Audit",
+        "button_link_2": "",
+        "visual_title": "The Impact of Frictionless B2B",
+        "visual_accessibility_text": "A chart showing the significant revenue increase of AI-Powered B2B versus stagnant Manual Wholesale revenue.",
+        "visual_svg": "<svg width=\"100%\" height=\"200\" viewbox=\"0 0 300 200\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family: 'Inter', sans-serif;\"><line x1=\"30\" y1=\"180\" x2=\"280\" y2=\"180\" stroke=\"#ccc\" stroke-width=\"1\"></line><line x1=\"30\" y1=\"20\" x2=\"30\" y2=\"180\" stroke=\"#ccc\" stroke-width=\"1\"></line><text x=\"10\" y=\"25\" fill=\"#666\" font-size=\"12\">Revenue</text><path d=\"M30 140 Q 80 130, 130 135 Q 180 140, 230 138 Q 250 137, 280 138\" stroke=\"#03045E\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"5,5\"></path><text x=\"50\" y=\"125\" fill=\"#03045E\" font-size=\"12\" font-weight=\"bold\">Manual Wholesale</text><path d=\"M30 140 C 80 120, 130 90, 180 70 C 230 50, 280 40\" stroke=\"#00B4D8\" stroke-width=\"3\" fill=\"none\"></path><text x=\"180\" y=\"35\" fill=\"#00B4D8\" font-size=\"14\" font-weight=\"bold\">AI-Powered B2B</text></svg>"
       }
     },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
+        "collection": "all",
+        "products_to_show": 8,
         "title": "Featured products",
         "heading_size": "h2",
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "all",
-        "products_to_show": 8,
         "columns_desktop": 4,
-        "color_scheme": "scheme-1",
+        "enable_desktop_slider": false,
         "full_width": false,
         "show_view_all": true,
         "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "swipe_on_mobile": false,
+        "color_scheme": "scheme-1",
         "image_ratio": "adapt",
         "image_shape": "default",
         "show_secondary_image": true,
@@ -72,13 +48,14 @@
         "show_rating": false,
         "quick_add": "none",
         "columns_mobile": "2",
+        "swipe_on_mobile": false,
         "padding_top": 44,
         "padding_bottom": 36
       }
     }
   },
   "order": [
-    "image_banner",
+    "hero_b2b_ai_LgcCEn",
     "featured_collection"
   ]
 }
