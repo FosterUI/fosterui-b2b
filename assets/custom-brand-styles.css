@@ -115,6 +115,10 @@ html {
     /* Updated */
 }
 
+.landing-page-customization .multicolumn-card__image-wrapper {
+    width: 40px;
+}
+
 /* 2. Rich Text (used for Testimonials) */
 .landing-page-customization .rich-text blockquote,
 .landing-page-customization .rich-text__text blockquote {
