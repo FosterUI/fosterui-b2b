@@ -201,6 +201,10 @@ body {
 /* Center the Navigation Links using CSS Grid (Desktop) */
 @media screen and (min-width: 990px) {
 
+    .rich-text__blocks {
+        max-width: 102rem;
+    }
+
     /* Apply a 3-column grid layout to the header container */
     .header.header--middle-left {
         display: grid;
