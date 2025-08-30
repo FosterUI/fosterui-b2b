@@ -192,9 +192,9 @@
             "duration": "Ongoing Management & Advisory",
             "price": "$1,950",
             "description": "Ongoing management, advanced integration work, AI-driven optimization, and strategic advisory to maintain your competitive edge.",
-            "deliverables": "<ul><li>Ongoing management, advanced integration work</li><li>90-Day Implementation Plan</li><li>AI Opportunity Matrix</li></ul>",
+            "deliverables": "<ul><li>AI-driven Optimization (Personalization/Forecasting)</li><li>Advanced Integration Management</li><li>Strategic Advisory and Reporting</li><li>Opportunity for \"WholesaleConnect\" App integration</li></ul>",
             "cta_label": "Book My Roadmap Now →",
-            "cta_enabled": true,
+            "cta_enabled": false,
             "cta_link": "",
             "cta_disabled_message": "Available after completion of the Roadmap."
           }
