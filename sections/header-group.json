@@ -37,6 +37,18 @@
     },
     "header": {
       "type": "header",
+      "blocks": {
+        "cta_button_VMdtQb": {
+          "type": "cta_button",
+          "settings": {
+            "button_label": "Book My $1,950 Roadmap",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "cta_button_VMdtQb"
+      ],
       "settings": {
         "logo_position": "middle-left",
         "mobile_logo_position": "center",
