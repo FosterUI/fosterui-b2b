@@ -49,8 +49,9 @@
         "column_MHHd9H": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "image": "shopify://shop_images/exploding-head.png",
+            "title": "The AI Gap & Overwhelm",
+            "text": "<p>You know AI is critical for 2025/2026, but you lack a practical strategy for implementation beyond basic tools, missing out on forecasting and efficiency gains.</p>",
             "link_label": "",
             "link": ""
           }
