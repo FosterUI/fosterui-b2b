@@ -173,13 +173,13 @@
           "type": "tier",
           "settings": {
             "featured": false,
-            "title": "1. The Opportunity Roadmap",
+            "title": "4-Week Intensive Execution Project",
             "duration": "5-Day Deep-Dive Audit",
             "price": "$1,950",
-            "description": "The essential first step. A deep-dive audit using my proprietary system.",
-            "deliverables": "<ul><li>Revenue Impact Model</li><li>90-Day Implementation Plan</li><li>AI Opportunity Matrix</li></ul>",
+            "description": "A 4-week intensive execution project based on the Roadmap. I rapidly set up your optimized B2B channel and deploy high-impact AI tools.",
+            "deliverables": "<ul><li>Core Shopify B2B Setup (Catalogs, Companies, Net Terms)</li><li>Theme Customization (e.g., Quick Order Forms)</li><li>Deployment of 1-2 High-Impact AI Tools</li><li>ERP/3PL Integration Support</li></ul>",
             "cta_label": "Book My Roadmap Now →",
-            "cta_enabled": true,
+            "cta_enabled": false,
             "cta_link": "",
             "cta_disabled_message": "Available after completion of the Roadmap."
           }
