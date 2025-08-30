@@ -13,10 +13,6 @@
   "sections": {
     "footer": {
       "type": "footer",
-      "custom_css": [
-        ".hsfc-Step .hsfc-Step__Content {padding: 0;}",
-        ".hsfc-Button {width: 100%;}"
-      ],
       "settings": {
         "color_scheme": "scheme-1",
         "newsletter_enable": true,
