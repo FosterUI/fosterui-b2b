@@ -1,0 +1,99 @@
+{{ 'section-about-principal.css' | asset_url | stylesheet_tag }}
+
+<div class="about-principal-section" id="about">
+  <div class="page-width">
+    <div class="about-grid">
+      <div class="about-bio">
+        <div class="intro-container">
+          <div class="headshot-wrapper">
+            {% if section.settings.headshot_image != blank %}
+              {{
+                section.settings.headshot_image
+                | image_url: width: 360
+                | image_tag: class: 'headshot-image', loading: 'lazy', widths: '180, 360'
+              }}
+            {% else %}
+              <div class="headshot-placeholder">[Your Photo]</div>
+            {% endif %}
+          </div>
+
+          <div class="intro-text">
+            <h2 class="h2">{{ section.settings.intro_title }}</h2>
+            <p>{{ section.settings.intro_subtitle }}</p>
+          </div>
+        </div>
+
+        <div class="rte">
+          {{ section.settings.bio_text }}
+        </div>
+      </div>
+
+      <div class="about-advantage">
+        <div class="about-highlight">
+          <h3 class="h3">{{ section.settings.highlight_title }}</h3>
+          <div class="rte">
+            {{ section.settings.highlight_text }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "B2B About Principal",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Introduction (Left Side)"
+    },
+    {
+      "type": "image_picker",
+      "id": "headshot_image",
+      "label": "Headshot Image (Recommended 180x180px or larger)"
+    },
+    {
+      "type": "text",
+      "id": "intro_title",
+      "label": "Intro Title",
+      "default": "Meet Your B2B Growth Partner"
+    },
+    {
+      "type": "text",
+      "id": "intro_subtitle",
+      "label": "Intro Subtitle",
+      "default": "A decade in the Shopify trenches."
+    },
+    {
+      "type": "richtext",
+      "id": "bio_text",
+      "label": "Biography Text",
+      "default": "<p>I am not a large agency where your project gets handed off to junior staff. I am a <strong>principal consultant</strong> and expert Shopify Developer.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Highlight Box (Right Side)"
+    },
+    {
+      "type": "text",
+      "id": "highlight_title",
+      "label": "Highlight Title",
+      "default": "My Advantage: Velocity and Precision"
+    },
+    {
+      "type": "richtext",
+      "id": "highlight_text",
+      "label": "Highlight Text",
+      "default": "<p>My advantage lies in hyper-specialization and execution velocity. I utilize my own advanced AI stack to analyze, architect, and execute strategies faster.</p>"
+    }
+  ],
+  "presets": [
+    {
+      "name": "B2B About Principal"
+    }
+  ]
+}
+{% endschema %}
