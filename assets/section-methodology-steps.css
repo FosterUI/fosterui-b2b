@@ -19,6 +19,12 @@
     margin-bottom: 20px;
 }
 
+.methodology-execution h3 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
 .methodology-intro h2,
 .methodology-execution h3 {
     color: var(--color-brand-primary-dark);
