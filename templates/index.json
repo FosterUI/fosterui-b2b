@@ -25,6 +25,37 @@
         "visual_svg": "<svg width=\"100%\" height=\"200\" viewbox=\"0 0 300 200\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family: 'Inter', sans-serif;\"><line x1=\"30\" y1=\"180\" x2=\"280\" y2=\"180\" stroke=\"#ccc\" stroke-width=\"1\"></line><line x1=\"30\" y1=\"20\" x2=\"30\" y2=\"180\" stroke=\"#ccc\" stroke-width=\"1\"></line><text x=\"10\" y=\"25\" fill=\"#666\" font-size=\"12\">Revenue</text><path d=\"M30 140 Q 80 130, 130 135 Q 180 140, 230 138 Q 250 137, 280 138\" stroke=\"#03045E\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"5,5\"></path><text x=\"50\" y=\"125\" fill=\"#03045E\" font-size=\"12\" font-weight=\"bold\">Manual Wholesale</text><path d=\"M30 140 C 80 120, 130 90, 180 70 C 230 50, 280 40\" stroke=\"#00B4D8\" stroke-width=\"3\" fill=\"none\"></path><text x=\"180\" y=\"35\" fill=\"#00B4D8\" font-size=\"14\" font-weight=\"bold\">AI-Powered B2B</text></svg>"
       }
     },
+    "rich_text_KmpwiU": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_gf3cPh": {
+          "type": "heading",
+          "settings": {
+            "heading": "Is Your Wholesale Channel Built to Scale—Or Built to Fail?",
+            "heading_size": "h1"
+          }
+        },
+        "text_db6PAV": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_gf3cPh",
+        "text_db6PAV"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "multicolumn_w9J7pE": {
       "type": "multicolumn",
       "blocks": {
@@ -123,6 +154,7 @@
   },
   "order": [
     "hero_b2b_ai_LgcCEn",
+    "rich_text_KmpwiU",
     "multicolumn_w9J7pE",
     "methodology_steps_EGJEVf"
   ]
