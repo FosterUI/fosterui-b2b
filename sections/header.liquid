@@ -224,6 +224,17 @@
     {%- endif -%}
 
     <div class="header__icons{% if section.settings.enable_country_selector or section.settings.enable_language_selector %} header__icons--localization header-localization{% endif %}">
+      {% comment %} CUSTOM: Add custom blocks {% endcomment %}
+      {%- for block in section.blocks -%}
+        {%- case block.type -%}
+          {%- when 'cta_button' -%}
+            <div class="header__custom-block-item" {{ block.shopify_attributes }}>
+              <a href="{{ block.settings.button_link }}" class="btn-brand btn-brand-primary header-cta-btn">
+                {{ block.settings.button_label }}
+              </a>
+            </div>
+        {%- endcase -%}
+      {%- endfor -%}
       <div class="desktop-localization-wrapper">
         {%- if section.settings.enable_country_selector and localization.available_countries.size > 1 -%}
           <localization-form class="small-hide medium-hide" data-prevent-hide>
