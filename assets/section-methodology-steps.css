@@ -44,10 +44,7 @@
 }
 
 .step h4 {
-    font-size: 1.2rem;
-    font-weight: 700;
     color: var(--color-brand-primary-dark);
-    margin-bottom: 10px;
 }
 
 /* Responsive Design */
