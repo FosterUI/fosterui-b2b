@@ -195,6 +195,7 @@ body {
 /* Style the navigation links to match the brand */
 .header__menu-item span {
     color: var(--color-brand-primary-dark);
+    font-size: 1.6rem;
     font-weight: 600;
     transition: color 0.3s;
 }
