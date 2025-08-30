@@ -201,7 +201,7 @@ html {
 /* Hide the custom CTA on mobile/tablet, as the space is limited */
 @media screen and (max-width: 989px) {
 
-    .menu-drawer-container,
+    header-drawer .menu-drawer-container,
     .header__custom-block-item {
         display: none;
     }
