@@ -15,6 +15,11 @@
       <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
     {%- endunless -%}
 
+    {% comment %} Add custom brand fonts {% endcomment %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+
     <title>
       {{ page_title }}
       {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
@@ -290,6 +295,9 @@
         onload="this.media='all'"
       >
     {%- endif -%}
+
+    {% comment %} Add custom brand styles {% endcomment %}
+    {{ 'custom-brand-styles.css' | asset_url | stylesheet_tag }}
 
     <script>
       if (Shopify.designMode) {
