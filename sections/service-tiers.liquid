@@ -1,0 +1,145 @@
+{{ 'section-service-tiers.css' | asset_url | stylesheet_tag }}
+
+<div class="service-tiers-section" id="services">
+  <div class="page-width">
+    <div class="service-tiers-header">
+      <h2 class="h2">{{ section.settings.title }}</h2>
+      <p>{{ section.settings.subtitle }}</p>
+    </div>
+
+    <div class="service-grid">
+      {% for block in section.blocks %}
+        <div class="service-card {% if block.settings.featured %}featured{% endif %}" {{ block.shopify_attributes }}>
+          <div>
+            <div class="service-header">
+              <h3 class="h3">{{ block.settings.title }}</h3>
+              <div class="duration">{{ block.settings.duration }}</div>
+              <div class="price">{{ block.settings.price }}</div>
+            </div>
+            <p>
+              <strong>{{ block.settings.description }}</strong>
+            </p>
+
+            <div class="rte">
+              {{ block.settings.deliverables }}
+            </div>
+          </div>
+
+          {% if block.settings.cta_enabled %}
+            <a href="{{ block.settings.cta_link }}" class="btn-brand btn-brand-primary">
+              {{ block.settings.cta_label }}
+            </a>
+          {% else %}
+            <a
+              href="#"
+              class="btn-brand btn-disabled"
+              onclick="alert('{{ block.settings.cta_disabled_message | escape }}'); return false;"
+              aria-disabled="true"
+            >
+              {{ block.settings.cta_label }}
+            </a>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "B2B Service Tiers",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "A Productized Approach to B2B Acceleration"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "I partner with established Shopify Plus merchants ready to execute."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "tier",
+      "name": "Service Tier",
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "featured",
+          "label": "Featured Tier (Highlights the card)",
+          "default": false
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "1. The Opportunity Roadmap"
+        },
+        {
+          "type": "text",
+          "id": "duration",
+          "label": "Duration",
+          "default": "5-Day Deep-Dive Audit"
+        },
+        {
+          "type": "text",
+          "id": "price",
+          "label": "Price",
+          "default": "$1,950"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description",
+          "default": "The essential first step. A deep-dive audit using my proprietary system."
+        },
+        {
+          "type": "richtext",
+          "id": "deliverables",
+          "label": "Deliverables (List)",
+          "default": "<ul><li>Revenue Impact Model</li><li>90-Day Implementation Plan</li><li>AI Opportunity Matrix</li></ul>"
+        },
+        {
+          "type": "header",
+          "content": "Call to Action"
+        },
+        {
+          "type": "text",
+          "id": "cta_label",
+          "label": "Button Label",
+          "default": "Book My Roadmap Now →"
+        },
+        {
+          "type": "checkbox",
+          "id": "cta_enabled",
+          "label": "Button Enabled (Active Link)",
+          "default": true
+        },
+        {
+          "type": "url",
+          "id": "cta_link",
+          "label": "Button Link (If enabled)"
+        },
+        {
+          "type": "text",
+          "id": "cta_disabled_message",
+          "label": "Disabled Alert Message",
+          "default": "Available after completion of the Roadmap."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "B2B Service Tiers",
+      "blocks": [{ "type": "tier" }, { "type": "tier" }, { "type": "tier" }]
+    }
+  ]
+}
+{% endschema %}

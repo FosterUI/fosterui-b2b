@@ -1,0 +1,115 @@
+/* assets/section-service-tiers.css */
+
+.service-tiers-section {
+    padding: 100px 0;
+    /* Ensure this section has the light background */
+    background-color: var(--color-brand-background);
+}
+
+.service-tiers-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.service-tiers-header h2 {
+    color: var(--color-brand-primary-dark);
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    text-align: left;
+}
+
+.service-card {
+    background-color: var(--color-brand-white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: var(--shadow-brand);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease;
+}
+
+/* Featuring the Roadmap */
+.service-card.featured {
+    border: 3px solid var(--color-brand-accent);
+    transform: scale(1.03);
+    box-shadow: 0 15px 40px rgba(0, 180, 216, 0.3);
+}
+
+.service-header {
+    border-bottom: 1px solid var(--color-brand-background);
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.service-header h3 {
+    color: var(--color-brand-primary-dark);
+}
+
+.price {
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--color-brand-primary-dark);
+    margin-top: 15px;
+}
+
+.duration {
+    font-size: 1rem;
+    color: #64748b;
+    font-weight: 600;
+}
+
+/* List styling within the cards (RTE) */
+.service-card .rte ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.service-card .rte ul li {
+    margin-bottom: 15px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.service-card .rte ul li::before {
+    content: '✓';
+    color: var(--color-brand-accent);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.btn-disabled {
+    background-color: #cbd5e1;
+    color: #64748b;
+    cursor: not-allowed;
+}
+
+.btn-disabled:hover {
+    transform: none;
+    background-color: #cbd5e1;
+    color: #64748b;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card.featured {
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 749px) {
+    .service-tiers-section {
+        padding: 60px 0;
+    }
+}
