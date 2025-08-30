@@ -42,6 +42,7 @@ h1.hero-b2b-title {
     display: flex;
     gap: 2rem;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 /* Money Slide Styling */
