@@ -150,12 +150,73 @@
         "text": "<p>I am not a generic “Shopify developer.” I am a specialized revenue accelerator focusing on the two most critical growth levers today: <strong>B2B expansion and AI integration.</strong></p><p>I don't just connect apps; <strong>I professionalize your entire wholesale channel. </strong>My methodology integrates the robustness of the Shopify B2B suite with the precision of strategic AI automation.</p>",
         "execution_title": "How I Execute:"
       }
+    },
+    "service_tiers_8jzFQk": {
+      "type": "service-tiers",
+      "blocks": {
+        "tier_HDx9AL": {
+          "type": "tier",
+          "settings": {
+            "featured": false,
+            "title": "1. The Opportunity Roadmap",
+            "duration": "5-Day Deep-Dive Audit",
+            "price": "$1,950",
+            "description": "The essential first step. A deep-dive audit using my proprietary system.",
+            "deliverables": "<ul><li>Revenue Impact Model</li><li>90-Day Implementation Plan</li><li>AI Opportunity Matrix</li></ul>",
+            "cta_label": "Book My Roadmap Now →",
+            "cta_enabled": true,
+            "cta_link": "",
+            "cta_disabled_message": "Available after completion of the Roadmap."
+          }
+        },
+        "tier_Vf6L4U": {
+          "type": "tier",
+          "settings": {
+            "featured": false,
+            "title": "1. The Opportunity Roadmap",
+            "duration": "5-Day Deep-Dive Audit",
+            "price": "$1,950",
+            "description": "The essential first step. A deep-dive audit using my proprietary system.",
+            "deliverables": "<ul><li>Revenue Impact Model</li><li>90-Day Implementation Plan</li><li>AI Opportunity Matrix</li></ul>",
+            "cta_label": "Book My Roadmap Now →",
+            "cta_enabled": true,
+            "cta_link": "",
+            "cta_disabled_message": "Available after completion of the Roadmap."
+          }
+        },
+        "tier_c8GPQM": {
+          "type": "tier",
+          "settings": {
+            "featured": false,
+            "title": "1. The Opportunity Roadmap",
+            "duration": "5-Day Deep-Dive Audit",
+            "price": "$1,950",
+            "description": "The essential first step. A deep-dive audit using my proprietary system.",
+            "deliverables": "<ul><li>Revenue Impact Model</li><li>90-Day Implementation Plan</li><li>AI Opportunity Matrix</li></ul>",
+            "cta_label": "Book My Roadmap Now →",
+            "cta_enabled": true,
+            "cta_link": "",
+            "cta_disabled_message": "Available after completion of the Roadmap."
+          }
+        }
+      },
+      "block_order": [
+        "tier_HDx9AL",
+        "tier_Vf6L4U",
+        "tier_c8GPQM"
+      ],
+      "name": "B2B Service Tiers",
+      "settings": {
+        "title": "A Productized Approach to B2B Acceleration",
+        "subtitle": "I partner with established Shopify Plus merchants ready to execute."
+      }
     }
   },
   "order": [
     "hero_b2b_ai_LgcCEn",
     "rich_text_KmpwiU",
     "multicolumn_w9J7pE",
-    "methodology_steps_EGJEVf"
+    "methodology_steps_EGJEVf",
+    "service_tiers_8jzFQk"
   ]
 }
