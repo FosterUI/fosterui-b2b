@@ -221,6 +221,17 @@
         "highlight_title": "My Advantage: Velocity and Precision",
         "highlight_text": "<p>My advantage lies in hyper-specialization and execution velocity. I utilize my own advanced AI stack (Gemini, Claude, Perplexity) to analyze, architect, and execute strategies faster, simulating the output of a 3-5 person team.</p><p>I don't believe in endless development cycles. I execute rapid, strategic implement</p>"
       }
+    },
+    "contact_split_hybrid_YMBRY8": {
+      "type": "contact-split-hybrid",
+      "name": "B2B Contact Split (Hybrid)",
+      "settings": {
+        "title": "Ready to Transform Your Wholesale Channel?",
+        "text": "<p>Don't let manual processes stunt your growth.</p><h3>What You Get in 5 Days:</h3><ul><li>A clear 90-Day Implementation Plan</li><li>A tailored Revenue Impact Model</li></ul>",
+        "form_title": "Book Your Roadmap or Request Audit",
+        "use_hubspot": true,
+        "hubspot_embed_code": ""
+      }
     }
   },
   "order": [
@@ -229,6 +240,7 @@
     "multicolumn_w9J7pE",
     "methodology_steps_EGJEVf",
     "service_tiers_8jzFQk",
-    "about_principal_LKJFK6"
+    "about_principal_LKJFK6",
+    "contact_split_hybrid_YMBRY8"
   ]
 }
