@@ -68,6 +68,10 @@
     padding: 0;
 }
 
+.hsfc-Button {
+    width: 100%;
+}
+
 /* Responsive Design */
 @media (max-width: 1024px) {
     .contact-grid {
