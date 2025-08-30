@@ -40,6 +40,7 @@
         "column_bzBJzC": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/disconnected-emoji.png",
             "title": "Disconnected Systems",
             "text": "<p>Your Shopify store, your ERP, and your 3PL don't speak the same language. This leads to manual data entry, fulfillment errors, and a broken experience for your B2B buyers. I provide the strategic blueprint to bridge these gaps.</p>",
             "link_label": "",
