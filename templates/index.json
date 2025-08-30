@@ -193,7 +193,7 @@
             "price": "$1,950",
             "description": "<p>Ongoing management, advanced integration work, AI-driven optimization, and strategic advisory to maintain your competitive edge.</p>",
             "deliverables": "<ul><li>AI-driven Optimization (Personalization/Forecasting)</li><li>Advanced Integration Management</li><li>Strategic Advisory and Reporting</li><li>Opportunity for \"WholesaleConnect\" App integration</li></ul>",
-            "cta_label": "Book My Roadmap Now →",
+            "cta_label": "Available After Sprint",
             "cta_enabled": false,
             "cta_link": "",
             "cta_disabled_message": "Available after completion of the Roadmap."
