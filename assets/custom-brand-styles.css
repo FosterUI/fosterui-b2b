@@ -201,7 +201,7 @@ body {
 /* Center the Navigation Links using CSS Grid (Desktop) */
 @media screen and (min-width: 990px) {
 
-    .rich-text__blocks {
+    .rich-text__wrapper .rich-text__blocks {
         max-width: 102rem;
     }
 
