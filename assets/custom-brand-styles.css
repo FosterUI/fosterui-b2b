@@ -10,6 +10,7 @@
     --color-brand-white: #ffffff;
     --shadow-brand: 0 1.5rem 3rem rgba(3, 4, 94, 0.1);
     /* Updated shadow */
+    --color-brand-text: #333333;
 
     /* --- FONT OVERRIDE: Enforce 'Inter' --- */
     /* This overrides the Theme Editor settings to ensure Inter is used globally */
@@ -26,6 +27,10 @@
 /* Ensure smooth scrolling for anchor links */
 html {
     scroll-behavior: smooth;
+}
+
+body {
+    color: var(--color-brand-text);
 }
 
 /* --- Custom Heading Styles (Namespaced) --- */
