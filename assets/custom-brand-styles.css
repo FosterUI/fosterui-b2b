@@ -29,20 +29,20 @@ html {
 }
 
 /* --- Custom Heading Styles (Namespaced) --- */
-h2 {
+.methodology-intro h2 {
     font-size: 3.6rem;
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: 20px;
 }
 
-h3 {
+.methodology-execution h3 {
     font-size: 2.4rem;
     font-weight: 700;
     line-height: 1.2;
 }
 
-h4 {
+.methodology-steps-list h4 {
     font-size: 1.92rem;
     font-weight: 700;
     margin-bottom: 10px;
