@@ -43,6 +43,7 @@ html {
     /* Updated: 1.6rem = 16px */
     line-height: 1.2;
     border: none;
+    white-space: nowrap;
 }
 
 .btn-brand-primary {
