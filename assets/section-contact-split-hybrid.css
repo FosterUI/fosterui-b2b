@@ -1,0 +1,82 @@
+/* assets/section-contact-split-hybrid.css */
+
+.contact-split-section {
+    padding: 100px 0;
+    background-color: var(--color-brand-background);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.contact-info h2,
+.contact-info h3 {
+    color: var(--color-brand-primary-dark);
+}
+
+.contact-info ul {
+    list-style: disc;
+    margin-left: 20px;
+}
+
+.contact-form-box {
+    background-color: var(--color-brand-white);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: var(--shadow-brand);
+}
+
+.contact-form-box h3 {
+    color: var(--color-brand-primary-dark);
+    margin-bottom: 25px;
+}
+
+/* HubSpot Form Styling (General Guidance) */
+.hubspot-form-embed {
+    margin-top: 20px;
+}
+
+/* Fallback Shopify Form Styling */
+.fallback-form .form-group {
+    margin-bottom: 20px;
+}
+
+.fallback-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: var(--color-brand-primary-dark);
+}
+
+.fallback-form .form-control {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.fallback-form .btn-brand-primary {
+    width: 100%;
+    margin-top: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 749px) {
+    .contact-split-section {
+        padding: 60px 0;
+    }
+
+    .contact-form-box {
+        padding: 30px;
+    }
+}
