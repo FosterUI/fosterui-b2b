@@ -31,7 +31,6 @@ html {
 
 body {
     color: var(--color-brand-text);
-    background-color: var(--color-brand-background) !important;
     line-height: 1.6;
 }
 
