@@ -1,4 +1,131 @@
-/* assets/custom-brand-styles.css (Continued/Updated) */
+/* assets/custom-brand-styles.css */
+
+:root {
+    /* Brand Colors - Namespaced to avoid conflicts with Dawn */
+    --color-brand-primary-dark: #03045E;
+    --color-brand-accent: #00B4D8;
+    --color-brand-accent-hover: #0094C6;
+    --color-brand-text: #333333;
+    --color-brand-background: #f8fafc;
+    --color-brand-white: #ffffff;
+    --shadow-brand: 0 15px 30px rgba(3, 4, 94, 0.1);
+}
+
+/* Ensure smooth scrolling for anchor links */
+html {
+    scroll-behavior: smooth;
+}
+
+/* --- Custom Button Styles (Namespaced) --- */
+/* Use these classes (e.g., btn-brand btn-brand-primary) instead of Dawn's native .button */
+
+.btn-brand {
+    display: inline-block;
+    padding: 14px 28px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 700;
+    transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
+    text-align: center;
+    cursor: pointer;
+    font-size: 1rem;
+    line-height: 1.2;
+    border: none;
+}
+
+.btn-brand-primary {
+    background-color: var(--color-brand-accent);
+    color: var(--color-brand-white);
+}
+
+.btn-brand-primary:hover {
+    background-color: var(--color-brand-accent-hover);
+    transform: translateY(-2px);
+    color: var(--color-brand-white);
+}
+
+.btn-brand-secondary {
+    background-color: transparent;
+    color: var(--color-brand-primary-dark);
+    border: 2px solid var(--color-brand-primary-dark);
+}
+
+.btn-brand-secondary:hover {
+    background-color: var(--color-brand-primary-dark);
+    color: var(--color-brand-white);
+    transform: translateY(-2px);
+}
+
+/* Utility Kicker Style */
+.kicker-brand {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-brand-accent);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+/* --- Overrides for Native Sections --- */
+/* This allows us to use native Dawn sections while matching the design. */
+/* INSTRUCTIONS: When using these native sections, add the class 'landing-page-customization' to the section's 'CSS class' setting in the Theme Editor. */
+
+/* 1. Multicolumn (used for Bottlenecks and Insights) */
+.landing-page-customization .multicolumn-list__item {
+    background-color: var(--color-brand-white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* 2. Rich Text (used for Testimonials) */
+.landing-page-customization .rich-text blockquote,
+.landing-page-customization .rich-text__text blockquote {
+    font-size: 1.75rem;
+    font-style: italic;
+    color: var(--color-brand-primary-dark);
+    line-height: 1.4;
+    margin: 30px 0;
+    border: none;
+    padding: 0;
+}
+
+.landing-page-customization .rich-text cite,
+.landing-page-customization .rich-text__text cite {
+    font-weight: 700;
+    font-style: normal;
+    display: block;
+    margin-top: 20px;
+}
+
+/* 3. Email Signup Banner (used for Newsletter) */
+.landing-page-customization.section-email-signup {
+    /* Ensure the section background is white/default before the box */
+    background-color: var(--color-brand-white);
+}
+
+.landing-page-customization .email-signup-banner__box {
+    background-color: var(--color-brand-primary-dark);
+    color: var(--color-brand-white);
+    border-radius: 8px;
+    padding: 40px;
+    box-shadow: var(--shadow-brand);
+    margin-top: 40px;
+}
+
+.landing-page-customization .email-signup-banner__heading {
+    color: var(--color-brand-white);
+}
+
+/* Style the button within the newsletter */
+.landing-page-customization .email-signup-banner__button .button {
+    background-color: var(--color-brand-accent);
+    color: var(--color-brand-white);
+}
+
+.landing-page-customization .email-signup-banner__button .button:hover {
+    background-color: var(--color-brand-accent-hover);
+}
 
 /* Remove or update old references to header-custom-cta-wrapper */
 
