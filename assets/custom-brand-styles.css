@@ -33,6 +33,12 @@ body {
     color: var(--color-brand-text);
 }
 
+
+.landing-page-customization .multicolumn-list__item,
+.rich-text__wrapper .rich-text__blocks {
+    color: var(--color-brand-text);
+}
+
 /* --- Custom Heading Styles (Namespaced) --- */
 .methodology-intro h2,
 .rich-text__heading {
