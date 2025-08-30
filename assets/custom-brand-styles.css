@@ -215,7 +215,7 @@ body {
         max-width: 102rem;
     }
 
-    .header {
+    sticky-header .header {
         padding: 15px 0;
     }
 
