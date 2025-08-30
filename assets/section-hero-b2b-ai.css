@@ -4,52 +4,69 @@
     background-color: var(--color-brand-white);
     /* Subtle background motif from mockup */
     background-image: radial-gradient(circle at top right, #f0f9ff 0%, var(--color-brand-white) 50%);
-    padding: 100px 0 80px;
+    padding: 10rem 0 8rem;
 }
 
 .hero-b2b-grid {
     display: grid;
     grid-template-columns: 3fr 2fr;
-    gap: 50px;
+    gap: 5rem;
     align-items: center;
 }
 
-.hero-b2b-title {
-    font-size: 3rem;
+/* KEY CHANGE: Increased specificity by adding 'h1.' to the selector */
+/* This ensures it overrides Dawn's global H1 styles */
+h1.hero-b2b-title {
+    font-size: 4.8rem;
+    /* 4.8rem = 48px */
     font-weight: 900;
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
     color: var(--color-brand-primary-dark);
+    line-height: 1.2;
+    /* Ensure appropriate line-height */
 }
 
-.hero-b2b-text {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
+/* KEY CHANGE: Increased specificity by adding the container class */
+/* And ensuring paragraphs inside the Rich Text Editor (RTE) are also covered */
+.hero-b2b .hero-b2b-text,
+.hero-b2b .hero-b2b-text p {
+    font-size: 1.9rem;
+    /* 1.9rem = 19px */
+}
+
+.hero-b2b .hero-b2b-text {
+    margin-bottom: 3rem;
 }
 
 .hero-b2b-cta-group {
     display: flex;
-    gap: 20px;
+    gap: 2rem;
     align-items: center;
 }
 
 /* Money Slide Styling */
 .money-slide {
     background-color: var(--color-brand-white);
-    padding: 30px;
+    padding: 3rem;
     border-radius: 8px;
     box-shadow: var(--shadow-brand);
     text-align: center;
 }
 
 .money-slide h3 {
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
     color: var(--color-brand-primary-dark);
+    /* Explicitly defining size for the visual title */
+    font-size: 2.2rem;
 }
 
 /* Responsive Design */
 @media (max-width: 1024px) {
-    .hero-b2b-title {
-        font-size: 2.5rem;
+
+    /* KEY CHANGE: Ensure responsive styles also have high specificity */
+    h1.hero-b2b-title {
+        font-size: 4rem;
+        /* 4.0rem = 40px */
     }
 
     .hero-b2b-grid {
@@ -57,13 +74,23 @@
     }
 
     .hero-b2b-visual {
-        margin-top: 30px;
+        margin-top: 3rem;
     }
 }
 
 @media (max-width: 768px) {
     .hero-b2b {
-        padding: 60px 0;
+        padding: 6rem 0;
+    }
+
+    /* Further reduction for mobile */
+    h1.hero-b2b-title {
+        font-size: 3.6rem;
+    }
+
+    .hero-b2b .hero-b2b-text,
+    .hero-b2b .hero-b2b-text p {
+        font-size: 1.8rem;
     }
 
     .hero-b2b-cta-group {
