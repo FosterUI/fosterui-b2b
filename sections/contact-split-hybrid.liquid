@@ -1,0 +1,162 @@
+{{ 'section-contact-split-hybrid.css' | asset_url | stylesheet_tag }}
+
+<div class="contact-split-section" id="contact">
+  <div class="page-width">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h2 class="h2">{{ section.settings.title }}</h2>
+        <div class="rte">
+          {{ section.settings.text }}
+        </div>
+      </div>
+
+      <div class="contact-form-container">
+        <div class="contact-form-box">
+          <h3 class="h3">{{ section.settings.form_title }}</h3>
+
+          {% if section.settings.use_hubspot %}
+            {% if section.settings.hubspot_embed_code != blank %}
+              <div class="hubspot-form-embed">
+                {{ section.settings.hubspot_embed_code }}
+              </div>
+            {% else %}
+              <p>Please paste the HubSpot embed code in the theme settings.</p>
+            {% endif %}
+          {% else %}
+            <div class="fallback-form">
+              {% form 'contact' %}
+                {% if form.posted_successfully? %}
+                  <p class="form-success form-status-list form__message" tabindex="-1" autofocus>
+                    Thanks for contacting us. We'll get back to you as soon as possible.
+                  </p>
+                {% elsif form.errors %}
+                  {{ form.errors | default_errors }}
+                {% endif %}
+
+                <div class="form-group">
+                  <label for="ContactFormName-{{ section.id }}">Full Name</label>
+                  <input
+                    type="text"
+                    id="ContactFormName-{{ section.id }}"
+                    name="contact[name]"
+                    required
+                    class="form-control"
+                  >
+                </div>
+                <div class="form-group">
+                  <label for="ContactFormEmail-{{ section.id }}">Work Email Address</label>
+                  <input
+                    type="email"
+                    id="ContactFormEmail-{{ section.id }}"
+                    name="contact[email]"
+                    required
+                    autocomplete="email"
+                    class="form-control"
+                  >
+                </div>
+                <div class="form-group">
+                  <label for="ContactFormURL-{{ section.id }}">Shopify Store URL</label>
+                  <input
+                    type="url"
+                    id="ContactFormURL-{{ section.id }}"
+                    name="contact[Shopify Store URL]"
+                    required
+                    class="form-control"
+                  >
+                </div>
+                <div class="form-group">
+                  <label for="ContactFormGMV-{{ section.id }}">Approximate Annual GMV</label>
+                  <select
+                    id="ContactFormGMV-{{ section.id }}"
+                    name="contact[Approximate Annual GMV]"
+                    required
+                    class="form-control"
+                  >
+                    <option value="">Select Range</option>
+                    <option value="$1M - $5M">$1M - $5M</option>
+                    <option value="$5M - $10M">$5M - $10M</option>
+                    <option value="$10M - $15M">$10M - $15M</option>
+                    <option value="$15M+">$15M+</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="ContactFormRequestType-{{ section.id }}">I am interested in:</label>
+                  <select
+                    id="ContactFormRequestType-{{ section.id }}"
+                    name="contact[Interest]"
+                    required
+                    class="form-control"
+                  >
+                    <option value="Booking the $1,950 Roadmap">Booking the $1,950 Roadmap</option>
+                    <option value="Requesting a Personalized Video Audit">Requesting a Personalized Video Audit</option>
+                  </select>
+                </div>
+                <div class="form-group" style="display:none;">
+                  <label for="ContactFormBody-{{ section.id }}">Body</label>
+                  <textarea
+                    name="contact[body]"
+                    id="ContactFormBody-{{ section.id }}">Landing Page Submission</textarea>
+                </div>
+                <button type="submit" class="btn-brand btn-brand-primary">Submit Request →</button>
+              {% endform %}
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "B2B Contact Split-Hybrid",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Pitch (Left Side)"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Ready to Transform Your Wholesale Channel?"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text",
+      "default": "<p>Don't let manual processes stunt your growth.</p><h3>What You Get in 5 Days:</h3><ul><li>A clear 90-Day Implementation Plan</li><li>A tailored Revenue Impact Model</li></ul>"
+    },
+    {
+      "type": "header",
+      "content": "Form (Right Side)"
+    },
+    {
+      "type": "text",
+      "id": "form_title",
+      "label": "Form Heading",
+      "default": "Book Your Roadmap or Request Audit"
+    },
+    {
+      "type": "checkbox",
+      "id": "use_hubspot",
+      "label": "Use HubSpot Embed Code",
+      "default": true,
+      "info": "If checked, the HubSpot code will be used. Otherwise, a standard Shopify contact form will be displayed."
+    },
+    {
+      "type": "html",
+      "id": "hubspot_embed_code",
+      "label": "HubSpot Form Embed Code",
+      "info": "Paste the JavaScript embed code provided by HubSpot here."
+    }
+  ],
+  "presets": [
+    {
+      "name": "B2B Contact Split (Hybrid)"
+    }
+  ]
+}
+{% endschema %}
