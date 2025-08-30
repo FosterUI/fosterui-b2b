@@ -64,6 +64,10 @@
     margin-top: 15px;
 }
 
+.hsfc-Step .hsfc-Step__Content {
+    padding: 0;
+}
+
 /* Responsive Design */
 @media (max-width: 1024px) {
     .contact-grid {
