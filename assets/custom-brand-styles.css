@@ -10,6 +10,17 @@
     --color-brand-white: #ffffff;
     --shadow-brand: 0 1.5rem 3rem rgba(3, 4, 94, 0.1);
     /* Updated shadow */
+
+    /* --- FONT OVERRIDE: Enforce 'Inter' --- */
+    /* This overrides the Theme Editor settings to ensure Inter is used globally */
+    --font-body-family: 'Inter', sans-serif;
+    --font-heading-family: 'Inter', sans-serif;
+
+    /* Optional: Ensure base styles are consistent */
+    --font-body-style: normal;
+    --font-heading-style: normal;
+    --font-body-weight: 400;
+    /* -------------------------------------- */
 }
 
 /* Ensure smooth scrolling for anchor links */
