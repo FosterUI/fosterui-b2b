@@ -157,11 +157,11 @@
         "tier_HDx9AL": {
           "type": "tier",
           "settings": {
-            "featured": false,
-            "title": "1. The Opportunity Roadmap",
+            "featured": true,
+            "title": "1. The B2B & AI Opportunity Roadmap",
             "duration": "5-Day Deep-Dive Audit",
             "price": "$1,950",
-            "description": "The essential first step. A deep-dive audit using my proprietary system.",
+            "description": "The essential first step. A deep-dive audit using my proprietary system to identify bottlenecks and quantify potential revenue lift.",
             "deliverables": "<ul><li>Revenue Impact Model</li><li>90-Day Implementation Plan</li><li>AI Opportunity Matrix</li></ul>",
             "cta_label": "Book My Roadmap Now →",
             "cta_enabled": true,
