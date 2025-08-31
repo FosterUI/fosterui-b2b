@@ -313,6 +313,32 @@
         "padding_bottom": 36,
         "custom_css_class": "landing-page-customization"
       }
+    },
+    "newsletter_cQ4kTJ": {
+      "type": "newsletter",
+      "blocks": {
+        "paragraph_XCJYxk": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Get specialized insights and implementation tactics for Shopify merchants, delivered weekly.</p>"
+          }
+        },
+        "email_form_PJzUMt": {
+          "type": "email_form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "paragraph_XCJYxk",
+        "email_form_PJzUMt"
+      ],
+      "name": "t:sections.newsletter.presets.name",
+      "settings": {
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
@@ -324,6 +350,7 @@
     "about_principal_LKJFK6",
     "contact_split_hybrid_YMBRY8",
     "rich_text_CcLkaA",
-    "multicolumn_9JGMiV"
+    "multicolumn_9JGMiV",
+    "newsletter_cQ4kTJ"
   ]
 }
