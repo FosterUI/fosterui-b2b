@@ -88,6 +88,37 @@
     margin-top: 8rem;
 }
 
+  /* Basic styling for the tabs */
+  .form-tabs {
+      display: flex;
+      border-bottom: 1px solid #e0e0e0;
+      margin-bottom: 20px;
+  }
+
+  .tab-link {
+      padding: 10px 20px;
+      cursor: pointer;
+      border: 1px solid transparent;
+      border-bottom: none;
+      margin-bottom: -1px;
+      font-size: 1.1em;
+  }
+
+  .tab-link.active {
+      border-color: #e0e0e0;
+      border-bottom: 1px solid white;
+      font-weight: bold;
+      background-color: white;
+  }
+
+  .form-content {
+      display: none;
+  }
+
+  .form-content.active {
+      display: block;
+  }
+
 /* Responsive Design */
 @media (max-width: 1024px) {
     .contact-grid {
