@@ -72,7 +72,12 @@
   background-color: var(--color-brand-accent);
   color: var(--color-brand-white);
   width: 290px;
+  cursor: pointer;
   /* Set a fixed width for the button */
+}
+
+.newsletter-form__field-wrapper .field__input {
+  cursor: pointer;
 }
 
 .newsletter-form__button:hover {
