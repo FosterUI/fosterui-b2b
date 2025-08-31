@@ -166,7 +166,7 @@
             "deliverables": "<ul><li>Revenue Impact Model (\"Money Slide\")</li><li>90-Day Implementation Plan</li><li>AI Opportunity Matrix</li><li>B2B Bottleneck Analysis</li></ul>",
             "cta_label": "Book My Roadmap Now →",
             "cta_enabled": true,
-            "cta_link": "",
+            "cta_link": "/#contact",
             "cta_disabled_message": "Available after completion of the Roadmap."
           }
         },
