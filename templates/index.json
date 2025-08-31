@@ -232,6 +232,16 @@
         "use_hubspot": true,
         "hubspot_embed_code": "<div id=\"contact-form-container\">\n  <!-- Your HubSpot Form Embed Code Goes Here -->\n  <!-- Example: script charset=\"utf-8\" ... src=\"//js.hsforms.net/...\" -->\n  <script src=\"https://js.hsforms.net/forms/embed/40164173.js\" defer></script>\n<div class=\"hs-form-frame\" data-region=\"na1\" data-form-id=\"25a94b25-c81c-4d24-9cc4-c8a0c08c2917\" data-portal-id=\"40164173\"></div>\n\n  <!-- Confirmation Message for \"Audit\" Request (Initially Hidden) -->\n  <div id=\"audit-confirmation\" style=\"display: none; border: 1px solid #e0e0e0; padding: 30px; border-radius: 8px;\">\n    <h3>Thank You for Your Request.</h3>\n    <h2>Your Personalized Video Audit is In the Queue.</h2>\n    <p>I've received your information and will now personally conduct a strategic review of your Shopify store. I will record a 5-minute Loom video with my initial findings and send it directly to your inbox.</p>\n    <p><strong>Please allow 2-3 business days for this analysis.</strong> I take the time to ensure my insights are specific, actionable, and valuable.</p>\n    <p>I look forward to sharing my findings with you shortly.</p>\n    <p>— [Your Name]</p>\n  </div>\n\n  <!-- Confirmation Message for \"Roadmap\" Request (Initially Hidden) -->\n  <div id=\"roadmap-confirmation\" style=\"display: none; border: 1px solid #e0e0e0; padding: 30px; border-radius: 8px;\">\n    <h3>Excellent. Let's Get Started.</h3>\n    <h2>I'm Reviewing Your Request to Book the Roadmap.</h2>\n    <p>Thank you for taking the first step. I personally review every Roadmap request to ensure it's a strong strategic fit before scheduling a call. This ensures our time together is maximally productive.</p>\n    <p><strong>Please look for a personal email from me within one business day.</strong> If your project aligns with my expertise, that email will contain a private link to my calendar to book our 25-minute discovery call.</p>\n    <p>I look forward to the possibility of partnering with you.</p>\n    <p>— [Your Name]</p>\n  </div>\n</div>"
       }
+    },
+    "custom_liquid_bttPWF": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<script>\n  window.addEventListener('message', event => {\n    if (event.data.type === 'hsFormCallback' && event.data.eventName === 'onFormSubmitted') {\n      // Find the form and hide it\n      const form = event.target.closest('.hs-form-container');\n      if (form) {\n        form.style.display = 'none';\n      }\n\n      // Get the submitted data\n      const submittedData = event.data.data.submissionValues;\n      // NOTE: Replace 'i_am_interested_in' with the actual internal name of your HubSpot form field.\n      const interest = submittedData.i_am_interested_in;\n\n      // Show the correct confirmation message\n      if (interest === 'Roadmap') {\n        document.getElementById('roadmap-confirmation').style.display = 'block';\n      } else if (interest === 'Audit') {\n        document.getElementById('audit-confirmation').style.display = 'block';\n      }\n    }\n  });\n</script>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
@@ -241,6 +251,7 @@
     "methodology_steps_EGJEVf",
     "service_tiers_8jzFQk",
     "about_principal_LKJFK6",
-    "contact_split_hybrid_YMBRY8"
+    "contact_split_hybrid_YMBRY8",
+    "custom_liquid_bttPWF"
   ]
 }
