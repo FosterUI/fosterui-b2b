@@ -299,9 +299,9 @@ body {
     color: #333333;
 }
 
-/* .newsletter-form__field-wrapper .newsletter-form__button.field__button {
+.newsletter-form__field-wrapper .newsletter-form__button.field__button {
     border-color: var(--color-brand-accent);
-} */
+}
 
 /* Hide the custom CTA on mobile/tablet, as the space is limited */
 @media screen and (max-width: 989px) {
