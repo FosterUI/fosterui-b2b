@@ -308,6 +308,7 @@
         "paragraph_XCJYxk",
         "email_form_PJzUMt"
       ],
+      "disabled": true,
       "name": "t:sections.newsletter.presets.name",
       "settings": {
         "color_scheme": "scheme-5",
@@ -319,10 +320,7 @@
     "newsletter_section_izCYan": {
       "type": "newsletter-section",
       "name": "B2B Newsletter Signup",
-      "settings": {
-        "heading": "Subscribe to the \"B2B AI Edge\"",
-        "subheading": "Get specialized insights and implementation tactics for Shopify merchants, delivered weekly."
-      }
+      "settings": {}
     }
   },
   "order": [
