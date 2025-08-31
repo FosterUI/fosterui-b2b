@@ -62,7 +62,7 @@
 
 
 /* Custom: Style button to sit next to the input */
-.newsletter-form__button {
+.newsletter-form__field-wrapper .newsletter-form__button {
   margin-left: 1rem;
   height: 4.5rem;
   padding: 0 2rem;
