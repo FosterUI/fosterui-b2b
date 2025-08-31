@@ -316,14 +316,12 @@
         "padding_bottom": 60
       }
     },
-    "custom_liquid_FTMz6c": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
+    "newsletter_section_izCYan": {
+      "type": "newsletter-section",
+      "name": "B2B Newsletter Signup",
       "settings": {
-        "custom_liquid": "<script src=\"https://js.hsforms.net/forms/embed/40164173.js\" defer></script>\n<div class=\"hs-form-frame\" data-region=\"na1\" data-form-id=\"a4f0c2eb-b5ee-478c-a3c8-c3aba828ad80\" data-portal-id=\"40164173\"></div>",
-        "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 52
+        "heading": "Subscribe to the \"B2B AI Edge\"",
+        "subheading": "Get specialized insights and implementation tactics for Shopify merchants, delivered weekly."
       }
     }
   },
@@ -337,6 +335,6 @@
     "contact_split_hybrid_YMBRY8",
     "multicolumn_9JGMiV",
     "newsletter_cQ4kTJ",
-    "custom_liquid_FTMz6c"
+    "newsletter_section_izCYan"
   ]
 }
