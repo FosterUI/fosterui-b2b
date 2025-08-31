@@ -11,6 +11,7 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
@@ -22,8 +23,15 @@
         "heading_kReJ9w": {
           "type": "heading",
           "settings": {
-            "heading": "Your Personalized Video Audit is In the Queue.",
+            "heading": "Thank You for Your  Request",
             "heading_size": "h1"
+          }
+        },
+        "heading_cKQcU8": {
+          "type": "heading",
+          "settings": {
+            "heading": "Your Personalized Video Audit is In the Queue.",
+            "heading_size": "h2"
           }
         },
         "text_HzFxb8": {
@@ -47,6 +55,7 @@
       },
       "block_order": [
         "heading_kReJ9w",
+        "heading_cKQcU8",
         "text_HzFxb8",
         "text_fxgKzV",
         "text_CCWBJn"
