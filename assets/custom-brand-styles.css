@@ -224,7 +224,7 @@ body {
 @media screen and (min-width: 990px) {
 
     .rich-text__wrapper .rich-text__blocks,
-    .newsletter__subheading {
+    .newsletter__subheading.rte {
         max-width: 102rem;
     }
 
