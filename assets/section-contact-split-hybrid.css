@@ -63,12 +63,12 @@
     margin-top: 15px;
 }
 
-.hsfc-Step .hsfc-Step__Content {
-    padding: 0;
-}
-
-.hsfc-Button {
-    width: 100%;
+.contact-info .rte ul li::before {
+    content: '✓';
+    color: var(--color-brand-accent);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
 }
 
 /* Responsive Design */
