@@ -273,6 +273,7 @@ body {
 }
 
 .fui-newsletter {
+    padding: 100px 0;
     background-color: var(--color-brand-white);
 }
 
