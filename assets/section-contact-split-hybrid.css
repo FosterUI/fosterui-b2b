@@ -88,60 +88,201 @@
     margin-top: 8rem;
 }
 
-  /* Basic styling for the tabs */
-  .contact-form-container {
-    padding: 2rem;
-  }
+/* assets/section-contact-split-hybrid.css */
 
-  /* Styling for the tab navigation container */
-  .form-tabs {
+/* --- Core Layout & Structure --- */
+.contact-split-section {
+    padding: 10rem 0;
+    background-color: var(--color-brand-background);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: start;
+    /* Align items to the top */
+}
+
+/* --- Left Side (Pitch) Styling --- */
+.contact-info h2,
+.contact-info h3 {
+    color: var(--color-brand-primary-dark);
+}
+
+/* Custom checkmark list style for the pitch */
+.contact-info .rte ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+.contact-info .rte ul li {
+    margin-bottom: 1.5rem;
+    padding-left: 2.5rem;
+    position: relative;
+    font-size: 1.6rem;
+}
+
+.contact-info .rte ul li::before {
+    content: '✓';
+    color: var(--color-brand-accent);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+
+/* --- Right Side (Form Box) Styling --- */
+.contact-form-box {
+    background-color: var(--color-brand-white);
+    border-radius: 8px;
+    box-shadow: var(--shadow-brand);
+    padding: 4rem;
+    /* Consistent padding */
+}
+
+/* --- Modern 'Pill' Tab Interface --- */
+.form-tabs-pill-container {
     display: flex;
-    border-bottom: 2px solid #e5e7eb; /* A slightly thicker, cleaner line */
-    margin-bottom: 1.5rem;
-  }
+    background-color: #f1f5f9;
+    /* Light gray background for the pill container */
+    border-radius: 8px;
+    padding: 0.5rem;
+    margin-bottom: 3rem;
+}
 
-  /* Styling for each individual tab link */
-  .tab-link {
-    padding: 0.75rem 1.5rem;
+.tab-link {
+    flex: 1;
+    /* Ensures both tabs take equal width */
+    padding: 1rem 1.5rem;
+    text-align: center;
     cursor: pointer;
-    border-bottom: 2px solid transparent;
-    margin-bottom: -2px; /* Pulls the active tab's bottom border over the container's border */
-    color: #6b7280; /* Muted color for inactive tabs */
-    font-weight: 500;
-    transition: all 0.2s ease-in-out;
-  }
+    border-radius: 6px;
+    color: var(--color-brand-primary-dark);
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-size: 1.6rem;
+}
 
-  /* Hover state for inactive tabs */
-  .tab-link:hover {
-    color: #111827; /* Darker color on hover */
-  }
+/* Active state for the 'Pill' tab */
+.tab-link.active {
+    background-color: var(--color-brand-white);
+    color: var(--color-brand-accent);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
 
-  /* Styling for the ACTIVE tab */
-  .tab-link.active {
-    color: #111827; /* Main text color for the active tab */
-    font-weight: 600; /* Bolder text for active tab */
-    border-bottom-color: #3b82f6; /* Use your brand's primary blue color */
-  }
-
-  /* Hide form content by default */
-  .form-content {
+/* --- Form Content Area --- */
+.form-content {
     display: none;
-  }
+    /* Hide by default */
+}
 
-  /* Show the active form content */
-  .form-content.active {
+.form-content.active {
     display: block;
-  }
+    /* Show active form */
+}
 
-  /* Optional: Styling for the intro text within each form section */
-  .form-content h4 {
-    font-size: 1.25rem;
-    margin-bottom: 0.5rem;
-  }
-  .form-content p {
-    margin-bottom: 1.5rem;
-    color: #4b5563;
-  }
+.form-content h4 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--color-brand-primary-dark);
+}
+
+.form-content p {
+    margin-bottom: 2.5rem;
+    color: var(--color-brand-text);
+    font-size: 1.6rem;
+}
+
+/* --- HubSpot Form Overrides (Crucial for Premium Look) --- */
+/* We must use !important because HubSpot injects highly specific styles. */
+
+/* Override HubSpot's injected font styles */
+.hubspot-form-embed iframe {
+    font-family: var(--font-body-family) !important;
+}
+
+/* Style Labels */
+.hubspot-form-embed .hs-label-sp,
+.hubspot-form-embed label {
+    font-weight: 600 !important;
+    color: var(--color-brand-primary-dark) !important;
+    font-size: 1.6rem !important;
+    margin-bottom: 0.5rem !important;
+}
+
+/* Style Inputs and Selects */
+.hubspot-form-embed input[type="text"],
+.hubspot-form-embed input[type="email"],
+.hubspot-form-embed input[type="url"],
+.hubspot-form-embed select.hs-input {
+    width: 100% !important;
+    padding: 1.2rem !important;
+    border: 1px solid #cbd5e1 !important;
+    border-radius: 5px !important;
+    font-size: 1.6rem !important;
+    font-family: var(--font-body-family) !important;
+    background-color: var(--color-brand-white) !important;
+    height: auto !important;
+    /* Ensure height is correct */
+}
+
+/* Style the Submit Button to match the brand primary button */
+.hubspot-form-embed .hs-button,
+.hubspot-form-embed input[type="submit"] {
+    /* Inherit styles from .btn-brand-primary */
+    display: inline-block;
+    padding: 1.4rem 2.8rem !important;
+    border-radius: 6px !important;
+    font-weight: 700 !important;
+    text-align: center;
+    cursor: pointer;
+    font-size: 1.6rem !important;
+    line-height: 1.2 !important;
+    border: none !important;
+    white-space: nowrap !important;
+    background-color: var(--color-brand-accent) !important;
+    color: var(--color-brand-white) !important;
+    transition: background-color 0.3s ease, transform 0.3s ease !important;
+    width: 100% !important;
+}
+
+.hubspot-form-embed .hs-button:hover,
+.hubspot-form-embed input[type="submit"]:hover {
+    background-color: var(--color-brand-accent-hover) !important;
+    transform: translateY(-2px);
+}
+
+
+/* --- Fallback Shopify Form Styling (Remains consistent) --- */
+/* ... (Fallback styles omitted for brevity, see previous iterations) ... */
+
+
+/* --- Responsive Design --- */
+@media (max-width: 1024px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 749px) {
+    .contact-split-section {
+        padding: 6rem 0;
+    }
+
+    .contact-form-box {
+        padding: 3rem;
+    }
+
+    /* Adjust tab font size for smaller screens */
+    .tab-link {
+        font-size: 1.4rem;
+        padding: 1rem;
+    }
+}
+  
 
 /* Responsive Design */
 @media (max-width: 1024px) {
