@@ -235,30 +235,6 @@
         "audit_desc": "Fill out the form below, and I will personally record a 5-minute Loom video highlighting specific bottlenecks in your current setup. Please allow 2-3 business days."
       }
     },
-    "rich_text_CcLkaA": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_tELKxp": {
-          "type": "heading",
-          "settings": {
-            "heading": "Insights",
-            "heading_size": "h1"
-          }
-        }
-      },
-      "block_order": [
-        "heading_tELKxp"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "left",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 36,
-        "padding_bottom": 0
-      }
-    },
     "multicolumn_9JGMiV": {
       "type": "multicolumn",
       "blocks": {
@@ -297,7 +273,7 @@
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
-        "title": "The Intersection of AI and B2B E-commerce",
+        "title": "Insights: The Intersection of AI and B2B E-commerce",
         "heading_size": "h2",
         "image_width": "full",
         "image_ratio": "adapt",
@@ -349,7 +325,6 @@
     "service_tiers_8jzFQk",
     "about_principal_LKJFK6",
     "contact_split_hybrid_YMBRY8",
-    "rich_text_CcLkaA",
     "multicolumn_9JGMiV",
     "newsletter_cQ4kTJ"
   ]
