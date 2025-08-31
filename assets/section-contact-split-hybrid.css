@@ -89,34 +89,62 @@
 }
 
   /* Basic styling for the tabs */
+  .contact-form-container {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e5e7eb;
+  }
+
+  /* Styling for the tab navigation container */
   .form-tabs {
-      display: flex;
-      border-bottom: 1px solid #e0e0e0;
-      margin-bottom: 20px;
+    display: flex;
+    border-bottom: 2px solid #e5e7eb; /* A slightly thicker, cleaner line */
+    margin-bottom: 1.5rem;
   }
 
+  /* Styling for each individual tab link */
   .tab-link {
-      padding: 10px 20px;
-      cursor: pointer;
-      border: 1px solid transparent;
-      border-bottom: none;
-      margin-bottom: -1px;
-      font-size: 1.1em;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -2px; /* Pulls the active tab's bottom border over the container's border */
+    color: #6b7280; /* Muted color for inactive tabs */
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
   }
 
+  /* Hover state for inactive tabs */
+  .tab-link:hover {
+    color: #111827; /* Darker color on hover */
+  }
+
+  /* Styling for the ACTIVE tab */
   .tab-link.active {
-      border-color: #e0e0e0;
-      border-bottom: 1px solid white;
-      font-weight: bold;
-      background-color: white;
+    color: #111827; /* Main text color for the active tab */
+    font-weight: 600; /* Bolder text for active tab */
+    border-bottom-color: #3b82f6; /* Use your brand's primary blue color */
   }
 
+  /* Hide form content by default */
   .form-content {
-      display: none;
+    display: none;
   }
 
+  /* Show the active form content */
   .form-content.active {
-      display: block;
+    display: block;
+  }
+
+  /* Optional: Styling for the intro text within each form section */
+  .form-content h4 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+  .form-content p {
+    margin-bottom: 1.5rem;
+    color: #4b5563;
   }
 
 /* Responsive Design */
