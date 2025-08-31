@@ -335,7 +335,7 @@
       "name": "t:sections.newsletter.presets.name",
       "settings": {
         "color_scheme": "scheme-5",
-        "full_width": true,
+        "full_width": false,
         "padding_top": 40,
         "padding_bottom": 52
       }
