@@ -84,6 +84,10 @@
     font-weight: bold;
 }
 
+.contact-info {
+    margin-top: 8rem;
+}
+
 /* Responsive Design */
 @media (max-width: 1024px) {
     .contact-grid {
