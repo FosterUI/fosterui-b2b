@@ -44,8 +44,7 @@ body {
 .methodology-intro h2,
 .service-tiers-header h2,
 .intro-text h2,
-.contact-info h2,
-.rich-text__heading {
+.contact-info h2 {
     font-size: 3.6rem;
     font-weight: 700;
     line-height: 1.2;
