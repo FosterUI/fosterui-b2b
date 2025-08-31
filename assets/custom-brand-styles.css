@@ -215,7 +215,7 @@ body {
     color: var(--color-brand-accent);
 }
 
-.newsletter-form__button.field__button {
+.newsletter-form__button:not(:focus-visible):not(.focused) {
     background-color: var(--color-brand-accent);
 }
 
