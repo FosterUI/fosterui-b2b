@@ -237,10 +237,10 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<script>\n  window.addEventListener('message', event => {\n    if (event.data.type === 'hsFormCallback' && event.data.eventName === 'onFormSubmitted') {\n      // Find the form and hide it\n      const form = event.target.closest('.hs-form-container');\n      if (form) {\n        form.style.display = 'none';\n      }\n\n      // Get the submitted data\n      const submittedData = event.data.data.submissionValues;\n      // NOTE: Replace 'i_am_interested_in' with the actual internal name of your HubSpot form field.\n      const interest = submittedData.i_am_interested_in;\n\n      // Show the correct confirmation message\n      if (interest === 'Roadmap') {\n        document.getElementById('roadmap-confirmation').style.display = 'block';\n      } else if (interest === 'Audit') {\n        document.getElementById('audit-confirmation').style.display = 'block';\n      }\n    }\n  });\n</script>",
+        "custom_liquid": "// HubSpot's \"form submitted\" event\n<script>\n  window.addEventListener('message', event => {\n    if (event.data.type === 'hsFormCallback' && event.data.eventName === 'onFormSubmitted') {\n      // Find the form and hide it\n      const form = event.target.closest('.hs-form-container');\n      if (form) {\n        form.style.display = 'none';\n      }\n\n      // Get the submitted data\n      const submittedData = event.data.data.submissionValues;\n      // NOTE: Replace 'i_am_interested_in' with the actual internal name of your HubSpot form field.\n      const interest = submittedData.i_am_interested_in;\n\n      // Show the correct confirmation message\n      if (interest === 'Roadmap') {\n        document.getElementById('roadmap-confirmation').style.display = 'block';\n      } else if (interest === 'Audit') {\n        document.getElementById('audit-confirmation').style.display = 'block';\n      }\n    }\n  });\n</script>",
         "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 52
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     }
   },
