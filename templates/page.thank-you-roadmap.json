@@ -10,61 +10,12 @@
 {
   "sections": {
     "main": {
-      "type": "main-page",
-      "disabled": true,
+      "type": "main-thank-you-roadmap",
       "settings": {
-        "padding_top": 28,
-        "padding_bottom": 28
-      }
-    },
-    "rich_text_RWMH7U": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_kReJ9w": {
-          "type": "heading",
-          "settings": {
-            "heading": "Excellent. Let's Get Started.",
-            "heading_size": "h1"
-          }
-        },
-        "text_HzFxb8": {
-          "type": "text",
-          "settings": {
-            "text": "<h3>I'm Reviewing Your Request to Book the Roadmap.</h3><p>Thank you for taking the first step. I personally review every Roadmap request to ensure it's a strong strategic fit before scheduling a call. This ensures our time together is maximally productive.</p>"
-          }
-        },
-        "text_fxgKzV": {
-          "type": "text",
-          "settings": {
-            "text": "<p><strong>Please look for a personal email from me within one business day.</strong> If your project aligns with my expertise, that email will contain a private link to my calendar to book our 25-minute discovery call.</p>"
-          }
-        },
-        "text_CCWBJn": {
-          "type": "text",
-          "settings": {
-            "text": "<p>In the meantime, you can get a better sense of my approach by reviewing my methodology. This is the exact process I use to identify and blueprint the solutions for scaling your B2B channel.</p><ul><li>[Link to your \"Methodology\" section on the homepage] My Methodology: Specialized Revenue Acceleration</li></ul><p>I look forward to the possibility of partnering with you.</p><p>— Robert Foster</p>"
-          }
-        }
-      },
-      "block_order": [
-        "heading_kReJ9w",
-        "text_HzFxb8",
-        "text_fxgKzV",
-        "text_CCWBJn"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
       }
     }
   },
   "order": [
-    "main",
-    "rich_text_RWMH7U"
+    "main"
   ]
 }
