@@ -29,6 +29,9 @@
 
 .contact-form-box h3 {
     color: var(--color-brand-primary-dark);
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1.2;
     margin-bottom: 25px;
 }
 
@@ -282,7 +285,7 @@
         padding: 1rem;
     }
 }
-  
+
 
 /* Responsive Design */
 @media (max-width: 1024px) {
