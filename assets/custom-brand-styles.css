@@ -272,6 +272,10 @@ body {
     /* Updated: 1.5rem = 15px (Fix for the user's issue) */
 }
 
+.newsletter__subheading {
+    font-weight: 700;
+}
+
 /* Hide the custom CTA on mobile/tablet, as the space is limited */
 @media screen and (max-width: 989px) {
 
