@@ -215,10 +215,6 @@ body {
     color: var(--color-brand-accent);
 }
 
-.newsletter-form__button:not(:focus-visible):not(.focused) {
-    background-color: var(--color-brand-accent); 
-}
-
 /* Remove Dawn's default underline effect */
 .header__menu-item span::after {
     display: none !important;
@@ -301,6 +297,10 @@ body {
 
 .newsletter-form__field-wrapper .field__label {
     color: #333333;
+}
+
+.newsletter-form__field-wrapper .newsletter-form__button.field__button {
+    border-color: var(--color-brand-accent);
 }
 
 /* Hide the custom CTA on mobile/tablet, as the space is limited */
