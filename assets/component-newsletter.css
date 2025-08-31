@@ -16,15 +16,13 @@
 }
 
 .newsletter-form__field-wrapper {
+  display: flex;
+  align-items: flex-start;
   width: 100%;
 }
 
-.newsletter-form__field-wrapper .field__input {
-  padding-right: 5rem;
-}
-
 .newsletter-form__field-wrapper .field {
-  z-index: 0;
+  flex-grow: 1;
 }
 
 .newsletter-form__message {
@@ -43,12 +41,10 @@
 }
 
 .newsletter-form__button {
-  width: 4.4rem;
-  margin: 0;
-  right: var(--inputs-border-width);
-  top: 0;
-  height: 100%;
-  z-index: 2;
+  margin-left: 1rem;
+  height: 4.5rem;
+  padding: 0 2rem;
+  border-radius: var(--inputs-radius-extra-small);
 }
 
 .newsletter-form__button:focus-visible {
