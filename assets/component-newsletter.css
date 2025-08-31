@@ -15,6 +15,7 @@
   }
 }
 
+/* Custom: Use flexbox to align input and button */
 .newsletter-form__field-wrapper {
   display: flex;
   align-items: flex-start;
@@ -40,11 +41,19 @@
   }
 }
 
+/* Custom: Style button to sit next to the input */
 .newsletter-form__button {
   margin-left: 1rem;
   height: 4.5rem;
   padding: 0 2rem;
   border-radius: var(--inputs-radius-extra-small);
+  background-color: var(--color-brand-accent);
+  color: var(--color-brand-white);
+  width: 150px; /* Set a fixed width for the button */
+}
+
+.newsletter-form__button:hover {
+  background-color: var(--color-brand-accent-hover);
 }
 
 .newsletter-form__button:focus-visible {
