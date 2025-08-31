@@ -3,112 +3,99 @@
 {% endcomment %}
 
 <style>
-    .newsletter-section-{{ section.id }} {
-      padding: 100px 20px;
-      background-color: var(--color-brand-white);
-    }
+  .newsletter-section-{{ section.id }} {
+    padding: 100px 20px;
+    background-color: var(--color-brand-white);
+  }
 
-    .newsletter-section-{{ section.id }} .newsletter-container {
-      max-width: 768px;
-      margin: 0 auto;
-      text-align: center;
-    }
+  .newsletter-section-{{ section.id }} .newsletter-container {
+    max-width: 768px;
+    margin: 0 auto;
+    text-align: center;
+  }
 
-    .newsletter-section-{{ section.id }} .newsletter-subheading {
-      font-size: 1.125rem; /* 18px */
-      max-width: 600px;
-      margin: 0 auto 2rem auto;
-      line-height: 1.6;
-    }
+  .newsletter-section-{{ section.id }} .newsletter-subheading {
+    font-size: 1.125rem; /* 18px */
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+    line-height: 1.6;
+  }
 
-    /* HubSpot Form Specific Styling */
-    .newsletter-section-{{ section.id }} .hs-form-wrapper {
-      max-width: 500px;
-      margin: 2rem auto 0;
-    }
+  /* HubSpot Form Specific Styling */
+  .newsletter-section-{{ section.id }} .hs-form-wrapper {
+    max-width: 500px;
+    margin: 2rem auto 0;
+  }
 
-    .newsletter-section-{{ section.id }} .hs-form-field {
-      margin-bottom: 0;
-    }
+  .newsletter-section-{{ section.id }} .hs-form-field {
+    margin-bottom: 0;
+  }
 
-    .newsletter-section-{{ section.id }} .hs-form-field > label {
-      display: none;
-    }
+  .newsletter-section-{{ section.id }} .hs-form-field > label {
+    display: none;
+  }
 
+  .newsletter-section-{{ section.id }} .hs_email .input,
+  .newsletter-section-{{ section.id }} .hs-submit {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .newsletter-section-{{ section.id }} .hs-input {
+    width: 100%;
+    height: 48px;
+    padding: 0.75rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 8px 0 0 8px;
+    font-size: 1rem;
+    background-color: #ffffff;
+    color: #111827;
+  }
+
+  .newsletter-section-{{ section.id }} .hs-button {
+    height: 48px;
+    padding: 0.75rem 1.5rem;
+    background-color: {{ section.settings.button_background_color }};
+    color: {{ section.settings.button_text_color }};
+    border: none;
+    border-radius: 0 8px 8px 0;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    white-space: nowrap;
+  }
+
+  .newsletter-section-{{ section.id }} .hs-button:hover {
+    background-color: {{ section.settings.button_background_hover_color }};
+  }
+
+  .newsletter-section-{{ section.id }} .hs-form-field.hs-form-required:after {
+      content: none;
+  }
+
+  .newsletter-section-{{ section.id }} .form-columns-2,
+  .newsletter-section-{{ section.id }} .form-columns-1 {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+  }
+
+  @media (max-width: 749px) {
     .newsletter-section-{{ section.id }} .hs_email .input,
     .newsletter-section-{{ section.id }} .hs-submit {
-      display: table-cell;
-      vertical-align: middle;
+        display: block;
     }
 
     .newsletter-section-{{ section.id }} .hs-input {
-      width: 100%;
-      height: 48px;
-      padding: 0.75rem 1rem;
-      border: 1px solid #d1d5db;
-      border-radius: 8px 0 0 8px;
-      font-size: 1rem;
-      background-color: #ffffff;
-      color: #111827;
+        border-radius: 8px;
+        margin-bottom: 1rem;
     }
 
     .newsletter-section-{{ section.id }} .hs-button {
-      height: 48px;
-      padding: 0.75rem 1.5rem;
-      background-color: {{ section.settings.button_background_color }};
-      color: {{ section.settings.button_text_color }};
-      border: none;
-      border-radius: 0 8px 8px 0;
-      font-size: 1rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: background-color 0.2s ease-in-out;
-      white-space: nowrap;
+        border-radius: 8px;
+        width: 100%;
     }
-
-    .newsletter-section-{{ section.id }} .hs-button:hover {
-      background-color: {{ section.settings.button_background_hover_color }};
-    }
-
-    .newsletter-section-{{ section.id }} .hs-form-field.hs-form-required:after {
-        content: none;
-    }
-
-    .newsletter-section-{{ section.id }} .form-columns-2,
-    .newsletter-section-{{ section.id }} .form-columns-1 {
-      display: table;
-      width: 100%;
-      table-layout: fixed;
-    }
-
-    @media (max-width: 749px) {
-      .newsletter-section-{{ section.id }} .hs_email .input,
-      .newsletter-section-{{ section.id }} .hs-submit {
-          display: block;
-      }
-
-      .newsletter-section-{{ section.id }} .hs-input {
-          border-radius: 8px;
-          margin-bottom: 1rem;
-      }
-
-      .newsletter-section-{{ section.id }} .hs-button {
-          border-radius: 8px;
-          width: 100%;
-      }
-    }
-
-    .hsfc-Step .hsfc-Step__Content {
-      width: 100%;
-      box-sizing: border-box;
-      padding: 68px 290px;
-  }
-
-
-  .newsletter-section-template--25811213189301__newsletter_section_izCYan .newsletter-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      text-align: center;
   }
 </style>
 
