@@ -50,6 +50,7 @@ body {
     font-weight: 700;
     line-height: 1.2;
     margin: 0 0 20px;
+    color: var(--color-brand-primary-dark);
 }
 
 .methodology-execution h3,
@@ -60,6 +61,7 @@ body {
     font-weight: 700;
     line-height: 1.2;
     margin: 0 0 20px;
+    color: var(--color-brand-primary-dark);
 }
 
 .methodology-steps-list h4 {

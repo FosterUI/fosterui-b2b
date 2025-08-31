@@ -12,11 +12,6 @@
     align-items: center;
 }
 
-.methodology-intro h2,
-.methodology-execution h3 {
-    color: var(--color-brand-primary-dark);
-}
-
 .methodology-steps-list {
     display: flex;
     flex-direction: column;
