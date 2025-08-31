@@ -11,7 +11,7 @@
   .newsletter-form {
     align-items: flex-start;
     margin: 0 auto;
-    max-width: 56rem; /* Custom: Increased max-width to accommodate wider button */
+    max-width: 48rem; /* Custom: Increased max-width to accommodate wider button */
   }
 }
 
@@ -61,6 +61,11 @@
 }
 
 
+/* Custom: Style for the newsletter label */
+.newsletter-form .field__label {
+  font-size: 1.6rem; /* Custom: Increased font size */
+  font-weight: 700; /* Custom: Set font weight to bold */
+}
 
 /* Custom: Style button to sit next to the input */
 .newsletter-form .newsletter-form__field-wrapper .newsletter-form__button {
@@ -72,8 +77,6 @@
   color: var(--color-brand-white);
   width: 200px;
   /* Set a fixed width for the button */
-  font-size: 1.6rem; /* Custom: Increased font size */
-  font-weight: 700; /* Custom: Set font weight to bold */
 }
 
 .newsletter-form__button:hover {
