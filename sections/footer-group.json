@@ -19,10 +19,18 @@
           "settings": {
             "show_social": true
           }
+        },
+        "link_list_JqfMeX": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Quick links",
+            "menu": "footer"
+          }
         }
       },
       "block_order": [
-        "brand_information_ywyK4F"
+        "brand_information_ywyK4F",
+        "link_list_JqfMeX"
       ],
       "settings": {
         "color_scheme": "scheme-5",
