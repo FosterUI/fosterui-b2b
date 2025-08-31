@@ -216,7 +216,7 @@ body {
 }
 
 .newsletter-form__button:not(:focus-visible):not(.focused) {
-    background-color: var(--color-brand-accent);
+    background-color: var(--color-brand-accent); 
 }
 
 /* Remove Dawn's default underline effect */
