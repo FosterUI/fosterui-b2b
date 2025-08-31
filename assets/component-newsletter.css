@@ -66,7 +66,7 @@
   margin-left: 1rem;
   height: 4.5rem;
   padding: 0 2rem;
-  border-radius: var(--inputs-radius-extra-small);
+  border-radius: 8px;
   background-color: var(--color-brand-accent);
   color: var(--color-brand-white);
   width: 150px;
