@@ -13,8 +13,19 @@
   "sections": {
     "footer": {
       "type": "footer",
+      "blocks": {
+        "brand_information_ywyK4F": {
+          "type": "brand_information",
+          "settings": {
+            "show_social": true
+          }
+        }
+      },
+      "block_order": [
+        "brand_information_ywyK4F"
+      ],
       "settings": {
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-5",
         "newsletter_enable": false,
         "newsletter_heading": "Subscribe to our emails",
         "enable_follow_on_shop": false,
