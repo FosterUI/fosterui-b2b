@@ -303,6 +303,10 @@ body {
     border-color: var(--color-brand-accent);
 }
 
+.field__button {
+    border-color: var(--color-brand-accent);
+}
+
 /* Hide the custom CTA on mobile/tablet, as the space is limited */
 @media screen and (max-width: 989px) {
 
