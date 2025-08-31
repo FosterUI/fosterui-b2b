@@ -64,6 +64,8 @@
 /* Custom: Style button to sit next to the input */
 .newsletter-form .newsletter-form__field-wrapper .newsletter-form__button {
   margin-left: 1rem;
+  font-size: 1.6rem;
+  font-weight: 700;
   height: 5rem;
   padding: 0 2rem;
   border-radius: 8px;
