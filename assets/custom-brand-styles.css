@@ -215,6 +215,10 @@ body {
     color: var(--color-brand-accent);
 }
 
+.newsletter-form__button.fiedl__button {
+    background-color: var(--color-brand-accent);
+}
+
 /* Remove Dawn's default underline effect */
 .header__menu-item span::after {
     display: none !important;
