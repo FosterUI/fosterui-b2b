@@ -57,8 +57,7 @@ body {
 .service-header h3,
 .about-highlight h3,
 .contact-info h3,
-.title,
-.inline-richtext {
+.title {
     font-size: 2.4rem;
     font-weight: 700;
     line-height: 1.2;
@@ -66,10 +65,12 @@ body {
     color: var(--color-brand-primary-dark);
 }
 
-.methodology-steps-list h4 {
+.methodology-steps-list h4,
+.inline-richtext {
     font-size: 1.92rem;
     font-weight: 700;
     margin: 0 0 10px;
+    color: var(--color-brand-primary-dark);
 }
 
 /* --- Custom Button Styles (Namespaced) --- */
