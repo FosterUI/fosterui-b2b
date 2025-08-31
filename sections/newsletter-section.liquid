@@ -1,204 +1,197 @@
 {% comment %}
-  Custom Newsletter Section for HubSpot Form Embed
-
-  This section provides a professionally styled container for your
-  "B2B AI Edge" newsletter signup form. The text content is fully
-  editable from the Shopify Theme Editor.
-
-  Instructions:
-  1. Create this file in your Shopify theme under the "Sections" folder.
-  2. Add this section to your homepage via the Theme Editor.
-  3. Paste your HubSpot form embed code where indicated below.
-  4. In your HubSpot form builder, add a custom CSS class "custom-newsletter-form"
-     to the form so these styles can target it effectively.
+  A customizable newsletter signup section with a HubSpot form.
 {% endcomment %}
 
 <style>
-  .newsletter-section {
+  .newsletter-section-{{ section.id }} {
     padding: 60px 20px;
-    background-color: #f9fafb; /* A subtle off-white background */
-    border-top: 1px solid #e5e7eb;
-    border-bottom: 1px solid #e5e7eb;
+    background-color: {{ section.settings.background_color }};
+    color: {{ section.settings.text_color }};
   }
 
-  .newsletter-section__container {
-    max-width: 1200px;
+  .newsletter-section-{{ section.id }} .newsletter-container {
+    max-width: 768px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 40px;
-    align-items: center;
+    text-align: center;
   }
 
-  @media (min-width: 768px) {
-    .newsletter-section__container {
-      grid-template-columns: 1fr 1fr; /* Two columns on larger screens */
-    }
-  }
-
-  .newsletter-section__text h2 {
-    font-size: 2.25rem; /* Matches the H2 style from your brief */
-    font-weight: 700;
-    margin-top: 0;
-    margin-bottom: 1rem;
-    line-height: 1.2;
-  }
-
-  .newsletter-section__text p {
-    font-size: 1.1rem;
-    color: #4b5563;
-    max-width: 450px;
-  }
-
-  .newsletter-section__form {
-    background-color: #ffffff;
-    padding: 2.5rem;
-    border-radius: 12px;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    border: 1px solid #e5e7eb;
+  .newsletter-section-{{ section.id }} .newsletter-subheading {
+    font-size: 1.125rem; /* 18px */
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+    line-height: 1.6;
   }
 
   /* HubSpot Form Specific Styling */
-  /* Add the class "custom-newsletter-form" to your form in HubSpot */
-  .custom-newsletter-form .hs-form-field {
-    margin-bottom: 1.5rem;
+  .newsletter-section-{{ section.id }} .hs-form-wrapper {
+    max-width: 500px;
+    margin: 2rem auto 0;
   }
 
-  .custom-newsletter-form .hs-input {
+  .newsletter-section-{{ section.id }} .hs-form-field {
+    margin-bottom: 0;
+  }
+
+  .newsletter-section-{{ section.id }} .hs-form-field > label {
+    display: none;
+  }
+
+  .newsletter-section-{{ section.id }} .hs_email .input,
+  .newsletter-section-{{ section.id }} .hs-submit {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .newsletter-section-{{ section.id }} .hs-input {
     width: 100%;
+    height: 48px;
     padding: 0.75rem 1rem;
     border: 1px solid #d1d5db;
-    border-radius: 8px;
+    border-radius: 8px 0 0 8px;
     font-size: 1rem;
+    background-color: #ffffff;
+    color: #111827;
   }
 
-  .custom-newsletter-form .hs-button {
-    width: 100%;
+  .newsletter-section-{{ section.id }} .hs-button {
+    height: 48px;
     padding: 0.75rem 1.5rem;
-    background-color: #2563eb; /* Your brand's primary blue */
-    color: #ffffff;
+    background-color: {{ section.settings.button_background_color }};
+    color: {{ section.settings.button_text_color }};
     border: none;
-    border-radius: 8px;
+    border-radius: 0 8px 8px 0;
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
     transition: background-color 0.2s ease-in-out;
+    white-space: nowrap;
   }
 
-  .custom-newsletter-form .hs-button:hover {
-    background-color: #1d4ed8; /* A darker blue for hover */
+  .newsletter-section-{{ section.id }} .hs-button:hover {
+    background-color: {{ section.settings.button_background_hover_color }};
+  }
+
+  .newsletter-section-{{ section.id }} .hs-form-field.hs-form-required:after {
+      content: none;
+  }
+
+  .newsletter-section-{{ section.id }} .form-columns-2,
+  .newsletter-section-{{ section.id }} .form-columns-1 {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+  }
+
+  @media (max-width: 749px) {
+    .newsletter-section-{{ section.id }} .hs_email .input,
+    .newsletter-section-{{ section.id }} .hs-submit {
+        display: block;
+    }
+
+    .newsletter-section-{{ section.id }} .hs-input {
+        border-radius: 8px;
+        margin-bottom: 1rem;
+    }
+
+    .newsletter-section-{{ section.id }} .hs-button {
+        border-radius: 8px;
+        width: 100%;
+    }
   }
 </style>
 
-<div class="newsletter-section">
-  <div class="newsletter-section__container">
-    <div class="newsletter-section__text">
-      <h2>{{ section.settings.heading }}</h2>
-      <p>{{ section.settings.subheading }}</p>
-    </div>
+<div class="newsletter-section-{{ section.id }}">
+  <div class="newsletter-container">
+    {% if section.settings.subheading != blank %}
+      <div class="newsletter-subheading">{{ section.settings.subheading }}</div>
+    {% endif %}
+
     <div class="newsletter-section__form">
-      <!-- PASTE YOUR HUBSPOT FORM EMBED CODE BELOW THIS LINE -->
-
-      {% comment %}
-        Custom Newsletter Section for HubSpot Form Embed
-
-        This section provides a professionally styled container for your
-        "B2B AI Edge" newsletter signup form. The text content is fully
-        editable from the Shopify Theme Editor.
-
-        Instructions:
-        1. Create this file in your Shopify theme under the "Sections" folder.
-        2. Add this section to your homepage via the Theme Editor.
-        3. Paste your HubSpot form embed code where indicated below.
-        4. In your HubSpot form builder, add a custom CSS class "custom-newsletter-form"
-           to the form so these styles can target it effectively.
-      {% endcomment %}
-
-      <style>
-        .newsletter-section {
-          padding: 60px 20px;
-          background-color: #f9fafb; /* A subtle off-white background */
-          border-top: 1px solid #e5e7eb;
-          border-bottom: 1px solid #e5e7eb;
-        }
-
-        .newsletter-section__container {
-          max-width: 768px; /* Set a max-width for readability, but allow it to be centered */
-          margin: 0 auto;
-          text-align: center; /* Center the content */
-        }
-
-        /* REMOVED the two-column grid layout for the container */
-
-        .newsletter-section__form {
-          background-color: #ffffff;
-          padding: 2.5rem;
-          border-radius: 12px;
-          box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-          border: 1px solid #e5e7eb;
-        }
-
-        /* HubSpot Form Specific Styling */
-        /* Add the class "custom-newsletter-form" to your form in HubSpot */
-        .custom-newsletter-form .hs-form-field {
-          margin-bottom: 1.5rem;
-        }
-
-        .custom-newsletter-form .hs-input {
-          width: 100%;
-          padding: 0.75rem 1rem;
-          border: 1px solid #d1d5db;
-          border-radius: 8px;
-          font-size: 1rem;
-        }
-
-        .custom-newsletter-form .hs-button {
-          width: 100%;
-          padding: 0.75rem 1.5rem;
-          background-color: #2563eb; /* Your brand's primary blue */
-          color: #ffffff;
-          border: none;
-          border-radius: 8px;
-          font-size: 1rem;
-          font-weight: 600;
-          cursor: pointer;
-          transition: background-color 0.2s ease-in-out;
-        }
-
-        .custom-newsletter-form .hs-button:hover {
-          background-color: #1d4ed8; /* A darker blue for hover */
-        }
-      </style>
-
-      <div class="newsletter-section">
-        <div class="newsletter-section__container">
-          <!-- The text div has been removed -->
-          <div class="newsletter-section__form">
-            <!-- PASTE YOUR HUBSPOT FORM EMBED CODE BELOW THIS LINE -->
-
-            <script src="https://js.hsforms.net/forms/embed/40164173.js" defer></script>
-            <div
-              class="hs-form-frame"
-              data-region="na1"
-              data-form-id="a4f0c2eb-b5ee-478c-a3c8-c3aba828ad80"
-              data-portal-id="40164173"
-            ></div>
-
-            <!-- PASTE YOUR HUBSPOT FORM EMBED CODE ABOVE THIS LINE -->
-          </div>
-        </div>
-      </div>
+      <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js" defer></script>
+      <script>
+        hbspt.forms.create({
+          region: "{{ section.settings.hubspot_region }}",
+          portalId: "{{ section.settings.hubspot_portal_id }}",
+          formId: "{{ section.settings.hubspot_form_id }}",
+          cssClass: 'custom-newsletter-form'
+        });
+      </script>
     </div>
   </div>
 </div>
 
 {% schema %}
 {
-  "name": "B2B Newsletter Signup",
-  "settings": [],
+  "name": "Newsletter",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "<p>Get specialized insights and implementation tactics for Shopify merchants, delivered weekly.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#000033"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "button_background_color",
+      "label": "Button Background Color",
+      "default": "#00C4CC"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button Text Color",
+      "default": "#000033"
+    },
+    {
+      "type": "color",
+      "id": "button_background_hover_color",
+      "label": "Button Background Hover Color",
+      "default": "#00A0A6"
+    },
+    {
+      "type": "header",
+      "content": "HubSpot Form"
+    },
+    {
+      "type": "text",
+      "id": "hubspot_region",
+      "label": "HubSpot Region",
+      "default": "na1",
+      "info": "e.g., na1, eu1"
+    },
+    {
+      "type": "text",
+      "id": "hubspot_portal_id",
+      "label": "HubSpot Portal ID",
+      "default": "40164173"
+    },
+    {
+      "type": "text",
+      "id": "hubspot_form_id",
+      "label": "HubSpot Form ID",
+      "default": "a4f0c2eb-b5ee-478c-a3c8-c3aba828ad80"
+    }
+  ],
   "presets": [
     {
-      "name": "B2B Newsletter Signup"
+      "name": "Newsletter"
     }
   ]
 }
