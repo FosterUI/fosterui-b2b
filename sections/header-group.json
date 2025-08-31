@@ -18,7 +18,7 @@
           "type": "cta_button",
           "settings": {
             "button_label": "Book My $1,950 Roadmap",
-            "button_link": "#contact"
+            "button_link": "/#contact"
           }
         }
       },
