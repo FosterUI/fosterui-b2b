@@ -10,61 +10,9 @@
 {
   "sections": {
     "main": {
-      "type": "main-page",
-      "disabled": true,
-      "settings": {
-        "padding_top": 28,
-        "padding_bottom": 28
-      }
-    },
-    "rich_text_RWMH7U": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_kReJ9w": {
-          "type": "heading",
-          "settings": {
-            "heading": "Thank You for Your Audit Request",
-            "heading_size": "h1"
-          }
-        },
-        "text_HzFxb8": {
-          "type": "text",
-          "settings": {
-            "text": "<h3><strong>Your Personalized Video Audit is In the Queue.</strong></h3><p>I've received your information. I will now personally conduct a strategic review of your Shopify store, focusing on the key bottlenecks that typically hinder B2B growth. I will record a 5-minute Loom video with my initial findings and send it directly to your inbox.</p>"
-          }
-        },
-        "text_fxgKzV": {
-          "type": "text",
-          "settings": {
-            "text": "<p><strong>Please allow 2-3 business days for this analysis.</strong> I take the time to ensure my insights are specific, actionable, and valuable.</p>"
-          }
-        },
-        "text_CCWBJn": {
-          "type": "text",
-          "settings": {
-            "text": "<p>While you wait, I recommend exploring these insights on the challenges and opportunities for B2B on Shopify Plus:</p><ul><li>[Link to your \"Insights\" page or a specific article] 3 AI Tools for Precision Wholesale Demand Forecasting</li><li>[Link to your \"Insights\" page or a specific article] The End of Manual Order Entry on Shopify Plus</li></ul><p>I look forward to sharing my findings with you shortly.</p><p>— Robert Foster</p>"
-          }
-        }
-      },
-      "block_order": [
-        "heading_kReJ9w",
-        "text_HzFxb8",
-        "text_fxgKzV",
-        "text_CCWBJn"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
+      "type": "main-thank-you-audit",
+      "settings": {}
     }
   },
-  "order": [
-    "main",
-    "rich_text_RWMH7U"
-  ]
+  "order": ["main"]
 }
