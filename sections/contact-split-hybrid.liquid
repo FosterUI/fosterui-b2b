@@ -15,7 +15,6 @@
           <h3 class="h3">{{ section.settings.form_title }}</h3>
 
           {% if section.settings.use_hubspot %}
-            {% if section.settings.hubspot_embed_code != blank %}
               <div class="hubspot-form-embed">
                 <!-- Tab Navigation -->
                 <div class="form-tabs">
@@ -58,9 +57,6 @@
                   ></div>
                 </div>
               </div>
-            {% else %}
-              <p>Please paste the HubSpot embed code in the theme settings.</p>
-            {% endif %}
           {% else %}
             <div class="fallback-form">
               {% form 'contact' %}
