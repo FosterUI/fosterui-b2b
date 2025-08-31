@@ -27,17 +27,10 @@
             "heading_size": "h1"
           }
         },
-        "heading_cKQcU8": {
-          "type": "heading",
-          "settings": {
-            "heading": "Your Personalized Video Audit is In the Queue.",
-            "heading_size": "h2"
-          }
-        },
         "text_HzFxb8": {
           "type": "text",
           "settings": {
-            "text": "<p>I've received your information. I will now personally conduct a strategic review of your Shopify store, focusing on the key bottlenecks that typically hinder B2B growth. I will record a 5-minute Loom video with my initial findings and send it directly to your inbox.</p>"
+            "text": "<h3><strong>Your Personalized Video Audit is In the Queue.</strong></h3><p>I've received your information. I will now personally conduct a strategic review of your Shopify store, focusing on the key bottlenecks that typically hinder B2B growth. I will record a 5-minute Loom video with my initial findings and send it directly to your inbox.</p>"
           }
         },
         "text_fxgKzV": {
@@ -55,7 +48,6 @@
       },
       "block_order": [
         "heading_kReJ9w",
-        "heading_cKQcU8",
         "text_HzFxb8",
         "text_fxgKzV",
         "text_CCWBJn"
