@@ -215,7 +215,14 @@ body {
     color: var(--color-brand-white);
 }
 
-
+/* Style the Input Field */
+.landing-page-customization .newsletter-form .field__input {
+    padding: 1.4rem 1.5rem;
+    /* Ensure the background is solid white for contrast */
+    background-color: var(--color-brand-white) !important;
+    color: var(--color-brand-text) !important;
+    border: 1px solid #cbd5e1 !important;
+}
 
 
 
