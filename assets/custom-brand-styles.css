@@ -230,14 +230,41 @@ body {
 }
 
 .landing-page-customization .newsletter__wrapper .newsletter-form__field-wrapper {
-  max-width: 50rem;
+    max-width: 50rem;
 }
 
 @media screen and (min-width: 750px) {
-  .landing-page-customization .newsletter-form {
-    max-width: 50rem;
-  }
-} 
+    .landing-page-customization .newsletter-form {
+        max-width: 50rem;
+    }
+}
+
+/* Adjust layout for desktop: Side-by-side input and button */
+@media screen and (min-width: 750px) {
+    .landing-page-customization .newsletter-form__field-wrapper {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        /* Small gap between input and button */
+    }
+
+    .landing-page-customization .newsletter__field {
+        flex-grow: 1;
+        /* Allow input to fill the space */
+    }
+
+    .landing-page-customization .newsletter-form .button {
+        margin-top: 0 !important;
+        /* Remove default Dawn margins */
+    }
+}
+
+/* Mobile refinement for padding */
+@media screen and (max-width: 749px) {
+    .landing-page-customization .newsletter__wrapper {
+        padding: 4rem 3rem;
+    }
+}
 
 
 /* --- Header Customization (From previous steps) --- */
