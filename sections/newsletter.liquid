@@ -45,9 +45,15 @@
           </div>
         {%- when 'email_form' -%}
           <div {{ block.shopify_attributes }}>
-            {% form 'customer', class: 'newsletter-form' %}
+            {% form 'customer',id: 'NewsletterFormAI--{{ section.id }}', class: 'newsletter-form' %}
               <input type="hidden" name="contact[tags]" value="newsletter">
-              <div class="newsletter-form__field-wrapper">
+              <div
+                class="newsletter-form__field-wrapper{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                {% if settings.animations_reveal_on_scroll %}
+                  data-cascade
+                  style="--animation-order: {{ forloop.index }};"
+                {% endif %}
+              >
                 <div class="field">
                   <input
                     id="NewsletterForm--{{ section.id }}"
@@ -116,19 +122,24 @@
 {% comment %} Custom: redirect script {% endcomment %}
 <script>
   document.addEventListener('DOMContentLoaded', function() {
+    // Define the ID used in the form tag above. We use Liquid to inject the dynamic section ID.
+    const formId = 'NewsletterFormAI--{{ section.id }}'; 
+    
     // Define the URL you want to redirect to
+    // IMPORTANT: Ensure this matches your Thank You page URL handle (created previously)
     const redirectUrl = '/pages/thank-you-newsletter'; 
 
-    // Check if the URL contains the success parameter (?customer_posted=true)
+    // 1. Check if the URL contains the success parameter (?contact_posted=true)
     // Shopify adds this parameter upon successful submission.
     const urlParams = new URLSearchParams(window.location.search);
-    const postedSuccessfully = urlParams.get('customer_posted') === 'true';
+    const postedSuccessfully = urlParams.get('contact_posted') === 'true';
     
-    // Check if there's any hash (form submission creates a hash)
-    const hasFormHash = window.location.hash.length > 0;
+    // 2. Check if the page anchor (hash) matches our specific form ID
+    // Shopify also redirects back to the page with the form ID as the hash.
+    const formAnchor = window.location.hash === ('/#' + formId);
 
-    // If both are true, it means a form was just successfully submitted
-    if (postedSuccessfully && hasFormHash) {
+    // If both are true, it means this specific form was just successfully submitted
+    if (postedSuccessfully && formAnchor) {
       // Redirect immediately
       window.location.href = redirectUrl;
     }
