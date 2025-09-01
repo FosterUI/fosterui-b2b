@@ -45,7 +45,10 @@
           </div>
         {%- when 'email_form' -%}
           <div {{ block.shopify_attributes }}>
-            {% form 'customer',id: 'NewsletterFormAI--{{ section.id }}', class: 'newsletter-form' %}
+            {%- liquid
+              assign form_id = 'NewsletterFormAI--' | append: section.id
+            -%}
+            {% form 'customer', id: form_id, class: 'newsletter-form' %}
               <input type="hidden" name="contact[tags]" value="newsletter">
               <div
                 class="newsletter-form__field-wrapper{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
