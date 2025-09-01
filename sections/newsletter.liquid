@@ -129,16 +129,16 @@
     // IMPORTANT: Ensure this matches your Thank You page URL handle (created previously)
     const redirectUrl = '/pages/thank-you-newsletter'; 
 
-    // 1. Check if the URL contains the success parameter (?contact_posted=true)
-    // Shopify adds this parameter upon successful submission.
+    // 1. Check if the URL contains the success parameter (?customer_posted=true)
+    // Shopify adds this parameter for the 'customer' form type upon successful submission.
     const urlParams = new URLSearchParams(window.location.search);
-    const postedSuccessfully = urlParams.get('contact_posted') === 'true';
+    const postedSuccessfully = urlParams.get('customer_posted') === 'true';
     
     // 2. Check if the page anchor (hash) matches our specific form ID
     // Shopify also redirects back to the page with the form ID as the hash.
-    const formAnchor = window.location.hash === ('/#' + formId);
+    const formAnchor = window.location.hash === ('#' + formId);
 
-    // If both are true, it means this specific form was just successfully submitted
+    // If both conditions are true, it means this specific form was just successfully submitted.
     if (postedSuccessfully && formAnchor) {
       // Redirect immediately
       window.location.href = redirectUrl;
