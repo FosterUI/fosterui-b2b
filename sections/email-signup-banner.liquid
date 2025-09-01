@@ -142,6 +142,33 @@
   </div>
 </div>
 
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Define the ID used in the form tag above. We use Liquid to inject the dynamic section ID.
+    // If you customized the ID in Step 2, update this line to match.
+    const formId = 'NewsletterForm--{{ section.id }}'; 
+    
+    // Define the URL you want to redirect to
+    // IMPORTANT: Update this if your Thank You page URL handle is different
+    const redirectUrl = '/pages/thank-you-newsletter'; 
+
+    // 1. Check if the URL contains the success parameter (?contact_posted=true)
+    const urlParams = new URLSearchParams(window.location.search);
+    const postedSuccessfully = urlParams.get('contact_posted') === 'true';
+    
+    // 2. Check if the page anchor (hash) matches our specific form ID
+    // Shopify redirects back to the page with the form ID as the hash on success.
+    const formAnchor = window.location.hash === ('#' + formId);
+
+    // If both are true, it means this specific form was just successfully submitted
+    if (postedSuccessfully && formAnchor) {
+      // Redirect immediately
+      window.location.href = redirectUrl;
+    }
+  });
+</script>
+
 {% schema %}
 {
   "name": "t:sections.email-signup-banner.name",
