@@ -74,6 +74,10 @@
     text-decoration: none;
 }
 
+.about-bio a:hover {
+    color: var(--color-brand-accent-hover);
+}
+
 /* Responsive Design */
 @media (max-width: 1024px) {
     .about-grid {
