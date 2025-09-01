@@ -213,6 +213,12 @@ body {
     color: var(--color-brand-white);
 }
 
+.landing-page-customization .newsletter-form {
+    max-width: 600px;
+    margin: 2rem auto 0 auto;
+    /* Add space between text and form */
+}
+
 
 /* --- Header Customization (From previous steps) --- */
 .header-wrapper--border-bottom {
