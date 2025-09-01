@@ -18,9 +18,20 @@
 /* Custom: Use flexbox to align input and button */
 .newsletter-form__field-wrapper {
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: stretch;
   width: 100%;
+  gap: 1rem;
 }
+
+@media screen and (min-width: 750px) {
+  .newsletter-form__field-wrapper {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 0;
+  }
+}
+/* End Custom */
 
 .newsletter-form__field-wrapper .field {
   flex-grow: 1;
@@ -59,27 +70,3 @@
 .newsletter-form__button .icon {
   width: 1.5rem;
 }
-
-
-/* Custom: Styles */
-/* .newsletter-form .newsletter-form__field-wrapper .newsletter-form__button {
-  margin-left: 1rem;
-  font-size: 1.6rem;
-  font-weight: 700;
-  height: 5rem;
-  padding: 0 2rem;
-  border-radius: 8px;
-  background-color: var(--color-brand-accent);
-  color: var(--color-brand-white);
-  width: 290px;
-  cursor: pointer; */
-  /* Set a fixed width for the button */
-/* }
-
-.newsletter-form__field-wrapper .field__input {
-  cursor: pointer;
-}
-
-.newsletter-form__button:hover {
-  background-color: var(--color-brand-accent-hover);
-} */
