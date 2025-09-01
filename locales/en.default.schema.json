@@ -2734,6 +2734,9 @@
         },
         "show_text_below": {
           "label": "Stack text below image"
+        },
+        "custom_css_class": {
+          "label": "CSS class"
         }
       },
       "blocks": {
