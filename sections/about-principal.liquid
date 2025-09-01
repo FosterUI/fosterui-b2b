@@ -2,8 +2,8 @@
 
 <div class="about-principal-section" id="about">
   <div class="page-width">
-    <div class="about-grid">
-      <div class="about-bio">
+        <div class="about-grid" {% if settings.animations_reveal_on_scroll %}data-cascade{% endif %}>
+            <div class="about-bio{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}" {% if settings.animations_reveal_on_scroll %}style="--animation-order: 1;"{% endif %}>
         <div class="intro-container">
           <div class="headshot-wrapper">
             {% if section.settings.headshot_image != blank %}
@@ -28,7 +28,7 @@
         </div>
       </div>
 
-      <div class="about-advantage">
+            <div class="about-advantage{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}" {% if settings.animations_reveal_on_scroll %}style="--animation-order: 2;"{% endif %}>
         <div class="about-highlight">
           <h3 class="h3">{{ section.settings.highlight_title }}</h3>
           <div class="rte">
