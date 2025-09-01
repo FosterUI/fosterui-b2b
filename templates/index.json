@@ -320,6 +320,7 @@
     },
     "newsletter_section_izCYan": {
       "type": "newsletter-section",
+      "disabled": true,
       "name": "B2B Newsletter Signup",
       "settings": {}
     }
