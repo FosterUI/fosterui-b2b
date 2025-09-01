@@ -229,7 +229,7 @@ body {
     transform: translateY(-2px);
 }
 
-/* .landing-page-customization .newsletter__wrapper .newsletter-form__field-wrapper {
+.landing-page-customization .newsletter__wrapper .newsletter-form__field-wrapper {
   max-width: 50rem;
 }
 
@@ -237,7 +237,7 @@ body {
   .landing-page-customization .newsletter-form {
     max-width: 50rem;
   }
-}  */
+} 
 
 /* --- Header Customization (From previous steps) --- */
 .header-wrapper--border-bottom {
