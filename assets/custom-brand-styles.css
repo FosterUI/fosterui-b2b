@@ -198,8 +198,15 @@ body {
 }
 
 .landing-page-customization .newsletter__wrapper {
-    /* background-color: var(--color-brand-white);  Optional: adjust if needed based on surrounding content */
-    padding-bottom: 6rem;
+    background-color: var(--color-brand-primary-dark);
+    color: var(--color-brand-white);
+    border-radius: 8px;
+    padding: 6rem 4rem;
+    /* Increased padding for a premium look */
+    box-shadow: var(--shadow-brand);
+    margin-top: 4rem;
+    /* Space between this and the Insights cards above */
+    text-align: center;
 }
 
 /* --- Header Customization (From previous steps) --- */
