@@ -28,7 +28,7 @@
 
 <div
   id="Banner-{{ section.id }}"
-  class="email-signup-banner banner banner--content-align-{{ section.settings.desktop_content_alignment }} banner--content-align-mobile-{{ section.settings.mobile_content_alignment }} banner--{{ section.settings.image_height }}{% if section.settings.image_height == 'adapt-image' and section.settings.image != blank %} banner--adapt{% endif %}{% if section.settings.show_text_below %} banner--mobile-bottom{%- endif -%}{% if section.settings.show_text_box == false %} banner--desktop-transparent{% endif %} {{ section.settings.custom_css_class }}"
+  class="email-signup-banner banner banner--content-align-{{ section.settings.desktop_content_alignment }} banner--content-align-mobile-{{ section.settings.mobile_content_alignment }} banner--{{ section.settings.image_height }}{% if section.settings.image_height == 'adapt-image' and section.settings.image != blank %} banner--adapt{% endif %}{% if section.settings.show_text_below %} banner--mobile-bottom{%- endif -%}{% if section.settings.show_text_box == false %} banner--desktop-transparent{% endif %}"
 >
   {%- if section.settings.show_background_image -%}
     <div class="banner__media{% if section.settings.image != blank %} media{% endif %}">
@@ -72,7 +72,7 @@
             </div>
           {%- when 'email_form' -%}
             <div {{ block.shopify_attributes }}>
-              {% form 'customer', id: 'NewsletterFormAI--{{ section.id }}', class: 'newsletter-form' %}
+              {% form 'customer', class: 'newsletter-form' %}
                 <input type="hidden" name="contact[tags]" value="newsletter">
                 <div class="newsletter-form__field-wrapper">
                   <div class="field">
@@ -141,33 +141,6 @@
     </div>
   </div>
 </div>
-
-
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    // Define the ID used in the form tag above. We use Liquid to inject the dynamic section ID.
-    // If you customized the ID in Step 2, update this line to match.
-    const formId = 'NewsletterFormAI--{{ section.id }}'; 
-    
-    // Define the URL you want to redirect to
-    // IMPORTANT: Update this if your Thank You page URL handle is different
-    const redirectUrl = '/pages/thank-you-newsletter'; 
-
-    // 1. Check if the URL contains the success parameter (?contact_posted=true)
-    const urlParams = new URLSearchParams(window.location.search);
-    const postedSuccessfully = urlParams.get('contact_posted') === 'true';
-    
-    // 2. Check if the page anchor (hash) matches our specific form ID
-    // Shopify redirects back to the page with the form ID as the hash on success.
-    const formAnchor = window.location.hash === ('#' + formId);
-
-    // If both are true, it means this specific form was just successfully submitted
-    if (postedSuccessfully && formAnchor) {
-      // Redirect immediately
-      window.location.href = redirectUrl;
-    }
-  });
-</script>
 
 {% schema %}
 {
@@ -337,12 +310,6 @@
       "id": "show_text_below",
       "default": true,
       "label": "t:sections.email-signup-banner.settings.show_text_below.label"
-    },
-    {
-      "type": "text",
-      "id": "custom_css_class",
-      "default": "landing-page-customization",
-      "label": "t:sections.email-signup-banner.settings.custom_css_class.label"
     }
   ],
   "blocks": [
