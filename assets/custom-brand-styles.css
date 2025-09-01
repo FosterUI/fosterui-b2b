@@ -333,18 +333,7 @@ body {
 }
 
 .newsletter-form__field-wrapper .field__input {
-    background-color: var(--color-brand-white);
-    cursor: text !important;
-    pointer-events: auto !important;
-    -webkit-user-select: text;
-    -moz-user-select: text;
-    -ms-user-select: text;
-    user-select: text;
-    outline: none;
-    border: 1px solid #ddd;
-    padding: 1rem;
-    font-size: 1.6rem;
-    transition: border-color 0.3s ease;
+    background-color: var(--color-brand-white) !important;
 }
 
 .newsletter-form__field-wrapper .field__label {
