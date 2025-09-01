@@ -209,6 +209,12 @@ body {
     text-align: center;
 }
 
+/* Style the headings and text inside the box */
+.landing-page-customization .newsletter__wrapper .title,
+.landing-page-customization .newsletter__wrapper .newsletter__subheading {
+    color: var(--color-brand-white);
+}
+
 /* --- Header Customization (From previous steps) --- */
 .header-wrapper--border-bottom {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
