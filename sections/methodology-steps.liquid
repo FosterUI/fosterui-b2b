@@ -2,7 +2,7 @@
 
 <div class="methodology-steps-section" id="methodology">
   <div class="page-width">
-    <div class="methodology-grid">
+          <div class="methodology-grid{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}" {% if settings.animations_reveal_on_scroll %}data-cascade{% endif %}>
       <div class="methodology-intro">
         <h2 class="h2">{{ section.settings.title }}</h2>
         <div class="rte">
@@ -14,7 +14,7 @@
         <h3 class="h3">{{ section.settings.execution_title }}</h3>
         <div class="methodology-steps-list">
           {% for block in section.blocks %}
-            <div class="step" {{ block.shopify_attributes }}>
+                        <div class="step{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}" {{ block.shopify_attributes }} {% if settings.animations_reveal_on_scroll %}data-cascade style="--animation-order: {{ forloop.index }};"{% endif %}>
               <div class="step-number">{{ forloop.index }}</div>
               <div class="step-content">
                 <h4>{{ block.settings.step_title }}</h4>
