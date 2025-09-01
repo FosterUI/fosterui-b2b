@@ -73,7 +73,7 @@
 
 .service-card .rte ul li {
     margin-bottom: 15px;
-    padding-left: 25px;
+    padding-left: 3.2rem;
     position: relative;
 }
 
@@ -81,7 +81,7 @@
     content: '✓';
     color: var(--color-brand-accent);
     position: absolute;
-    left: 0;
+    left: 0.5rem;
     font-weight: bold;
 }
 
