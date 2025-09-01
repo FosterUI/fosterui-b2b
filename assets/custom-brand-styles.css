@@ -570,3 +570,53 @@ body {
         gap: 4rem;
     }
 }
+
+/* assets/custom-brand-styles.css (Additions) */
+
+/* --- Global Form Styling (Used across multiple sections via .fallback-form class) --- */
+
+.fallback-form .form-group {
+    margin-bottom: 2.5rem;
+    /* Increased spacing for a premium feel */
+}
+
+.fallback-form label {
+    display: block;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+    color: var(--color-brand-primary-dark);
+    font-size: 1.6rem;
+}
+
+.fallback-form .form-control {
+    width: 100%;
+    padding: 1.4rem 1.5rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 1.6rem;
+    background-color: var(--color-brand-white);
+}
+
+.fallback-form textarea.form-control {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.fallback-form .btn-brand-primary {
+    width: 100%;
+    margin-top: 1.5rem;
+}
+
+/* Form Success Message Styling */
+.form-success {
+    background-color: #dcfce7;
+    /* Light green background */
+    color: #166534;
+    /* Dark green text */
+    padding: 2rem;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.6rem;
+}
