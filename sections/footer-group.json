@@ -19,10 +19,18 @@
           "settings": {
             "show_social": true
           }
+        },
+        "link_list_Bt9X6M": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Quick links",
+            "menu": "footer"
+          }
         }
       },
       "block_order": [
-        "brand_information_ywyK4F"
+        "brand_information_ywyK4F",
+        "link_list_Bt9X6M"
       ],
       "settings": {
         "color_scheme": "scheme-5",
