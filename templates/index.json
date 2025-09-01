@@ -62,7 +62,7 @@
         "column_DNnzYx": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/bar-chart-emoji.png",
+            "image": "shopify://shop_images/icon-barchart.svg",
             "title": "The Spreadsheet Nightmare",
             "text": "<p>Managing orders with messy discount codes and manual entry paralyzes your operations. This approach doesn't scale and drains resources.</p>",
             "link_label": "",
@@ -72,7 +72,7 @@
         "column_bzBJzC": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/disconnected-emoji.png",
+            "image": "shopify://shop_images/icon-link-slash.svg",
             "title": "Disconnected Systems",
             "text": "<p>Your Shopify store, your ERP, and your 3PL don't speak the same language. This leads to manual data entry, fulfillment errors, and a broken experience for your B2B buyers. I provide the strategic blueprint to bridge these gaps.</p>",
             "link_label": "",
@@ -82,7 +82,7 @@
         "column_MHHd9H": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/exploding-head.png",
+            "image": "shopify://shop_images/icon-frown.svg",
             "title": "The AI Gap & Overwhelm",
             "text": "<p>You know AI is critical for 2025/2026, but you lack a practical strategy for implementation beyond basic tools, missing out on forecasting and efficiency gains.</p>",
             "link_label": "",
