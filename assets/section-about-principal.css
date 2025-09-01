@@ -69,6 +69,11 @@
     color: var(--color-brand-accent) !important;
 }
 
+.about-bio a {
+    color: var(--color-brand-accent);
+    text-decoration: none;
+}
+
 /* Responsive Design */
 @media (max-width: 1024px) {
     .about-grid {
