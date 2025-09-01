@@ -540,6 +540,10 @@ body {
     color: var(--color-brand-white);
 }
 
+.footer .btn-brand {
+    color: var(--color-brand-accent);
+}
+
 .footer__copyright {
     font-size: 1.4rem;
 }
