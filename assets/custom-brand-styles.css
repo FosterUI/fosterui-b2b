@@ -424,7 +424,6 @@ body {
     transition: color 0.3s;
 }
 
-.footer a:hover,
 .policies-list__link:hover {
     color: var(--color-brand-white);
     /* Brighter on hover */
