@@ -21,36 +21,34 @@
             style="--animation-order: {{ forloop.index }};"
           {% endif %}
         >
-          <div class="service-content-wrapper">
-            <div>
-              <div class="service-header">
-                <h3 class="h3">{{ block.settings.title }}</h3>
-                <div class="duration">{{ block.settings.duration }}</div>
-                <div class="price">{{ block.settings.price }}</div>
-              </div>
-
-              {{ block.settings.description }}
-
-              <div class="rte">
-                {{ block.settings.deliverables }}
-              </div>
+          <div>
+            <div class="service-header">
+              <h3 class="h3">{{ block.settings.title }}</h3>
+              <div class="duration">{{ block.settings.duration }}</div>
+              <div class="price">{{ block.settings.price }}</div>
             </div>
 
-            {% if block.settings.cta_enabled %}
-              <a href="{{ block.settings.cta_link }}" class="btn-brand btn-brand-primary">
-                {{ block.settings.cta_label }}
-              </a>
-            {% else %}
-              <a
-                href="#"
-                class="btn-brand btn-disabled"
-                onclick="alert('{{ block.settings.cta_disabled_message | escape }}'); return false;"
-                aria-disabled="true"
-              >
-                {{ block.settings.cta_label }}
-              </a>
-            {% endif %}
+            {{ block.settings.description }}
+
+            <div class="rte">
+              {{ block.settings.deliverables }}
+            </div>
           </div>
+
+          {% if block.settings.cta_enabled %}
+            <a href="{{ block.settings.cta_link }}" class="btn-brand btn-brand-primary">
+              {{ block.settings.cta_label }}
+            </a>
+          {% else %}
+            <a
+              href="#"
+              class="btn-brand btn-disabled"
+              onclick="alert('{{ block.settings.cta_disabled_message | escape }}'); return false;"
+              aria-disabled="true"
+            >
+              {{ block.settings.cta_label }}
+            </a>
+          {% endif %}
         </div>
       {% endfor %}
     </div>
