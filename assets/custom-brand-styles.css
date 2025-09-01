@@ -236,6 +236,11 @@ body {
     white-space: nowrap;
 }
 
+.landing-page-customization .newsletter-form .newsletter-form__button:hover {
+    background-color: var(--color-brand-accent-hover);
+    transform: translateY(-2px);
+}
+
 .landing-page-customization .newsletter__wrapper .newsletter-form__field-wrapper {
     max-width: 50rem;
 }
