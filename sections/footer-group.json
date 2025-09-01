@@ -17,7 +17,7 @@
         "liquid_aJJ394": {
           "type": "liquid",
           "settings": {
-            "custom_liquid": "<div class=\"footer-custom-liquid\">\n  <div class=\"footer-profile\">\n    <img src=\"[URL_TO_YOUR_HEADSHOT.jpg]\" alt=\"Robert Foster Headshot\" class=\"footer-headshot\" loading=\"lazy\" width=\"80\" height=\"80\">\n    <div>\n      <h3>Robert Foster</h3>\n      <p>Principal Consultant</p>\n    </div>\n  </div>\n\n  <p>I help established Shopify Plus brands ($1M-$15M GMV) transform their DTC momentum into AI-powered B2B wholesale revenue engines. 10+ years specializing in rapid, strategic implementation focused on quantifiable revenue lift.</p>\n</div>"
+            "custom_liquid": "<div class=\"footer-custom-liquid\">\n  <div class=\"footer-profile\">\n    <img src=\"[URL_TO_YOUR_HEADSHOT.jpg]\" alt=\"Robert Foster Headshot\" class=\"footer-headshot\" loading=\"lazy\" width=\"80\" height=\"80\">\n    <div>\n      <h3>Robert Foster</h3>\n      <p>Founder & Shopify Plus Consultant</p>\n    </div>\n  </div>\n\n  <p>I help established Shopify Plus brands ($1M-$15M GMV) transform their DTC momentum into AI-powered B2B wholesale revenue engines. 10+ years specializing in rapid, strategic implementation focused on quantifiable revenue lift.</p>\n</div>"
           }
         },
         "link_list_CWLMgj": {
