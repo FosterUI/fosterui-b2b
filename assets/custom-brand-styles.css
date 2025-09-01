@@ -200,15 +200,18 @@ body {
 /* Style the wrapper to create the dark blue, rounded container */
 /* We target the internal wrapper element used by newsletter.liquid */
 .landing-page-customization .newsletter__wrapper {
-    background-color: var(--color-brand-primary-dark);
     color: var(--color-brand-white);
-    border-radius: 8px;
     padding: 6rem 4rem;
     /* Increased padding for a premium look */
     box-shadow: var(--shadow-brand);
     margin-top: 4rem;
     /* Space between this and the Insights cards above */
-    text-align: center;
+}
+
+/* Style the headings and text inside the box */
+.landing-page-customization .newsletter__wrapper .title,
+.landing-page-customization .newsletter__wrapper .newsletter__subheading {
+    color: var(--color-brand-white);
 }
 
 
