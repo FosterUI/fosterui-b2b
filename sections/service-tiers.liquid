@@ -7,37 +7,50 @@
       <p>{{ section.settings.subtitle }}</p>
     </div>
 
-        <div class="service-grid" {% if settings.animations_reveal_on_scroll %}data-cascade{% endif %}>
+    <div
+      class="service-grid"
+      {% if settings.animations_reveal_on_scroll %}
+        data-cascade
+      {% endif %}
+    >
       {% for block in section.blocks %}
-                <div class="service-card {% if block.settings.featured %}featured{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}" {{ block.shopify_attributes }} {% if settings.animations_reveal_on_scroll %}style="--animation-order: {{ forloop.index }};"{% endif %}>
-          <div>
-            <div class="service-header">
-              <h3 class="h3">{{ block.settings.title }}</h3>
-              <div class="duration">{{ block.settings.duration }}</div>
-              <div class="price">{{ block.settings.price }}</div>
-            </div>
-
-            {{ block.settings.description }}
-
-            <div class="rte">
-              {{ block.settings.deliverables }}
-            </div>
-          </div>
-
-          {% if block.settings.cta_enabled %}
-            <a href="{{ block.settings.cta_link }}" class="btn-brand btn-brand-primary">
-              {{ block.settings.cta_label }}
-            </a>
-          {% else %}
-            <a
-              href="#"
-              class="btn-brand btn-disabled"
-              onclick="alert('{{ block.settings.cta_disabled_message | escape }}'); return false;"
-              aria-disabled="true"
-            >
-              {{ block.settings.cta_label }}
-            </a>
+        <div
+          class="service-card {% if block.settings.featured %}featured{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+          {{ block.shopify_attributes }}
+          {% if settings.animations_reveal_on_scroll %}
+            style="--animation-order: {{ forloop.index }};"
           {% endif %}
+        >
+          <div class="service-content-wrapper">
+            <div>
+              <div class="service-header">
+                <h3 class="h3">{{ block.settings.title }}</h3>
+                <div class="duration">{{ block.settings.duration }}</div>
+                <div class="price">{{ block.settings.price }}</div>
+              </div>
+
+              {{ block.settings.description }}
+
+              <div class="rte">
+                {{ block.settings.deliverables }}
+              </div>
+            </div>
+
+            {% if block.settings.cta_enabled %}
+              <a href="{{ block.settings.cta_link }}" class="btn-brand btn-brand-primary">
+                {{ block.settings.cta_label }}
+              </a>
+            {% else %}
+              <a
+                href="#"
+                class="btn-brand btn-disabled"
+                onclick="alert('{{ block.settings.cta_disabled_message | escape }}'); return false;"
+                aria-disabled="true"
+              >
+                {{ block.settings.cta_label }}
+              </a>
+            {% endif %}
+          </div>
         </div>
       {% endfor %}
     </div>
