@@ -2,16 +2,16 @@
 
 <div class="contact-split-section" id="contact">
   <div class="page-width">
-    <div class="contact-grid">
+        <div class="contact-grid" {% if settings.animations_reveal_on_scroll %}data-cascade{% endif %}>
       
-      <div class="contact-info">
+            <div class="contact-info{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}" {% if settings.animations_reveal_on_scroll %}style="--animation-order: 1;"{% endif %}>
         <h2 class="h2">{{ section.settings.title }}</h2>
         <div class="rte">
           {{ section.settings.text }}
         </div>
       </div>
 
-      <div class="contact-form-container">
+            <div class="contact-form-container{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}" {% if settings.animations_reveal_on_scroll %}style="--animation-order: 2;"{% endif %}>
         <div class="contact-form-box">
           
           {% if section.settings.use_hubspot %}
