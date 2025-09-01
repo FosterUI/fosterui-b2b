@@ -348,8 +348,8 @@
       ],
       "name": "t:sections.newsletter.presets.name",
       "settings": {
-        "color_scheme": "scheme-1",
-        "full_width": false,
+        "color_scheme": "",
+        "full_width": true,
         "custom_css_class": "",
         "padding_top": 40,
         "padding_bottom": 52
