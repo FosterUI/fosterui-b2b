@@ -1,0 +1,209 @@
+{{ 'section-custom-contact-page.css' | asset_url | stylesheet_tag }}
+
+<div class="custom-contact-page">
+  <div class="page-width">
+    <div class="contact-page-header">
+      <h1>{{ section.settings.title }}</h1>
+    </div>
+
+    <div class="contact-page-grid">
+      <div class="contact-context">
+        <h2>{{ section.settings.context_heading }}</h2>
+        <div class="rte">
+          {{ section.settings.context_text }}
+        </div>
+
+        <div class="ideal-client-box">
+          <h3>{{ section.settings.ideal_title }}</h3>
+          <div class="rte">
+            {{ section.settings.ideal_text }}
+          </div>
+        </div>
+
+        <div class="contact-signature">
+          {% if section.settings.headshot_image != blank %}
+            {{
+              section.settings.headshot_image
+              | image_url: width: 160
+              | image_tag: class: 'contact-headshot', loading: 'lazy', widths: '80, 160'
+            }}
+          {% else %}
+            <div class="contact-headshot" style="background-color: #eee;"></div>
+          {% endif %}
+          <div>
+            <h4>{{ section.settings.signature_name }}</h4>
+            <p>{{ section.settings.signature_title }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form-container">
+        <div class="contact-form-card fallback-form">
+          {% comment %} Native Shopify Contact Form with Custom Fields {% endcomment %}
+          {% form 'contact' %}
+            {% if form.posted_successfully? %}
+              <p class="form-success form-status-list form__message" tabindex="-1" autofocus>
+                Thank you. I will personally review your inquiry and respond within 1 business day.
+              </p>
+            {% elsif form.errors %}
+              <div class="form-status-list form__message" role="alert" style="color: red;">
+                <h3 class="h4">Please correct the errors below:</h3>
+                {{ form.errors | default_errors }}
+              </div>
+            {% endif %}
+
+            <div class="form-group">
+              <label for="ContactFormName-{{ section.id }}">Full Name *</label>
+              <input
+                type="text"
+                id="ContactFormName-{{ section.id }}"
+                name="contact[name]"
+                required
+                class="form-control"
+                autocomplete="name"
+                value="{{ form.name }}"
+              >
+            </div>
+            <div class="form-group">
+              <label for="ContactFormEmail-{{ section.id }}">Work Email Address *</label>
+              <input
+                type="email"
+                id="ContactFormEmail-{{ section.id }}"
+                name="contact[email]"
+                required
+                autocomplete="email"
+                class="form-control"
+                value="{{ form.email }}"
+              >
+            </div>
+            <div class="form-group">
+              <label for="ContactFormURL-{{ section.id }}">Shopify Store URL *</label>
+              <input
+                type="url"
+                id="ContactFormURL-{{ section.id }}"
+                name="contact[Shopify Store URL]"
+                required
+                class="form-control"
+              >
+            </div>
+            <div class="form-group">
+              <label for="ContactFormGMV-{{ section.id }}">Approximate Annual GMV *</label>
+              <select
+                id="ContactFormGMV-{{ section.id }}"
+                name="contact[Approximate Annual GMV]"
+                required
+                class="form-control"
+              >
+                <option value="">Select Range</option>
+                <option value="$1M - $5M">$1M - $5M</option>
+                <option value="$5M - $10M">$5M - $10M</option>
+                <option value="$10M - $15M">$10M - $15M</option>
+                <option value="$15M+">$15M+</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="ContactFormRequestType-{{ section.id }}">How can I help? *</label>
+              <select
+                id="ContactFormRequestType-{{ section.id }}"
+                name="contact[Interest]"
+                required
+                class="form-control"
+              >
+                <option value="">Select Option</option>
+                <option value="Discussing the Roadmap/Implementation">Discussing the Roadmap/Implementation</option>
+                <option value="Requesting a Video Audit">Requesting a Video Audit</option>
+                <option value="Media/Partnership Inquiry">Media/Partnership Inquiry</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="ContactFormBody-{{ section.id }}">Message (Optional)</label>
+              <textarea
+                name="contact[body]"
+                id="ContactFormBody-{{ section.id }}"
+                class="form-control"
+              >{{ form.body }}</textarea>
+            </div>
+
+            <button type="submit" class="btn-brand btn-brand-primary">Send Inquiry →</button>
+          {% endform %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Custom Contact Page",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Page Heading (H1)",
+      "default": "Let's Discuss Your B2B Growth Strategy"
+    },
+    {
+      "type": "header",
+      "content": "Context (Left Column)"
+    },
+    {
+      "type": "text",
+      "id": "context_heading",
+      "label": "Context Heading",
+      "default": "Direct Access to Specialized Expertise"
+    },
+    {
+      "type": "richtext",
+      "id": "context_text",
+      "label": "Context Text",
+      "default": "<p>I specialize exclusively in transforming Shopify DTC stores into AI-powered B2B wholesale engines. If you are looking to professionalize your wholesale channel and eliminate manual processes, let's connect.</p><p>I personally review every inquiry and typically respond within one business day.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Ideal Client Box"
+    },
+    {
+      "type": "text",
+      "id": "ideal_title",
+      "label": "Box Title",
+      "default": "Is This You?"
+    },
+    {
+      "type": "richtext",
+      "id": "ideal_text",
+      "label": "Box Text",
+      "default": "<ul><li>Shopify Plus Merchant</li><li>$1M-$15M Annual GMV</li><li>Primarily DTC, seeking B2B growth</li><li>Struggling with manual wholesale processes or complex integrations</li></ul>"
+    },
+    {
+      "type": "header",
+      "content": "Signature"
+    },
+    {
+      "type": "image_picker",
+      "id": "headshot_image",
+      "label": "Headshot Image"
+    },
+    {
+      "type": "text",
+      "id": "signature_name",
+      "label": "Name",
+      "default": "Robert Foster"
+    },
+    {
+      "type": "text",
+      "id": "signature_title",
+      "label": "Title",
+      "default": "Principal Consultant & B2B AI Specialist"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Contact Page"
+    }
+  ]
+}
+{% endschema %}
