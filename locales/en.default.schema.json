@@ -2607,6 +2607,9 @@
         },
         "paragraph": {
           "content": "Signups add [customer profiles](https://help.shopify.com/manual/customers/manage-customers)"
+        },
+        "custom_css_class": {
+          "label": "CSS class"
         }
       },
       "blocks": {
@@ -2734,9 +2737,6 @@
         },
         "show_text_below": {
           "label": "Stack text below image"
-        },
-        "custom_css_class": {
-          "label": "CSS class"
         }
       },
       "blocks": {
