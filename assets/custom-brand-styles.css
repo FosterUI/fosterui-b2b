@@ -434,19 +434,3 @@ body {
 .footer__copyright {
     font-size: 1.4rem;
 }
-
-/* Mobile Adjustments */
-@media screen and (max-width: 749px) {
-
-    /* Revert to centered alignment on mobile */
-    .footer__content-top,
-    .footer-block {
-        text-align: center;
-    }
-
-    /* Center the profile elements on mobile */
-    .footer-profile {
-        flex-direction: column;
-        gap: 1rem;
-    }
-}
