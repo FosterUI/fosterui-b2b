@@ -362,40 +362,6 @@ body {
     }
 }
 
-/* --- Footer Customization --- */
-.footer {
-    border-top: none;
-}
-
-.footer__content-top,
-.footer__content-bottom {
-    text-align: center;
-    justify-content: center;
-}
-
-.footer__blocks-wrapper {
-    justify-content: center;
-}
-
-.footer a,
-.policies-list__link,
-.footer__list-social li a {
-    color: var(--color-brand-accent);
-    text-decoration: none;
-}
-
-.footer a:hover,
-.policies-list__link:hover,
-.footer__list-social li a:hover {
-    color: var(--color-brand-accent-hover);
-    text-decoration: underline;
-}
-
-.footer__copyright {
-    font-size: 1.4rem;
-    /* Updated: 1.4rem = 14px */
-}
-
 /* assets/custom-brand-styles.css (Additions/Updates) */
 
 /* --- Newsletter Signup Section Refinement (Fixing harsh inputs) --- */
@@ -412,48 +378,6 @@ body {
 /* Style the placeholder text/label */
 .landing-page-customization .email-signup-banner__box .field__label {
     color: rgba(255, 255, 255, 0.7) !important;
-}
-
-/* Note: If you are using HubSpot embeds for the newsletter, ensure your HubSpot form styling settings match this aesthetic. */
-
-
-/* --- Premium Footer Redesign --- */
-
-.footer {
-    border-top: none;
-}
-
-/* Override Dawn's default centering to create a structured grid on desktop */
-@media screen and (min-width: 750px) {
-    .footer__content-top {
-        text-align: left;
-    }
-
-    /* Implement the 3-Column Grid Layout */
-    .footer__blocks-wrapper {
-        display: grid;
-        /* Col 1 (Bio) is wider, Cols 2 & 3 (Nav/CTA) are equal */
-        grid-template-columns: 2fr 1fr 1fr;
-        gap: 5rem;
-        justify-content: space-between;
-        align-items: start;
-    }
-}
-
-/* Ensure footer text is readable (16px) and aligned */
-.footer__content-top,
-.footer-custom-liquid p {
-    font-size: 1.6rem;
-    line-height: 1.6;
-}
-
-/* Style the headings used in the footer blocks */
-.footer-block__heading,
-.footer-custom-liquid h3 {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: var(--color-brand-white);
-    margin-bottom: 1.5rem;
 }
 
 
