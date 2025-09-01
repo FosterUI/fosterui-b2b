@@ -9,7 +9,7 @@
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 60px;
-    align-items: center;
+    align-items: start;
 }
 
 .methodology-steps-list {
