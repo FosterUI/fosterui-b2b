@@ -215,12 +215,7 @@ body {
     color: var(--color-brand-white);
 }
 
-/* Center the form and constrain its width for better readability */
-.landing-page-customization .newsletter-form {
-    max-width: 600px;
-    margin: 2rem auto 0 auto;
-    /* Add space between text and form */
-}
+
 
 
 
