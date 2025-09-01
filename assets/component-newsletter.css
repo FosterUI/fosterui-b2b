@@ -53,7 +53,7 @@
 
 .newsletter-form__button:not(:focus-visible):not(.focused) {
   box-shadow: inherit;
-  background-color: inherit;
+  /* background-color: inherit; Custom: Remove default background color which was overwriting the custom brand colors */  
 }
 
 .newsletter-form__button .icon {
