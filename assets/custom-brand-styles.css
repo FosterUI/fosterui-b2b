@@ -234,6 +234,7 @@ body {
     border-radius: 6px;
     transition: background-color 0.3s ease, transform 0.3s ease;
     white-space: nowrap;
+    cursor: pointer;
 }
 
 .landing-page-customization .newsletter-form .newsletter-form__button:hover {
