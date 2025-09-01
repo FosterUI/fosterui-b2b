@@ -539,8 +539,6 @@ body {
 .footer .policies-list__link:hover,
 .footer .list-menu__item--link:hover {
     color: var(--color-brand-white);
-    /* Brighter on hover */
-    text-decoration: underline;
 }
 
 .footer__copyright {
