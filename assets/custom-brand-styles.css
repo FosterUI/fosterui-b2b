@@ -395,3 +395,134 @@ body {
     font-size: 1.4rem;
     /* Updated: 1.4rem = 14px */
 }
+
+/* assets/custom-brand-styles.css (Additions/Updates) */
+
+/* --- Newsletter Signup Section Refinement (Fixing harsh inputs) --- */
+/* This targets the Email Signup section when the 'landing-page-customization' class is used */
+
+/* Style inputs to look elegant on the dark background (if using native Shopify forms) */
+.landing-page-customization .email-signup-banner__box .field__input {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    /* Subtle transparent white background */
+    color: var(--color-brand-white) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Style the placeholder text/label */
+.landing-page-customization .email-signup-banner__box .field__label {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* Note: If you are using HubSpot embeds for the newsletter, ensure your HubSpot form styling settings match this aesthetic. */
+
+
+/* --- Premium Footer Redesign --- */
+
+.footer {
+    border-top: none;
+}
+
+/* Override Dawn's default centering to create a structured grid on desktop */
+@media screen and (min-width: 750px) {
+    .footer__content-top {
+        text-align: left;
+    }
+
+    /* Implement the 3-Column Grid Layout */
+    .footer__blocks-wrapper {
+        display: grid;
+        /* Col 1 (Bio) is wider, Cols 2 & 3 (Nav/CTA) are equal */
+        grid-template-columns: 2fr 1fr 1fr;
+        gap: 5rem;
+        justify-content: space-between;
+        align-items: start;
+    }
+}
+
+/* Ensure footer text is readable (16px) and aligned */
+.footer__content-top,
+.footer-custom-liquid p {
+    font-size: 1.6rem;
+    line-height: 1.6;
+}
+
+/* Style the headings used in the footer blocks */
+.footer-block__heading,
+.footer-custom-liquid h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--color-brand-white);
+    margin-bottom: 1.5rem;
+}
+
+
+/* --- Styling for Custom Liquid Blocks (Used for Col 1 and Col 3) --- */
+
+/* Headshot Integration (Column 1) */
+.footer-profile {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-headshot {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid var(--color-brand-accent);
+    object-fit: cover;
+}
+
+/* Final CTA Button (Column 3) */
+.footer-cta-btn {
+    margin-top: 2rem;
+    /* Inherits styles from .btn-brand-primary */
+}
+
+
+/* --- Footer Bottom Bar (Copyright/Policy) --- */
+.footer__content-bottom {
+    text-align: center;
+    justify-content: center;
+    /* Add a subtle separator line */
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 5rem;
+    padding-top: 3rem;
+}
+
+/* General Footer Link Styling */
+.footer a,
+.policies-list__link {
+    color: var(--color-brand-accent);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer a:hover,
+.policies-list__link:hover {
+    color: var(--color-brand-white);
+    /* Brighter on hover */
+    text-decoration: underline;
+}
+
+.footer__copyright {
+    font-size: 1.4rem;
+}
+
+/* Mobile Adjustments */
+@media screen and (max-width: 749px) {
+
+    /* Revert to centered alignment on mobile */
+    .footer__content-top,
+    .footer-block {
+        text-align: center;
+    }
+
+    /* Center the profile elements on mobile */
+    .footer-profile {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
