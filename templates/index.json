@@ -350,7 +350,7 @@
       "settings": {
         "color_scheme": "",
         "full_width": true,
-        "custom_css_class": "",
+        "custom_css_class": "landing-page-customization",
         "padding_top": 40,
         "padding_bottom": 0
       }
