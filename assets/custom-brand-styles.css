@@ -530,7 +530,7 @@ body {
 .footer a,
 .footer .policies-list__link,
 .footer .list-menu__item--link {
-    color: var(--color-brand-accent);
+    color: var(--color-brand-white);
     text-decoration: none;
     transition: color 0.3s;
 }
