@@ -62,7 +62,7 @@
         "column_DNnzYx": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/icon-barchart.svg",
+            "image": "shopify://shop_images/icon-bar-chart.svg",
             "title": "The Spreadsheet Nightmare",
             "text": "<p>Managing orders with messy discount codes and manual entry paralyzes your operations. This approach doesn't scale and drains resources.</p>",
             "link_label": "",
