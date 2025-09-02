@@ -39,104 +39,95 @@
 
       <div class="contact-form-container">
         <div class="contact-form-card fallback-form">
-          <script src="https://js.hsforms.net/forms/embed/40164173.js" defer></script>
-          <div
-            class="hs-form-frame"
-            data-region="na1"
-            data-form-id="8f7f0890-ca95-435d-96b6-97ebecc2c19f"
-            data-portal-id="40164173"
-          ></div>
           {% comment %} Native Shopify Contact Form with Custom Fields {% endcomment %}
-          {% comment %}
-            {% form 'contact' %}
-              {% if form.posted_successfully? %}
-                <p class="form-success form-status-list form__message" tabindex="-1" autofocus>
-                  Thank you. I will personally review your inquiry and respond within 1 business day.
-                </p>
-              {% elsif form.errors %}
-                <div class="form-status-list form__message" role="alert" style="color: red;">
-                  <h3 class="h4">Please correct the errors below:</h3>
-                  {{ form.errors | default_errors }}
-                </div>
-              {% endif %}
+          {% form 'contact' %}
+            {% if form.posted_successfully? %}
+              <p class="form-success form-status-list form__message" tabindex="-1" autofocus>
+                Thank you. I will personally review your inquiry and respond within 1 business day.
+              </p>
+            {% elsif form.errors %}
+              <div class="form-status-list form__message" role="alert" style="color: red;">
+                <h3 class="h4">Please correct the errors below:</h3>
+                {{ form.errors | default_errors }}
+              </div>
+            {% endif %}
 
-              <div class="form-group">
-                <label for="ContactFormName-{{ section.id }}">Full Name *</label>
-                <input
-                  type="text"
-                  id="ContactFormName-{{ section.id }}"
-                  name="contact[name]"
-                  required
-                  class="form-control"
-                  autocomplete="name"
-                  value="{{ form.name }}"
-                >
-              </div>
-              <div class="form-group">
-                <label for="ContactFormEmail-{{ section.id }}">Work Email Address *</label>
-                <input
-                  type="email"
-                  id="ContactFormEmail-{{ section.id }}"
-                  name="contact[email]"
-                  required
-                  autocomplete="email"
-                  class="form-control"
-                  value="{{ form.email }}"
-                >
-              </div>
-              <div class="form-group">
-                <label for="ContactFormURL-{{ section.id }}">Shopify Store URL *</label>
-                <input
-                  type="url"
-                  id="ContactFormURL-{{ section.id }}"
-                  name="contact[Shopify Store URL]"
-                  required
-                  class="form-control"
-                >
-              </div>
-              <div class="form-group">
-                <label for="ContactFormGMV-{{ section.id }}">Approximate Annual GMV *</label>
-                <select
-                  id="ContactFormGMV-{{ section.id }}"
-                  name="contact[Approximate Annual GMV]"
-                  required
-                  class="form-control"
-                >
-                  <option value="">Select Range</option>
-                  <option value="$1M - $5M">$1M - $5M</option>
-                  <option value="$5M - $10M">$5M - $10M</option>
-                  <option value="$10M - $15M">$10M - $15M</option>
-                  <option value="$15M+">$15M+</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="ContactFormRequestType-{{ section.id }}">How can I help? *</label>
-                <select
-                  id="ContactFormRequestType-{{ section.id }}"
-                  name="contact[Interest]"
-                  required
-                  class="form-control"
-                >
-                  <option value="">Select Option</option>
-                  <option value="Discussing the Roadmap/Implementation">Discussing the Roadmap/Implementation</option>
-                  <option value="Requesting a Video Audit">Requesting a Video Audit</option>
-                  <option value="Media/Partnership Inquiry">Media/Partnership Inquiry</option>
-                  <option value="Other">Other</option>
-                </select>
-              </div>
+            <div class="form-group">
+              <label for="ContactFormName-{{ section.id }}">Full Name *</label>
+              <input
+                type="text"
+                id="ContactFormName-{{ section.id }}"
+                name="contact[name]"
+                required
+                class="form-control"
+                autocomplete="name"
+                value="{{ form.name }}"
+              >
+            </div>
+            <div class="form-group">
+              <label for="ContactFormEmail-{{ section.id }}">Work Email Address *</label>
+              <input
+                type="email"
+                id="ContactFormEmail-{{ section.id }}"
+                name="contact[email]"
+                required
+                autocomplete="email"
+                class="form-control"
+                value="{{ form.email }}"
+              >
+            </div>
+            <div class="form-group">
+              <label for="ContactFormURL-{{ section.id }}">Shopify Store URL *</label>
+              <input
+                type="url"
+                id="ContactFormURL-{{ section.id }}"
+                name="contact[Shopify Store URL]"
+                required
+                class="form-control"
+              >
+            </div>
+            <div class="form-group">
+              <label for="ContactFormGMV-{{ section.id }}">Approximate Annual GMV *</label>
+              <select
+                id="ContactFormGMV-{{ section.id }}"
+                name="contact[Approximate Annual GMV]"
+                required
+                class="form-control"
+              >
+                <option value="">Select Range</option>
+                <option value="$1M - $5M">$1M - $5M</option>
+                <option value="$5M - $10M">$5M - $10M</option>
+                <option value="$10M - $15M">$10M - $15M</option>
+                <option value="$15M+">$15M+</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="ContactFormRequestType-{{ section.id }}">How can I help? *</label>
+              <select
+                id="ContactFormRequestType-{{ section.id }}"
+                name="contact[Interest]"
+                required
+                class="form-control"
+              >
+                <option value="">Select Option</option>
+                <option value="Discussing the Roadmap/Implementation">Discussing the Roadmap/Implementation</option>
+                <option value="Requesting a Video Audit">Requesting a Video Audit</option>
+                <option value="Media/Partnership Inquiry">Media/Partnership Inquiry</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
 
-              <div class="form-group">
-                <label for="ContactFormBody-{{ section.id }}">Message (Optional)</label>
-                <textarea
-                  name="contact[body]"
-                  id="ContactFormBody-{{ section.id }}"
-                  class="form-control"
-                >{{ form.body }}</textarea>
-              </div>
+            <div class="form-group">
+              <label for="ContactFormBody-{{ section.id }}">Message (Optional)</label>
+              <textarea
+                name="contact[body]"
+                id="ContactFormBody-{{ section.id }}"
+                class="form-control"
+              >{{ form.body }}</textarea>
+            </div>
 
-              <button type="submit" class="btn-brand btn-brand-primary">Send Inquiry →</button>
-            {% endform %}
-          {% endcomment %}
+            <button type="submit" class="btn-brand btn-brand-primary">Send Inquiry →</button>
+          {% endform %}
         </div>
       </div>
     </div>
