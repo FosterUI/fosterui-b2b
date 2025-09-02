@@ -212,6 +212,29 @@
         "subtitle": "I partner with established Shopify Plus merchants ready to execute. This is my proven, structured process for unlocking growth."
       }
     },
+    "rich_text_PKaryz": {
+      "type": "rich-text",
+      "blocks": {
+        "text_WLd6CN": {
+          "type": "text",
+          "settings": {
+            "text": "<p><em>*Implementation fees cover expert configuration and integration services. Required third-party app licenses/SaaS fees are separate and will be budgeted during the Roadmap phase.</em></p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_WLd6CN"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "about_principal_LKJFK6": {
       "type": "about-principal",
       "name": "B2B About Principal",
@@ -369,6 +392,7 @@
     "multicolumn_w9J7pE",
     "methodology_steps_EGJEVf",
     "service_tiers_8jzFQk",
+    "rich_text_PKaryz",
     "about_principal_LKJFK6",
     "contact_split_hybrid_YMBRY8",
     "multicolumn_9JGMiV",
