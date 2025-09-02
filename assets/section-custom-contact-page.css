@@ -30,7 +30,7 @@
     color: var(--color-brand-primary-dark);
     font-size: 2.4rem;
     font-weight: 700;
-    margin: 3rem 0 2rem;
+    margin-bottom: 2rem;
 }
 
 .contact-context .rte {
@@ -84,7 +84,7 @@
 /* --- Right Side: Form Container --- */
 .contact-form-card {
     background-color: var(--color-brand-white);
-    padding: 0 4rem 4rem;
+    padding: 5rem;
     border-radius: 8px;
     box-shadow: var(--shadow-brand);
 }
