@@ -176,7 +176,7 @@
             "featured": false,
             "title": "2. 4-Week Intensive Execution Project",
             "duration": "Putting Your Roadmap into Action",
-            "price": "$8,500",
+            "price": "$8,500*",
             "description": "<p>A 4-week intensive execution project based on the Roadmap. I rapidly set up your optimized B2B channel and deploy high-impact AI tools.</p>",
             "deliverables": "<ul><li>Core Shopify B2B Setup (Catalogs, Companies, Net Terms)</li><li>Theme Customization (e.g., Quick Order Forms)</li><li>Deployment of 1-2 High-Impact AI Tools</li><li>ERP/3PL Integration Support</li></ul>",
             "cta_label": "Available After Roadmap",
@@ -210,6 +210,29 @@
       "settings": {
         "title": "A Productized Approach to B2B Acceleration",
         "subtitle": "I partner with established Shopify Plus merchants ready to execute. This is my proven, structured process for unlocking growth."
+      }
+    },
+    "rich_text_PKaryz": {
+      "type": "rich-text",
+      "blocks": {
+        "text_WLd6CN": {
+          "type": "text",
+          "settings": {
+            "text": "<p><em>*Implementation fees cover expert configuration and integration services. Required third-party app licenses/SaaS fees are separate and will be budgeted during the Roadmap phase.</em></p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_WLd6CN"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     },
     "about_principal_LKJFK6": {
@@ -369,6 +392,7 @@
     "multicolumn_w9J7pE",
     "methodology_steps_EGJEVf",
     "service_tiers_8jzFQk",
+    "rich_text_PKaryz",
     "about_principal_LKJFK6",
     "contact_split_hybrid_YMBRY8",
     "multicolumn_9JGMiV",
