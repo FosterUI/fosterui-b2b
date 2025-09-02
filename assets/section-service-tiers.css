@@ -97,6 +97,12 @@
     color: #64748b;
 }
 
+/* Additional App license cost disclaimer */
+.rich-text {
+    padding-top: 0;
+    margin-top: -70px;
+}
+
 /* Responsive Design */
 @media (max-width: 1024px) {
     .service-grid {
