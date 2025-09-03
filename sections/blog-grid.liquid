@@ -1,0 +1,58 @@
+{{ 'section-blog-layout.css' | asset_url | stylesheet_tag }}
+
+<div class="blog-grid-wrapper">
+  <div class="page-width">
+    {% paginate blog.articles by section.settings.posts_per_page %}
+      <div class="blog-grid">
+        {% for article in blog.articles %}
+          <article class="blog-card">
+            <h2 class="blog-card__title">
+              <a href="{{ article.url }}">{{ article.title }}</a>
+            </h2>
+
+            <div class="blog-card__excerpt">
+              {% comment %} Display excerpt if available, otherwise truncate the main content {% endcomment %}
+              {% if article.excerpt.size > 0 %}
+                {{ article.excerpt | strip_html | truncatewords: 30 }}
+              {% else %}
+                {{ article.content | strip_html | truncatewords: 30 }}
+              {% endif %}
+            </div>
+
+            <div class="blog-card__meta">
+              {{ article.published_at | date: '%B %d, %Y' }}
+            </div>
+          </article>
+        {% endfor %}
+      </div>
+
+      {% if paginate.pages > 1 %}
+        <div class="pagination-wrapper">
+          {{ paginate | default_pagination }}
+        </div>
+      {% endif %}
+    {% endpaginate %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Blog Grid",
+  "settings": [
+    {
+      "type": "range",
+      "id": "posts_per_page",
+      "min": 3,
+      "max": 24,
+      "step": 3,
+      "label": "Posts per page",
+      "default": 9
+    }
+  ],
+  "presets": [
+    {
+      "name": "Blog Grid"
+    }
+  ]
+}
+{% endschema %}
