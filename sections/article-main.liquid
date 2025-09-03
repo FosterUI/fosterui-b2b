@@ -1,0 +1,107 @@
+{{ 'section-blog-layout.css' | asset_url | stylesheet_tag }}
+
+<article class="article-wrapper">
+  <div class="article-container">
+    {% comment %} Strategic Addition: Pillar Link Callout {% endcomment %}
+    {% if section.settings.enable_pillar_link %}
+      <div class="pillar-link-callout">
+        <p>
+          {{ section.settings.pillar_link_text }}
+          <a href="{{ section.settings.pillar_link_url }}">{{ section.settings.pillar_link_title }}</a>
+        </p>
+      </div>
+    {% endif %}
+
+    {% comment %} Main Article Content {% endcomment %}
+    <div class="article-content rte">
+      {{ article.content }}
+    </div>
+
+    {% comment %} Author Bio / CTA {% endcomment %}
+    {% if section.settings.enable_author_cta %}
+      <div class="article-author-cta">
+        <div class="article-author-cta__bio">
+          <h3>{{ section.settings.author_cta_title }}</h3>
+          <p>{{ section.settings.author_cta_text }}</p>
+        </div>
+        <div class="article-author-cta__action">
+          <a href="{{ section.settings.author_cta_button_link }}" class="btn-brand btn-brand-primary">
+            {{ section.settings.author_cta_button_label }}
+          </a>
+        </div>
+      </div>
+    {% endif %}
+  </div>
+</article>
+
+{% schema %}
+{
+  "name": "Article Main Content",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Pillar Link Callout (Hub/Spoke)"
+    },
+    {
+      "type": "paragraph",
+      "content": "Crucial for SEO: Link back to your main Pillar Page."
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_pillar_link",
+      "label": "Enable Pillar Link Callout",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "pillar_link_text",
+      "label": "Intro Text",
+      "default": "This article is part of my comprehensive resource:"
+    },
+    {
+      "type": "text",
+      "id": "pillar_link_title",
+      "label": "Pillar Page Title",
+      "default": "The Definitive Guide to AI-Powered B2B on Shopify Plus."
+    },
+    {
+      "type": "url",
+      "id": "pillar_link_url",
+      "label": "Pillar Page URL"
+    },
+    {
+      "type": "header",
+      "content": "Author Bio / Final CTA"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_author_cta",
+      "label": "Enable Author CTA Box",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "author_cta_title",
+      "label": "Title",
+      "default": "About the Author & Expert"
+    },
+    {
+      "type": "textarea",
+      "id": "author_cta_text",
+      "label": "Bio/Pitch Text",
+      "default": "I am a principal consultant specializing in transforming Shopify DTC stores into AI-powered B2B wholesale engines. My methodology focuses on specialized revenue acceleration, velocity, and precision."
+    },
+    {
+      "type": "text",
+      "id": "author_cta_button_label",
+      "label": "Button Label",
+      "default": "Book My $1,950 Roadmap"
+    },
+    {
+      "type": "url",
+      "id": "author_cta_button_link",
+      "label": "Button Link"
+    }
+  ]
+}
+{% endschema %}
