@@ -1,24 +1,33 @@
+{% comment %} Ensure CSS and JS assets are loaded {% endcomment %}
 {{ 'section-pillar-layout.css' | asset_url | stylesheet_tag }}
 <script src="{{ 'component-pillar-layout.js' | asset_url }}" defer="defer"></script>
 
 <main class="pillar-container pillar-layout pillar-wrapper">
+
+  {% comment %} Mobile TOC (Hidden on Desktop) {% endcomment %}
   <div class="mobile-toc">
     <div class="mobile-toc-header">
-      <span>{{ section.settings.toc_title }}</span>
-      <span class="toggle-icon">▼</span>
+        <span>{{ section.settings.toc_title }}</span>
+        <span class="toggle-icon">▼</span>
     </div>
-    <ul class="mobile-toc-list" id="mobile-toc-nav"></ul>
+    <ul class="mobile-toc-list" id="mobile-toc-nav">
+        {% comment %} Populated by JavaScript {% endcomment %}
+    </ul>
   </div>
 
+  {% comment %} Desktop Sidebar (Hidden on Mobile) {% endcomment %}
   <aside class="sidebar">
     <div class="toc-title">{{ section.settings.toc_title }}</div>
-    <ul class="toc-list" id="toc-nav"></ul>
+    <ul class="toc-list" id="toc-nav">
+        {% comment %} Populated by JavaScript {% endcomment %}
+    </ul>
 
     {% if section.settings.enable_sidebar_cta %}
       <div class="sidebar-cta">
         <h4>{{ section.settings.cta_title }}</h4>
         <p>{{ section.settings.cta_text }}</p>
-        {# Updated button classes to use the global brand styles #}
+        
+        {% comment %} Using the global brand styles defined in custom-brand-styles.css {% endcomment %}
         <a href="{{ section.settings.cta_link }}" class="btn-brand btn-brand-primary">
           {{ section.settings.cta_button }}
         </a>
@@ -26,15 +35,18 @@
     {% endif %}
   </aside>
 
-  {# The ID 'content-body' is essential for the JS to find the H2s #}
+  {% comment %} Main Content Area. The ID 'content-body' is essential for the JS to find the H2s {% endcomment %}
   <article class="content-body pillar-content" id="content-body">
-    {% comment %} Supports both Page and Article templates {% endcomment %}
+    
+    {% comment %} Dynamically pull content based on whether it's a Page or an Article (Blog Post) {% endcomment %}
     {% if template.name == 'page' %}
       {{ page.content }}
     {% elsif template.name == 'article' %}
       {{ article.content }}
     {% endif %}
+
   </article>
+
 </main>
 
 {% schema %}
@@ -42,18 +54,18 @@
   "name": "Pillar Main Content",
   "settings": [
     {
-      "type": "header",
-      "content": "Table of Contents"
+        "type": "header",
+        "content": "Table of Contents"
     },
     {
-      "type": "paragraph",
-      "content": "The TOC is automatically generated from the H2 headings in the content."
+        "type": "paragraph",
+        "content": "The TOC is automatically generated from the H2 headings in the content."
     },
     {
-      "type": "text",
-      "id": "toc_title",
-      "label": "TOC Title",
-      "default": "In This Guide"
+        "type": "text",
+        "id": "toc_title",
+        "label": "TOC Title",
+        "default": "In This Guide"
     },
     {
       "type": "header",
