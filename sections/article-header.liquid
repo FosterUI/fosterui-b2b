@@ -1,0 +1,44 @@
+{{ 'section-blog-layout.css' | asset_url | stylesheet_tag }}
+
+<header class="article-header">
+  <div class="page-width">
+    <h1>{{ article.title }}</h1>
+
+    <div class="article-header__meta">
+      {% if section.settings.show_author %}
+        <span>{{ article.author }}</span>
+        {% if section.settings.show_date -%}
+          <span> | </span>
+        {%- endif %}
+      {% endif %}
+      {% if section.settings.show_date %}
+        <span>{{ article.published_at | date: '%B %d, %Y' }}</span>
+      {% endif %}
+    </div>
+  </div>
+</header>
+
+{% schema %}
+{
+  "name": "Article Header",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_date",
+      "label": "Show publication date",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_author",
+      "label": "Show author",
+      "default": true
+    }
+  ],
+  "presets": [
+    {
+      "name": "Article Header"
+    }
+  ]
+}
+{% endschema %}
