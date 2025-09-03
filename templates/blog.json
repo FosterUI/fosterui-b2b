@@ -1,28 +1,42 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
+    "header": {
+      "type": "blog-header",
+      "settings": {}
+    },
     "main": {
-      "type": "main-blog",
+      "type": "blog-grid",
+      "settings": {}
+    },
+    "newsletter": {
+      "type": "newsletter",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Subscribe to the \"B2B AI Edge\" Newsletter"
+          }
+        },
+        "paragraph": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Get specialized insights and implementation tactics for Shopify merchants, delivered weekly.</p>"
+          }
+        },
+        "email_form": {
+          "type": "email_form",
+          "settings": {}
+        }
+      },
+      "block_order": ["heading", "paragraph", "email_form"],
       "settings": {
-        "layout": "collage",
-        "show_image": true,
-        "image_height": "medium",
-        "show_date": true,
-        "show_author": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "color_scheme": "background-1",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        // This class applies the custom styles defined in your custom-brand-styles.css
+        "css_class": "landing-page-customization fui-newsletter"
       }
     }
   },
-  "order": [
-    "main"
-  ]
+  "order": ["header", "main", "newsletter"]
 }
