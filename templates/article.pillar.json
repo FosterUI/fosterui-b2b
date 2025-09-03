@@ -1,0 +1,17 @@
+{
+  "sections": {
+    "hero": {
+      "type": "pillar-hero",
+      "settings": {}
+    },
+    "main": {
+      "type": "pillar-main-content",
+      "settings": {}
+    },
+    "cta": {
+      "type": "pillar-final-cta",
+      "settings": {}
+    }
+  },
+  "order": ["hero", "main", "cta"]
+}
