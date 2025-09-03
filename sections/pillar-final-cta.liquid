@@ -1,0 +1,89 @@
+{{ 'section-pillar-layout.css' | asset_url | stylesheet_tag }}
+
+<style>
+  /* Section-specific CSS for the Final CTA */
+  .pillar-cta-section {
+    /* Uses dark background */
+    background-color: var(--color-brand-primary-dark);
+    color: var(--color-brand-white);
+    padding: 8rem 0;
+    text-align: center;
+    /* Spacing above the CTA */
+    margin-top: 6rem;
+  }
+
+  .pillar-cta-section h2 {
+    color: var(--color-brand-white);
+    /* 3.6rem = 36px */
+    font-size: 3.6rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+  }
+
+  .pillar-cta-section__text {
+    max-width: 70rem;
+    margin: 0 auto 4rem;
+    font-size: 1.6rem;
+  }
+
+  /* Mobile adjustments */
+  @media screen and (max-width: 989px) {
+    .pillar-cta-section h2 {
+      /* 2.8rem = 28px */
+      font-size: 2.8rem;
+    }
+  }
+</style>
+
+<section class="pillar-cta-section pillar-wrapper">
+  <div class="pillar-container">
+    <h2>{{ section.settings.title }}</h2>
+
+    {% if section.settings.text != blank %}
+      <div class="pillar-cta-section__text">
+        {{ section.settings.text }}
+      </div>
+    {% endif %}
+
+    {# Updated button classes to use the global brand styles #}
+    <a href="{{ section.settings.button_link }}" class="btn-brand btn-brand-primary">
+      {{ section.settings.button_label }}
+    </a>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Pillar Final CTA",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Ready to Transform Your Wholesale Channel?"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text",
+      "default": "<p>Don't let manual processes stunt your growth. If you are a Shopify Plus merchant between $1M-$15M GMV, the Roadmap is your first step.</p>"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label",
+      "default": "Book My $1,950 Roadmap"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Pillar Final CTA"
+    }
+  ]
+}
+{% endschema %}
