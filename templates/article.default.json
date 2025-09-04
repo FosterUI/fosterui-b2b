@@ -1,0 +1,16 @@
+{
+  "sections": {
+    "header": {
+      "type": "article-header",
+      "settings": {}
+    },
+    "main": {
+      "type": "article-main",
+      "settings": {
+        // IMPORTANT: Update this URL to match the actual URL of your Pillar Page
+        "pillar_link_url": "/pages/the-definitive-guide-to-ai-powered-b2b-on-shopify-plus"
+      }
+    }
+  },
+  "order": ["header", "main"]
+}
