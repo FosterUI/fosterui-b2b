@@ -5,15 +5,27 @@
     <h1>{{ article.title }}</h1>
 
     <div class="article-header__meta">
-      {% if section.settings.show_author %}
-        <span>{{ article.author }}</span>
-        {% if section.settings.show_date -%}
-          <span> &nbsp;|&nbsp;</span>
-        {%- endif %}
-      {% endif %}
-      {% if section.settings.show_date %}
-        <span>{{ article.published_at | date: '%B %d, %Y' }}</span>
-      {% endif %}
+      {%- if section.settings.author_image != blank -%}
+        <img
+          src="{{ section.settings.author_image | image_url: width: 50, height: 50, crop: 'center' }}"
+          alt="{{ section.settings.author_image.alt | escape }}"
+          loading="lazy"
+          width="25"
+          height="25"
+          class="article-header__author-image"
+        >
+      {%- endif -%}
+      <div class="article-header__meta-text">
+        {% if section.settings.show_author %}
+          <span>{{ article.author }}</span>
+          {% if section.settings.show_date -%}
+            <span class="separator"> &nbsp;|&nbsp;</span>
+          {%- endif %}
+        {% endif %}
+        {% if section.settings.show_date %}
+          <span>{{ article.published_at | date: '%B %d, %Y' }}</span>
+        {% endif %}
+      </div>
     </div>
   </div>
 </header>
@@ -33,6 +45,11 @@
       "id": "show_author",
       "label": "Show author",
       "default": true
+    },
+    {
+      "type": "image_picker",
+      "id": "author_image",
+      "label": "Author image"
     }
   ],
   "presets": [

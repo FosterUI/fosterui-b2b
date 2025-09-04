@@ -139,7 +139,19 @@
     font-size: 1.6rem;
     color: #64748b;
     display: flex;
-    justify-content: center; 
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.article-header__author-image {
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.article-header__meta-text {
+    display: flex;
+    align-items: center;
 }
 
 .article-header__author {
