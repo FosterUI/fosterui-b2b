@@ -9,14 +9,6 @@
  */
 {
   "sections": {
-    "article_header_HdE89r": {
-      "type": "article-header",
-      "name": "B2B Article Header",
-      "settings": {
-        "show_date": true,
-        "show_author": true
-      }
-    },
     "main": {
       "type": "main-article",
       "blocks": {
@@ -30,7 +22,7 @@
           "type": "title",
           "settings": {
             "blog_show_date": true,
-            "blog_show_author": true
+            "blog_show_author": false
           }
         },
         "share": {
@@ -39,39 +31,14 @@
             "share_label": "Share"
           }
         },
-        "content_4Wb36q": {
+        "content": {
           "type": "content",
           "settings": {}
         }
       },
-      "block_order": [
-        "featured_image",
-        "title",
-        "share",
-        "content_4Wb36q"
-      ],
-      "disabled": true,
+      "block_order": ["featured_image", "title", "share", "content"],
       "settings": {}
-    },
-    "article_main_JEqU9d": {
-      "type": "article-main",
-      "name": "B2B Article Main Content",
-      "settings": {
-        "enable_pillar_link": true,
-        "pillar_link_text": "This article is part of my comprehensive resource:",
-        "pillar_link_title": "The Definitive Guide to AI-Powered B2B on Shopify Plus.",
-        "pillar_link_url": "shopify://pages/the-definitive-guide-to-ai-powered-b2b-on-shopify-plus",
-        "enable_author_cta": true,
-        "author_cta_title": "About the Author & Expert",
-        "author_cta_text": "I am a Founder & Shopify Plus Consultant specializing in transforming Shopify DTC stores into AI-powered B2B wholesale engines. My methodology focuses on specialized revenue acceleration, velocity, and precision.",
-        "author_cta_button_label": "Book My $1,950 Roadmap",
-        "author_cta_button_link": "/#contact"
-      }
     }
   },
-  "order": [
-    "article_header_HdE89r",
-    "main",
-    "article_main_JEqU9d"
-  ]
+  "order": ["main"]
 }
