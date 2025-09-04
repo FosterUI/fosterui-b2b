@@ -41,9 +41,18 @@
         "padding_top": 20,
         "padding_bottom": 20
       }
+    },
+    "blog_header_tUmfwG": {
+      "type": "blog-header",
+      "name": "B2B Blog Header",
+      "settings": {
+        "kicker": "Insights & Strategy",
+        "introduction": "<p>Specialized implementation tactics and insights on the intersection of AI and B2B E-commerce for Shopify merchants.</p>"
+      }
     }
   },
   "order": [
-    "header"
+    "header",
+    "blog_header_tUmfwG"
   ]
 }
