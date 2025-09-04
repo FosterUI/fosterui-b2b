@@ -415,10 +415,6 @@ body {
     color: var(--color-brand-accent-hover);
 }
 
-.card__heading a:hover {;
-}
-
-
 /* --- Styling for Custom Liquid Blocks (Used for Col 1 and Col 3) --- */
 
 /* Headshot Integration (Column 1) */
