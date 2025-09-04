@@ -26,23 +26,29 @@
         
         {% comment %} Render the native HTML5 audio player with multiple format support {% endcomment %}
         <audio id="audio-player-{{ article.id }}" controls preload="metadata">
-          {% comment %} Get file extension from the audio URL {% endcomment %}
-          {% assign file_extension = audio_url | split: '.' | last | downcase %}
-          {% if file_extension == 'mp4a' or file_extension == 'm4a' %}
-            <source src="{{ audio_url }}" type="audio/m4a">
-            <source src="{{ audio_url }}" type="audio/x-m4a">
-          {% elsif file_extension == 'mp3' %}
-            <source src="{{ audio_url }}" type="audio/mpeg">
-          {% elsif file_extension == 'wav' %}
-            <source src="{{ audio_url }}" type="audio/wav">
-          {% elsif file_extension == 'ogg' %}
-            <source src="{{ audio_url }}" type="audio/ogg">
-          {% else %}
-            <source src="{{ audio_url }}" type="audio/m4a">
-            <source src="{{ audio_url }}" type="audio/mpeg">
-          {% endif %}
+          {% comment %} Since Shopify CDN URLs don't include file extensions, provide multiple source types {% endcomment %}
+          {% comment %} Try M4A/MP4A formats first (most likely for your .mp4a file) {% endcomment %}
+          <source src="{{ audio_url }}" type="audio/m4a">
+          <source src="{{ audio_url }}" type="audio/x-m4a">
+          <source src="{{ audio_url }}" type="audio/mp4">
+          {% comment %} Fallback to other common formats {% endcomment %}
+          <source src="{{ audio_url }}" type="audio/mpeg">
+          <source src="{{ audio_url }}" type="audio/wav">
           Your browser does not support the audio element.
         </audio>
+        
+        {% comment %} Debug information - remove this after testing {% endcomment %}
+        <div style="margin-top: 1rem; padding: 1rem; background: #f0f0f0; font-size: 1.2rem; font-family: monospace;">
+          <strong>Debug Info:</strong><br>
+          Audio URL: {{ audio_url }}<br>
+          File object: {{ audio_file }}<br>
+          {% if audio_file.content_type %}
+            Content Type: {{ audio_file.content_type }}<br>
+          {% endif %}
+          {% if audio_file.size %}
+            File Size: {{ audio_file.size }} bytes<br>
+          {% endif %}
+        </div>
       </div>
     {% endif %}
 
