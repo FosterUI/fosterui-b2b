@@ -283,6 +283,32 @@
     margin-bottom: 2.5rem;
 }
 
+/* Article Audio Player Container */
+.article-audio-player {
+    margin-bottom: 4rem;
+    background-color: var(--color-brand-white);
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow-brand);
+    /* Optional: Add accent border to match other callouts */
+    border-left: 4px solid var(--color-brand-accent);
+}
+
+.article-audio-player__label {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--color-brand-primary-dark);
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+/* Style the native HTML5 Audio Player */
+.article-audio-player audio {
+    width: 100%;
+    height: 5.4rem;
+    /* Standard height for modern browsers */
+}
+
 
 /* 3. Mobile Responsiveness */
 @media screen and (max-width: 989px) {
