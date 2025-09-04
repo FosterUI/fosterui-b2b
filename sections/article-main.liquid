@@ -58,17 +58,37 @@
         <script>
           document.addEventListener('DOMContentLoaded', function () {
             const audio = document.getElementById('audio-player-{{ article.id }}');
+            if (!audio) {
+              console.error('Audio element not found!');
+              return;
+            }
             const audioContainer = audio.closest('.article-audio-player');
             const durationSpan = document.getElementById('audio-duration-{{ article.id }}');
+            if (!durationSpan) {
+              console.error('Duration span not found!');
+              return;
+            }
             let errorShown = false;
 
-            audio.addEventListener('loadedmetadata', function() {
+            function updateDuration() {
+              console.log('Attempting to update duration. Current duration:', audio.duration);
               if (audio.duration && isFinite(audio.duration)) {
                 const minutes = Math.floor(audio.duration / 60);
                 const seconds = Math.floor(audio.duration % 60).toString().padStart(2, '0');
                 durationSpan.textContent = `${minutes}:${seconds}`;
+                console.log('Duration updated to:', durationSpan.textContent);
+              } else {
+                console.log('Audio duration not available or invalid.');
               }
-            });
+            }
+
+            audio.addEventListener('loadedmetadata', updateDuration);
+            audio.addEventListener('durationchange', updateDuration);
+
+            // Sometimes, the duration is available right away
+            if (audio.readyState > 0) {
+              updateDuration();
+            }
 
             // Function to show error message
             function showError(message) {
