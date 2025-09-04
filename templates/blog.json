@@ -51,7 +51,7 @@
       ],
       "settings": {
         "color_scheme": "background-1",
-        "full_width": true,
+        "full_width": false,
         "custom_css_class": "landing-page-customization fui-newsletter",
         "padding_top": 40,
         "padding_bottom": 40
