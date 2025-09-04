@@ -139,7 +139,7 @@
     font-size: 1.6rem;
     color: #64748b;
     display: flex;
-    justify-content: center;
+    justify-content: center; 
 }
 
 .article-header__author {
