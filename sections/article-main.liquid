@@ -18,9 +18,12 @@
 
     {% if audio_file %}
       <div class="article-audio-player">
-        <label class="article-audio-player__label" for="audio-player-{{ article.id }}">
-          {{- section.settings.audio_player_label -}}
-        </label>
+        <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.5rem;">
+          <label class="article-audio-player__label" for="audio-player-{{ article.id }}">
+            {{- section.settings.audio_player_label -}}
+          </label>
+          <span id="audio-duration-{{ article.id }}" style="font-size: 0.9rem; color: #555;"></span>
+        </div>
 
         {% comment %} Try different approaches to get a working audio URL {% endcomment %}
         {% assign audio_url_method1 = audio_file | file_url %}
@@ -56,7 +59,16 @@
           document.addEventListener('DOMContentLoaded', function () {
             const audio = document.getElementById('audio-player-{{ article.id }}');
             const audioContainer = audio.closest('.article-audio-player');
+            const durationSpan = document.getElementById('audio-duration-{{ article.id }}');
             let errorShown = false;
+
+            audio.addEventListener('loadedmetadata', function() {
+              if (audio.duration && isFinite(audio.duration)) {
+                const minutes = Math.floor(audio.duration / 60);
+                const seconds = Math.floor(audio.duration % 60).toString().padStart(2, '0');
+                durationSpan.textContent = `${minutes}:${seconds}`;
+              }
+            });
 
             // Function to show error message
             function showError(message) {
