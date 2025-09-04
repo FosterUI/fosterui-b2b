@@ -402,6 +402,65 @@
         "padding_bottom": 0
       }
     },
+    "homepage_faq_k4mwX6": {
+      "type": "homepage-faq",
+      "blocks": {
+        "faq_item_HJHfmt": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How is Shopify B2B different from using discount codes or wholesale apps?",
+            "answer": "<p>The native Shopify B2B suite is fundamentally different. Discount codes are a workaround that corrupts analytics and requires manual effort. Third-party apps often create disconnected data silos. Shopify B2B integrates directly into the core platform, offering robust features like Company Profiles, Custom Catalogs, and Net Terms, allowing you to manage DTC and B2B seamlessly from one backend.</p>"
+          }
+        },
+        "faq_item_qmA8Wj": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Can I run my DTC and B2B channels on the same Shopify store?",
+            "answer": "<p>Yes. Shopify Plus supports a \"Blended Storefront\" approach. Your DTC experience remains unchanged, but when a wholesale buyer logs in, the storefront dynamically adapts to display their specific catalog, pricing, and payment terms. This provides a unified brand experience and operational efficiency.</p>"
+          }
+        },
+        "faq_item_6aTEKQ": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How complex is integrating my ERP (like NetSuite or Dynamics) with Shopify B2B?",
+            "answer": "<p>ERP integration is often the most complex part of a B2B launch. While connectors exist, the challenge lies in data mapping, managing API limits, and handling complex B2B pricing rules. A successful integration requires a strategic blueprint to avoid costly operational disruptions and ensure a single source of truth. This is a core part of my methodology.</p>"
+          }
+        },
+        "faq_item_TNBMK7": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What are the most impactful ways to use AI in my B2B operations today?",
+            "answer": "<p>The highest impact areas are Precision Demand Forecasting and Personalization. AI forecasting moves beyond spreadsheet guesswork by analyzing complex, real-time data to prevent stockouts and free up capital. AI personalization delivers tailored product recommendations and dynamic content at scale, increasing B2B order frequency and AOV.</p>"
+          }
+        },
+        "faq_item_GQWq4m": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How long does it take to launch a professional B2B channel?",
+            "answer": "<p>A fully optimized B2B channel can be launched rapidly with the right expertise. My methodology utilizes a 5-day deep-dive audit (The Roadmap) followed by a 4-week intensive execution project (The Implementation Sprint). This approach prioritizes velocity and delivers a functional, professional wholesale channel in just over a month.</p>"
+          }
+        },
+        "faq_item_Vr9Xpz": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Why hire a specialist like you instead of a general Shopify agency?",
+            "answer": "<p>General agencies focus on broad e-commerce solutions. I focus exclusively on the intersection of B2B expansion and AI integration on Shopify Plus. This hyper-specialization allows me to execute faster, identify bottlenecks others miss (using my proprietary AI audit system), and deliver quantifiable revenue lift, rather than just code.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_HJHfmt",
+        "faq_item_qmA8Wj",
+        "faq_item_6aTEKQ",
+        "faq_item_TNBMK7",
+        "faq_item_GQWq4m",
+        "faq_item_Vr9Xpz"
+      ],
+      "name": "B2B Homepage FAQ",
+      "settings": {
+        "title": "Frequently Asked Questions"
+      }
+    },
     "newsletter_section_izCYan": {
       "type": "newsletter-section",
       "disabled": true,
@@ -421,6 +480,7 @@
     "multicolumn_9JGMiV",
     "featured_blog_MPqJz9",
     "newsletter_cQ4kTJ",
+    "homepage_faq_k4mwX6",
     "newsletter_HPecCR",
     "newsletter_section_izCYan"
   ]
