@@ -403,6 +403,14 @@ body {
     color: var(--color-brand-primary-dark);
 }
 
+.article-card .card__heading {
+    font-size: 1.92rem;
+    font-weight: 700;
+    margin: 0 0 10px;
+    color: var(--color-brand-primary-dark);
+
+}
+
 
 /* --- Styling for Custom Liquid Blocks (Used for Col 1 and Col 3) --- */
 
