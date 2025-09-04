@@ -413,7 +413,7 @@ body {
 .card__heading a:hover {
     text-decoration: none;
     color: var(--color-brand-accent-hover);
-}
+} 
 
 /* --- Styling for Custom Liquid Blocks (Used for Col 1 and Col 3) --- */
 
