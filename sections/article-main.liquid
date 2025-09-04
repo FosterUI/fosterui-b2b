@@ -79,53 +79,32 @@
               showError('The audio file could not be loaded.');
             });
 
+            let audioLoaded = false;
+
             audio.addEventListener('loadstart', function () {
               console.log('Audio loading started for URL:', audio.currentSrc || '{{ audio_url }}');
             });
 
             audio.addEventListener('loadeddata', function () {
+              audioLoaded = true;
               console.log('Audio data loaded successfully');
             });
 
             audio.addEventListener('canplay', function () {
+              audioLoaded = true;
               console.log('Audio ready to play');
             });
 
-            // Check if audio can load after a timeout
+            // Only show error if audio truly fails to load
             setTimeout(function () {
-              if (audio.readyState === 0) {
+              if (audio.readyState === 0 && !audioLoaded) {
                 console.error('Audio failed to load after timeout');
                 showError('Audio file is not accessible at the current URL.');
               }
-            }, 5000);
+            }, 8000);
           });
         </script>
 
-        {% comment %} Enhanced debug information {% endcomment %}
-        <div style="margin-top: 1rem; padding: 1rem; background: #f0f0f0; font-size: 1.2rem; font-family: monospace; border-radius: 4px;">
-          <strong>Debug Info:</strong><br>
-          Final Audio URL: {{ audio_url -}}
-          <br>
-          Method 1 (file_url): {{ audio_url_method1 -}}
-          <br>
-          Method 2 (.url): {{ audio_url_method2 -}}
-          <br>
-          Method 3 (img_url): {{ audio_url_method3 -}}
-          <br>
-          File object: {{ audio_file -}}
-          <br>
-          {% if audio_file.content_type %}
-            Content Type: {{ audio_file.content_type -}}
-            <br>
-          {% endif %}
-          {% if audio_file.size %}
-            File Size: {{ audio_file.size }} bytes<br>
-          {% endif %}
-          {% if audio_file.alt %}
-            Alt Text: {{ audio_file.alt -}}
-            <br>
-          {% endif %}
-        </div>
       </div>
     {% endif %}
 
