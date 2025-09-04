@@ -29,10 +29,37 @@
         "author_cta_button_label": "Book My $1,950 Roadmap",
         "author_cta_button_link": "/#contact"
       }
+    },
+    "newsletter": {
+      "type": "newsletter",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Subscribe to the \"B2B AI Edge\" Newsletter"
+          }
+        },
+        "paragraph": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Get specialized insights and implementation tactics for Shopify merchants, delivered weekly.</p>"
+          }
+        },
+        "email_form": {
+          "type": "email_form",
+          "settings": {}
+        }
+      },
+      "block_order": ["heading", "paragraph", "email_form"],
+      "settings": {
+        "color_scheme": "background-1",
+        // Set padding to 0, as the custom CSS class 'fui-newsletter' handles the padding.
+        "padding_top": 0,
+        "padding_bottom": 0,
+        // CRITICAL: These classes apply the custom styles defined in your custom-brand-styles.css
+        "css_class": "landing-page-customization fui-newsletter"
+      }
     }
   },
-  "order": [
-    "header",
-    "main"
-  ]
+  "order": ["header", "main", "newsletter"]
 }
