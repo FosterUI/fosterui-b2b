@@ -410,7 +410,7 @@ body {
     color: var(--color-brand-primary-dark);
 }
 
-.card__heading a {
+.card__heading a:hover {
     text-decoration: none;
     color: var(--color-brand-accent-hover);
 }
