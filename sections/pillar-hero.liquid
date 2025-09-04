@@ -1,51 +1,51 @@
 {{ 'section-pillar-layout.css' | asset_url | stylesheet_tag }}
 
 <style>
-  /* Section-specific CSS for the Hero */
-  .pillar-hero {
-    padding: 8rem 0;
-    text-align: center;
-    /* Hero uses white background */
-    background-color: var(--color-brand-white);
-    border-bottom: 1px solid #e0e0e0;
-  }
+/* Section-specific CSS for the Hero */
+.pillar-hero {
+  padding: 8rem 0;
+  text-align: center;
+  /* Hero uses white background */
+  background-color: var(--color-brand-white);
+  border-bottom: 1px solid #e0e0e0;
+}
 
-  .pillar-hero h1 {
-    /* 4.8rem = 48px */
-    font-size: 4.8rem;
-    font-weight: 900;
-    color: var(--color-brand-primary-dark);
-    margin-bottom: 2.5rem;
-    line-height: 1.2;
-  }
+.pillar-hero h1 {
+  /* 4.8rem = 48px */
+  font-size: 4.8rem; 
+  font-weight: 900;
+  color: var(--color-brand-primary-dark);
+  margin-bottom: 2.5rem;
+  line-height: 1.2;
+}
 
-  .pillar-hero__intro {
-    /* 1.92rem = ~19px */
-    font-size: 1.92rem;
-    max-width: 80rem;
-    margin: 0 auto;
-  }
+.pillar-hero__intro {
+  /* 1.92rem = ~19px */
+  font-size: 1.92rem; 
+  max-width: 80rem;
+  margin: 0 auto;
+}
 
-  /* Mobile adjustments */
-  @media screen and (max-width: 989px) {
+/* Mobile adjustments */
+@media screen and (max-width: 989px) {
     .pillar-hero {
-      padding: 6rem 0;
+        padding: 6rem 0;
     }
     .pillar-hero h1 {
-      /* 3.6rem = 36px */
-      font-size: 3.6rem;
+        /* 3.6rem = 36px */
+        font-size: 3.6rem; 
     }
-  }
+}
 </style>
 
 <section class="pillar-hero pillar-wrapper">
   <div class="pillar-container">
     {% if section.settings.kicker != blank %}
-      {# Updated class to kicker-brand #}
+      {% comment %} Updated class to kicker-brand {% endcomment %}
       <div class="kicker-brand">{{ section.settings.kicker }}</div>
     {% endif %}
-
-    {# Automatically use the Page or Article title as the H1 #}
+    
+    {% comment %} Automatically use the Page or Article title as the H1 {% endcomment %}
     <h1>
       {% if template.name == 'page' %}
         {{ page.title }}
@@ -53,10 +53,10 @@
         {{ article.title }}
       {% endif %}
     </h1>
-
+    
     {% if section.settings.introduction != blank %}
       <div class="pillar-hero__intro">
-        {{ section.settings.introduction }}
+          {{ section.settings.introduction }}
       </div>
     {% endif %}
   </div>
@@ -83,7 +83,7 @@
       "default": "<p>Stop relying on spreadsheets and manual processes. This guide outlines the exact strategy required to transform your Shopify DTC store into a frictionless, high-volume B2B powerhouse using strategic AI automation.</p>"
     }
   ],
-  "presets": [
+    "presets": [
     {
       "name": "B2B Pillar Hero"
     }
