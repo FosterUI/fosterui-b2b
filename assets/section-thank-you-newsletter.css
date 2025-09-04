@@ -50,3 +50,12 @@
     text-decoration: none;
     color: var(--color-brand-accent-hover);
 }
+
+/* Custom: Newsletter Thank You Page */
+.page-thank-you .rte a {
+    color: var(--color-brand-accent);
+}
+
+.page-thank-you .rte a:hover {
+    color: var(--color-brand-accent-hover);
+}
