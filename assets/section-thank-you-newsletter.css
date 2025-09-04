@@ -53,9 +53,9 @@
 
 /* Custom: Newsletter Thank You Page */
 .page-thank-you .rte a {
-    color: var(--color-brand-accent);
+    color: var(--color-brand-white);
 }
 
 .page-thank-you .rte a:hover {
-    color: var(--color-brand-accent-hover);
+    color: var(--color-brand-white-hover);
 }
