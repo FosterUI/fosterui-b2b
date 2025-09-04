@@ -58,7 +58,7 @@
       ],
       "settings": {
         "color_scheme": "background-1",
-        "full_width": true,
+        "full_width": false,
         "custom_css_class": "landing-page-customization fui-newslette",
         "padding_top": 0,
         "padding_bottom": 0
