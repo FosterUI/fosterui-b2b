@@ -386,7 +386,7 @@ body {
     color: rgba(255, 255, 255, 0.7) !important;
 }
 
-/* Article Card */
+/* Featured blog */
 .blog__posts.articles-wrapper .article {
     scroll-snap-align: start;
     background-color: var(--color-brand-white);
@@ -396,7 +396,7 @@ body {
     color: var(--color-brand-text);
 }
 
-.blog__title {
+.title-wrapper-with-link .blog__title {
     font-size: 3.6rem;
     font-weight: 700;
     line-height: 1.2;
