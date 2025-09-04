@@ -253,6 +253,7 @@
         "title": "Ready to Transform Your Wholesale Channel into an AI-Powered Powerhouse?",
         "text": "<p>Don't let manual processes stunt your growth. If you are a Shopify Plus merchant between $1M-$15M GMV, the Roadmap is your first step.</p><h3>What You Get in 5 Days:</h3><ul><li>A clear 90-Day Implementation Plan</li><li>A tailored Revenue Impact Model</li><li>A customized AI Opportunity Matrix</li></ul><p>If you prefer a quick overview first, request a personalized video audit, and I will send you a 5-minute Loom video highlighting specific bottlenecks in your current setup.</p>",
         "use_hubspot": false,
+        "native_form_title": "Book Your Roadmap or Request Audit",
         "roadmap_title": "The Essential First Step",
         "roadmap_desc": "Fill out the form below to request a booking for the $1,950 B2B & AI Opportunity Roadmap. I'll personally review it and be in touch within one business day.",
         "audit_title": "Get a Quick Overview First",
@@ -313,6 +314,24 @@
         "padding_bottom": 0,
         "custom_css_class": "landing-page-customization insights__wrapper",
         "navigation": "insights"
+      }
+    },
+    "featured_blog_MPqJz9": {
+      "type": "featured-blog",
+      "name": "t:sections.featured-blog.presets.name",
+      "settings": {
+        "blog": "insights",
+        "post_limit": 3,
+        "heading": "Blog posts",
+        "heading_size": "h1",
+        "columns_desktop": 3,
+        "show_view_all": true,
+        "show_image": true,
+        "show_date": true,
+        "show_author": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "newsletter_cQ4kTJ": {
@@ -396,6 +415,7 @@
     "about_principal_LKJFK6",
     "contact_split_hybrid_YMBRY8",
     "multicolumn_9JGMiV",
+    "featured_blog_MPqJz9",
     "newsletter_cQ4kTJ",
     "newsletter_HPecCR",
     "newsletter_section_izCYan"
