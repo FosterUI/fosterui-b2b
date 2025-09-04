@@ -1,0 +1,192 @@
+<style>
+.homepage-faq {
+    /* Uses the standard background color */
+    background-color: var(--color-brand-background);
+    padding: 10rem 0;
+}
+
+.homepage-faq__header {
+    text-align: center;
+    margin-bottom: 6rem;
+}
+
+.homepage-faq__title {
+    font-size: 3.6rem;
+    font-weight: 700;
+    color: var(--color-brand-primary-dark);
+}
+
+.homepage-faq__container {
+    max-width: 90rem;
+    margin: 0 auto;
+}
+
+/* Accordion Styling */
+.faq-item {
+    background-color: var(--color-brand-white);
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow-brand);
+    transition: background-color 0.3s ease;
+}
+
+.faq-question {
+    /* Removes the default browser arrow */
+    list-style: none; 
+    padding: 2.5rem;
+    cursor: pointer;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--color-brand-primary-dark);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Hide default arrows in Safari/Chrome */
+.faq-question::-webkit-details-marker {
+    display: none;
+}
+
+/* Custom Arrow Icon (Plus/Minus) */
+.faq-icon {
+    font-size: 2.4rem;
+    font-weight: 400;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+    margin-left: 2rem;
+}
+
+.faq-answer {
+    padding: 0 2.5rem 2.5rem 2.5rem;
+    border-top: 1px solid #e0e0e0;
+    padding-top: 2.5rem;
+    font-size: 1.6rem;
+    line-height: 1.6;
+}
+
+/* State management for the icon rotation */
+.faq-item[open] > .faq-question {
+    background-color: #f1f5f9; /* Subtle background change when open */
+}
+
+.faq-item[open] .faq-icon {
+  transform: rotate(45deg); /* Turns '+' into 'x' */
+}
+
+@media screen and (max-width: 989px) {
+    .homepage-faq {
+        padding: 6rem 0;
+    }
+    .homepage-faq__title {
+        font-size: 2.8rem;
+    }
+    .faq-question {
+        font-size: 1.6rem;
+    }
+}
+</style>
+
+<section class="homepage-faq">
+  <div class="page-width">
+    <div class="homepage-faq__header">
+      <h2 class="homepage-faq__title">{{ section.settings.title }}</h2>
+    </div>
+
+    <div class="homepage-faq__container">
+      {% comment %} Uses the HTML details/summary elements for a lightweight accordion {% endcomment %}
+      {% for block in section.blocks %}
+        <details class="faq-item" {{ block.shopify_attributes }}>
+          <summary class="faq-question">
+            <span>{{ block.settings.question }}</span>
+            <span class="faq-icon">+</span>
+          </summary>
+          <div class="faq-answer rte">
+            {{ block.settings.answer }}
+          </div>
+        </details>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "B2B Homepage FAQ",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Frequently Asked Questions"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "faq_item",
+      "name": "FAQ Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "question",
+          "label": "Question"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "Answer"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "B2B Homepage FAQ",
+      "blocks": [
+        {
+          "type": "faq_item",
+          "settings": {
+            "question": "How is Shopify B2B different from using discount codes or wholesale apps?",
+            "answer": "<p>The native Shopify B2B suite is fundamentally different. Discount codes are a workaround that corrupts analytics and requires manual effort. Third-party apps often create disconnected data silos. Shopify B2B integrates directly into the core platform, offering robust features like Company Profiles, Custom Catalogs, and Net Terms, allowing you to manage DTC and B2B seamlessly from one backend.</p>"
+          }
+        },
+        {
+            "type": "faq_item",
+            "settings": {
+                "question": "Can I run my DTC and B2B channels on the same Shopify store?",
+                "answer": "<p>Yes. Shopify Plus supports a \"Blended Storefront\" approach. Your DTC experience remains unchanged, but when a wholesale buyer logs in, the storefront dynamically adapts to display their specific catalog, pricing, and payment terms. This provides a unified brand experience and operational efficiency.</p>"
+            }
+        },
+        {
+            "type": "faq_item",
+            "settings": {
+                "question": "How complex is integrating my ERP (like NetSuite or Dynamics) with Shopify B2B?",
+                "answer": "<p>ERP integration is often the most complex part of a B2B launch. While connectors exist, the challenge lies in data mapping, managing API limits, and handling complex B2B pricing rules. A successful integration requires a strategic blueprint to avoid costly operational disruptions and ensure a single source of truth. This is a core part of my methodology.</p>"
+            }
+        },
+        {
+            "type": "faq_item",
+            "settings": {
+                "question": "What are the most impactful ways to use AI in my B2B operations today?",
+                "answer": "<p>The highest impact areas are Precision Demand Forecasting and Personalization. AI forecasting moves beyond spreadsheet guesswork by analyzing complex, real-time data to prevent stockouts and free up capital. AI personalization delivers tailored product recommendations and dynamic content at scale, increasing B2B order frequency and AOV.</p>"
+            }
+        },
+        {
+            "type": "faq_item",
+            "settings": {
+                "question": "How long does it take to launch a professional B2B channel?",
+                "answer": "<p>A fully optimized B2B channel can be launched rapidly with the right expertise. My methodology utilizes a 5-day deep-dive audit (The Roadmap) followed by a 4-week intensive execution project (The Implementation Sprint). This approach prioritizes velocity and delivers a functional, professional wholesale channel in just over a month.</p>"
+            }
+        },
+        {
+            "type": "faq_item",
+            "settings": {
+                "question": "Why hire a specialist like you instead of a general Shopify agency?",
+                "answer": "<p>General agencies focus on broad e-commerce solutions. I focus exclusively on the intersection of B2B expansion and AI integration on Shopify Plus. This hyper-specialization allows me to execute faster, identify bottlenecks others miss (using my proprietary AI audit system), and deliver quantifiable revenue lift, rather than just code.</p>"
+            }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
