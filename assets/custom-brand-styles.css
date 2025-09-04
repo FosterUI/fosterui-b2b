@@ -339,7 +339,7 @@ body {
 
 /* --- Custom Newsletter Styles (Namespaced) --- */
 .fui-newsletter {
-    padding: 100px 0;
+    padding: 0 0 100px;
     background-color: var(--color-brand-white);
 }
 
