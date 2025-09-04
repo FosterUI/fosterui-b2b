@@ -9,6 +9,14 @@
  */
 {
   "sections": {
+    "blog_header_pWPmTp": {
+      "type": "blog-header",
+      "name": "B2B Blog Header",
+      "settings": {
+        "kicker": "Insights & Strategy",
+        "introduction": "<p>Specialized implementation tactics and insights on the intersection of AI and B2B E-commerce for Shopify merchants.</p>"
+      }
+    },
     "main": {
       "type": "blog-grid",
       "settings": {
@@ -51,6 +59,7 @@
     }
   },
   "order": [
+    "blog_header_pWPmTp",
     "main",
     "newsletter"
   ]
