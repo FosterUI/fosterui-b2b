@@ -203,6 +203,15 @@
     margin-bottom: 2rem;
 }
 
+.article-content a {
+    color: var(--color-brand-accent);
+    text-decoration: none;
+}
+
+.article-content a:hover {
+    color: var(--color-brand-accent-hover);
+}
+
 .article-content h2 {
     font-size: 3.2rem;
     font-weight: 700;
