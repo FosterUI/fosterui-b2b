@@ -23,6 +23,10 @@ a {
     text-decoration: none;
 }
 
+a:hover {
+    color: var(--color-brand-accent-hover);
+}
+
 .pillar-wrapper {
     background-color: var(--color-brand-background);
     color: var(--color-brand-text);
