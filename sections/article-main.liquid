@@ -29,14 +29,36 @@
           {% assign audio_url = audio_url_raw %}
         {% endif %}
         
-        {% comment %} Render the native HTML5 audio player - since we know this is an M4A file {% endcomment %}
+        {% comment %} Render the native HTML5 audio player with error handling {% endcomment %}
         <audio id="audio-player-{{ article.id }}" controls preload="metadata">
-          {% comment %} Provide M4A MIME types since your file is .mp4a {% endcomment %}
+          {% comment %} Try multiple MIME types for better compatibility {% endcomment %}
           <source src="{{ audio_url }}" type="audio/m4a">
           <source src="{{ audio_url }}" type="audio/x-m4a">
           <source src="{{ audio_url }}" type="audio/mp4">
+          <source src="{{ audio_url }}" type="audio/mpeg">
           Your browser does not support the audio element.
         </audio>
+        
+        {% comment %} JavaScript to handle audio loading errors {% endcomment %}
+        <script>
+          document.addEventListener('DOMContentLoaded', function() {
+            const audio = document.getElementById('audio-player-{{ article.id }}');
+            const audioContainer = audio.closest('.article-audio-player');
+            
+            audio.addEventListener('error', function(e) {
+              console.error('Audio loading error:', e);
+              audioContainer.innerHTML = '<div style="padding: 1rem; background: #fee; border: 1px solid #fcc; border-radius: 4px; color: #c33;"><strong>Audio Error:</strong> The audio file could not be loaded. Please check if the file was uploaded correctly to the metafield.</div>';
+            });
+            
+            audio.addEventListener('loadstart', function() {
+              console.log('Audio loading started for URL:', audio.currentSrc || '{{ audio_url }}');
+            });
+            
+            audio.addEventListener('canplay', function() {
+              console.log('Audio can play - file loaded successfully');
+            });
+          });
+        </script>
         
         {% comment %} Debug information - remove this after testing {% endcomment %}
         <div style="margin-top: 1rem; padding: 1rem; background: #f0f0f0; font-size: 1.2rem; font-family: monospace;">
