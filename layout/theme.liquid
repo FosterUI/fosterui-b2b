@@ -306,6 +306,9 @@
         document.documentElement.classList.add('shopify-design-mode');
       }
     </script>
+
+{% comment %} Custom: JSON-LD Schema logo, name, description, articles, etc {% endcomment %}
+    {% render 'json-ld-enhanced' %}
   </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
