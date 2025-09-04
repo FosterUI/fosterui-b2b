@@ -2884,6 +2884,9 @@
         },
         "full_width": {
           "label": "Full width"
+        },
+        "custom_rt_class": {
+          "label": "CSS class"
         }
       },
       "blocks": {
