@@ -398,7 +398,6 @@ body {
 
 .title-wrapper-with-link .blog__title {
     font-size: 3.6rem;
-    font-weight: 700;
     line-height: 1.2;
     margin: 0 0 20px;
     color: var(--color-brand-primary-dark);
