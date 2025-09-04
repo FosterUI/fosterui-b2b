@@ -1,39 +1,50 @@
 {{ 'section-blog-layout.css' | asset_url | stylesheet_tag }}
 
+{% comment %} Calculate Read Time (Approx 225 WPM). Using ceil filter to round up. {% endcomment %}
+{% assign word_count = article.content | strip_html | number_of_words %}
+{% assign read_time = word_count | divided_by: 225.0 | ceil %}
+
 <header class="article-header">
   <div class="page-width">
+    
     <h1>{{ article.title }}</h1>
+    
+    <div class="article-header__meta-wrapper">
+        {% if section.settings.author_headshot != blank %}
+            <img src="{{ section.settings.author_headshot | image_url: width: 60, height: 60 }}" alt="{{ article.author }}" class="article-header__headshot" width="60" height="60" loading="lazy">
+        {% endif %}
 
-    <div class="article-header__meta">
-      {%- if section.settings.author_image != blank -%}
-        <img
-          src="{{ section.settings.author_image | image_url: width: 50, height: 50, crop: 'center' }}"
-          alt="{{ section.settings.author_image.alt | escape }}"
-          loading="lazy"
-          width="25"
-          height="25"
-          class="article-header__author-image"
-        >
-      {%- endif -%}
-      <div class="article-header__meta-text">
-        {% if section.settings.show_author %}
-          <span>{{ article.author }}</span>
-          {% if section.settings.show_date -%}
-            <span class="separator"> &nbsp;|&nbsp;</span>
-          {%- endif %}
-        {% endif %}
-        {% if section.settings.show_date %}
-          <span>{{ article.published_at | date: '%B %d, %Y' }}</span>
-        {% endif %}
-      </div>
+        <div class="article-header__meta">
+            {% if section.settings.show_author %}
+                <span class="article-header__author">{{ article.author }}</span>
+            {% endif %}
+            
+            <span class="article-header__date-time">
+                {% if section.settings.show_date %}
+                    <span>{{ article.published_at | date: '%B %d, %Y' }}</span>
+                {% endif %}
+                
+                {% comment %} NEW: Display Read Time {% endcomment %}
+                {% if section.settings.show_read_time %}
+                    {% if section.settings.show_date %}<span> | </span>{% endif %}
+                    <span>{{ read_time }} min read</span>
+                {% endif %}
+            </span>
+        </div>
     </div>
+
   </div>
 </header>
 
 {% schema %}
 {
-  "name": "B2B Article Header",
+  "name": "Article Header",
   "settings": [
+    {
+      "type": "image_picker",
+      "id": "author_headshot",
+      "label": "Author Headshot"
+    },
     {
       "type": "checkbox",
       "id": "show_date",
@@ -42,19 +53,20 @@
     },
     {
       "type": "checkbox",
-      "id": "show_author",
-      "label": "Show author",
+      "id": "show_read_time",
+      "label": "Show estimated read time",
       "default": true
     },
     {
-      "type": "image_picker",
-      "id": "author_image",
-      "label": "Author image"
+      "type": "checkbox",
+      "id": "show_author",
+      "label": "Show author",
+      "default": true
     }
   ],
-  "presets": [
+    "presets": [
     {
-      "name": "B2B Article Header"
+      "name": "Article Header"
     }
   ]
 }
