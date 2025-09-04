@@ -322,7 +322,7 @@
       "settings": {
         "blog": "insights",
         "post_limit": 3,
-        "heading": "Blog posts",
+        "heading": "<strong>Insights: The Intersection of AI and B2B E-commerce</strong>",
         "heading_size": "h1",
         "columns_desktop": 3,
         "show_view_all": true,
