@@ -18,6 +18,11 @@
 /* 1. Base Styles */
 /* We rely on custom-brand-styles.css for variables and fonts */
 
+a {
+    color: var(--color-brand-accent);
+    text-decoration: none;
+}
+
 .pillar-wrapper {
     background-color: var(--color-brand-background);
     color: var(--color-brand-text);
