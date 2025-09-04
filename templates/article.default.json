@@ -36,7 +36,8 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Subscribe to the \"B2B AI Edge\" Newsletter"
+            "heading": "Subscribe to the \"B2B AI Edge\" Newsletter",
+            "heading_size": "h1"
           }
         },
         "paragraph": {
@@ -50,16 +51,23 @@
           "settings": {}
         }
       },
-      "block_order": ["heading", "paragraph", "email_form"],
+      "block_order": [
+        "heading",
+        "paragraph",
+        "email_form"
+      ],
       "settings": {
         "color_scheme": "background-1",
-        // Set padding to 0, as the custom CSS class 'fui-newsletter' handles the padding.
+        "full_width": true,
+        "custom_css_class": "landing-page-customization fui-newslette",
         "padding_top": 0,
-        "padding_bottom": 0,
-        // CRITICAL: These classes apply the custom styles defined in your custom-brand-styles.css
-        "css_class": "landing-page-customization fui-newsletter"
+        "padding_bottom": 0
       }
     }
   },
-  "order": ["header", "main", "newsletter"]
+  "order": [
+    "header",
+    "main",
+    "newsletter"
+  ]
 }
