@@ -296,10 +296,9 @@
 
 .article-audio-player__header {
     display: flex;
-    justify-content: space-between;
     align-items: baseline;
     margin-bottom: 1.5rem;
-    gap: 1rem;
+    gap: 0.8rem;
 }
 
 .article-audio-player__label {
