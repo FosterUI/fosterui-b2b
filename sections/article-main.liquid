@@ -75,7 +75,7 @@
               if (audio.duration && isFinite(audio.duration)) {
                 const minutes = Math.floor(audio.duration / 60);
                 const seconds = Math.floor(audio.duration % 60).toString().padStart(2, '0');
-                durationSpan.textContent = `${minutes}:${seconds}`;
+                durationSpan.textContent = `(Duration: ${minutes}:${seconds})`;
                 console.log('Duration updated to:', durationSpan.textContent);
               } else {
                 console.log('Audio duration not available or invalid.');
