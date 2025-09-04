@@ -1,27 +1,12 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
-    "blog_header_pWPmTp": {
+    "header": {
       "type": "blog-header",
-      "name": "B2B Blog Header",
-      "settings": {
-        "kicker": "Insights & Strategy",
-        "introduction": "<p>Specialized implementation tactics and insights on the intersection of AI and B2B E-commerce for Shopify merchants.</p>"
-      }
+      "settings": {}
     },
     "main": {
       "type": "blog-grid",
-      "settings": {
-        "posts_per_page": 9
-      }
+      "settings": {}
     },
     "newsletter": {
       "type": "newsletter",
@@ -29,8 +14,7 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Subscribe to the \"B2B AI Edge\" Newsletter",
-            "heading_size": "h1"
+            "heading": "Subscribe to the \"B2B AI Edge\" Newsletter"
           }
         },
         "paragraph": {
@@ -44,23 +28,16 @@
           "settings": {}
         }
       },
-      "block_order": [
-        "heading",
-        "paragraph",
-        "email_form"
-      ],
+      "block_order": ["heading", "paragraph", "email_form"],
       "settings": {
         "color_scheme": "background-1",
-        "full_width": true,
-        "custom_css_class": "",
-        "padding_top": 40,
-        "padding_bottom": 40
+        // Set padding to 0, as the custom CSS class 'fui-newsletter' handles the padding.
+        "padding_top": 0,
+        "padding_bottom": 0,
+        // CRITICAL: These classes apply the custom styles defined in your custom-brand-styles.css
+        "css_class": "landing-page-customization fui-newsletter"
       }
     }
   },
-  "order": [
-    "blog_header_pWPmTp",
-    "main",
-    "newsletter"
-  ]
+  "order": ["header", "main", "newsletter"]
 }
