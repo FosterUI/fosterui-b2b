@@ -9,6 +9,14 @@
  */
 {
   "sections": {
+    "article_header_HdE89r": {
+      "type": "article-header",
+      "name": "B2B Article Header",
+      "settings": {
+        "show_date": true,
+        "show_author": true
+      }
+    },
     "main": {
       "type": "main-article",
       "blocks": {
@@ -62,6 +70,7 @@
     }
   },
   "order": [
+    "article_header_HdE89r",
     "main",
     "article_main_JEqU9d"
   ]
