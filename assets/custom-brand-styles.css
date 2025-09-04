@@ -380,6 +380,16 @@ body {
     color: rgba(255, 255, 255, 0.7) !important;
 }
 
+/* Article Card */
+.blog__posts.articles-wrapper .article {
+    scroll-snap-align: start;
+    background-color: var(--color-brand-white);
+    padding: 3rem;
+    border-radius: 8px;
+    box-shadow: 0 .5rem 1.5rem #0000000d;
+    color: var(--color-brand-text);
+}
+
 
 /* --- Styling for Custom Liquid Blocks (Used for Col 1 and Col 3) --- */
 
