@@ -16,37 +16,6 @@
         "show_author": true
       }
     },
-    "rich_text_UNWyQU": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_pc777n": {
-          "type": "heading",
-          "settings": {
-            "heading": "<strong>The End of Manual Order Entry - Automating B2B on Shopify Plus</strong>",
-            "heading_size": "h1"
-          }
-        },
-        "text_4htA9a": {
-          "type": "text",
-          "settings": {
-            "text": "<p>It's 8 p.m. on a Friday. Your direct-to-consumer orders are humming along, but your wholesale business—the segment that's supposed to be your biggest growth engine—is struggling to keep up. You've spent the last three hours manually keying in purchase orders from six different PDFs, trying to decipher which SKU is which, and cross-referencing a spreadsheet of custom price lists. Your weekend just vanished, sacrificed to the god of data entry.</p><ol><li>If this sounds familiar, you're not alone. You've created a successful seven- or eight-figure DTC brand, but your B2B operations are lagging behind. This manual process isn't just a hassle; it's a significant barrier to your business growth. It's time to move away from being the highest-paid data entry clerk in your own company. Picture the freedom of not having to spend your weekends stuck in data entry, allowing you to concentrate on strategic growth and innovation instead.</li></ol><ul><li><strong>Greater Operational Efficiency:</strong> Automation removes the human bottleneck. Look at the results: Food manufacturer Snyder's of Hanover reduced the time their sales reps spent on administrative tasks by 25%, freeing them up to focus on selling. Medical supplier American Health Professionals (AHP) went even further, saving an incredible 11,000 hours of manual work annually by automating their order process. Imagine what your team could achieve with that time back. With automation, your team can be more productive, focusing on tasks that drive growth and innovation.</li></ul>"
-          }
-        }
-      },
-      "block_order": [
-        "heading_pc777n",
-        "text_4htA9a"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "left",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
     "main": {
       "type": "article-main",
       "settings": {
@@ -64,7 +33,6 @@
   },
   "order": [
     "header",
-    "rich_text_UNWyQU",
     "main"
   ]
 }
