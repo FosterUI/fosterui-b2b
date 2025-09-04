@@ -415,6 +415,11 @@ body {
     color: var(--color-brand-accent-hover);
 } 
 
+/* Custom: Services Section */
+.rich-text--services {
+    margin-top: -56px;
+}
+
 /* --- Styling for Custom Liquid Blocks (Used for Col 1 and Col 3) --- */
 
 /* Headshot Integration (Column 1) */
