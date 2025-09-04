@@ -139,8 +139,7 @@
     font-size: 1.6rem;
     color: #64748b;
     display: flex;
-    flex-direction: column;
-    text-align: left;
+    justify-content: center;
 }
 
 .article-header__author {
