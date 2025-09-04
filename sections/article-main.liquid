@@ -18,11 +18,11 @@
 
     {% if audio_file %}
       <div class="article-audio-player">
-        <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.5rem;">
+        <div class="article-audio-player__header">
           <label class="article-audio-player__label" for="audio-player-{{ article.id }}">
             {{- section.settings.audio_player_label -}}
           </label>
-          <span id="audio-duration-{{ article.id }}" style="font-size: 0.9rem; color: #555;"></span>
+          <span id="audio-duration-{{ article.id }}" class="article-audio-player__duration"></span>
         </div>
 
         {% comment %} Try different approaches to get a working audio URL {% endcomment %}
