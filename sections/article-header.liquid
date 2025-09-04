@@ -1,7 +1,7 @@
 {{ 'section-blog-layout.css' | asset_url | stylesheet_tag }}
 
 {% comment %} Calculate Read Time (Approx 225 WPM). Using ceil filter to round up. {% endcomment %}
-{% assign word_count = article.content | strip_html | number_of_words %}
+{% assign word_count = article.content | strip_html | split: ' ' | size %}
 {% assign read_time = word_count | divided_by: 225.0 | ceil %}
 
 <header class="article-header">
