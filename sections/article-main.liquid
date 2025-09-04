@@ -18,12 +18,9 @@
 
     {% if audio_file %}
       <div class="article-audio-player">
-        <div class="article-audio-player__header">
-          <label class="article-audio-player__label" for="audio-player-{{ article.id }}">
-            {{- section.settings.audio_player_label -}}
-          </label>
-          <span id="audio-duration-{{ article.id }}" class="article-audio-player__duration"></span>
-        </div>
+        <label class="article-audio-player__label" for="audio-player-{{ article.id }}">
+          {{- section.settings.audio_player_label -}}
+        </label>
 
         {% comment %} Try different approaches to get a working audio URL {% endcomment %}
         {% assign audio_url_method1 = audio_file | file_url %}
@@ -63,32 +60,7 @@
               return;
             }
             const audioContainer = audio.closest('.article-audio-player');
-            const durationSpan = document.getElementById('audio-duration-{{ article.id }}');
-            if (!durationSpan) {
-              console.error('Duration span not found!');
-              return;
-            }
             let errorShown = false;
-
-            function updateDuration() {
-              console.log('Attempting to update duration. Current duration:', audio.duration);
-              if (audio.duration && isFinite(audio.duration)) {
-                const minutes = Math.floor(audio.duration / 60);
-                const seconds = Math.floor(audio.duration % 60).toString().padStart(2, '0');
-                durationSpan.textContent = `${minutes}:${seconds}`;
-                console.log('Duration updated to:', durationSpan.textContent);
-              } else {
-                console.log('Audio duration not available or invalid.');
-              }
-            }
-
-            audio.addEventListener('loadedmetadata', updateDuration);
-            audio.addEventListener('durationchange', updateDuration);
-
-            // Sometimes, the duration is available right away
-            if (audio.readyState > 0) {
-              updateDuration();
-            }
 
             // Function to show error message
             function showError(message) {
