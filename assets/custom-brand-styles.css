@@ -253,6 +253,10 @@ body {
 }
 
 /* --- Header Customization (From previous steps) --- */
+.header__menu-item:hover span {
+    text-decoration: none;
+}
+
 .header-wrapper--border-bottom {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
