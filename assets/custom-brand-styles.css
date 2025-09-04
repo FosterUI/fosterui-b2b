@@ -254,7 +254,7 @@ body {
 
 /* --- Header Customization (From previous steps) --- */
 .header__menu-item:hover span,
-.footer-block__details-content .list-menu__item--link:hover,
+.footer-block .footer-block__details-content .list-menu__item--link:hover,
 .copyright__content a:hover {
     text-decoration: none;
 }
