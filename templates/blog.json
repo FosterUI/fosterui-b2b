@@ -9,13 +9,11 @@
  */
 {
   "sections": {
-    "header": {
-      "type": "blog-header",
-      "settings": {}
-    },
     "main": {
       "type": "blog-grid",
-      "settings": {}
+      "settings": {
+        "posts_per_page": 9
+      }
     },
     "newsletter": {
       "type": "newsletter",
@@ -23,7 +21,8 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Subscribe to the \"B2B AI Edge\" Newsletter"
+            "heading": "Subscribe to the \"B2B AI Edge\" Newsletter",
+            "heading_size": "h1"
           }
         },
         "paragraph": {
@@ -44,13 +43,14 @@
       ],
       "settings": {
         "color_scheme": "background-1",
+        "full_width": true,
+        "custom_css_class": "",
         "padding_top": 40,
         "padding_bottom": 40
       }
     }
   },
   "order": [
-    "header",
     "main",
     "newsletter"
   ]
