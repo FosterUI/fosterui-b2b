@@ -1,0 +1,83 @@
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@graph": [
+      {
+        // We use ProfessionalService as it's more specific than Organization for a consultancy
+        "@type": ["Organization", "ProfessionalService"],
+        "@id": "{{ shop.url }}#organization",
+        "name": "{{ shop.name }}",
+        "url": "{{ shop.url }}",
+        // CRITICAL: Update with your logo URL from Settings > Files
+        "logo": {
+          "@type": "ImageObject",
+          "url": "[Your Logo URL]"
+        },
+        "image": "https://fosterui.com/cdn/shop/files/fosterui_b2b_log_transparent.png?v=1757009951&width=320",
+        "description": "Transforming Shopify DTC Stores into AI-Powered B2B Powerhouses. Specialized implementation and growth strategies for mid-market brands.",
+        // CRITICAL: Update with your social media links if available
+        "sameAs": [
+          "https://www.linkedin.com/in/robert-fosterui/"
+        ],
+        "founder": {
+          "@type": "Person",
+          "name": "Robert Foster",
+          "jobTitle": "Founder & Shopify Plus Consultant"
+        },
+        // Define the services offered
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "B2B Acceleration Services",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "The B2B & AI Opportunity Roadmap"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "The Implementation Sprint"
+              }
+            }
+          ]
+        }
+      }
+      {% if template.name == 'article' or template.name == 'page' and template.suffix contains 'pillar' %}
+      ,{
+        "@type": "BlogPosting",
+        "@id": "{{ canonical_url }}#article",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "{{ canonical_url }}"
+        },
+        "headline": {{ article.title | default: page.title | strip_html | json }},
+        "datePublished": "{{ article.published_at | default: page.published_at | date: '%Y-%m-%dT%H:%M:%S%z' }}",
+        "dateModified": "{{ article.updated_at | default: page.updated_at | date: '%Y-%m-%dT%H:%M:%S%z' }}",
+        "author": {
+          "@type": "Person",
+          // Use the article author if available, otherwise default to your name
+          "name": "{{ article.author | default: '[Your Name]' }}"
+        },
+        "publisher": {
+          "@id": "{{ shop.url }}#organization"
+        },
+        "description": {{ article.excerpt_or_content | default: page.content | strip_html | truncatewords: 50 | json }},
+        // Use the article's featured image if available, otherwise fallback to logo
+        "image": [
+          {% if article.image %}
+            {{ article.image | image_url: width: 1200 | json }}
+          {% elsif page.image %}
+            {{ page.image | image_url: width: 1200 | json }}
+          {% else %}
+            "[Your Logo URL]"
+          {% endif %}
+        ]
+      }
+      {% endif %}
+    ]
+  }
+</script>
