@@ -410,6 +410,14 @@ body {
     color: var(--color-brand-primary-dark);
 }
 
+.card__heading a {
+    text-decoration: none;
+    color: var(--color-brand-primary-hover);
+}
+
+.card__heading a:hover {;
+}
+
 
 /* --- Styling for Custom Liquid Blocks (Used for Col 1 and Col 3) --- */
 
