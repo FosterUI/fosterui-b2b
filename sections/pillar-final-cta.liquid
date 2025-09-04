@@ -1,51 +1,52 @@
 {{ 'section-pillar-layout.css' | asset_url | stylesheet_tag }}
 
 <style>
-  /* Section-specific CSS for the Final CTA */
-  .pillar-cta-section {
-    /* Uses dark background */
-    background-color: var(--color-brand-primary-dark);
-    color: var(--color-brand-white);
-    padding: 8rem 0;
-    text-align: center;
-    /* Spacing above the CTA */
-    margin-top: 6rem;
-  }
+/* Section-specific CSS for the Final CTA */
+.pillar-cta-section {
+  /* Uses dark background */
+  background-color: var(--color-brand-primary-dark);
+  color: var(--color-brand-white);
+  /* Increased padding-bottom from 8rem to 10rem for better spacing from footer */
+  padding: 8rem 0 10rem 0;
+  text-align: center;
+  /* Spacing above the CTA */
+  margin-top: 6rem; 
+}
 
-  .pillar-cta-section h2 {
-    color: var(--color-brand-white);
-    /* 3.6rem = 36px */
-    font-size: 3.6rem;
-    font-weight: 700;
-    margin-bottom: 2rem;
-  }
+.pillar-cta-section h2 {
+  color: var(--color-brand-white);
+  /* 3.6rem = 36px */
+  font-size: 3.6rem; 
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
 
-  .pillar-cta-section__text {
+.pillar-cta-section__text {
     max-width: 70rem;
     margin: 0 auto 4rem;
     font-size: 1.6rem;
-  }
+}
 
-  /* Mobile adjustments */
-  @media screen and (max-width: 989px) {
+/* Mobile adjustments */
+@media screen and (max-width: 989px) {
     .pillar-cta-section h2 {
-      /* 2.8rem = 28px */
-      font-size: 2.8rem;
+        /* 2.8rem = 28px */
+        font-size: 2.8rem; 
     }
-  }
+}
 </style>
 
 <section class="pillar-cta-section pillar-wrapper">
   <div class="pillar-container">
     <h2>{{ section.settings.title }}</h2>
-
+    
     {% if section.settings.text != blank %}
       <div class="pillar-cta-section__text">
-        {{ section.settings.text }}
+          {{ section.settings.text }}
       </div>
     {% endif %}
 
-    {# Updated button classes to use the global brand styles #}
+    {% comment %} Updated button classes to use the global brand styles {% endcomment %}
     <a href="{{ section.settings.button_link }}" class="btn-brand btn-brand-primary">
       {{ section.settings.button_label }}
     </a>
