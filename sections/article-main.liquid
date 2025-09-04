@@ -45,7 +45,7 @@
         {% endif %}
 
         {% comment %} Render audio player with comprehensive format support {% endcomment %}
-        <audio id="audio-player-{{ article.id }}" controls preload="none" crossorigin="anonymous">
+        <audio id="audio-player-{{ article.id }}" controls preload="metadata" crossorigin="anonymous">
           <source src="{{ audio_url }}" type="audio/m4a">
           <source src="{{ audio_url }}" type="audio/x-m4a">
           <source src="{{ audio_url }}" type="audio/mp4">
