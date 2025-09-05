@@ -1,0 +1,102 @@
+/* assets/section-hero-b2b-ai.css */
+
+.hero-b2b {
+    background-color: var(--color-brand-white);
+    /* Subtle background motif from mockup */
+    background-image: radial-gradient(circle at top right, #f0f9ff 0%, var(--color-brand-white) 50%);
+    padding: 10rem 0 8rem;
+}
+
+.hero-b2b-grid {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 5rem;
+    align-items: center;
+}
+
+/* KEY CHANGE: Increased specificity by adding 'h1.' to the selector */
+/* This ensures it overrides Dawn's global H1 styles */
+h1.hero-b2b-title {
+    font-size: 4.8rem;
+    /* 4.8rem = 48px */
+    font-weight: 900;
+    margin: 0 0 2.5rem;
+    color: var(--color-brand-primary-dark);
+    line-height: 1.2;
+    /* Ensure appropriate line-height */
+}
+
+/* KEY CHANGE: Increased specificity by adding the container class */
+/* And ensuring paragraphs inside the Rich Text Editor (RTE) are also covered */
+.hero-b2b .hero-b2b-text,
+.hero-b2b .hero-b2b-text p {
+    font-size: 2rem;
+    /* 2rem = 20px */
+    line-height: 1.6
+}
+
+.hero-b2b .hero-b2b-text {
+    margin-bottom: 3rem;
+}
+
+.hero-b2b-cta-group {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    /* flex-wrap: wrap; */
+}
+
+/* Money Slide Styling */
+.money-slide {
+    background-color: var(--color-brand-white);
+    padding: 3rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow-brand);
+    text-align: center;
+}
+
+.money-slide h3 {
+    margin-bottom: 2rem;
+    color: var(--color-brand-primary-dark);
+    /* Explicitly defining size for the visual title */
+    font-size: 2.2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+
+    /* KEY CHANGE: Ensure responsive styles also have high specificity */
+    h1.hero-b2b-title {
+        font-size: 4rem;
+        /* 4.0rem = 40px */
+    }
+
+    .hero-b2b-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-b2b-visual {
+        margin-top: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-b2b {
+        padding: 6rem 0;
+    }
+
+    /* Further reduction for mobile */
+    h1.hero-b2b-title {
+        font-size: 3.6rem;
+    }
+
+    .hero-b2b .hero-b2b-text,
+    .hero-b2b .hero-b2b-text p {
+        font-size: 1.8rem;
+    }
+
+    .hero-b2b-cta-group {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}

@@ -1,0 +1,661 @@
+/* assets/custom-brand-styles.css */
+
+:root {
+    /* Brand Colors - Namespaced to avoid conflicts with Dawn */
+    --color-brand-primary-dark: #03045E;
+    --color-brand-accent: #00B4D8;
+    --color-brand-accent-hover: #0094C6;
+    --color-brand-text: #333333;
+    --color-brand-background: #f8fafc;
+    --color-brand-white: #ffffff;
+    --shadow-brand: 0 1.5rem 3rem rgba(3, 4, 94, 0.1);
+    /* Updated shadow */
+    --color-brand-text: #333333;
+
+    /* --- FONT OVERRIDE: Enforce 'Inter' --- */
+    /* This overrides the Theme Editor settings to ensure Inter is used globally */
+    --font-body-family: 'Inter', sans-serif;
+    --font-heading-family: 'Inter', sans-serif;
+
+    /* Optional: Ensure base styles are consistent */
+    --font-body-style: normal;
+    --font-heading-style: normal;
+    --font-body-weight: 400;
+    /* -------------------------------------- */
+}
+
+/* Ensure smooth scrolling for anchor links */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: var(--color-brand-text);
+    line-height: 1.6;
+}
+
+
+.landing-page-customization .multicolumn-list__item,
+.rich-text__wrapper .rich-text__blocks {
+    color: var(--color-brand-text);
+}
+
+/* --- Custom Heading Styles (Namespaced) --- */
+.methodology-intro h2,
+.service-tiers-header h2,
+.intro-text h2,
+.contact-info h2,
+.rich-text__heading,
+.title {
+    font-size: 3.6rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0 0 20px;
+    color: var(--color-brand-primary-dark);
+}
+
+.methodology-execution h3,
+.service-header h3,
+.about-highlight h3,
+.contact-info h {
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0 0 20px;
+    color: var(--color-brand-primary-dark);
+}
+
+.methodology-steps-list h4,
+.multicolumn-card__info .inline-richtext {
+    font-size: 1.92rem;
+    font-weight: 700;
+    margin: 0 0 10px;
+    color: var(--color-brand-primary-dark);
+}
+
+/* --- Custom Button Styles (Namespaced) --- */
+.btn-brand {
+    display: inline-block;
+    padding: 1.4rem 2.8rem;
+    /* Updated padding */
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 700;
+    transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
+    text-align: center;
+    cursor: pointer;
+    font-size: 1.6rem;
+    /* Updated: 1.6rem = 16px */
+    line-height: 1.2;
+    border: none;
+    white-space: nowrap;
+}
+
+.btn-brand-primary {
+    background-color: var(--color-brand-accent);
+    color: var(--color-brand-white);
+}
+
+.btn-brand-primary:hover {
+    background-color: var(--color-brand-accent-hover);
+    transform: translateY(-2px);
+    color: var(--color-brand-white);
+}
+
+.btn-brand-secondary {
+    background-color: transparent;
+    color: var(--color-brand-primary-dark);
+    border: 2px solid var(--color-brand-primary-dark);
+}
+
+.btn-brand-secondary:hover {
+    background-color: var(--color-brand-primary-dark);
+    color: var(--color-brand-white);
+    transform: translateY(-2px);
+}
+
+/* Utility Kicker Style */
+.kicker-brand {
+    font-size: 1.6rem;
+    /* Updated: 1.6rem = 16px */
+    font-weight: 700;
+    color: var(--color-brand-accent);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+    /* Updated */
+}
+
+/* --- Overrides for Native Sections --- */
+/* INSTRUCTIONS: When using these native sections, add the class 'landing-page-customization' to the section's 'CSS class' setting in the Theme Editor. */
+
+/* 1. Multicolumn (used for Bottlenecks and Insights) */
+.landing-page-customization .multicolumn-list__item {
+    background-color: var(--color-brand-white);
+    padding: 3rem;
+    /* Updated */
+    border-radius: 8px;
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.05);
+    /* Updated */
+    color: var(--color-brand-text);
+}
+
+.landing-page-customization .multicolumn-card__image-wrapper {
+    width: 40px;
+}
+
+/* 2. Rich Text (used for Testimonials) */
+.landing-page-customization .rich-text blockquote,
+.landing-page-customization .rich-text__text blockquote {
+    font-size: 2.8rem;
+    /* Updated: 2.8rem = 28px */
+    font-style: italic;
+    color: var(--color-brand-primary-dark);
+    line-height: 1.4;
+    margin: 3rem 0;
+    /* Updated */
+    border: none;
+    padding: 0;
+}
+
+.landing-page-customization .rich-text cite,
+.landing-page-customization .rich-text__text cite {
+    font-weight: 700;
+    font-style: normal;
+    display: block;
+    margin-top: 2rem;
+    /* Updated */
+}
+
+/* 3. Email Signup Banner (used for Newsletter) */
+.landing-page-customization.section-email-signup {
+    background-color: var(--color-brand-white);
+}
+
+.landing-page-customization .email-signup-banner__box {
+    background-color: var(--color-brand-primary-dark);
+    color: var(--color-brand-white);
+    border-radius: 8px;
+    padding: 4rem;
+    /* Updated */
+    box-shadow: var(--shadow-brand);
+    margin-top: 4rem;
+    /* Updated */
+}
+
+.landing-page-customization .email-signup-banner__heading {
+    color: var(--color-brand-white);
+}
+
+/* Style the button within the newsletter */
+.landing-page-customization .email-signup-banner__button .button {
+    background-color: var(--color-brand-accent);
+    color: var(--color-brand-white);
+}
+
+.landing-page-customization .email-signup-banner__button .button:hover {
+    background-color: var(--color-brand-accent-hover);
+}
+
+.landing-page-customization .newsletter__wrapper {
+    background-color: var(--color-brand-primary-dark);
+    color: var(--color-brand-white);
+    border-radius: 8px;
+    padding: 6rem 4rem;
+    /* Increased padding for a premium look */
+    box-shadow: var(--shadow-brand);
+    margin-top: 4rem;
+    /* Space between this and the Insights cards above */
+    text-align: center;
+}
+
+/* Style the headings and text inside the box */
+.landing-page-customization .newsletter__wrapper .title,
+.landing-page-customization .newsletter__wrapper .newsletter__subheading {
+    color: var(--color-brand-white);
+}
+
+/* Style the Input Field */
+.landing-page-customization .newsletter-form .field__input {
+    padding: 1.4rem 1.5rem 0;
+    /* Ensure the background is solid white for contrast */
+    background-color: var(--color-brand-white) !important;
+    color: var(--color-brand-text) !important;
+    border: 1px solid #cbd5e1 !important;
+}
+
+/* Style the button to match the brand CTA (.btn-brand-primary) */
+.landing-page-customization .newsletter-form .newsletter-form__button {
+    background-color: var(--color-brand-accent);
+    color: var(--color-brand-white);
+    padding: 1.4rem 2.8rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.landing-page-customization .newsletter-form .newsletter-form__button:hover {
+    background-color: var(--color-brand-accent-hover);
+    transform: translateY(-2px);
+}
+
+.landing-page-customization .newsletter__wrapper .newsletter-form__field-wrapper {
+    max-width: 50rem;
+}
+
+@media screen and (min-width: 750px) {
+    .landing-page-customization .newsletter-form {
+        max-width: 50rem;
+    }
+}
+
+/* --- Header Customization (From previous steps) --- */
+.header__menu-item:hover span,
+.footer-block .footer-block__details-content .list-menu__item--link:hover,
+.copyright__content a:hover {
+    text-decoration: none;
+}
+
+.header-wrapper--border-bottom {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* Style the navigation links to match the brand */
+.header__menu-item span {
+    color: var(--color-brand-primary-dark);
+    font-size: 1.6rem;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.header__menu-item:hover span {
+    color: var(--color-brand-accent);
+}
+
+/* Remove Dawn's default underline effect */
+.header__menu-item span::after {
+    display: none !important;
+}
+
+/* Center the Navigation Links using CSS Grid (Desktop) */
+@media screen and (min-width: 990px) {
+
+    .rich-text__wrapper .rich-text__blocks,
+    .newsletter__subheading.rte {
+        max-width: 102rem;
+    }
+
+    sticky-header .header {
+        padding: 15px 0;
+    }
+
+    /* Apply a 3-column grid layout to the header container */
+    .header.header--middle-left {
+        display: grid;
+        /* Col 1 (Logo) | Col 2 (Nav) | Col 3 (CTA/Icons) */
+        grid-template-columns: 1fr auto 1fr;
+    }
+
+    /* Align logo to the start (left) of the first column */
+    .header__heading {
+        justify-self: start;
+    }
+
+    /* Centers the menu in the middle column */
+    .header__inline-menu {
+        justify-self: center;
+        margin: 0 auto;
+    }
+
+    /* Align the CTA and icons to the end (right) of the third column */
+    .header__icons {
+        justify-content: flex-end;
+    }
+}
+
+/* Wrapper for the custom block item added via the editor */
+.header__custom-block-item {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    /* Adds spacing between the CTA and the icons (Search/Cart) */
+    margin-right: 1.5rem;
+}
+
+/* Style the Custom CTA Button */
+.header-cta-btn {
+    padding: 1rem 2rem;
+    /* Updated padding */
+    font-size: 1.5rem;
+    /* Updated: 1.5rem = 15px (Fix for the user's issue) */
+}
+
+.insights__wrapper {
+    background-color: var(--color-brand-white);
+}
+
+/* --- Custom Newsletter Styles (Namespaced) --- */
+.fui-newsletter {
+    padding: 0 0 100px;
+    background-color: var(--color-brand-white);
+}
+
+.newsletter__wrapper {
+    border-radius: 8px;
+}
+
+.newsletter__subheading {
+    font-weight: 700;
+}
+
+.newsletter-form__field-wrapper .field__input {
+    background-color: var(--color-brand-white) !important;
+}
+
+.newsletter-form__field-wrapper .field__label {
+    color: #333333;
+}
+
+/* Hide the custom CTA on mobile/tablet, as the space is limited */
+@media screen and (max-width: 989px) {
+
+    #Details-menu-drawer-container,
+    .header__custom-block-item {
+        display: none;
+    }
+}
+
+/* assets/custom-brand-styles.css (Additions/Updates) */
+
+/* --- Newsletter Signup Section Refinement (Fixing harsh inputs) --- */
+/* This targets the Email Signup section when the 'landing-page-customization' class is used */
+
+/* Style inputs to look elegant on the dark background (if using native Shopify forms) */
+.landing-page-customization .email-signup-banner__box .field__input {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    /* Subtle transparent white background */
+    color: var(--color-brand-white) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Style the placeholder text/label */
+.landing-page-customization .email-signup-banner__box .field__label {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* Featured blog */
+.blog__posts.articles-wrapper .article {
+    scroll-snap-align: start;
+    background-color: var(--color-brand-white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 .5rem 1.5rem #0000000d;
+    color: var(--color-brand-text);
+}
+
+.title-wrapper-with-link .blog__title {
+    font-size: 3.6rem;
+    line-height: 1.2;
+    margin: 0 0 20px;
+    color: var(--color-brand-primary-dark);
+}
+
+.article-card .card__heading {
+    font-size: 1.92rem;
+    font-weight: 700;
+    margin: 0 0 10px;
+    color: var(--color-brand-primary-dark);
+}
+
+.card__heading a:hover {
+    text-decoration: none;
+    color: var(--color-brand-accent-hover);
+} 
+
+/* Custom: Services Section */
+.rich-text--services {
+    margin-top: -56px;
+}
+
+/* --- Styling for Custom Liquid Blocks (Used for Col 1 and Col 3) --- */
+
+/* Headshot Integration (Column 1) */
+.footer-profile {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-headshot {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid var(--color-brand-accent);
+    object-fit: cover;
+}
+
+/* Final CTA Button (Column 3) */
+.footer-cta-btn {
+    margin-top: 2rem;
+    /* Inherits styles from .btn-brand-primary */
+}
+
+
+/* --- Footer Bottom Bar (Copyright/Policy) --- */
+.footer__content-bottom {
+    text-align: center;
+    justify-content: center;
+    /* Add a subtle separator line */
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 5rem;
+    padding-top: 3rem;
+}
+
+/* General Footer Link Styling */
+.footer a,
+.policies-list__link {
+    color: var(--color-brand-accent);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.policies-list__link:hover {
+    color: var(--color-brand-white);
+    /* Brighter on hover */
+    text-decoration: underline;
+}
+
+.footer__copyright {
+    font-size: 1.4rem;
+}
+
+/* --- Premium Footer Redesign --- */
+
+.footer {
+    border-top: none;
+}
+
+/* Override Dawn's default centering and enforce the structured grid on desktop */
+@media screen and (min-width: 750px) {
+
+    /* Ensure the container is left-aligned */
+    .footer .footer__content-top {
+        text-align: left;
+    }
+
+    /* Implement the 3-Column Grid Layout */
+    /* KEY FIX: Increased specificity (.footer .) and use !important to override Dawn's utility classes (e.g., grid--4-col-tablet) */
+    .footer .footer__blocks-wrapper {
+        display: grid !important;
+        /* Col 1 (Bio) is wider, Cols 2 & 3 (Nav/CTA) are equal */
+        grid-template-columns: 2fr 1fr 1fr !important;
+        gap: 5rem;
+        justify-content: space-between;
+        align-items: start;
+    }
+
+    /* Ensure individual blocks fill the grid cells correctly and align left */
+    .footer .footer-block.grid__item {
+        width: 100%;
+        max-width: 100%;
+        /* Remove potential max-width constraints from Dawn */
+        text-align: left;
+    }
+}
+
+/* Ensure footer text is readable (16px) and aligned */
+.footer__content-top,
+.footer-custom-liquid p,
+.footer-block__details-content {
+    /* Added footer-block__details-content for Menu links/text blocks */
+    font-size: 1.6rem;
+    line-height: 1.6;
+}
+
+/* Style the headings used in the footer blocks */
+/* Increased specificity to ensure color override within the color scheme */
+.footer .footer-block__heading,
+.footer .footer-custom-liquid h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--color-brand-white);
+    margin-bottom: 1.5rem;
+}
+
+
+/* --- Styling for Custom Liquid Blocks (Used for Col 1 and Col 3) --- */
+
+/* Headshot Integration (Column 1) */
+.footer-profile {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-headshot {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid var(--color-brand-accent);
+    object-fit: cover;
+}
+
+/* Final CTA Button (Column 3) */
+.footer-cta-btn {
+    margin-top: 2rem;
+    /* Inherits styles from .btn-brand-primary */
+}
+
+
+/* --- Footer Bottom Bar (Copyright/Policy) --- */
+.footer__content-bottom {
+    text-align: center;
+    justify-content: center;
+    /* Add a subtle separator line */
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 5rem;
+    padding-top: 3rem;
+}
+
+/* General Footer Link Styling */
+/* Increased specificity for links to ensure the accent color is applied */
+/* We must include the specific class Dawn uses for menu links: .list-menu__item--link */
+.footer a,
+.footer .policies-list__link,
+.footer .list-menu__item--link {
+    color: var(--color-brand-accent);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer a:hover,
+.footer .policies-list__link:hover,
+.footer .list-menu__item--link:hover {
+    color: var(--color-brand-white);
+}
+
+.footer .btn-brand {
+    color: var(--color-brand-white);
+}
+
+.footer__copyright {
+    font-size: 1.4rem;
+}
+
+/* Mobile Adjustments */
+@media screen and (max-width: 749px) {
+
+    /* Revert to centered alignment on mobile */
+    .footer__content-top,
+    .footer-block {
+        text-align: center;
+    }
+
+    /* Center the profile elements on mobile */
+    .footer-profile {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    /* Ensure mobile blocks stack correctly using flexbox for better gap control */
+    .footer .footer__blocks-wrapper {
+        display: flex !important;
+        flex-direction: column;
+        gap: 4rem;
+    }
+}
+
+/* assets/custom-brand-styles.css (Additions) */
+
+/* --- Global Form Styling (Used across multiple sections via .fallback-form class) --- */
+
+.fallback-form .form-group {
+    margin-bottom: 2.5rem;
+    /* Increased spacing for a premium feel */
+}
+
+.fallback-form label {
+    display: block;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+    color: var(--color-brand-primary-dark);
+    font-size: 1.6rem;
+}
+
+.fallback-form .form-control {
+    width: 100%;
+    padding: 1.4rem 1.5rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 1.6rem;
+    background-color: var(--color-brand-white);
+}
+
+.fallback-form textarea.form-control {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.fallback-form .btn-brand-primary {
+    width: 100%;
+    margin-top: 1.5rem;
+}
+
+/* Form Success Message Styling */
+.form-success {
+    background-color: #dcfce7;
+    /* Light green background */
+    color: #166534;
+    /* Dark green text */
+    padding: 2rem;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.6rem;
+}

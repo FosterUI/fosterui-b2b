@@ -1,0 +1,42 @@
+{% comment %}
+  A customizable newsletter signup section with a HubSpot form.
+{% endcomment %}
+
+<style>
+  .newsletter-section-{{ section.id }} {
+    padding: 100px 20px;
+    background-color: var(--color-brand-white);
+  }
+
+  .newsletter-section-{{ section.id }} .newsletter-container {
+    max-width: 768px;
+    margin: 0 auto;
+  }
+</style>
+
+<div class="newsletter-section-{{ section.id }}">
+  <div class="newsletter-container">
+    <div class="newsletter-section__form">
+      <script src="https://js.hsforms.net/forms/embed/40164173.js" defer></script>
+      <div
+        class="hs-form-frame"
+        data-region="na1"
+        data-form-id="a4f0c2eb-b5ee-478c-a3c8-c3aba828ad80"
+        data-portal-id="40164173"
+      ></div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "B2B Custom Newsletter",
+  "tag": "section",
+  "settings": [],
+  "presets": [
+    {
+      "name": "B2B Custom Newsletter"
+    }
+  ]
+}
+{% endschema %}

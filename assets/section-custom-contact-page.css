@@ -1,0 +1,115 @@
+/* assets/section-custom-contact-page.css */
+
+.custom-contact-page {
+    padding: 8rem 0;
+    /* Use the light gray background established in the brand guide */
+    background-color: var(--color-brand-background);
+}
+
+.contact-page-header {
+    text-align: center;
+    margin-bottom: 6rem;
+}
+
+.contact-page-header h1 {
+    color: var(--color-brand-primary-dark);
+    font-size: 4rem;
+    font-weight: 900;
+}
+
+/* Split layout grid */
+.contact-page-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: start;
+}
+
+/* --- Left Side: Context and Credibility --- */
+.contact-context h2 {
+    color: var(--color-brand-primary-dark);
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.contact-context .rte {
+    font-size: 1.6rem;
+    line-height: 1.6;
+}
+
+.contact-context .rte p {
+    margin-bottom: 2rem;
+}
+
+/* Highlight Box for Ideal Client Profile */
+.ideal-client-box {
+    background-color: var(--color-brand-white);
+    border-left: 4px solid var(--color-brand-accent);
+    padding: 3rem;
+    margin: 4rem 0;
+    border-radius: 0 8px 8px 0;
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.05);
+}
+
+.ideal-client-box h3 {
+    color: var(--color-brand-accent);
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+/* Profile/Signature Area */
+.contact-signature {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.contact-headshot {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid var(--color-brand-accent);
+    object-fit: cover;
+}
+
+.contact-signature h4 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--color-brand-primary-dark);
+}
+
+/* --- Right Side: Form Container --- */
+.contact-form-card {
+    background-color: var(--color-brand-white);
+    padding: 5rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow-brand);
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 990px) {
+    .contact-page-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-context {
+        margin-bottom: 4rem;
+    }
+}
+
+@media (max-width: 749px) {
+    .custom-contact-page {
+        padding: 5rem 0;
+    }
+
+    .contact-page-header h1 {
+        font-size: 3.2rem;
+    }
+
+    .contact-form-card {
+        padding: 3rem;
+    }
+}

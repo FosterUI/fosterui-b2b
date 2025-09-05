@@ -1,0 +1,327 @@
+{{ 'section-contact-split-hybrid.css' | asset_url | stylesheet_tag }}
+
+<div class="contact-split-section" id="contact">
+  <div class="page-width">
+    <div
+      class="contact-grid{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+      {% if settings.animations_reveal_on_scroll %}
+        data-cascade
+      {% endif %}
+    >
+      <div
+        class="contact-info{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+        {% if settings.animations_reveal_on_scroll %}
+          style="--animation-order: 1;"
+        {% endif %}
+      >
+        <h2 class="h2">{{ section.settings.title }}</h2>
+        <div class="rte">
+          {{ section.settings.text }}
+        </div>
+      </div>
+
+      <div
+        class="contact-form-container{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+        {% if settings.animations_reveal_on_scroll %}
+          style="--animation-order: 2;"
+        {% endif %}
+      >
+        <div class="contact-form-box">
+          {% if section.settings.use_hubspot %}
+            {% comment %} --- HUBSPOT IMPLEMENTATION (Legacy) --- {% endcomment %}
+            <div class="hubspot-form-embed">
+              <div class="form-tabs-pill-container">
+                <div class="tab-link active" data-form="roadmap">Book the Roadmap</div>
+                <div class="tab-link" data-form="audit">Request a Video Audit</div>
+              </div>
+
+              <div id="roadmap-form" class="form-content active">
+                <h4>{{ section.settings.roadmap_title }}</h4>
+                <p>{{ section.settings.roadmap_desc }}</p>
+                <div id="hubspot-roadmap-container"></div>
+              </div>
+
+              <div id="audit-form" class="form-content">
+                <h4>{{ section.settings.audit_title }}</h4>
+                <p>{{ section.settings.audit_desc }}</p>
+                <div id="hubspot-audit-container"></div>
+              </div>
+            </div>
+
+          {% else %}
+            {% comment %} --- NATIVE SHOPIFY FORM IMPLEMENTATION --- {% endcomment %}
+            {% if section.settings.native_form_title != blank %}
+              <h3 class="h3 form-title">{{ section.settings.native_form_title }}</h3>
+            {% endif %}
+
+            <div class="fallback-form">
+              {% comment %} Define unique form ID for redirection script {% endcomment %}
+              {% assign form_id = 'ContactLandingForm--' | append: section.id %}
+
+              {% form 'contact', id: form_id %}
+                {% if form.posted_successfully? %}
+                  <p class="form-success form-status-list form__message" tabindex="-1" autofocus>
+                    Thank you. I will personally review your inquiry and respond within 1 business day.
+                  </p>
+                {% elsif form.errors %}
+                  <div class="form-status-list form__message" role="alert" style="color: red; margin-bottom: 2rem;">
+                    <h4 style="font-size: 1.6rem; font-weight: bold;">Please correct the errors below:</h4>
+                    {{ form.errors | default_errors }}
+                  </div>
+                {% endif %}
+
+                <div class="form-group">
+                  <label for="ContactFormName-{{ section.id }}">Full Name *</label>
+                  <input
+                    type="text"
+                    id="ContactFormName-{{ section.id }}"
+                    name="contact[name]"
+                    required
+                    class="form-control"
+                    autocomplete="name"
+                    value="{{ form.name }}"
+                  >
+                </div>
+                <div class="form-group">
+                  <label for="ContactFormEmail-{{ section.id }}">Work Email Address *</label>
+                  <input
+                    type="email"
+                    id="ContactFormEmail-{{ section.id }}"
+                    name="contact[email]"
+                    required
+                    autocomplete="email"
+                    class="form-control"
+                    value="{{ form.email }}"
+                  >
+                </div>
+                <div class="form-group">
+                  <label for="ContactFormURL-{{ section.id }}">Shopify Store URL *</label>
+                  <input
+                    type="url"
+                    id="ContactFormURL-{{ section.id }}"
+                    placeholder="https://yourstore.myshopify.com"
+                    name="contact[Shopify Store URL]"
+                    required
+                    class="form-control"
+                    value="https://"
+                  >
+                </div>
+                <div class="form-group">
+                  <label for="ContactFormGMV-{{ section.id }}">Approximate Annual GMV *</label>
+                  <select
+                    id="ContactFormGMV-{{ section.id }}"
+                    name="contact[Approximate Annual GMV]"
+                    required
+                    class="form-control"
+                  >
+                    <option value="">Select Range</option>
+                    <option value="$1M - $5M">$1M - $5M</option>
+                    <option value="$5M - $10M">$5M - $10M</option>
+                    <option value="$10M - $15M">$10M - $15M</option>
+                    <option value="$15M+">$15M+</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="ContactFormRequestType-{{ section.id }}">I am interested in: *</label>
+                  <select
+                    id="ContactFormRequestType-{{ section.id }}"
+                    name="contact[Interest]"
+                    required
+                    class="form-control"
+                    data-redirect-select
+                  >
+                    <option value="">Select Option</option>
+                    <option value="Booking the $1,950 Roadmap" data-redirect="/pages/thank-you-roadmap">
+                      Booking the $1,950 Roadmap
+                    </option>
+                    <option value="Requesting a Personalized Video Audit" data-redirect="/pages/thank-you-audit">
+                      Requesting a Personalized Video Audit
+                    </option>
+                  </select>
+                </div>
+
+                <div class="form-group" style="display:none;">
+                  <label for="ContactFormBody-{{ section.id }}">Body</label>
+                  <textarea
+                    name="contact[body]"
+                    id="ContactFormBody-{{ section.id }}">Landing Page Submission</textarea>
+                </div>
+
+                <button type="submit" class="btn-brand btn-brand-primary">Submit Request →</button>
+              {% endform %}
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // --- Conditional Redirection Logic (For Native Shopify Form) ---
+  // This script handles redirection when HubSpot is disabled.
+  if (!{{ section.settings.use_hubspot }}) {
+      document.addEventListener('DOMContentLoaded', function() {
+        const formId = 'ContactLandingForm--{{ section.id }}';
+
+        // 1. Capture Intent: Determine the intended redirect URL based on the selected option
+        const redirectSelect = document.querySelector('[data-redirect-select]');
+
+        if (redirectSelect) {
+            redirectSelect.addEventListener('change', function() {
+                const selectedOption = this.options[this.selectedIndex];
+                const redirectUrl = selectedOption.getAttribute('data-redirect');
+
+                // Store the intended redirect URL in localStorage before the form submits
+                if (redirectUrl) {
+                    localStorage.setItem('contact_redirect_target', redirectUrl);
+                } else {
+                    localStorage.removeItem('contact_redirect_target');
+                }
+            });
+        }
+
+        // 2. Check for successful submission indicators in the URL after reload
+        const urlParams = new URLSearchParams(window.location.search);
+        const postedSuccessfully = urlParams.get('contact_posted') === 'true';
+        const formAnchor = window.location.hash === ('#' + formId);
+
+        // 3. If successful, retrieve the stored URL and redirect
+        if (postedSuccessfully && formAnchor) {
+          const storedRedirect = localStorage.getItem('contact_redirect_target');
+          if (storedRedirect) {
+            localStorage.removeItem('contact_redirect_target'); // Clean up storage
+            window.location.href = storedRedirect;
+          }
+          // If storedRedirect is null (e.g., they selected the empty option), the page will simply show the success message (default behavior).
+        }
+      });
+  }
+
+
+  // --- HubSpot Logic (Only runs if HubSpot is enabled) ---
+  if ({{ section.settings.use_hubspot }}) {
+      // 1. Tab Switching Logic
+      document.addEventListener('DOMContentLoaded', function() {
+        const tabs = document.querySelectorAll('.contact-form-box .tab-link');
+        const forms = document.querySelectorAll('.contact-form-box .form-content');
+
+        tabs.forEach(tab => {
+          tab.addEventListener('click', function() {
+            const formName = this.getAttribute('data-form');
+
+            // Hide all forms and deactivate all tabs
+            forms.forEach(form => form.classList.remove('active'));
+            tabs.forEach(t => t.classList.remove('active'));
+
+            // Show the selected form and activate its tab
+            document.getElementById(formName + '-form').classList.add('active');
+            this.classList.add('active');
+          });
+        });
+      });
+
+      // 2. HubSpot Form Initialization
+      (function() {
+            const script = document.createElement('script');
+            script.src = "//js.hsforms.net/forms/embed/v2.js";
+            script.charset = "utf-8";
+            script.type = "text/javascript";
+            document.body.appendChild(script);
+
+            script.onload = function() {
+              if (window.hbspt) {
+                // Initialize Roadmap Form
+                hbspt.forms.create({
+                  region: "na1",
+                  portalId: "40164173", // Your Portal ID
+                  formId: "9b74bbf1-97b6-4e1a-a5b5-cee87094b536", // Roadmap Form ID
+                  target: '#hubspot-roadmap-container'
+                });
+
+                // Initialize Audit Form
+                hbspt.forms.create({
+                  region: "na1",
+                  portalId: "40164173", // Your Portal ID
+                  formId: "25a94b25-c81c-4d24-9cc4-c8a0c08c2917", // Audit Form ID
+                  target: '#hubspot-audit-container'
+                });
+              }
+            };
+      })();
+  }
+</script>
+
+{% schema %}
+{
+  "name": "B2B Contact Split-Hybrid",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Pitch (Left Side)"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Ready to Transform Your Wholesale Channel?"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text",
+      "default": "<p>Don't let manual processes stunt your growth.</p><h3>What You Get in 5 Days:</h3><ul><li>A clear 90-Day Implementation Plan</li><li>A tailored Revenue Impact Model</li></ul>"
+    },
+    {
+      "type": "header",
+      "content": "Form Settings (Right Side)"
+    },
+    {
+      "type": "checkbox",
+      "id": "use_hubspot",
+      "label": "Use HubSpot Tabbed Forms (Legacy)",
+      "default": false,
+      "info": "If unchecked (recommended), the native Shopify form below will be used."
+    },
+    {
+      "type": "text",
+      "id": "native_form_title",
+      "label": "Native Form Heading (H3)",
+      "default": "Book Your Roadmap or Request Audit"
+    },
+    {
+      "type": "header",
+      "content": "HubSpot Tab Content (If Enabled)"
+    },
+    {
+      "type": "text",
+      "id": "roadmap_title",
+      "label": "HubSpot: Roadmap Tab Title",
+      "default": "The Essential First Step"
+    },
+    {
+      "type": "textarea",
+      "id": "roadmap_desc",
+      "label": "HubSpot: Roadmap Tab Description"
+    },
+    {
+      "type": "text",
+      "id": "audit_title",
+      "label": "HubSpot: Audit Tab Title",
+      "default": "Get a Quick Overview First"
+    },
+    {
+      "type": "textarea",
+      "id": "audit_desc",
+      "label": "HubSpot: Audit Tab Description"
+    }
+  ],
+  "presets": [
+    {
+      "name": "B2B Contact Split (Hybrid)"
+    }
+  ]
+}
+{% endschema %}

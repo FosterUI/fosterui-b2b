@@ -1,0 +1,77 @@
+{{ 'page-thank-you.css' | asset_url | stylesheet_tag }}
+{{ 'section-thank-you-newsletter.css' | asset_url | stylesheet_tag }}
+
+<div class="page-thank-you">
+  <div class="page-width">
+    <div class="thank-you-content">
+      <span class="thank-you-icon">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="60"
+          height="60"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="feather feather-inbox"
+        >
+          <polyline points="22 12 16 12 14 15 10 15 8 12 2 12"></polyline><path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path>
+        </svg>
+      </span>
+
+      <h1>Welcome to the Edge.</h1>
+      <h2>You’re now subscribed to the most specialized newsletter for Shopify Plus merchants.</h2>
+
+      <div class="rte">
+        <p>
+          Your subscription is confirmed. Every week, you’ll receive a single, high-signal email with actionable tactics
+          on the two most critical growth levers for 2025: B2B expansion and strategic AI integration.
+        </p>
+
+        <div class="action-callout">
+          <strong>Don't miss an issue:</strong> Please add [Your Email Address] to your trusted contacts.
+        </div>
+
+        <h3>My Philosophy</h3>
+        <p>
+          I don’t share generic industry news. I deliver focused, field-tested insights from my work in the Shopify
+          trenches—the kind of strategies that help you automate operations, professionalize your wholesale channel, and
+          drive real revenue.
+        </p>
+
+        <h3>While You Wait for the Next Issue...</h3>
+        <p>Explore the archive and get a head start with these popular articles:</p>
+
+        <ul class="thank-you-links styled-links">
+          <li><a href="/blogs/insights/why-your-erp-integration-is-failing-your-b2b-launch">Why Your ERP Integration is Failing Your B2B Launch</a></li>
+          <li><a href="/blogs/insights/3-ai-tools-for-precision-wholesale-demand-forecasting-in-2025">3 AI Tools for Precision Wholesale Demand Forecasting in 2025</a></li>
+          <li><a href="/blogs/insights/the-end-of-manual-order-entry-automating-b2b-on-shopify-plus">The End of Manual Order Entry: Automating B2B on Shopify Plus</a></li>
+        </ul>
+
+        <h3>Ready for Implementation?</h3>
+        <p>
+          When you're ready to move from insights to implementation, my <strong>B2B & AI Opportunity Roadmap</strong> is
+          the definitive first step.
+        </p>
+
+        <div style="margin-top: 3rem; text-align: center;">
+          <a href="/#contact" class="btn-brand btn-brand-primary">Book the $1,950 Roadmap</a>
+        </div>
+      </div>
+
+      <div class="thank-you-closing">
+        <p>— Robert Foster</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Thank You Newsletter Page",
+  "tag": "section",
+  "settings": []
+}
+{% endschema %}

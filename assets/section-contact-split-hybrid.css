@@ -1,0 +1,145 @@
+/* assets/section-contact-split-hybrid.css */
+
+/* --- Core Layout & Structure --- */
+/* Using 10px baseline REM values */
+.contact-split-section {
+    padding: 10rem 0;
+    background-color: var(--color-brand-background);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: start;
+    /* Align items to the top */
+}
+
+/* --- Left Side (Pitch) Styling --- */
+.contact-info h2,
+.contact-info h3 {
+    color: var(--color-brand-primary-dark);
+}
+
+/* Custom checkmark list style for the pitch */
+.contact-info .rte ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+.contact-info .rte ul li {
+    margin-bottom: 1.5rem;
+    padding-left: 3.2rem;
+    /* Refined spacing */
+    position: relative;
+    font-size: 1.6rem;
+}
+
+.contact-info .rte ul li::before {
+    content: '✓';
+    color: var(--color-brand-accent);
+    position: absolute;
+    left: 0.5rem;
+    /* Refined spacing */
+    font-weight: bold;
+}
+
+
+/* --- Right Side (Form Box) Styling --- */
+.contact-form-box {
+    background-color: var(--color-brand-white);
+    border-radius: 8px;
+    box-shadow: var(--shadow-brand);
+    padding: 4rem;
+    /* Consistent padding */
+}
+
+/* Title for the Native Form */
+.contact-form-box .form-title {
+    color: var(--color-brand-primary-dark);
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 3rem;
+}
+
+/* Note: Styling for .fallback-form inputs/labels is handled globally in custom-brand-styles.css */
+
+
+/* --- HubSpot Specific Styles (Only used if HubSpot is enabled) --- */
+
+/* Modern 'Pill' Tab Interface */
+.form-tabs-pill-container {
+    display: flex;
+    background-color: #f1f5f9;
+    border-radius: 8px;
+    padding: 0.5rem;
+    margin-bottom: 3rem;
+}
+
+.tab-link {
+    flex: 1;
+    padding: 1rem 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 6px;
+    color: var(--color-brand-primary-dark);
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-size: 1.6rem;
+}
+
+.tab-link.active {
+    background-color: var(--color-brand-white);
+    color: var(--color-brand-accent);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Content Area */
+.form-content {
+    display: none;
+}
+
+.form-content.active {
+    display: block;
+}
+
+.form-content h4 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--color-brand-primary-dark);
+}
+
+.form-content p {
+    margin-bottom: 2.5rem;
+    color: var(--color-brand-text);
+    font-size: 1.6rem;
+}
+
+/* HubSpot Form Overrides (If re-enabled) */
+/* (HubSpot overrides omitted for brevity, as they are identical to the previous implementation and only needed if re-enabled) */
+
+
+/* --- Responsive Design --- */
+@media (max-width: 1024px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Ensure the form appears below the pitch on smaller screens */
+    .contact-info {
+        margin-bottom: 4rem;
+    }
+}
+
+@media (max-width: 749px) {
+    .contact-split-section {
+        padding: 6rem 0;
+    }
+
+    .contact-form-box {
+        padding: 3rem;
+    }
+}

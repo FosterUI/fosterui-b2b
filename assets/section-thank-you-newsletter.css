@@ -1,0 +1,61 @@
+/* assets/section-thank-you-newsletter.css */
+
+/* Ensure the icon color matches the brand accent */
+.page-thank-you .thank-you-icon svg {
+    color: var(--color-brand-accent);
+}
+
+/* Styling for the "Add to contacts" callout box */
+.action-callout {
+    background-color: #f0f9ff;
+    /* Very light tint of the accent color */
+    border: 1px solid var(--color-brand-accent);
+    padding: 2rem;
+    border-radius: 6px;
+    margin: 3rem 0;
+    text-align: center;
+    font-size: 1.6rem;
+}
+
+/* Style the links list to look more premium than standard bullets */
+.styled-links {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    /* Ensure links are left-aligned */
+}
+
+.styled-links li {
+    /* Add subtle separators between links */
+    border-bottom: 1px solid #e5e7eb;
+    padding: 1.5rem 0;
+}
+
+.styled-links li:last-child {
+    border-bottom: none;
+}
+
+.styled-links a {
+    display: block;
+    transition: transform 0.2s ease;
+    color: var(--color-brand-accent);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.7rem;
+}
+
+/* Add a subtle interaction effect */
+.styled-links a:hover {
+    transform: translateX(5px);
+    text-decoration: none;
+    color: var(--color-brand-accent-hover);
+}
+
+/* Custom: Newsletter Thank You Page */
+.page-thank-you .rte a {
+    color: var(--color-brand-white);
+}
+
+.page-thank-you .rte a:hover {
+    color: var(--color-brand-white);
+} 

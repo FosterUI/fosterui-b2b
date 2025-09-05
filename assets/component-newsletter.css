@@ -15,16 +15,26 @@
   }
 }
 
+/* Custom: Use flexbox to align input and button */
 .newsletter-form__field-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
   width: 100%;
+  gap: 1rem;
 }
 
-.newsletter-form__field-wrapper .field__input {
-  padding-right: 5rem;
+@media screen and (min-width: 750px) {
+  .newsletter-form__field-wrapper {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 0;
+  }
 }
+/* End Custom */
 
 .newsletter-form__field-wrapper .field {
-  z-index: 0;
+  flex-grow: 1;
 }
 
 .newsletter-form__message {
@@ -42,15 +52,6 @@
   }
 }
 
-.newsletter-form__button {
-  width: 4.4rem;
-  margin: 0;
-  right: var(--inputs-border-width);
-  top: 0;
-  height: 100%;
-  z-index: 2;
-}
-
 .newsletter-form__button:focus-visible {
   box-shadow: 0 0 0 0.3rem rgb(var(--color-background)), 0 0 0 0.4rem rgba(var(--color-foreground));
   background-color: rgb(var(--color-background));
@@ -63,7 +64,7 @@
 
 .newsletter-form__button:not(:focus-visible):not(.focused) {
   box-shadow: inherit;
-  background-color: inherit;
+  /* background-color: inherit; Custom: Remove default background color which was overwriting the custom brand colors */  
 }
 
 .newsletter-form__button .icon {

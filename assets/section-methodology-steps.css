@@ -1,0 +1,56 @@
+/* assets/section-methodology-steps.css */
+
+.methodology-steps-section {
+    padding: 100px 0;
+    background-color: var(--color-brand-white);
+}
+
+.methodology-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.methodology-steps-list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.step {
+    display: flex;
+    gap: 20px;
+}
+
+.step-number {
+    background-color: var(--color-brand-accent);
+    color: var(--color-brand-white);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 2.4rem;
+    flex-shrink: 0;
+}
+
+.step h4 {
+    color: var(--color-brand-primary-dark);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .methodology-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 749px) {
+    .methodology-steps-section {
+        padding: 60px 0;
+    }
+}

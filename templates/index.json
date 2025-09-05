@@ -9,76 +9,479 @@
  */
 {
   "sections": {
-    "image_banner": {
-      "type": "image-banner",
+    "hero_b2b_ai_LgcCEn": {
+      "type": "hero-b2b-ai",
+      "name": "B2B AI Hero",
+      "settings": {
+        "kicker": "Specialized Consulting for Shopify Plus",
+        "title": "Transforming Shopify DTC Stores into AI-Powered B2B Powerhouses",
+        "text": "<p>Stop struggling with spreadsheets and patchwork solutions. I help established Shopify Plus brands ($1M-$15M GMV) unlock scalable wholesale revenue using the full Shopify B2B suite and strategic AI automation.</p><p><strong>This isn't agency delegation; it's a direct, senior-level partnership with a 10-year Shopify expert.</strong></p>",
+        "button_label_1": "Book the B2B & AI Roadmap →",
+        "button_link_1": "/#contact",
+        "button_label_2": "Request a Personalized Video Audit",
+        "button_link_2": "/#contact",
+        "visual_title": "The Impact of Frictionless B2B",
+        "visual_accessibility_text": "A chart showing the significant revenue increase of AI-Powered B2B versus stagnant Manual Wholesale revenue.",
+        "visual_svg": "<svg width=\"100%\" height=\"200\" viewbox=\"0 0 300 200\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family: 'Inter', sans-serif;\"><line x1=\"30\" y1=\"180\" x2=\"280\" y2=\"180\" stroke=\"#ccc\" stroke-width=\"1\"></line><line x1=\"30\" y1=\"20\" x2=\"30\" y2=\"180\" stroke=\"#ccc\" stroke-width=\"1\"></line><text x=\"10\" y=\"25\" fill=\"#666\" font-size=\"12\">Revenue</text><path d=\"M30 140 Q 80 130, 130 135 Q 180 140, 230 138 Q 250 137, 280 138\" stroke=\"#03045E\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"5,5\"></path><text x=\"50\" y=\"125\" fill=\"#03045E\" font-size=\"12\" font-weight=\"bold\">Manual Wholesale</text><path d=\"M30 140 C 80 120, 130 90, 180 70 C 230 50, 280 40\" stroke=\"#00B4D8\" stroke-width=\"3\" fill=\"none\"></path><text x=\"180\" y=\"35\" fill=\"#00B4D8\" font-size=\"14\" font-weight=\"bold\">AI-Powered B2B</text></svg>"
+      }
+    },
+    "rich_text_KmpwiU": {
+      "type": "rich-text",
       "blocks": {
-        "heading": {
+        "heading_gf3cPh": {
           "type": "heading",
           "settings": {
-            "heading": "Browse our latest products",
-            "heading_size": "h0"
+            "heading": "Is Your Wholesale Channel Built to Scale or Built to Fail?",
+            "heading_size": "h1"
           }
         },
-        "button": {
-          "type": "buttons",
+        "text_db6PAV": {
+          "type": "text",
           "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify://collections/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "text": "<p>Many successful DTC brands hit a revenue ceiling. When they attempt to expand into wholesale, they rely on outdated, manual processes that kill margins, frustrate B2B buyers, and prevent scalable growth. If you recognize these bottlenecks, your operation is leaking revenue.</p>"
           }
         }
       },
       "block_order": [
-        "heading",
-        "button"
+        "heading_gf3cPh",
+        "text_db6PAV"
       ],
+      "name": "t:sections.rich-text.presets.name",
       "settings": {
-        "image_overlay_opacity": 40,
-        "image_height": "large",
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
-        "image_behavior": "none",
-        "desktop_content_alignment": "center",
-        "color_scheme": "scheme-3",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": false
-      }
-    },
-    "featured_collection": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "Featured products",
-        "heading_size": "h2",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "all",
-        "products_to_show": 8,
-        "columns_desktop": 4,
+        "desktop_content_position": "center",
+        "content_alignment": "center",
         "color_scheme": "scheme-1",
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "swipe_on_mobile": false,
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "none",
-        "columns_mobile": "2",
-        "padding_top": 44,
+        "full_width": true,
+        "custom_rt_class": "",
+        "padding_top": 96,
         "padding_bottom": 36
       }
+    },
+    "multicolumn_w9J7pE": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_DNnzYx": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/icon-bar-chart.svg",
+            "title": "The Spreadsheet Nightmare",
+            "text": "<p>Managing orders with messy discount codes and manual entry paralyzes your operations. This approach doesn't scale and drains resources.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_bzBJzC": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/icon-link-slash.svg",
+            "title": "Disconnected Systems",
+            "text": "<p>Your Shopify store, your ERP, and your 3PL don't speak the same language. This leads to manual data entry, fulfillment errors, and a broken experience for your B2B buyers. I provide the strategic blueprint to bridge these gaps.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_MHHd9H": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/icon-frown.svg",
+            "title": "The AI Gap & Overwhelm",
+            "text": "<p>You know AI is critical for 2025/2026, but you lack a practical strategy for implementation beyond basic tools, missing out on forecasting and efficiency gains.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_DNnzYx",
+        "column_bzBJzC",
+        "column_MHHd9H"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "none",
+        "color_scheme": "scheme-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 100,
+        "custom_css_class": "landing-page-customization",
+        "navigation": ""
+      }
+    },
+    "methodology_steps_EGJEVf": {
+      "type": "methodology-steps",
+      "blocks": {
+        "step_kXhctM": {
+          "type": "step",
+          "settings": {
+            "step_title": "Proprietary AI Audit System",
+            "step_text": "I leverage my proprietary audit system, which utilizes the latest AI models for analysis, to rapidly identify B2B bottlenecks and operational inefficiencies that traditional consultants often miss."
+          }
+        },
+        "step_7FwHmK": {
+          "type": "step",
+          "settings": {
+            "step_title": "Frictionless B2B Implementation",
+            "step_text": "Expert execution of the full Shopify B2B suite: Catalogs, Companies, Net Terms, and custom theme elements like Quick Order Forms, tailored to your workflow."
+          }
+        },
+        "step_af6pQ6": {
+          "type": "step",
+          "settings": {
+            "step_title": "Strategic AI Rollout",
+            "step_text": "I design the strategy for deploying high-impact AI tools for personalization and forecasting. My plan ensures these tools can integrate effectively with your operational workflow, providing a clear path for any required ERP/3PL data connections."
+          }
+        }
+      },
+      "block_order": [
+        "step_kXhctM",
+        "step_7FwHmK",
+        "step_af6pQ6"
+      ],
+      "name": "B2B Methodology Steps",
+      "settings": {
+        "title": "My Methodology: Specialized Revenue Acceleration",
+        "text": "<p>I am not a generic “Shopify developer.” I am a specialized revenue accelerator focusing on the two most critical growth levers today: <strong>B2B expansion and AI integration.</strong></p><p>I don't just connect apps; <strong>I professionalize your entire wholesale channel. </strong>My methodology integrates the robustness of the Shopify B2B suite with the precision of strategic AI automation.</p>",
+        "execution_title": "How I Execute"
+      }
+    },
+    "service_tiers_8jzFQk": {
+      "type": "service-tiers",
+      "blocks": {
+        "tier_HDx9AL": {
+          "type": "tier",
+          "settings": {
+            "featured": true,
+            "title": "1. The B2B & AI Opportunity Roadmap",
+            "duration": "5-Day Deep-Dive Audit",
+            "price": "$1,950",
+            "description": "<p><strong>The essential first step.</strong> A deep-dive audit using my proprietary system to identify bottlenecks and quantify potential revenue lift.</p>",
+            "deliverables": "<ul><li>Revenue Impact Model (\"Money Slide\")</li><li>90-Day Implementation Plan</li><li>AI Opportunity Matrix</li><li>B2B Bottleneck Analysis</li></ul>",
+            "cta_label": "Book My Roadmap Now →",
+            "cta_enabled": true,
+            "cta_link": "/#contact",
+            "cta_disabled_message": "Available after completion of the Roadmap."
+          }
+        },
+        "tier_Vf6L4U": {
+          "type": "tier",
+          "settings": {
+            "featured": false,
+            "title": "2. 4-Week Intensive Execution Project",
+            "duration": "Putting Your Roadmap into Action",
+            "price": "$8,500*",
+            "description": "<p>A 4-week intensive execution project based on the Roadmap. I rapidly set up your optimized B2B channel and deploy high-impact AI tools.</p>",
+            "deliverables": "<ul><li>Core Shopify B2B Setup (Catalogs, Companies, Net Terms)</li><li>Theme Customization (e.g., Quick Order Forms)</li><li>Deployment of 1-2 High-Impact AI Tools</li><li>ERP/3PL Integration Support</li></ul>",
+            "cta_label": "Available After Roadmap",
+            "cta_enabled": false,
+            "cta_link": "",
+            "cta_disabled_message": "Available after completion of the Roadmap."
+          }
+        },
+        "tier_c8GPQM": {
+          "type": "tier",
+          "settings": {
+            "featured": false,
+            "title": " 3. Growth & Optimization Retainer",
+            "duration": "Ongoing Management & Advisory",
+            "price": "$4,000",
+            "description": "<p>Ongoing management, advanced integration work, AI-driven optimization, and strategic advisory to maintain your competitive edge.</p>",
+            "deliverables": "<ul><li>AI-driven Optimization (Personalization/Forecasting)</li><li>Advanced Integration Management</li><li>Strategic Advisory and Reporting</li><li>Opportunity for \"WholesaleConnect\" App integration</li></ul>",
+            "cta_label": "Available After Sprint",
+            "cta_enabled": false,
+            "cta_link": "",
+            "cta_disabled_message": "Available after completion of the Roadmap."
+          }
+        }
+      },
+      "block_order": [
+        "tier_HDx9AL",
+        "tier_Vf6L4U",
+        "tier_c8GPQM"
+      ],
+      "name": "B2B Service Tiers",
+      "settings": {
+        "title": "A Productized Approach to B2B Acceleration",
+        "subtitle": "I partner with established Shopify Plus merchants ready to execute. This is my proven, structured process for unlocking growth."
+      }
+    },
+    "rich_text_PKaryz": {
+      "type": "rich-text",
+      "blocks": {
+        "text_WLd6CN": {
+          "type": "text",
+          "settings": {
+            "text": "<p><em>*Implementation fees cover expert configuration and integration services. Required third-party app licenses/SaaS fees are separate and will be budgeted during the Roadmap phase.</em></p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_WLd6CN"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": false,
+        "custom_rt_class": "rich-text--services",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "about_principal_LKJFK6": {
+      "type": "about-principal",
+      "name": "B2B About Principal",
+      "settings": {
+        "intro_title": "Meet Your B2B Growth Partner",
+        "intro_subtitle": "I've spent a decade in the Shopify trenches. Now, I'm focused exclusively on your B2B future.",
+        "bio_text": "<p>I'm Robert Foster, a principal consultant and expert Shopify Developer—not a large agency where your project gets handed off to junior staff.</p><p>After 10+ years in the ecosystem, I’ve deliberately narrowed my niche to focus on the two most critical growth levers in 2025: <strong>B2B expansion and AI integration.</strong></p><p>When you hire me, you get <em>me</em>—ensuring direct, senior-level strategy and execution throughout our engagement. My reputation is built on delivering results, not just code.</p><p><a href=\"/pages/contact\" title=\"Contact\">Contact Me</a></p>",
+        "highlight_title": "My Advantage: Velocity and Precision",
+        "highlight_text": "<p>My advantage isn't just access to advanced AI like Gemini and Claude; it's the proprietary methodology I've built to apply them. My system analyzes, architects, and executes strategies with a velocity that simulates a 3-5 person team.</p><p>I don't believe in endless development cycles. I execute rapid, strategic implementation sprints focused on delivering quantifiable revenue lift.</p>"
+      }
+    },
+    "contact_split_hybrid_YMBRY8": {
+      "type": "contact-split-hybrid",
+      "name": "B2B Contact Split (Hybrid)",
+      "settings": {
+        "title": "Ready to Transform Your Wholesale Channel into an AI-Powered Powerhouse?",
+        "text": "<p>Don't let manual processes stunt your growth. If you are a Shopify Plus merchant between $1M-$15M GMV, the Roadmap is your first step.</p><h3>What You Get in 5 Days:</h3><ul><li>A clear 90-Day Implementation Plan</li><li>A tailored Revenue Impact Model</li><li>A customized AI Opportunity Matrix</li></ul><p>If you prefer a quick overview first, request a personalized video audit, and I will send you a 5-minute Loom video highlighting specific bottlenecks in your current setup.</p>",
+        "use_hubspot": false,
+        "native_form_title": "Book Your Roadmap or Request Audit",
+        "roadmap_title": "The Essential First Step",
+        "roadmap_desc": "Fill out the form below to request a booking for the $1,950 B2B & AI Opportunity Roadmap. I'll personally review it and be in touch within one business day.",
+        "audit_title": "Get a Quick Overview First",
+        "audit_desc": "Fill out the form below, and I will personally record a 5-minute Loom video highlighting specific bottlenecks in your current setup. Please allow 2-3 business days."
+      }
+    },
+    "multicolumn_9JGMiV": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_FEUXLA": {
+          "type": "column",
+          "settings": {
+            "title": "Why Your ERP Integration is Failing Your B2B Launch",
+            "text": "<p>A deep dive into the common pitfalls of connecting Shopify B2B with legacy systems. (Link to LinkedIn/Blog)</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_W9cnDT": {
+          "type": "column",
+          "settings": {
+            "title": "3 AI Tools for Precision Wholesale Demand Forecasting in 2025",
+            "text": "<p>Practical applications for AI in forecasting, personalization, and automation. (Link to LinkedIn/Blog)</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_Xr4bt6": {
+          "type": "column",
+          "settings": {
+            "title": "The End of Manual Order Entry: Automating B2B on Shopify Plus",
+            "text": "<p>Analyzing the shift from high-CAC DTC to high-AOV B2B strategies. (Link to LinkedIn/Blog)</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_FEUXLA",
+        "column_W9cnDT",
+        "column_Xr4bt6"
+      ],
+      "disabled": true,
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "Insights: The Intersection of AI and B2B E-commerce",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "none",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 100,
+        "padding_bottom": 0,
+        "custom_css_class": "landing-page-customization insights__wrapper",
+        "navigation": "insights"
+      }
+    },
+    "featured_blog_MPqJz9": {
+      "type": "featured-blog",
+      "name": "t:sections.featured-blog.presets.name",
+      "settings": {
+        "blog": "insights",
+        "post_limit": 3,
+        "heading": "<strong>Insights: The Intersection of AI and B2B E-commerce</strong>",
+        "heading_size": "h1",
+        "columns_desktop": 3,
+        "custom_fb_class": "",
+        "show_view_all": true,
+        "show_image": false,
+        "show_date": true,
+        "show_author": false,
+        "color_scheme": "scheme-2",
+        "padding_top": 100,
+        "padding_bottom": 36
+      }
+    },
+    "newsletter_cQ4kTJ": {
+      "type": "newsletter",
+      "blocks": {
+        "paragraph_XCJYxk": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Get specialized insights and implementation tactics for Shopify merchants, delivered weekly.</p>"
+          }
+        },
+        "email_form_PJzUMt": {
+          "type": "email_form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "paragraph_XCJYxk",
+        "email_form_PJzUMt"
+      ],
+      "disabled": true,
+      "name": "t:sections.newsletter.presets.name",
+      "settings": {
+        "color_scheme": "scheme-5",
+        "full_width": false,
+        "custom_css_class": "landing-page-customization",
+        "padding_top": 100,
+        "padding_bottom": 60
+      }
+    },
+    "newsletter_HPecCR": {
+      "type": "newsletter",
+      "blocks": {
+        "heading_gQYjwA": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Subscribe to our emails",
+            "heading_size": "h1"
+          }
+        },
+        "paragraph_RMfxGn": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p><strong>Get specialized insights and implementation tactics for Shopify merchants, delivered weekly.</strong></p>"
+          }
+        },
+        "email_form_43Ljn9": {
+          "type": "email_form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "heading_gQYjwA",
+        "paragraph_RMfxGn",
+        "email_form_43Ljn9"
+      ],
+      "name": "t:sections.newsletter.presets.name",
+      "settings": {
+        "color_scheme": "",
+        "full_width": false,
+        "custom_css_class": "landing-page-customization",
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "homepage_faq_k4mwX6": {
+      "type": "homepage-faq",
+      "blocks": {
+        "faq_item_HJHfmt": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How is Shopify B2B different from using discount codes or wholesale apps?",
+            "answer": "<p>The native Shopify B2B suite is fundamentally different. Discount codes are a workaround that corrupts analytics and requires manual effort. Third-party apps often create disconnected data silos. Shopify B2B integrates directly into the core platform, offering robust features like Company Profiles, Custom Catalogs, and Net Terms, allowing you to manage DTC and B2B seamlessly from one backend.</p>"
+          }
+        },
+        "faq_item_qmA8Wj": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Can I run my DTC and B2B channels on the same Shopify store?",
+            "answer": "<p>Yes. Shopify Plus supports a \"Blended Storefront\" approach. Your DTC experience remains unchanged, but when a wholesale buyer logs in, the storefront dynamically adapts to display their specific catalog, pricing, and payment terms. This provides a unified brand experience and operational efficiency.</p>"
+          }
+        },
+        "faq_item_6aTEKQ": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How complex is integrating my ERP (like NetSuite or Dynamics) with Shopify B2B?",
+            "answer": "<p>ERP integration is often the most complex part of a B2B launch. While connectors exist, the challenge lies in data mapping, managing API limits, and handling complex B2B pricing rules. A successful integration requires a strategic blueprint to avoid costly operational disruptions and ensure a single source of truth. This is a core part of my methodology.</p>"
+          }
+        },
+        "faq_item_TNBMK7": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What are the most impactful ways to use AI in my B2B operations today?",
+            "answer": "<p>The highest impact areas are Precision Demand Forecasting and Personalization. AI forecasting moves beyond spreadsheet guesswork by analyzing complex, real-time data to prevent stockouts and free up capital. AI personalization delivers tailored product recommendations and dynamic content at scale, increasing B2B order frequency and AOV.</p>"
+          }
+        },
+        "faq_item_GQWq4m": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How long does it take to launch a professional B2B channel?",
+            "answer": "<p>A fully optimized B2B channel can be launched rapidly with the right expertise. My methodology utilizes a 5-day deep-dive audit (The Roadmap) followed by a 4-week intensive execution project (The Implementation Sprint). This approach prioritizes velocity and delivers a functional, professional wholesale channel in just over a month.</p>"
+          }
+        },
+        "faq_item_Vr9Xpz": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Why hire a specialist like you instead of a general Shopify agency?",
+            "answer": "<p>General agencies focus on broad e-commerce solutions. I focus exclusively on the intersection of B2B expansion and AI integration on Shopify Plus. This hyper-specialization allows me to execute faster, identify bottlenecks others miss (using my proprietary AI audit system), and deliver quantifiable revenue lift, rather than just code.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_HJHfmt",
+        "faq_item_qmA8Wj",
+        "faq_item_6aTEKQ",
+        "faq_item_TNBMK7",
+        "faq_item_GQWq4m",
+        "faq_item_Vr9Xpz"
+      ],
+      "name": "B2B Homepage FAQ",
+      "settings": {
+        "title": "Frequently Asked Questions"
+      }
+    },
+    "newsletter_section_izCYan": {
+      "type": "newsletter-section",
+      "disabled": true,
+      "name": "B2B Newsletter Signup",
+      "settings": {}
     }
   },
   "order": [
-    "image_banner",
-    "featured_collection"
+    "hero_b2b_ai_LgcCEn",
+    "rich_text_KmpwiU",
+    "multicolumn_w9J7pE",
+    "methodology_steps_EGJEVf",
+    "service_tiers_8jzFQk",
+    "rich_text_PKaryz",
+    "about_principal_LKJFK6",
+    "contact_split_hybrid_YMBRY8",
+    "multicolumn_9JGMiV",
+    "featured_blog_MPqJz9",
+    "newsletter_cQ4kTJ",
+    "homepage_faq_k4mwX6",
+    "newsletter_HPecCR",
+    "newsletter_section_izCYan"
   ]
 }

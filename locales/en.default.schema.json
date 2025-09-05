@@ -290,6 +290,10 @@
         "social_vimeo_link": {
           "label": "Vimeo",
           "info": "https://vimeo.com/shopify"
+        },
+        "social_linkedin_link": {
+          "label": "LinkedIn",
+          "info": "https://www.linkedin.com/in/robert-fosterui"
         }
       }
     },
@@ -2603,6 +2607,9 @@
         },
         "paragraph": {
           "content": "Signups add [customer profiles](https://help.shopify.com/manual/customers/manage-customers)"
+        },
+        "custom_css_class": {
+          "label": "CSS class"
         }
       },
       "blocks": {
@@ -2877,6 +2884,9 @@
         },
         "full_width": {
           "label": "Full width"
+        },
+        "custom_rt_class": {
+          "label": "CSS class"
         }
       },
       "blocks": {

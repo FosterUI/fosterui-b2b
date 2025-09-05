@@ -9,18 +9,26 @@
  */
 {
   "sections": {
-    "blog_header_pWPmTp": {
-      "type": "blog-header",
-      "name": "B2B Blog Header",
+    "header": {
+      "type": "article-header",
       "settings": {
-        "kicker": "Insights & Strategy",
-        "introduction": "<p>Specialized implementation tactics and insights on the intersection of AI and B2B E-commerce for Shopify merchants.</p>"
+        "show_date": true,
+        "show_read_time": true,
+        "show_author": true
       }
     },
     "main": {
-      "type": "blog-grid",
+      "type": "article-main",
       "settings": {
-        "posts_per_page": 9
+        "enable_pillar_link": true,
+        "pillar_link_text": "This article is part of my comprehensive resource:",
+        "pillar_link_title": "The Definitive Guide to AI-Powered B2B on Shopify Plus.",
+        "pillar_link_url": "/pages/the-definitive-guide-to-ai-powered-b2b-on-shopify-plus",
+        "enable_author_cta": true,
+        "author_cta_title": "About the Author & Expert",
+        "author_cta_text": "With over a decade of specialized experience deep within the Shopify ecosystem, Robert is a Founder & Shopify Plus Consultant focused exclusively on transforming DTC stores into AI-powered B2B wholesale engines. My methodology leverages this deep expertise to deliver specialized revenue acceleration, velocity, and precision.",
+        "author_cta_button_label": "Book My $1,950 Roadmap",
+        "author_cta_button_link": "/#contact"
       }
     },
     "newsletter": {
@@ -52,14 +60,14 @@
       "settings": {
         "color_scheme": "background-1",
         "full_width": false,
-        "custom_css_class": "landing-page-customization fui-newsletter",
-        "padding_top": 40,
-        "padding_bottom": 40
+        "custom_css_class": "landing-page-customization fui-newslette",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     }
   },
   "order": [
-    "blog_header_pWPmTp",
+    "header",
     "main",
     "newsletter"
   ]

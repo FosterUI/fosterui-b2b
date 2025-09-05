@@ -34,7 +34,8 @@
         "snapchat": "Snapchat",
         "youtube": "YouTube",
         "vimeo": "Vimeo",
-        "tiktok": "TikTok"
+        "tiktok": "TikTok",
+        "linkedin": "LinkedIn"
       }
     },
     "continue_shopping": "Continue shopping",
@@ -67,9 +68,9 @@
     }
   },
   "newsletter": {
-    "label": "Email",
+    "label": "Enter your work email",
     "success": "Thanks for subscribing",
-    "button_label": "Subscribe"
+    "button_label": "Subscribe Now"
   },
   "accessibility": {
     "skip_to_text": "Skip to content",
@@ -283,7 +284,6 @@
       "announcement": "Announcement",
       "announcement_bar": "Announcement bar"
     },
-
     "header": {
       "announcement": "Announcement",
       "menu": "Menu",

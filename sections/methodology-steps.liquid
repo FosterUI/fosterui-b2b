@@ -1,0 +1,91 @@
+{{ 'section-methodology-steps.css' | asset_url | stylesheet_tag }}
+
+<div class="methodology-steps-section" id="methodology">
+  <div class="page-width">
+          <div class="methodology-grid{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}" {% if settings.animations_reveal_on_scroll %}data-cascade{% endif %}>
+      <div class="methodology-intro">
+        <h2 class="h2">{{ section.settings.title }}</h2>
+        <div class="rte">
+          {{ section.settings.text }}
+        </div>
+      </div>
+
+      <div class="methodology-execution">
+        <h3 class="h3">{{ section.settings.execution_title }}</h3>
+        <div class="methodology-steps-list">
+          {% for block in section.blocks %}
+                        <div class="step{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}" {{ block.shopify_attributes }} {% if settings.animations_reveal_on_scroll %}data-cascade style="--animation-order: {{ forloop.index }};"{% endif %}>
+              <div class="step-number">{{ forloop.index }}</div>
+              <div class="step-content">
+                <h4>{{ block.settings.step_title }}</h4>
+                <p>{{ block.settings.step_text }}</p>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "B2B Methodology Steps",
+  "tag": "section",
+  "class": "section section-white-brand",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Introduction (Left Side)"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "My Methodology: Specialized Revenue Acceleration"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text",
+      "default": "<p>I am not a generic “Shopify developer.” I am a specialized revenue accelerator focusing on the two most critical growth levers today: <strong>B2B expansion and AI integration.</strong></p><p>I don't just connect apps; <strong>I professionalize your entire wholesale channel.</strong></p>"
+    },
+    {
+      "type": "header",
+      "content": "Execution (Right Side)"
+    },
+    {
+      "type": "text",
+      "id": "execution_title",
+      "label": "Execution Heading",
+      "default": "How I Execute:"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "step",
+      "name": "Step",
+      "settings": [
+        {
+          "type": "text",
+          "id": "step_title",
+          "label": "Step Title",
+          "default": "Proprietary AI Audit System"
+        },
+        {
+          "type": "textarea",
+          "id": "step_text",
+          "label": "Step Description",
+          "default": "I leverage my proprietary audit system—using the latest AI models for analysis—to rapidly identify B2B bottlenecks."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "B2B Methodology Steps",
+      "blocks": [{ "type": "step" }, { "type": "step" }, { "type": "step" }]
+    }
+  ]
+}
+{% endschema %}

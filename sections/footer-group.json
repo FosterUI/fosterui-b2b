@@ -13,15 +13,41 @@
   "sections": {
     "footer": {
       "type": "footer",
+      "blocks": {
+        "liquid_aJJ394": {
+          "type": "liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"footer-custom-liquid\">\n  <div class=\"footer-profile\">\n    <img src=\"[URL_TO_YOUR_HEADSHOT.jpg]\" alt=\"Robert Foster Headshot\" class=\"footer-headshot\" loading=\"lazy\" width=\"80\" height=\"80\">\n    <div>\n      <h3>Robert Foster</h3>\n      <p>Founder & Shopify Plus Consultant</p>\n    </div>\n  </div>\n\n  <p>I help established Shopify Plus brands ($1M-$15M GMV) transform their DTC momentum into AI-powered B2B wholesale revenue engines. I apply over a decade of deep Shopify expertise to the two most critical growth levers in 2025: B2B expansion and strategic AI integration.</p>\n<a href=\"/pages/contact\">Contact Me</a>\n</div>"
+          }
+        },
+        "link_list_CWLMgj": {
+          "type": "link_list",
+          "settings": {
+            "heading": "The Blueprint",
+            "menu": "shopify-plus-wholesale"
+          }
+        },
+        "liquid_ytTbWQ": {
+          "type": "liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"footer-custom-liquid\">\n  <h3>Ready to Scale?</h3>\n  <p>Stop struggling with patchwork solutions. Let's transform your wholesale channel.</p>\n  \n  <a href=\"#contact\" class=\"btn-brand btn-brand-primary footer-cta-btn\">\n    Book the $1,950 Roadmap →\n  </a>\n\n  <h3 style=\"margin-top: 4rem;\">Connect</h3>\n   <p>\n    <a href=\"https://www.linkedin.com/in/robert-fosterui\" target=\"_blank\" rel=\"noopener noreferrer\">\n      Follow on LinkedIn\n    </a>\n  </p>\n</div>"
+          }
+        }
+      },
+      "block_order": [
+        "liquid_aJJ394",
+        "link_list_CWLMgj",
+        "liquid_ytTbWQ"
+      ],
       "settings": {
-        "color_scheme": "scheme-1",
-        "newsletter_enable": true,
+        "color_scheme": "scheme-5",
+        "newsletter_enable": false,
         "newsletter_heading": "Subscribe to our emails",
-        "enable_follow_on_shop": true,
-        "show_social": true,
-        "enable_country_selector": true,
+        "enable_follow_on_shop": false,
+        "show_social": false,
+        "enable_country_selector": false,
         "enable_language_selector": true,
-        "payment_enable": true,
+        "payment_enable": false,
         "show_policy": true,
         "margin_top": 0,
         "padding_top": 36,

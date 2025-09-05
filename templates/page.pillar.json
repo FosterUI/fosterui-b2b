@@ -1,0 +1,45 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hero": {
+      "type": "pillar-hero",
+      "settings": {
+        "kicker": "The Definitive Guide for 2025/2026",
+        "introduction": "<p>Stop relying on spreadsheets and manual processes. This guide outlines the exact strategy required to transform your Shopify DTC store into a frictionless, high-volume B2B powerhouse using strategic AI automation.</p>"
+      }
+    },
+    "main": {
+      "type": "pillar-main-content",
+      "settings": {
+        "toc_title": "In This Guide",
+        "enable_sidebar_cta": true,
+        "cta_title": "Ready to Execute?",
+        "cta_text": "Start with the essential 5-day deep-dive audit.",
+        "cta_button": "Book the Roadmap",
+        "cta_link": "/#contact"
+      }
+    },
+    "cta": {
+      "type": "pillar-final-cta",
+      "settings": {
+        "title": "Ready to Transform Your Wholesale Channel into an AI-Powered Powerhouse??",
+        "text": "<p>Don't let manual processes stunt your growth. If you are a Shopify Plus merchant between $1M-$15M GMV, the Roadmap is your first step.</p>",
+        "button_label": "Book My $1,950 Roadmap",
+        "button_link": "/#contact"
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "main",
+    "cta"
+  ]
+}
