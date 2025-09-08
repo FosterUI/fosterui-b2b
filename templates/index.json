@@ -243,7 +243,7 @@
       "settings": {
         "intro_title": "Meet Your B2B Growth Partner",
         "intro_subtitle": "I've spent a decade in the Shopify trenches. Now, I'm focused exclusively on your B2B future.",
-        "bio_text": "<p>I'm Robert Foster, a principal consultant and expert Shopify Developer—not a large agency where your project gets handed off to junior staff.</p><p>After 10+ years in the ecosystem, I’ve deliberately narrowed my niche to focus on the two most critical growth levers in 2025: <strong>B2B expansion and AI integration.</strong></p><p>When you hire me, you get <em>me</em>—ensuring direct, senior-level strategy and execution throughout our engagement. My reputation is built on delivering results, not just code.</p><p><a href=\"/pages/contact\" title=\"Contact\">Contact Me</a></p>",
+        "bio_text": "<p>I'm Robert Foster, a founder & Shopify Plus consultant, as well as an expert Shopify Developer—not a large agency where your project gets handed off to junior staff.</p><p>After 10+ years in the ecosystem, I’ve deliberately narrowed my niche to focus on the two most critical growth levers in 2025: <strong>B2B expansion and AI integration.</strong></p><p>When you hire me, you get <em>me</em>—ensuring direct, senior-level strategy and execution throughout our engagement. My reputation is built on delivering results, not just code.</p><p><a href=\"/pages/contact\" title=\"Contact\">Contact Me</a></p>",
         "highlight_title": "My Advantage: Velocity and Precision",
         "highlight_text": "<p>My advantage isn't just access to advanced AI like Gemini and Claude; it's the proprietary methodology I've built to apply them. My system analyzes, architects, and executes strategies with a velocity that simulates a 3-5 person team.</p><p>I don't believe in endless development cycles. I execute rapid, strategic implementation sprints focused on delivering quantifiable revenue lift.</p>"
       }
@@ -366,42 +366,6 @@
         "padding_bottom": 60
       }
     },
-    "newsletter_HPecCR": {
-      "type": "newsletter",
-      "blocks": {
-        "heading_gQYjwA": {
-          "type": "heading",
-          "disabled": true,
-          "settings": {
-            "heading": "Subscribe to our emails",
-            "heading_size": "h1"
-          }
-        },
-        "paragraph_RMfxGn": {
-          "type": "paragraph",
-          "settings": {
-            "text": "<p><strong>Get specialized insights and implementation tactics for Shopify merchants, delivered weekly.</strong></p>"
-          }
-        },
-        "email_form_43Ljn9": {
-          "type": "email_form",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "heading_gQYjwA",
-        "paragraph_RMfxGn",
-        "email_form_43Ljn9"
-      ],
-      "name": "t:sections.newsletter.presets.name",
-      "settings": {
-        "color_scheme": "",
-        "full_width": false,
-        "custom_css_class": "landing-page-customization",
-        "padding_top": 40,
-        "padding_bottom": 0
-      }
-    },
     "homepage_faq_k4mwX6": {
       "type": "homepage-faq",
       "blocks": {
@@ -459,6 +423,42 @@
       "name": "B2B Homepage FAQ",
       "settings": {
         "title": "Frequently Asked Questions"
+      }
+    },
+    "newsletter_HPecCR": {
+      "type": "newsletter",
+      "blocks": {
+        "heading_gQYjwA": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Subscribe to our emails",
+            "heading_size": "h1"
+          }
+        },
+        "paragraph_RMfxGn": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Receive tailored insights and implementation strategies for Shopify merchants, delivered weekly.</p>"
+          }
+        },
+        "email_form_43Ljn9": {
+          "type": "email_form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "heading_gQYjwA",
+        "paragraph_RMfxGn",
+        "email_form_43Ljn9"
+      ],
+      "name": "t:sections.newsletter.presets.name",
+      "settings": {
+        "color_scheme": "",
+        "full_width": false,
+        "custom_css_class": "landing-page-customization",
+        "padding_top": 40,
+        "padding_bottom": 0
       }
     },
     "newsletter_section_izCYan": {
