@@ -10,7 +10,13 @@
               <a href="{{ article.url }}">{{ article.title }}</a>
             </h2>
 
-            <div class="blog-card__excerpt {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+            <div
+              class="blog-card__excerpt {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
+              {% if settings.animations_reveal_on_scroll %}
+                data-cascade
+                style="--animation-order: {{ forloop.index }};"
+              {% endif %}
+            >
               {% comment %} Display excerpt if available, otherwise truncate the main content {% endcomment %}
               {% if article.excerpt.size > 0 %}
                 {{ article.excerpt | strip_html | truncatewords: 30 }}
