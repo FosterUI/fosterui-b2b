@@ -6,31 +6,47 @@
 
 <header class="article-header">
   <div class="page-width">
-    
-    <h1>{{ article.title }}</h1>
-    
-    <div class="article-header__meta-wrapper">
-        {% if section.settings.author_headshot != blank %}
-            <img src="{{ section.settings.author_headshot | image_url: width: 60, height: 60 }}" alt="{{ article.author }}" class="article-header__headshot" width="60" height="60" loading="lazy">
+    <div
+      class="article-header__content"
+      {% if settings.animations_reveal_on_scroll %}
+        data-cascade
+      {% endif %}
+    >
+      <h1 
+        class="{% if settings.animations_reveal_on_scroll %}scroll-trigger animate--slide-in{% endif %}"
+        {% if settings.animations_reveal_on_scroll %}
+          style="--animation-order: 1;"
         {% endif %}
+      >{{ article.title }}</h1>
+      
+      <div 
+        class="article-header__meta-wrapper{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+        {% if settings.animations_reveal_on_scroll %}
+          style="--animation-order: 2;"
+        {% endif %}
+      >
+          {% if section.settings.author_headshot != blank %}
+              <img src="{{ section.settings.author_headshot | image_url: width: 60, height: 60 }}" alt="{{ article.author }}" class="article-header__headshot" width="60" height="60" loading="lazy">
+          {% endif %}
 
-        <div class="article-header__meta">
-            {% if section.settings.show_author %}
-                <span class="article-header__author">{{ article.author }}</span>
-            {% endif %}
-            
-            <span class="article-header__date-time">
-                {% if section.settings.show_date %}
-                    <span>{{ article.published_at | date: '%B %d, %Y' }}</span>
-                {% endif %}
-                
-                {% comment %} NEW: Display Read Time {% endcomment %}
-                {% if section.settings.show_read_time %}
-                    {% if section.settings.show_date %}<span> | </span>{% endif %}
-                    <span>{{ read_time }} min read</span>
-                {% endif %}
-            </span>
-        </div>
+          <div class="article-header__meta">
+              {% if section.settings.show_author %}
+                  <span class="article-header__author">{{ article.author }}</span>
+              {% endif %}
+              
+              <span class="article-header__date-time">
+                  {% if section.settings.show_date %}
+                      <span>{{ article.published_at | date: '%B %d, %Y' }}</span>
+                  {% endif %}
+                  
+                  {% comment %} NEW: Display Read Time {% endcomment %}
+                  {% if section.settings.show_read_time %}
+                      {% if section.settings.show_date %}<span> | </span>{% endif %}
+                      <span>{{ read_time }} min read</span>
+                  {% endif %}
+              </span>
+          </div>
+      </div>
     </div>
 
   </div>
