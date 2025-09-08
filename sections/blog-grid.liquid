@@ -6,20 +6,7 @@
       <div class="blog-grid">
         {% for article in blog.articles %}
           <article class="blog-card">
-            {% if article.image %}
-              <div class="blog-card__image">
-                <a href="{{ article.url }}">
-                  <img
-                    src="{{ article.image | image_url: width: 1000 }}"
-                    alt="{{ article.image.alt | escape }}"
-                    width="1000"
-                    height="{{ 1000 | divided_by: article.image.aspect_ratio | round }}"
-                  >
-                </a>
-              </div>
-            {% endif %}
-            <div class="blog-card__content">
-              <h2 class="blog-card__title">
+            <h2 class="blog-card__title">
               <a href="{{ article.url }}">{{ article.title }}</a>
             </h2>
 
@@ -34,7 +21,6 @@
 
             <div class="blog-card__meta">
               {{ article.published_at | date: '%B %d, %Y' }}
-            </div>
             </div>
           </article>
         {% endfor %}
