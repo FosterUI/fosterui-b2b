@@ -6,11 +6,11 @@
       <div class="blog-grid">
         {% for article in blog.articles %}
           <article class="blog-card">
-            <h2 class="blog-card__title">
+            <h2 class="blog-card__title {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
               <a href="{{ article.url }}">{{ article.title }}</a>
             </h2>
 
-            <div class="blog-card__excerpt">
+            <div class="blog-card__excerpt {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
               {% comment %} Display excerpt if available, otherwise truncate the main content {% endcomment %}
               {% if article.excerpt.size > 0 %}
                 {{ article.excerpt | strip_html | truncatewords: 30 }}
@@ -19,7 +19,7 @@
               {% endif %}
             </div>
 
-            <div class="blog-card__meta">
+            <div class="blog-card__meta {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
               {{ article.published_at | date: '%B %d, %Y' }}
             </div>
           </article>
