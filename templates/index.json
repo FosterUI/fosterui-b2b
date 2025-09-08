@@ -461,6 +461,41 @@
         "padding_bottom": 0
       }
     },
+    "newsletter_FaJz7k": {
+      "type": "newsletter",
+      "blocks": {
+        "heading_fiVaTz": {
+          "type": "heading",
+          "settings": {
+            "heading": "Subscribe to the \"B2B AI Edge\" Newsletter",
+            "heading_size": "h1"
+          }
+        },
+        "paragraph_W8Pxqj": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Get specialized insights and implementation tactics for Shopify merchants, delivered weekly.</p>"
+          }
+        },
+        "email_form_FFpb3T": {
+          "type": "email_form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "heading_fiVaTz",
+        "paragraph_W8Pxqj",
+        "email_form_FFpb3T"
+      ],
+      "name": "t:sections.newsletter.presets.name",
+      "settings": {
+        "color_scheme": "",
+        "full_width": true,
+        "custom_css_class": "landing-page-customization fui-newsletter",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "newsletter_section_izCYan": {
       "type": "newsletter-section",
       "disabled": true,
@@ -482,6 +517,7 @@
     "newsletter_cQ4kTJ",
     "homepage_faq_k4mwX6",
     "newsletter_HPecCR",
+    "newsletter_FaJz7k",
     "newsletter_section_izCYan"
   ]
 }
