@@ -10,7 +10,7 @@
         {% endif %}
       >
         {% for article in blog.articles %}
-          <article class="blog-card">
+          <article class="blog-card"{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}>
             <h2 class="blog-card__title">
               <a href="{{ article.url }}">{{ article.title }}</a>
             </h2>
