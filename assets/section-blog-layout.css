@@ -77,10 +77,6 @@
     letter-spacing: 0.5px;
 }
 
-.newsletter__wrapper h2 {
-    color: var(--color-brand-white);
-}
-
 /* Pagination */
 .pagination__list {
     justify-content: center;
