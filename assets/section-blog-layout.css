@@ -156,7 +156,8 @@
 }
 
 
-.article-container {
+.article-container,
+.rich-text__wrapper {
     max-width: 80rem;
     /* Optimal reading width */
     margin: 0 auto;
