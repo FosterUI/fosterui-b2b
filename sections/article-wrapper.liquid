@@ -1,7 +1,7 @@
 {{ 'section-blog-layout.css' | asset_url | stylesheet_tag }}
 
 <section class="article-wrapper-section">
-  <div class="article-container">
+  <div class="article-container {{ section.settings.custom_css }}">
     {% comment %} Iterate through all blocks within this section {% endcomment %}
     {% for block in section.blocks %}
       <div class="article-block" {{ block.shopify_attributes }}>
@@ -174,7 +174,13 @@
 {% schema %}
 {
   "name": "Article Content Wrapper",
-  "settings": [],
+  "settings": [
+    {
+      "type": "text",
+      "id": "custom_css",
+      "label": "Custom CSS"
+    }
+  ],
   "blocks": [
     {
       "type": "rich_text",
