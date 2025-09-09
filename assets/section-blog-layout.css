@@ -300,24 +300,6 @@
     color: #64748b;
 }
 
-/* References Section Styling (De-emphasized) */
-/* Applied via the checkbox setting in the block schema */
-.block-references.article-content-block {
-    font-size: 1.4rem;
-    line-height: 1.5;
-    color: #64748b;
-}
-
-.block-references h2,
-.block-references h3 {
-    font-size: 2.2rem;
-}
-
-.block-references li {
-    margin-bottom: 1rem;
-}
-
-
 /* 3. Mobile Responsiveness */
 @media screen and (max-width: 989px) {
 
