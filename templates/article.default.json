@@ -17,21 +17,31 @@
         "show_author": true
       }
     },
-    "pillar_link_callout_7qkfA3": {
-      "type": "pillar-link-callout",
-      "name": "Pillar Link Callout",
-      "settings": {
-        "pillar_link_text": "This article is part of my comprehensive resource:",
-        "pillar_link_title": "The Definitive Guide to AI-Powered B2B on Shopify Plus.",
-        "pillar_link_url": "shopify://pages/the-definitive-guide-to-ai-powered-b2b-on-shopify-plus"
-      }
-    },
-    "article_audio_player_dN9x7T": {
-      "type": "article-audio-player",
-      "name": "Audio Player",
-      "settings": {
-        "audio_player_label": "Listen to the Audio Overview:"
-      }
+    "main_wrapper": {
+      "type": "article-wrapper",
+      "settings": {},
+      "blocks": {
+        "pillar_link_callout_7qkfA3": {
+          "type": "pillar-link-callout",
+          "name": "Pillar Link Callout",
+          "settings": {
+            "pillar_link_text": "This article is part of my comprehensive resource:",
+            "pillar_link_title": "The Definitive Guide to AI-Powered B2B on Shopify Plus.",
+            "pillar_link_url": "shopify://pages/the-definitive-guide-to-ai-powered-b2b-on-shopify-plus"
+          }
+        },
+        "article_audio_player_dN9x7T": {
+          "type": "article-audio-player",
+          "name": "Audio Player",
+          "settings": {
+            "audio_player_label": "Listen to the Audio Overview:"
+          }
+        }
+      },
+      "block_order": [
+        "pillar_link_callout_7qkfA3",
+        "article_audio_player_dN9x7T"
+      ]
     },
     "rich_text_AxYQ8N": {
       "type": "rich-text",
