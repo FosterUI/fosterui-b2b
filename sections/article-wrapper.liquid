@@ -150,6 +150,14 @@
                 </div>
               </div>
             </div>
+            {% comment %} --- CTA BUTTON BLOCK --- {% endcomment %}
+          {% when 'cta_button' %}
+            <div class="article-cta-button">
+              <a href="{{ block.settings.button_link }}" class="btn-brand btn-brand-primary">
+                {{ block.settings.button_label }}
+              </a>
+            </div>
+
         {% endcase %}
       </div>
     {% endfor %}
@@ -249,6 +257,23 @@
         {
           "type": "url",
           "id": "author_cta_button_link",
+          "label": "Button Link"
+        }
+      ]
+    },
+    {
+      "type": "cta_button",
+      "name": "CTA Button",
+      "settings": [
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "Button Label",
+          "default": "Click me"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
           "label": "Button Link"
         }
       ]
