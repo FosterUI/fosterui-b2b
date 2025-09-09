@@ -254,7 +254,16 @@
     {%- endunless -%}
   {%- endif -%}
 
-  <p>footer__content-bottom</p>
+  {% comment %} Custom: Add citation section {% endcomment %}
+  {%- if section.settings.show_citations and section.settings.citation_text != blank -%}
+    <div class="footer__citations-wrapper page-width">
+      <div class="footer__citations-content rte">
+        <small>
+          {{ section.settings.citation_text }}
+        </small>
+      </div>
+    </div>
+  {%- endif -%}
 
   <div
     class="footer__content-bottom{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
