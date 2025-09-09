@@ -2,6 +2,7 @@
 {% assign audio_file = article.metafields.custom.audio_overview.value %}
 
 {% if audio_file %}
+<div class="article-container section-container-spacing">
   <div class="article-audio-player">
     <label class="article-audio-player__label" for="audio-player-{{ article.id }}">
       {{- section.settings.audio_player_label -}}
@@ -95,6 +96,7 @@
     </script>
 
   </div>
+</div>
 {% endif %}
 
 {% schema %}
