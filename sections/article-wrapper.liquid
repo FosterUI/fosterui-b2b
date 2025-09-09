@@ -153,9 +153,16 @@
             {% comment %} --- CTA BUTTON BLOCK --- {% endcomment %}
           {% when 'cta_button' %}
             <div class="article-cta-button">
-              <a href="{{ block.settings.button_link }}" class="btn-brand btn-brand-primary">
-                {{ block.settings.button_label }}
-              </a>
+              {% if block.settings.button_label != blank and block.settings.button_link != blank %}
+                <a href="{{ block.settings.button_link }}" class="btn-brand btn-brand-primary">
+                  {{ block.settings.button_label }}
+                </a>
+              {% endif %}
+              {% if block.settings.secondary_button_label != blank and block.settings.secondary_button_link != blank %}
+                <a href="{{ block.settings.secondary_button_link }}" class="btn-brand btn-brand-secondary">
+                  {{ block.settings.secondary_button_label }}
+                </a>
+              {% endif %}
             </div>
 
         {% endcase %}
@@ -268,13 +275,23 @@
         {
           "type": "text",
           "id": "button_label",
-          "label": "Button Label",
+          "label": "Primary Button Label",
           "default": "Click me"
         },
         {
           "type": "url",
           "id": "button_link",
-          "label": "Button Link"
+          "label": "Primary Button Link"
+        },
+        {
+          "type": "text",
+          "id": "secondary_button_label",
+          "label": "Secondary Button Label"
+        },
+        {
+          "type": "url",
+          "id": "secondary_button_link",
+          "label": "Secondary Button Link"
         }
       ]
     }

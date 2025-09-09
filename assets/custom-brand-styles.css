@@ -712,6 +712,10 @@ body {
 
 /* --- Article CTA Button --- */
 .article-cta-button {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
     margin: 3rem 0;
 }
