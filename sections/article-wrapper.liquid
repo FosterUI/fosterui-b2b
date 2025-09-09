@@ -30,7 +30,7 @@
               <div class="article-container section-container-spacing">
                 <div class="article-audio-player">
                   <label class="article-audio-player__label" for="audio-player-{{ article.id }}">
-                    {{- section.settings.audio_player_label -}}
+                    {{- block.settings.audio_player_label -}}
                   </label>
 
                   {% comment %} Try different approaches to get a working audio URL {% endcomment %}
