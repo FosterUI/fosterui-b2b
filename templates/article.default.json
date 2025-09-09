@@ -73,6 +73,38 @@
         "padding_bottom": 52
       }
     },
+    "rich_text_Eyqkcc": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_MXtcGN": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Part 3: The Two Critical Decisions You Must Get Right</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_QGck8t": {
+          "type": "text",
+          "settings": {
+            "text": "<p>To prevent this downward spiral, founders must be opinionated about two specific, often-delegated decisions. Getting these right is non-negotiable for a successful B2B launch.</p><p><strong>1. The Blueprint: Why Data Mapping is Non-Negotiable</strong></p><p>Data mapping is the process of documenting exactly how information—products, customers, orders—will sync between your systems. It’s the foundational blueprint for your entire integration, and its importance cannot be overstated. It ensures a seamless flow of information, creates a 360-degree view of your customer, and guarantees data accuracy across your business.</p><p>This critical step is where most projects begin to fail. It goes wrong for three main reasons:</p><ul><li><strong>Underestimating Complexity:</strong> Teams fail to appreciate the resources required for a proper data transfer, leading to rushed work and poor quality assessment.</li><li><strong>Ignoring Legacy Data Quality:</strong> You cannot transfer \"dirty\" data into a new system and expect clean results. Many organizations fail to address existing inaccuracies and inconsistencies in their legacy systems before migration begins.</li><li><strong>Viewing it as a Purely Technical Task:</strong> Data mapping is a business strategy process, not just an IT task. Delegating it entirely to a technical team without input from operations, finance, and sales creates a massive disconnect between what is built and what the business actually needs.</li></ul><p><strong>2. The Engine: Choosing Your Integration Method</strong></p><p>You have two primary ways to connect Shopify to your ERP: using middleware (an intermediary software like Celigo or Boomi) or building a direct API integration. Middleware can seem appealing with its pre-built connectors and promises of quick implementation. However, it adds complexity, requires its own maintenance, and can result in slower data transfer compared to a direct connection.</p><p>For a modern, future-proof e-commerce strategy, <strong>direct API integration is the generally recommended and preferred method</strong>. The reason is simple: it offers superior performance and control. A direct API connection enables instant, real-time data synchronization, which is critical for accurate inventory and timely order processing. It also keeps your system structure simpler, which reduces long-term maintenance efforts. Most importantly, it gives you complete control over your data flows, allowing you to tailor the integration to your unique business workflows instead of being constrained by a third-party platform. Middleware can be a temporary bridge, but a direct API is a permanent foundation. For a business serious about scale, the choice is clear.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_MXtcGN",
+        "text_QGck8t"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": false,
+        "custom_rt_class": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "main": {
       "type": "article-main",
       "settings": {
@@ -127,6 +159,7 @@
     "header",
     "rich_text_AxYQ8N",
     "rich_text_bJjUfk",
+    "rich_text_Eyqkcc",
     "main",
     "newsletter"
   ]
