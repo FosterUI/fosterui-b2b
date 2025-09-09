@@ -197,7 +197,8 @@
 }
 
 /* Fix bunched paragraphs */
-.article-content p {
+.article-content p,
+.rich-text__text p {
     margin-bottom: 2rem;
 }
 
