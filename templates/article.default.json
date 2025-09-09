@@ -209,6 +209,7 @@
     },
     "main": {
       "type": "article-main",
+      "disabled": true,
       "settings": {}
     },
     "newsletter": {
