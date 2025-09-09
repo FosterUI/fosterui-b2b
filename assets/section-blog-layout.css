@@ -31,7 +31,6 @@
     gap: 4rem;
 }
 
-/* Blog Article Card */
 .blog-card {
     background-color: var(--color-brand-white);
     border-radius: 8px;
@@ -77,7 +76,6 @@
     letter-spacing: 0.5px;
 }
 
-/* Pagination */
 .pagination__list {
     justify-content: center;
     margin-top: 6rem;
@@ -96,11 +94,6 @@
 
 /* 2. Blog Article (Detail Page) Styles */
 
-/* Ensure background color is correct for the article page template */
-.article-page-background {
-    background-color: var(--color-brand-background);
-}
-
 /* Article Header */
 .article-header {
     padding: 8rem 0;
@@ -117,7 +110,6 @@
     margin: 0 auto 3.5rem;
 }
 
-/* Header Profile Integration */
 .article-header__meta-wrapper {
     display: flex;
     align-items: center;
@@ -146,9 +138,16 @@
 }
 
 
-/* --- Article Layout Standardization (UPDATED: Increased Specificity) --- */
+/* --- Article Layout & Wrapper --- */
 
-/* Standardized Container for alignment */
+.article-wrapper-section {
+    background-color: var(--color-brand-background);
+    /* Provides the main vertical spacing for the article */
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+/* The primary container for alignment and width constraint */
 .article-container {
     max-width: 80rem;
     /* Optimal reading width */
@@ -157,37 +156,13 @@
     padding-right: 2rem;
 }
 
-/* Standardized Vertical Spacing (Reduced slightly for tighter rhythm) */
-.article-section-spacing {
+/* Standardized Vertical Spacing between Blocks */
+.article-block {
     margin-bottom: 3rem;
 }
 
-/* Specific spacing for the first element after the header (Reduced slightly) */
-.article-section-top-spacing {
-    padding-top: 5rem;
-}
 
-/* Ensure Dawn's Rich Text section aligns correctly */
-/* Increased specificity and added !important to enforce the width constraint */
-body.template-article .rich-text .page-width {
-    max-width: 80rem !important;
-    margin: 0 auto;
-    /* Ensure padding is consistent with article-container */
-    padding-left: 2rem !important;
-    padding-right: 2rem !important;
-}
-
-/* Ensure Rich Text sections have consistent spacing and no extra padding */
-body.template-article .rich-text {
-    margin-bottom: 3rem;
-    /* Reduced slightly */
-    /* Important to override Dawn's default section padding */
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
-}
-
-
-/* --- Component Styling (Callouts, Audio, Bio) --- */
+/* --- Component Styling (Used within Blocks) --- */
 
 /* Pillar Link Callout */
 .pillar-link-callout {
@@ -245,6 +220,8 @@ body.template-article .rich-text {
     display: flex;
     gap: 3rem;
     align-items: center;
+    margin-top: 4rem;
+    /* Extra space before the bio */
 }
 
 .author-cta__headshot {
@@ -267,28 +244,27 @@ body.template-article .rich-text {
 }
 
 
-/* --- Article Content Typography Standardization (UPDATED) --- */
-/* Increased specificity for typography rules */
+/* --- Article Content Typography (Applied to Rich Text Blocks) --- */
 
-.template-article .rich-text__text {
+.article-content-block {
     font-size: 1.8rem;
     line-height: 1.7;
 }
 
-.template-article .rich-text__text p {
+.article-content-block p {
     margin-bottom: 2rem;
 }
 
-.template-article .rich-text__text a {
+.article-content-block a {
     color: var(--color-brand-accent);
     text-decoration: underline;
 }
 
-.template-article .rich-text__text a:hover {
+.article-content-block a:hover {
     color: var(--color-brand-accent-hover);
 }
 
-.template-article .rich-text__blocks h2 {
+.article-content-block h2 {
     font-size: 3.2rem;
     font-weight: 700;
     border-top: 1px solid #e0e0e0;
@@ -299,13 +275,13 @@ body.template-article .rich-text {
 }
 
 /* Ensure the first H2 in a block doesn't have double border/margin */
-.template-article .rich-text__blocks h2:first-child {
+.article-content-block h2:first-child {
     border-top: none;
     padding-top: 0;
     margin-top: 0;
 }
 
-.template-article .rich-text__blocks h3 {
+.article-content-block h3 {
     font-size: 2.4rem;
     font-weight: 700;
     margin-top: 4rem;
@@ -313,20 +289,19 @@ body.template-article .rich-text {
     color: var(--color-brand-primary-dark);
 }
 
-/* FIX: Ensure list indentation is correct */
-.template-article .rich-text__blocks ul,
-.template-article .rich-text__blocks ol {
+/* FIX: Ensure correct list indentation and wrapping */
+.article-content-block ul,
+.article-content-block ol {
     margin-bottom: 2.5rem;
     padding-left: 4rem;
-    /* Ensures text wraps correctly under the bullet/number */
     list-style-position: outside;
 }
 
-.template-article .rich-text__blocks li {
+.article-content-block li {
     margin-bottom: 1.5rem;
 }
 
-.template-article .rich-text__blocks blockquote {
+.article-content-block blockquote {
     border-left: 4px solid var(--color-brand-accent);
     padding-left: 2rem;
     margin: 3rem 0;
@@ -335,18 +310,19 @@ body.template-article .rich-text {
 }
 
 /* References Section Styling (De-emphasized) */
-.article-references .rich-text__text {
+/* Applied via the checkbox setting in the block schema */
+.block-references.article-content-block {
     font-size: 1.4rem;
     line-height: 1.5;
     color: #64748b;
 }
 
-.article-references .rich-text__blocks h2,
-.article-references .rich-text__blocks h3 {
+.block-references h2,
+.block-references h3 {
     font-size: 2.2rem;
 }
 
-.article-references .rich-text__blocks li {
+.block-references li {
     margin-bottom: 1rem;
 }
 
@@ -363,11 +339,11 @@ body.template-article .rich-text {
         grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
     }
 
-    .template-article .rich-text__text {
+    .article-content-block {
         font-size: 1.6rem;
     }
 
-    .template-article .rich-text__blocks h2 {
+    .article-content-block h2 {
         font-size: 2.8rem;
     }
 
@@ -378,8 +354,9 @@ body.template-article .rich-text {
         padding: 3rem;
     }
 
-    /* Adjust top spacing for mobile (Reduced slightly) */
-    .article-section-top-spacing {
+    /* Adjust top spacing for mobile */
+    .article-wrapper-section {
         padding-top: 3rem;
+        padding-bottom: 3rem;
     }
 }
