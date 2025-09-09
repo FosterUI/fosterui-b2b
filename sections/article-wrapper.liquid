@@ -26,15 +26,14 @@
 
           {% comment %} --- AUDIO PLAYER BLOCK --- {% endcomment %}
           {% when 'audio_player' %}
-            {% assign audio_file = article.metafields.custom.audio_overview.value %}
-            {% if audio_file %}
+            {% if block.settings.audio_file %}
               <div class="article-audio-player">
                 <label class="article-audio-player__label" for="audio-player-{{ article.id }}-{{ block.id }}">
                   {{- block.settings.audio_player_label -}}
                 </label>
                 
                 {% comment %} Robust URL resolution for File Reference metafields (Fixes greyed-out player) {% endcomment %}
-                {% assign audio_url = audio_file.url | default: audio_file | file_url %}
+                {% assign audio_url = block.settings.audio_file.url | default: block.settings.audio_file | file_url %}
                 
                 {% if audio_url != blank %}
                   <audio id="audio-player-{{ article.id }}-{{ block.id }}" controls preload="metadata">
