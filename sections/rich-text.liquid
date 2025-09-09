@@ -25,7 +25,7 @@
           {%- case block.type -%}
             {%- when 'heading' -%}
               <h2
-                class="rich-text__heading rte inline-richtext {{ block.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                class="rich-text__heading rte inline-richtext {{ block.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} {{ section.settings.custom_class_heading }}"
                 {{ block.shopify_attributes }}
                 {% if settings.animations_reveal_on_scroll %}
                   data-cascade
@@ -168,6 +168,11 @@
       "type": "text",
       "id": "custom_class",
       "label": "Custom CSS"
+    },
+    {
+      "type": "text",
+      "id": "custom_class_heading",
+      "label": "Custom CSS for Heading"
     },
     {
       "type": "header",
