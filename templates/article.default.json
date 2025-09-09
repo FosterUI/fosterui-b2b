@@ -41,19 +41,16 @@
         "padding_bottom": 52
       }
     },
-    "custom_liquid_aepkT6": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<hr>",
-        "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
     "rich_text_bJjUfk": {
       "type": "rich-text",
       "blocks": {
+        "heading_FMBJUK": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Part 2: The Real Costs of a Broken Integration</strong>",
+            "heading_size": "h1"
+          }
+        },
         "text_yBnmbV": {
           "type": "text",
           "settings": {
@@ -62,6 +59,7 @@
         }
       },
       "block_order": [
+        "heading_FMBJUK",
         "text_yBnmbV"
       ],
       "name": "t:sections.rich-text.presets.name",
@@ -128,7 +126,6 @@
   "order": [
     "header",
     "rich_text_AxYQ8N",
-    "custom_liquid_aepkT6",
     "rich_text_bJjUfk",
     "main",
     "newsletter"
