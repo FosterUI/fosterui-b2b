@@ -483,6 +483,52 @@ body {
     border-top: none;
 }
 
+/* Footer Citations Styling */
+.footer__citations-wrapper {
+    /* Adds space between main footer and citations */
+    margin-top: 4rem;
+    padding-top: 2.5rem;
+    padding-bottom: 2rem;
+    /* Subtle horizontal line separator (10% opacity white) */
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer__citations-content {
+    text-align: left;
+    /* Constrain width for readability of dense text and center the block */
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer__citations-content small {
+    /* Small font size (12px equivalent in Dawn's rem system) */
+    font-size: 1.2rem;
+    line-height: 1.6;
+    /* Muted color (60% opacity white) for subtlety */
+    color: rgba(255, 255, 255, 0.6);
+    display: block;
+}
+
+/* Ensures the richtext paragraph doesn't add extra margins or override styles */
+.footer__citations-content p {
+    margin: 0;
+    font-size: inherit;
+    color: inherit;
+}
+
+/* Desktop adjustments */
+@media screen and (min-width: 750px) {
+    .footer__citations-content {
+        text-align: center;
+        /* Center align on desktop for balance */
+    }
+
+    .footer__citations-content small {
+        font-size: 1.3rem;
+    }
+}
+
 /* Override Dawn's default centering and enforce the structured grid on desktop */
 @media screen and (min-width: 750px) {
 
