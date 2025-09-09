@@ -1,16 +1,21 @@
-<div class="article-container section-container-spacing">
+{{ 'section-blog-layout.css' | asset_url | stylesheet_tag }}
+
+{% comment %}
+  We apply 'article-section-top-spacing' here as this is typically the first section after the header.
+{% endcomment %}
+<div class="article-container article-section-spacing article-section-top-spacing">
   <div class="pillar-link-callout">
-  <p>
-    {{ section.settings.pillar_link_text }}
-    <a href="{{ section.settings.pillar_link_url }}">{{ section.settings.pillar_link_title }}</a>
-  </p>
+    <p>
+      {{ section.settings.pillar_link_text }}
+      <a href="{{ section.settings.pillar_link_url }}">{{ section.settings.pillar_link_title }}</a>
+    </p>
   </div>
 </div>
 
 {% schema %}
 {
   "name": "B2B Pillar Link Callout",
-  "class": "pillar-link-callout--wrapper",
+  "class": "article-page-background",
   "settings": [
     {
       "type": "paragraph",
