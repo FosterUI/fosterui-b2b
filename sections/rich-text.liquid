@@ -15,7 +15,7 @@
 {%- endstyle -%}
 
 <div class="isolate{% unless section.settings.full_width %} page-width{% endunless %} {{ section.settings.custom_rt_class }}">
-  <div class="rich-text content-container color-{{ section.settings.color_scheme }} gradient{% if section.settings.full_width %} rich-text--full-width content-container--full-width{% endif %} section-{{ section.id }}-padding {% if block.settings.is_references %}block-references{% endif %}"></div>">
+  <div class="rich-text content-container color-{{ section.settings.color_scheme }} gradient{% if section.settings.full_width %} rich-text--full-width content-container--full-width{% endif %} section-{{ section.id }}-padding {% if section.settings.is_references %}block-references{% endif %}">
     <div class="rich-text__wrapper rich-text__wrapper--{{ section.settings.desktop_content_position }}{% if section.settings.full_width %} page-width{% endif %}">
       <div class="rich-text__blocks {{ section.settings.content_alignment }}">
         {%- for block in section.blocks -%}
@@ -301,9 +301,9 @@
       "limit": 2,
       "settings": [
         {
-         "type": "header",
-         "content": "t:sections.rich-text.blocks.buttons.settings.header_button1.content"
-        },        
+          "type": "header",
+          "content": "t:sections.rich-text.blocks.buttons.settings.header_button1.content"
+        },
         {
           "type": "text",
           "id": "button_label",
@@ -323,9 +323,9 @@
           "label": "t:sections.rich-text.blocks.buttons.settings.button_style_secondary_1.label"
         },
         {
-         "type": "header",
-         "content": "t:sections.rich-text.blocks.buttons.settings.header_button2.content"
-        },          
+          "type": "header",
+          "content": "t:sections.rich-text.blocks.buttons.settings.header_button2.content"
+        },
         {
           "type": "text",
           "id": "button_label_2",
