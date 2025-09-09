@@ -1,35 +1,38 @@
-<div class="article-container section-container-spacing">
-  <div class="article-author-cta">
-  {% if section.settings.author_cta_headshot != blank %}
-    <div class="article-author-cta__image">
-      <img
-        src="{{ section.settings.author_cta_headshot | image_url: width: 100, height: 100 }}"
-        alt="{{ article.author }}"
-        class="author-cta__headshot"
-        width="100"
-        height="100"
-        loading="lazy"
-      >
-    </div>
-  {% endif %}
+{{ 'section-blog-layout.css' | asset_url | stylesheet_tag }}
 
-  <div class="article-author-cta__content">
-    <div class="article-author-cta__bio">
-      <h3>{{ section.settings.author_cta_title }}</h3>
-      <p>{{ section.settings.author_cta_text }}</p>
+<div class="article-container article-section-spacing">
+  <div class="article-author-cta">
+    {% if section.settings.author_cta_headshot != blank %}
+      <div class="article-author-cta__image">
+        <img
+          src="{{ section.settings.author_cta_headshot | image_url: width: 100, height: 100 }}"
+          alt="{{ article.author }}"
+          class="author-cta__headshot"
+          width="100"
+          height="100"
+          loading="lazy"
+        >
+      </div>
+    {% endif %}
+
+    <div class="article-author-cta__content">
+      <div class="article-author-cta__bio">
+        <h3>{{ section.settings.author_cta_title }}</h3>
+        <p>{{ section.settings.author_cta_text }}</p>
+      </div>
+      <div class="article-author-cta__action">
+        <a href="{{ section.settings.author_cta_button_link }}" class="btn-brand btn-brand-primary">
+          {{ section.settings.author_cta_button_label }}
+        </a>
+      </div>
     </div>
-    <div class="article-author-cta__action">
-      <a href="{{ section.settings.author_cta_button_link }}" class="btn-brand btn-brand-primary">
-        {{ section.settings.author_cta_button_label }}
-      </a>
-    </div>
-  </div>
   </div>
 </div>
 
 {% schema %}
 {
   "name": "Author Bio & CTA",
+  "class": "article-page-background",
   "settings": [
     {
       "type": "image_picker",
