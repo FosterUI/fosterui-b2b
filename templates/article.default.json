@@ -203,6 +203,7 @@
         "content_alignment": "left",
         "color_scheme": "",
         "full_width": true,
+        "is_references": true,
         "custom_rt_class": "article-container article-content-block",
         "padding_top": 0,
         "padding_bottom": 52
