@@ -70,7 +70,7 @@
         "full_width": false,
         "custom_rt_class": "",
         "padding_top": 0,
-        "padding_bottom": 52
+        "padding_bottom": 0
       }
     },
     "rich_text_Eyqkcc": {
@@ -101,8 +101,8 @@
         "color_scheme": "",
         "full_width": false,
         "custom_rt_class": "",
-        "padding_top": 40,
-        "padding_bottom": 52
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "rich_text_n4dz8R": {
@@ -145,8 +145,8 @@
         "color_scheme": "",
         "full_width": false,
         "custom_rt_class": "",
-        "padding_top": 40,
-        "padding_bottom": 52
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "rich_text_aQQ7kz": {
@@ -177,8 +177,8 @@
         "color_scheme": "",
         "full_width": true,
         "custom_rt_class": "",
-        "padding_top": 40,
-        "padding_bottom": 52
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "main": {
