@@ -22,7 +22,7 @@
       "settings": {},
       "blocks": {
         "pillar_link_callout_7qkfA3": {
-          "type": "pillar-link-callout",
+          "type": "pillar_callout",
           "name": "Pillar Link Callout",
           "settings": {
             "pillar_link_text": "This article is part of my comprehensive resource:",
@@ -31,7 +31,7 @@
           }
         },
         "article_audio_player_dN9x7T": {
-          "type": "article-audio-player",
+          "type": "audio_player",
           "name": "Audio Player",
           "settings": {
             "audio_player_label": "Listen to the Audio Overview:"
