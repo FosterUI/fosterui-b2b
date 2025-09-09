@@ -26,24 +26,7 @@
 
           {% comment %} --- AUDIO PLAYER BLOCK --- {% endcomment %}
           {% when 'audio_player' %}
-            {% if block.settings.audio_file %}
-              <div class="article-audio-player">
-                <label class="article-audio-player__label" for="audio-player-{{ article.id }}-{{ block.id }}">
-                  {{- block.settings.audio_player_label -}}
-                </label>
-                
-                {% comment %} Robust URL resolution for File Reference metafields (Fixes greyed-out player) {% endcomment %}
-                {% assign audio_url = block.settings.audio_file.url | default: block.settings.audio_file | file_url %}
-                
-                {% if audio_url != blank %}
-                  <audio id="audio-player-{{ article.id }}-{{ block.id }}" controls preload="metadata">
-                    {% comment %} M4A files use the audio/mp4 MIME type {% endcomment %}
-                    <source src="{{ audio_url }}" type="audio/mp4">
-                    Your browser does not support the audio element.
-                  </audio>
-                {% endif %}
-              </div>
-            {% endif %}
+            {% render 'article-audio-player' with block.settings %}
 
           {% comment %} --- AUTHOR BIO BLOCK --- {% endcomment %}
           {% when 'author_bio' %}
