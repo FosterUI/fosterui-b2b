@@ -17,9 +17,34 @@
         "show_author": true
       }
     },
+    "rich_text_AxYQ8N": {
+      "type": "rich-text",
+      "blocks": {
+        "text_i7xPr3": {
+          "type": "text",
+          "settings": {
+            "text": "<p>You wrote a six-figure check for a single source of truth. Instead, you got a seven-figure headache. Your Enterprise Resource Planning (ERP) system was supposed to be the central nervous system for your expanding B2B operations, but instead, you have significant budget overruns, a frustrated team, and a B2B launch that is stalling on the runway.</p><p>This is one of the most expensive and demoralizing setbacks a growing DTC brand can face. But the problem is rarely the technology itself. ERP integration projects don't fail because of technical glitches; they fail because of fundamental strategic missteps. They fail because the strategy was flawed long before the first line of code was written. <strong>This isn’t a technical problem; it’s a leadership vacuum.</strong></p><p>The good news is that these failures are predictable and preventable. They almost always stem from the same three strategic oversights:</p><ol><li><strong>Lack of Clear Objectives & Inadequate Planning:</strong> Teams kick off with vague goals (“improve efficiency”) and no measurable success criteria, inviting scope creep and misalignment. Gartner notes that <strong>more than 70% of recently implemented ERP initiatives will fail to fully meet their original business goals by 2027</strong>, driven in part by technology‑centric approaches that ignore stakeholder engagement.[1]</li><li><strong>Poor Data Management & Migration:</strong> Data migration is a chronic risk area. Multiple studies show <strong>a high proportion of migrations run late or over budget</strong>, and that business participation — not just IT — is essential. Experian reports <strong>85% of organizations encounter migration challenges that throw off timelines and budgets</strong>; Bloor’s survey work historically found <strong>only 16% of projects (2007) delivered on time/on budget, improving to 62% by 2011</strong> after better practices were adopted.[2][3][4]</li><li><strong>Lack of Stakeholder Alignment & User Adoption:</strong> Treating the integration as an “IT project” isolates it from operations and sales. Gartner stresses that <strong>stakeholder engagement is a prerequisite</strong> to meeting business expectations — not just a nice‑to‑have.[1]</li></ol><p>If you’re seeing the symptoms of a stalled integration, it’s because one or more of these foundational cracks are undermining your entire investment.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_i7xPr3"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": false,
+        "custom_rt_class": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "main": {
       "type": "article-main",
       "settings": {
+        "audio_player_label": "Listen to the Audio Overview:",
         "enable_pillar_link": true,
         "pillar_link_text": "This article is part of my comprehensive resource:",
         "pillar_link_title": "The Definitive Guide to AI-Powered B2B on Shopify Plus.",
@@ -68,6 +93,7 @@
   },
   "order": [
     "header",
+    "rich_text_AxYQ8N",
     "main",
     "newsletter"
   ]
