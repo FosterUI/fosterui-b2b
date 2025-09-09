@@ -15,7 +15,7 @@
 {%- endstyle -%}
 
 <div class="isolate{% unless section.settings.full_width %} page-width{% endunless %} {{ section.settings.custom_rt_class }}">
-  <div class="rich-text content-container color-{{ section.settings.color_scheme }} gradient{% if section.settings.full_width %} rich-text--full-width content-container--full-width{% endif %} section-{{ section.id }}-padding">
+  <div class="rich-text content-container color-{{ section.settings.color_scheme }} gradient{% if section.settings.full_width %} rich-text--full-width content-container--full-width{% endif %} section-{{ section.id }}-padding {% if block.settings.is_references %}block-references{% endif %}"></div>">
     <div class="rich-text__wrapper rich-text__wrapper--{{ section.settings.desktop_content_position }}{% if section.settings.full_width %} page-width{% endif %}">
       <div class="rich-text__blocks {{ section.settings.content_alignment }}">
         {%- for block in section.blocks -%}
@@ -156,9 +156,15 @@
       "label": "t:sections.rich-text.settings.full_width.label"
     },
     {
+      "type": "checkbox",
+      "id": "is_references",
+      "default": false,
+      "label": "Style as References (Smaller Text)"
+    },
+    {
       "type": "text",
       "id": "custom_rt_class",
-      "label": "t:sections.rich-text.settings.custom_rt_class.label"
+      "label": "Custom CSS"
     },
     {
       "type": "header",
