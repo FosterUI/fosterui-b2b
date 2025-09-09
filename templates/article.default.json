@@ -202,9 +202,8 @@
         "desktop_content_position": "center",
         "content_alignment": "left",
         "color_scheme": "",
-        "full_width": true,
+        "full_width": false,
         "is_references": true,
-        "custom_rt_class": "article-container article-content-block",
         "padding_top": 0,
         "padding_bottom": 52
       }
