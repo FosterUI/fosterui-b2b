@@ -41,9 +41,19 @@
         "padding_top": 20,
         "padding_bottom": 20
       }
+    },
+    "article_header_daBMtA": {
+      "type": "article-header",
+      "name": "Article Header",
+      "settings": {
+        "show_date": true,
+        "show_read_time": true,
+        "show_author": true
+      }
     }
   },
   "order": [
-    "header"
+    "header",
+    "article_header_daBMtA"
   ]
 }
