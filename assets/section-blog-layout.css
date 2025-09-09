@@ -202,13 +202,15 @@
     margin-bottom: 2rem;
 }
 
-.article-content a {
+.article-content a,
+.rich-text__text a {
     color: var(--color-brand-accent);
     text-decoration: none;
     font-weight: 700;
 }
 
-.article-content a:hover {
+.article-content a:hover,
+.rich-text__text a:hover {
     color: var(--color-brand-accent-hover);
 }
 
@@ -223,7 +225,8 @@
     color: var(--color-brand-primary-dark);
 }
 
-.article-content h3 {
+.article-content h3,
+.rich-text__blocks h3 {
     font-size: 2.4rem;
     font-weight: 700;
     margin-top: 4rem;
@@ -233,16 +236,20 @@
 
 /* Fix list styling (UL and OL) */
 .article-content ul,
-.article-content ol {
+.rich-text__blocks ul,
+.article-content ol,
+.rich-text__blocks ol {
     margin-bottom: 2.5rem;
 }
 
-.article-content li {
+.article-content li,
+.rich-text__blocks li {
     margin-bottom: 1.5rem;
 }
 
 /* Add styling for blockquotes */
-.article-content blockquote {
+.article-content blockquote,
+.rich-text__blocks blockquote {
     border-left: 4px solid var(--color-brand-accent);
     padding-left: 2rem;
     margin: 3rem 0;
