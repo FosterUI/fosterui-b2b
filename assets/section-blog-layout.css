@@ -147,15 +147,6 @@
     padding-bottom: 5rem;
 }
 
-/* The primary container for alignment and width constraint */
-.article-container {
-    max-width: 80rem;
-    /* Optimal reading width */
-    margin: 0 auto;
-    padding-left: 2rem;
-    padding-right: 2rem;
-}
-
 /* Standardized Vertical Spacing between Blocks */
 .article-block {
     margin-bottom: 3rem;

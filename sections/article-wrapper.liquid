@@ -8,7 +8,7 @@
         {% case block.type %}
             {% comment %} --- RICH TEXT BLOCK --- {% endcomment %}
           {% when 'rich_text' %}
-            <div class="article-content-block rte {% if block.settings.is_references %}block-references{% endif %}">
+            <div class="article-content-block rte {{ block.settings.content_alignment }} {% if block.settings.is_references %}block-references{% endif %}">
               {{ block.settings.content }}
             </div>
 
@@ -152,7 +152,7 @@
             </div>
             {% comment %} --- CTA BUTTON BLOCK --- {% endcomment %}
           {% when 'cta_button' %}
-            <div class="article-cta-button">
+            <div class="article-cta-button {{ block.settings.content_alignment }}">
               {% if block.settings.button_label != blank and block.settings.button_link != blank %}
                 <a href="{{ block.settings.button_link }}" class="btn-brand btn-brand-primary">
                   {{ block.settings.button_label }}
@@ -190,6 +190,26 @@
           "id": "is_references",
           "label": "Style as References (Smaller Text)",
           "default": false
+        },
+        {
+          "type": "select",
+          "id": "content_alignment",
+          "options": [
+            {
+              "value": "text-left",
+              "label": "Left"
+            },
+            {
+              "value": "text-center",
+              "label": "Center"
+            },
+            {
+              "value": "text-right",
+              "label": "Right"
+            }
+          ],
+          "default": "text-left",
+          "label": "Content Alignment"
         }
       ]
     },
@@ -292,6 +312,26 @@
           "type": "url",
           "id": "secondary_button_link",
           "label": "Secondary Button Link"
+        },
+        {
+          "type": "select",
+          "id": "content_alignment",
+          "options": [
+            {
+              "value": "text-left",
+              "label": "Left"
+            },
+            {
+              "value": "text-center",
+              "label": "Center"
+            },
+            {
+              "value": "text-right",
+              "label": "Right"
+            }
+          ],
+          "default": "text-center",
+          "label": "Button Alignment"
         }
       ]
     }
