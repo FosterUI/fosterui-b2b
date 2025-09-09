@@ -205,7 +205,7 @@
         "color_scheme": "",
         "full_width": false,
         "is_references": true,
-        "custom_class": "article-content-block article-container block-references",
+        "custom_class": "article-content-block article-container article-content-header block-references",
         "padding_top": 0,
         "padding_bottom": 52
       }
