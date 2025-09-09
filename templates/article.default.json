@@ -239,5 +239,6 @@
         "newsletter"
       ]
     }
-  }
+  },
+  "order": ["header", "main_wrapper"]
 }
