@@ -57,7 +57,21 @@
         "rich_text_PUrBJW": {
           "type": "rich_text",
           "settings": {
-            "content": "<p>That’s what the <strong>B2B & AI Opportunity Roadmap</strong> delivers in <strong>5 business days</strong>:</p><ul><li><strong>Data‑Flow Visualization</strong> of how Shopify Plus, your ERP, and apps should connect<br/></li><li><strong>Revenue‑Impact Model</strong> to quantify today’s bottlenecks and prioritize fixes<br/></li><li><strong>90‑Day Implementation Plan</strong> focused on quick wins (not expensive detours)<br/></li><li><strong>Integration Complexity Score</strong> to determine whether you need an ERP now—or later<br/></li></ul><p>This isn’t a 200‑page shelf document. It’s a <strong>workable blueprint</strong> you can execute immediately with your team or with us.</p><p><strong>Investment:</strong> <strong>$1,950</strong><br/><strong>[Book Your B2B & AI Roadmap →]</strong></p><p><em>Not ready for the full Roadmap? Start with a free 5‑minute video snapshot of your current Shopify Plus B2B setup. If we see clear ROI potential, we’ll recommend the Roadmap; if not, you’ll still get a punch list of next steps. [Get your personalized audit →]</em></p>",
+            "content": "<p>That’s what the <strong>B2B & AI Opportunity Roadmap</strong> delivers in <strong>5 business days</strong>:</p><ul><li><strong>Data‑Flow Visualization</strong> of how Shopify Plus, your ERP, and apps should connect<br/></li><li><strong>Revenue‑Impact Model</strong> to quantify today’s bottlenecks and prioritize fixes<br/></li><li><strong>90‑Day Implementation Plan</strong> focused on quick wins (not expensive detours)<br/></li><li><strong>Integration Complexity Score</strong> to determine whether you need an ERP now—or later<br/></li></ul><p>This isn’t a 200‑page shelf document. It’s a <strong>workable blueprint</strong> you can execute immediately with your team or with us.</p><p><strong>Investment:</strong> <strong>$1,950</strong></p>",
+            "is_references": false
+          }
+        },
+        "cta_button_jN9zRY": {
+          "type": "cta_button",
+          "settings": {
+            "button_label": "Book Your B2B & AI Roadmap",
+            "button_link": "/#contacts"
+          }
+        },
+        "rich_text_YpTRhd": {
+          "type": "rich_text",
+          "settings": {
+            "content": "<p><em>Not ready for the full Roadmap? Start with a free 5‑minute video snapshot of your current Shopify Plus B2B setup. If we see clear ROI potential, we’ll recommend the Roadmap; if not, you’ll still get a punch list of next steps. [Get your personalized audit →]</em></p>",
             "is_references": false
           }
         },
@@ -86,6 +100,8 @@
         "rich_text_UXVji6",
         "rich_text_Gc6F9G",
         "rich_text_PUrBJW",
+        "cta_button_jN9zRY",
+        "rich_text_YpTRhd",
         "rich_text_FjJiNP",
         "author_bio_EGLc4j"
       ],
