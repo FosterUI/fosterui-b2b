@@ -211,7 +211,8 @@
     color: var(--color-brand-accent-hover);
 }
 
-.article-content h2 {
+.article-content h2,
+.rich-text__blocks h2 {
     font-size: 3.2rem;
     font-weight: 700;
     border-top: 1px solid #e0e0e0;
