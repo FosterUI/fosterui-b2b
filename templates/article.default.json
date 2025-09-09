@@ -71,8 +71,15 @@
         "rich_text_YpTRhd": {
           "type": "rich_text",
           "settings": {
-            "content": "<p><em>Not ready for the full Roadmap? Start with a free 5‑minute video snapshot of your current Shopify Plus B2B setup. If we see clear ROI potential, we’ll recommend the Roadmap; if not, you’ll still get a punch list of next steps. [Get your personalized audit →]</em></p>",
+            "content": "<p><em>Not ready for the full Roadmap? Start with a free 5‑minute video snapshot of your current Shopify Plus B2B setup. If we see clear ROI potential, we’ll recommend the Roadmap; if not, you’ll still get a punch list of next steps.</em></p>",
             "is_references": false
+          }
+        },
+        "cta_button_dQ9pdc": {
+          "type": "cta_button",
+          "settings": {
+            "button_label": "Get your personalized audit",
+            "button_link": "/#contacts"
           }
         },
         "rich_text_FjJiNP": {
@@ -102,6 +109,7 @@
         "rich_text_PUrBJW",
         "cta_button_jN9zRY",
         "rich_text_YpTRhd",
+        "cta_button_dQ9pdc",
         "rich_text_FjJiNP",
         "author_bio_EGLc4j"
       ],
