@@ -126,7 +126,9 @@
         "author_bio_EGLc4j",
         "rich_text_FjJiNP"
       ],
-      "settings": {}
+      "settings": {
+        "custom_css": ""
+      }
     },
     "newsletter": {
       "type": "newsletter",
@@ -201,7 +203,7 @@
         "content_alignment": "left",
         "color_scheme": "",
         "full_width": true,
-        "custom_rt_class": "",
+        "custom_rt_class": "article-content-block",
         "padding_top": 0,
         "padding_bottom": 52
       }
