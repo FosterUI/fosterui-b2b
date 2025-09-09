@@ -1,0 +1,121 @@
+{% comment %} Check if the metafield 'custom.audio_overview' has a value and assign the file object {% endcomment %}
+{% assign audio_file = article.metafields.custom.audio_overview.value %}
+
+{% if audio_file %}
+  <div class="article-audio-player">
+    <label class="article-audio-player__label" for="audio-player-{{ article.id }}">
+      {{- section.settings.audio_player_label -}}
+    </label>
+
+    {% comment %} Try different approaches to get a working audio URL {% endcomment %}
+    {% assign audio_url_method1 = audio_file | file_url %}
+    {% assign audio_url_method2 = audio_file.url %}
+    {% assign audio_url_method3 = audio_file | image_url %}
+
+    {% comment %} Use the first available URL method {% endcomment %}
+    {% if audio_url_method2 != blank %}
+      {% assign audio_url = audio_url_method2 %}
+    {% elsif audio_url_method1 != blank %}
+      {% assign audio_url = audio_url_method1 %}
+    {% else %}
+      {% assign audio_url = audio_url_method3 %}
+    {% endif %}
+
+    {% comment %} Ensure HTTPS protocol {% endcomment %}
+    {% if audio_url contains '//' and audio_url contains 'fosterui.com' %}
+      {% assign audio_url = 'https:' | append: audio_url %}
+    {% endif %}
+
+    {% comment %} Render audio player with comprehensive format support {% endcomment %}
+    <audio id="audio-player-{{ article.id }}" controls preload="metadata" crossorigin="anonymous">
+      <source src="{{ audio_url }}" type="audio/m4a">
+      <source src="{{ audio_url }}" type="audio/x-m4a">
+      <source src="{{ audio_url }}" type="audio/mp4">
+      <source src="{{ audio_url }}" type="audio/mpeg">
+      <source src="{{ audio_url }}" type="audio/wav">
+      Your browser does not support the audio element.
+    </audio>
+
+    {% comment %} Enhanced JavaScript error handling and debugging {% endcomment %}
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const audio = document.getElementById('audio-player-{{ article.id }}');
+        if (!audio) {
+          console.error('Audio element not found!');
+          return;
+        }
+        const audioContainer = audio.closest('.article-audio-player');
+        let errorShown = false;
+
+        // Function to show error message
+        function showError(message) {
+          if (!errorShown) {
+            errorShown = true;
+            const errorDiv = document.createElement('div');
+            errorDiv.style.cssText =
+              'padding: 1rem; background: #fee; border: 1px solid #fcc; border-radius: 4px; color: #c33; margin-top: 1rem;';
+            errorDiv.innerHTML =
+              '<strong>Audio Error:</strong> ' +
+              message +
+              '<br><small>Please try re-uploading the audio file or contact support.</small>';
+            audioContainer.appendChild(errorDiv);
+          }
+        }
+
+        // Handle various audio events
+        audio.addEventListener('error', function (e) {
+          console.error('Audio error event:', e);
+          showError('The audio file could not be loaded.');
+        });
+
+        let audioLoaded = false;
+
+        audio.addEventListener('loadstart', function () {
+          console.log('Audio loading started for URL:', audio.currentSrc || '{{ audio_url }}');
+        });
+
+        audio.addEventListener('loadeddata', function () {
+          audioLoaded = true;
+          console.log('Audio data loaded successfully');
+        });
+
+        audio.addEventListener('canplay', function () {
+          audioLoaded = true;
+          console.log('Audio ready to play');
+        });
+
+        // Only show error if audio truly fails to load
+        setTimeout(function () {
+          if (audio.readyState === 0 && !audioLoaded) {
+            console.error('Audio failed to load after timeout');
+            showError('Audio file is not accessible at the current URL.');
+          }
+        }, 8000);
+      });
+    </script>
+
+  </div>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Audio Player",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "The audio player automatically appears if the 'Article Audio Overview' metafield (custom.audio_overview) is populated on the blog post."
+    },
+    {
+      "type": "text",
+      "id": "audio_player_label",
+      "label": "Audio Player Label",
+      "default": "Listen to the Audio Overview:"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Audio Player"
+    }
+  ]
+}
+{% endschema %}
