@@ -161,10 +161,55 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "rich_text_3nTpNW": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_QNzktm": {
+          "type": "heading",
+          "settings": {
+            "heading": "References",
+            "heading_size": "h2"
+          }
+        },
+        "text_cehaLJ": {
+          "type": "text",
+          "settings": {
+            "text": "<h3></h3><ol><li>Gartner — <em>What IT Leaders Must Do to Avoid Disappointing ERP Initiatives</em> (predicts <strong>&gt;70%</strong> of recently implemented ERP initiatives will not fully meet original goals by 2027; emphasizes stakeholder engagement). <a href=\"https://www.gartner.com/en/information-technology/insights/what-it-leaders-must-do-to-avoid-disappointing-erp-initiatives?utm_source=chatgpt.com\" target=\"_blank\">Gartner</a><br/></li><li>Experian — <em>Easing the Data Migration Burden</em> (91% undertake migrations; <strong>85%</strong> encounter challenges that impact timelines/budgets). <a href=\"https://www.edq.com/white-papers/easing-the-data-migration-burden/?utm_source=chatgpt.com\" target=\"_blank\">Experian Data Quality</a><br/></li><li>Pacific Data Integrators summary of Bloor surveys — 2007 vs. 2011 migration success (from <strong>16%</strong> on‑time/on‑budget in 2007 to <strong>62%</strong> in 2011). <a href=\"https://info.pacificdataintegrators.com/hubfs/PDI-page-14/58.pdf?utm_source=chatgpt.com\" target=\"_blank\">info.pacificdataintegrators.com</a><br/></li><li>Bloor Research — <em>Data Migration White Paper</em> (governance and treating migration as a sub‑project). <a href=\"https://www.existbi.com/wp-content/uploads/2015/12/Bloor-Data_Migration-White-Paper-1.pdf?utm_source=chatgpt.com\" target=\"_blank\">ExistBI - Uniting Business & Technology</a><br/></li><li>Panorama Consulting Group — <em>2022 ERP Report</em> (budget adherence: <strong>32.1% slightly over</strong>, <strong>9.3% significantly over</strong>; causes of overruns). <a href=\"https://f.hubspotusercontent40.net/hubfs/4439340/The%202022%20ERP%20Report%20-%20Panorama%20Consulting%20Group.pdf\" target=\"_blank\">f.hubspotusercontent40.net</a><br/></li><li><em>An approach to estimation of degree of customization for ERP projects…</em> (ScienceDirect) — customization as material cost/effort driver; need quantitative trade‑offs. <a href=\"https://www.sciencedirect.com/science/article/pii/S016412121630022X?utm_source=chatgpt.com\" target=\"_blank\">ScienceDirect</a><br/></li><li>Panorama Consulting — <em>Hidden ERP Project Costs</em> (overview of commonly underestimated cost categories). <a href=\"https://www.panorama-consulting.com/hidden-erp-project-costs/?utm_source=chatgpt.com\" target=\"_blank\">Panorama Consulting Group</a><br/></li><li>RetailWire citing IHL — out‑of‑stocks ~<strong>4.1%</strong> sales loss; overstocks <strong>3.2%</strong>. <a href=\"https://retailwire.com/discussion/retailers-suffer-the-high-cost-of-overstocks-and-out-of-stocks/?utm_source=chatgpt.com\" target=\"_blank\">RetailWire</a><br/></li><li>ECR Retail Loss — improving inventory record accuracy lifts sales <strong>~4–8%</strong> (with follow‑on case up to <strong>~11%</strong> at one retailer). <a href=\"https://www.ecrloss.com/research/grow-sales-by-improving-inventory-records?utm_source=chatgpt.com\" target=\"_blank\">ecrloss.com+1</a><br/></li><li>APQC — O2C cycle time and finance time allocation benchmarks (impact of manual steps; importance of measuring O2C KPIs). <a href=\"https://www.apqc.org/what-we-do/benchmarking/open-standards-benchmarking/measures/cycle-time-days-perform-order-cash-o2c?utm_source=chatgpt.com\" target=\"_blank\">APQC+1</a><br/></li><li>Research synthesis — manual transcription error rates <strong>~0.5%–6.5%</strong> per field depending on context (clinical/registry studies). <a href=\"https://www.researchgate.net/publication/330466610_Measuring_the_rate_of_manual_transcription_error_in_outpatient_point-of-care_testing/fulltext/5c5b835092851c48a9bfcadf/Measuring-the-rate-of-manual-transcription-error-in-outpatient-point-of-care-testing.pdf?utm_source=chatgpt.com\" target=\"_blank\">ResearchGate</a><br/></li><li>PLOS ONE — <strong>Double entry vs. single entry</strong> substantially reduces data entry errors; visual checking performs poorly. <a href=\"https://journals.plos.org/plosone/article/file?id=10.1371%2Fjournal.pone.0035087&type=printable&utm_source=chatgpt.com\" target=\"_blank\">PLOS</a><br/></li><li>Digital Commerce 360 — Sana Commerce survey: <strong>86%</strong> of B2B retailer buyers will switch for a better web experience. <a href=\"https://www.digitalcommerce360.com/2024/03/11/sana-commerce-survey-b2b-sellers-online-buyers-error-prone-order-processing/?utm_source=chatgpt.com\" target=\"_blank\">Digital Commerce 360</a><br/></li><li>Industrial Supply Magazine — breakdown of <strong>86%</strong> (retailers) vs manufacturers/distributors/wholesalers. <a href=\"https://industrialsupplymagazine.com/pages/News-042324-New-survey-B2B-web-stores-drive-buyers-away.php?utm_source=chatgpt.com\" target=\"_blank\">Industrial Supply Magazine</a><br/></li><li>Oracle (Data Migration WP) — migration success requires business engagement and governance (not just IT). <a href=\"https://www.oracle.com/a/ocom/docs/middleware/data-integration/data-migration-wp.pdf?utm_source=chatgpt.com\" target=\"_blank\">Oracle</a><br/></li><li>Gartner Peer Insights (iPaaS) — authoritative iPaaS definition; context for middleware tradeoffs. <a href=\"https://www.gartner.com/reviews/market/integration-platform-as-a-service?utm_source=chatgpt.com\" target=\"_blank\">Gartner</a><br/></li><li>X2X eCommerce — direct API pros/cons (fewer intermediaries often means less latency/complexity; greater engineering ownership). <a href=\"https://x2xecommerce.com/api-based-integration-vs-middleware-solutions-which-is-right-for-your-business/?utm_source=chatgpt.com\" target=\"_blank\">x2xecommerce.com</a><br/></li></ol>"
+          }
+        },
+        "button_7W4hdX": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_QNzktm",
+        "text_cehaLJ",
+        "button_7W4hdX"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "custom_rt_class": "",
+        "padding_top": 0,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
     "main_wrapper",
-    "newsletter"
+    "newsletter",
+    "rich_text_3nTpNW"
   ]
 }
