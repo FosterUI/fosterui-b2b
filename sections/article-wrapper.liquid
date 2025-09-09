@@ -143,11 +143,13 @@
                   <h3>{{ block.settings.author_cta_title }}</h3>
                   <p>{{ block.settings.author_cta_text }}</p>
                 </div>
-                <div class="article-author-cta__action">
-                  <a href="{{ block.settings.author_cta_button_link }}" class="btn-brand btn-brand-primary">
-                    {{ block.settings.author_cta_button_label }}
-                  </a>
-                </div>
+                {% if block.settings.author_cta_button_label != blank and block.settings.author_cta_button_link != blank %}
+                  <div class="article-author-cta__action">
+                    <a href="{{ block.settings.author_cta_button_link }}" class="btn-brand btn-brand-primary">
+                      {{ block.settings.author_cta_button_label }}
+                    </a>
+                  </div>
+                {% endif %}
               </div>
             </div>
             {% comment %} --- CTA BUTTON BLOCK --- {% endcomment %}
