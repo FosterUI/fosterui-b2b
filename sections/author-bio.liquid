@@ -20,13 +20,13 @@
         <h3>{{ section.settings.author_cta_title }}</h3>
         <p>{{ section.settings.author_cta_text }}</p>
       </div>
-      {% if section.settings.author_cta_button_label != blank %}
+      {% if section.settings.author_cta_button_label != blank and section.settings.author_cta_button_link != blank %}
         <div class="article-author-cta__action">
           <a href="{{ section.settings.author_cta_button_link }}" class="btn-brand btn-brand-primary">
             {{ section.settings.author_cta_button_label }}
           </a>
         </div>
-      {% endif %} 
+      {% endif %}
     </div>
   </div>
 </div>
