@@ -190,7 +190,8 @@
 }
 
 /* Article Content Typography (FIXED SPACING/STYLING) */
-.article-content {
+.article-content,
+.rich-text__text {
     font-size: 1.8rem;
     line-height: 1.7;
 }
