@@ -1,5 +1,5 @@
 /* 1. Blog Index (Grid) Styles */
-/* (Styles for the Blog Index remain unchanged, included for completeness) */
+/* (Styles for the Blog Index remain unchanged, included here for completeness) */
 .blog-header {
     padding: 6rem 0;
     text-align: center;
@@ -117,7 +117,7 @@
     margin: 0 auto 3.5rem;
 }
 
-/* Header Profile Integration (Restored the intended layout) */
+/* Header Profile Integration */
 .article-header__meta-wrapper {
     display: flex;
     align-items: center;
@@ -136,7 +136,6 @@
     font-size: 1.6rem;
     color: #64748b;
     display: flex;
-    /* Fixed alignment issue seen in screenshots */
     flex-direction: column;
     text-align: left;
 }
@@ -147,7 +146,7 @@
 }
 
 
-/* --- Article Layout Standardization --- */
+/* --- Article Layout Standardization (UPDATED: Increased Specificity) --- */
 
 /* Standardized Container for alignment */
 .article-container {
@@ -158,27 +157,30 @@
     padding-right: 2rem;
 }
 
-/* Standardized Vertical Spacing (using margin-bottom) */
+/* Standardized Vertical Spacing (Reduced slightly for tighter rhythm) */
 .article-section-spacing {
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
 }
 
-/* Specific spacing for the first element after the header */
+/* Specific spacing for the first element after the header (Reduced slightly) */
 .article-section-top-spacing {
-    padding-top: 6rem;
+    padding-top: 5rem;
 }
 
-/* Ensure Dawn's Rich Text section also aligns correctly */
-.template-article .rich-text .page-width {
-    max-width: 80rem;
+/* Ensure Dawn's Rich Text section aligns correctly */
+/* Increased specificity and added !important to enforce the width constraint */
+body.template-article .rich-text .page-width {
+    max-width: 80rem !important;
     margin: 0 auto;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    /* Ensure padding is consistent with article-container */
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
 }
 
 /* Ensure Rich Text sections have consistent spacing and no extra padding */
-.template-article .rich-text {
-    margin-bottom: 4rem;
+body.template-article .rich-text {
+    margin-bottom: 3rem;
+    /* Reduced slightly */
     /* Important to override Dawn's default section padding */
     padding-top: 0 !important;
     padding-bottom: 0 !important;
@@ -265,28 +267,28 @@
 }
 
 
-/* --- Article Content Typography Standardization --- */
-/* Ensures consistent styling for content added via the Theme Editor (Rich Text section classes). */
-.rich-text__text {
+/* --- Article Content Typography Standardization (UPDATED) --- */
+/* Increased specificity for typography rules */
+
+.template-article .rich-text__text {
     font-size: 1.8rem;
     line-height: 1.7;
 }
 
-.rich-text__text p {
+.template-article .rich-text__text p {
     margin-bottom: 2rem;
 }
 
-.rich-text__text a {
+.template-article .rich-text__text a {
     color: var(--color-brand-accent);
     text-decoration: underline;
-    /* Underline links for better accessibility */
 }
 
-.rich-text__text a:hover {
+.template-article .rich-text__text a:hover {
     color: var(--color-brand-accent-hover);
 }
 
-.rich-text__blocks h2 {
+.template-article .rich-text__blocks h2 {
     font-size: 3.2rem;
     font-weight: 700;
     border-top: 1px solid #e0e0e0;
@@ -297,13 +299,13 @@
 }
 
 /* Ensure the first H2 in a block doesn't have double border/margin */
-.rich-text__blocks h2:first-child {
+.template-article .rich-text__blocks h2:first-child {
     border-top: none;
     padding-top: 0;
     margin-top: 0;
 }
 
-.rich-text__blocks h3 {
+.template-article .rich-text__blocks h3 {
     font-size: 2.4rem;
     font-weight: 700;
     margin-top: 4rem;
@@ -311,17 +313,20 @@
     color: var(--color-brand-primary-dark);
 }
 
-.rich-text__blocks ul,
-.rich-text__blocks ol {
+/* FIX: Ensure list indentation is correct */
+.template-article .rich-text__blocks ul,
+.template-article .rich-text__blocks ol {
     margin-bottom: 2.5rem;
     padding-left: 4rem;
+    /* Ensures text wraps correctly under the bullet/number */
+    list-style-position: outside;
 }
 
-.rich-text__blocks li {
+.template-article .rich-text__blocks li {
     margin-bottom: 1.5rem;
 }
 
-.rich-text__blocks blockquote {
+.template-article .rich-text__blocks blockquote {
     border-left: 4px solid var(--color-brand-accent);
     padding-left: 2rem;
     margin: 3rem 0;
@@ -329,14 +334,11 @@
     color: #64748b;
 }
 
-/* NEW: References Section Styling (De-emphasized) */
-/* Apply this class ('article-references') to the Rich Text section in the Theme Editor */
+/* References Section Styling (De-emphasized) */
 .article-references .rich-text__text {
     font-size: 1.4rem;
-    /* Smaller font size */
     line-height: 1.5;
     color: #64748b;
-    /* Softer color */
 }
 
 .article-references .rich-text__blocks h2,
@@ -346,7 +348,6 @@
 
 .article-references .rich-text__blocks li {
     margin-bottom: 1rem;
-    /* Tighter spacing between reference items */
 }
 
 
@@ -362,11 +363,11 @@
         grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
     }
 
-    .rich-text__text {
+    .template-article .rich-text__text {
         font-size: 1.6rem;
     }
 
-    .rich-text__blocks h2 {
+    .template-article .rich-text__blocks h2 {
         font-size: 2.8rem;
     }
 
@@ -377,8 +378,8 @@
         padding: 3rem;
     }
 
-    /* Adjust top spacing for mobile */
+    /* Adjust top spacing for mobile (Reduced slightly) */
     .article-section-top-spacing {
-        padding-top: 4rem;
+        padding-top: 3rem;
     }
 }
