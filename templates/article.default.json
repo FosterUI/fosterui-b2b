@@ -17,6 +17,22 @@
         "show_author": true
       }
     },
+    "pillar_link_callout_7qkfA3": {
+      "type": "pillar-link-callout",
+      "name": "Pillar Link Callout",
+      "settings": {
+        "pillar_link_text": "This article is part of my comprehensive resource:",
+        "pillar_link_title": "The Definitive Guide to AI-Powered B2B on Shopify Plus.",
+        "pillar_link_url": ""
+      }
+    },
+    "article_audio_player_dN9x7T": {
+      "type": "article-audio-player",
+      "name": "Audio Player",
+      "settings": {
+        "audio_player_label": "Listen to the Audio Overview:"
+      }
+    },
     "rich_text_AxYQ8N": {
       "type": "rich-text",
       "blocks": {
@@ -181,6 +197,16 @@
         "padding_bottom": 0
       }
     },
+    "author_bio_C8pp4G": {
+      "type": "author-bio",
+      "name": "Author Bio & CTA",
+      "settings": {
+        "author_cta_title": "About the Author & Expert",
+        "author_cta_text": "With over a decade of specialized experience deep within the Shopify ecosystem, I am a principal consultant focused exclusively on transforming DTC stores into AI-powered B2B wholesale engines. My methodology leverages this deep expertise to deliver specialized revenue acceleration, velocity, and precision.",
+        "author_cta_button_label": "Book My $1,950 Roadmap",
+        "author_cta_button_link": ""
+      }
+    },
     "main": {
       "type": "article-main",
       "disabled": true,
@@ -223,11 +249,14 @@
   },
   "order": [
     "header",
+    "pillar_link_callout_7qkfA3",
+    "article_audio_player_dN9x7T",
     "rich_text_AxYQ8N",
     "rich_text_bJjUfk",
     "rich_text_Eyqkcc",
     "rich_text_n4dz8R",
     "rich_text_aQQ7kz",
+    "author_bio_C8pp4G",
     "main",
     "newsletter"
   ]
