@@ -105,6 +105,17 @@
             "content_alignment": "text-left"
           }
         },
+        "enhanced_cta_3UUyCc": {
+          "type": "enhanced_cta",
+          "settings": {
+            "content": "<p>Your ERP integration is one of the highest‑stakes decisions in your shift from DTC to B2B. Industry research shows many initiatives <strong>don’t fully meet their original goals</strong> and a meaningful share run <strong>over budget</strong>—which is exactly why you need a plan before you buy or build.</p><p>That’s what the <strong>B2B & AI Opportunity Roadmap</strong> delivers in <strong>5 business days</strong>:</p><ul><li><strong>Data‑Flow Visualization</strong> of how Shopify Plus, your ERP, and apps should connect<br/></li><li><strong>Revenue‑Impact Model</strong> to quantify today’s bottlenecks and prioritize fixes<br/></li><li><strong>90‑Day Implementation Plan</strong> focused on quick wins (not expensive detours)<br/></li><li><strong>Integration Complexity Score</strong> to determine whether you need an ERP now—or later<br/></li></ul><p>This isn’t a 200‑page shelf document. It’s a <strong>workable blueprint</strong> you can execute immediately with your team or with us.</p><p><strong>Investment:</strong> <strong>$1,950</strong></p>",
+            "button_label": "Book the B2B & AI Roadmap",
+            "button_link": "/#contacts",
+            "secondary_button_label": "",
+            "secondary_button_link": "",
+            "style": "style-card"
+          }
+        },
         "author_bio_EGLc4j": {
           "type": "author_bio",
           "settings": {
@@ -136,6 +147,7 @@
         "cta_button_jN9zRY",
         "rich_text_YpTRhd",
         "cta_button_dQ9pdc",
+        "enhanced_cta_3UUyCc",
         "author_bio_EGLc4j",
         "rich_text_FjJiNP"
       ],
