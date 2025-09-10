@@ -1,7 +1,7 @@
 {{ 'section-blog-layout.css' | asset_url | stylesheet_tag }}
 
-<article class="article-wrapper">
-  <div class="article-container">
+<article class="article-wrapper-section">
+  <div class="article-container {{ section.settings.custom_css }}">
     <div class="article-content rte">
       {{ article.content }}
     </div>
@@ -9,18 +9,23 @@
 </article>
 
 {% schema %}
-  {
-    "name": "B2B Article Main Content",
-    "settings": [
-      {
-        "type": "paragraph",
-        "content": "This section displays the main article content from the blog post editor."
-      }
-    ],
-    "presets": [
-      {
-        "name": "B2B Article Main Content"
-      }
-    ]
-  }
+{
+  "name": "B2B Article Main Content",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "This section displays the main article content from the blog post editor."
+    },
+    {
+      "type": "text",
+      "id": "custom_css",
+      "label": "Custom CSS"
+    }
+  ],
+  "presets": [
+    {
+      "name": "B2B Article Main Content"
+    }
+  ]
+}
 {% endschema %}
