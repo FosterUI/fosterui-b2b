@@ -368,8 +368,9 @@ body {
     .header__custom-block-item-desktop--cta {
         display: none;
     }
-    .article-cta-button {
-        justify-content: center; 
+
+    .article-block .article-cta-button {
+        justify-content: center;
     }
 }
 
@@ -751,9 +752,9 @@ body {
 
 /* --- Mobile Drawer CTA Button --- */
 .menu-drawer__menu-item--cta {
-  padding: 1.5rem 2.5rem;
+    padding: 1.5rem 2.5rem;
 }
 
 .menu-drawer__menu-item--cta .btn-brand {
-  width: 100%;
+    width: 100%;
 }
