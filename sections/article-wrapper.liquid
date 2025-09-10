@@ -8,7 +8,7 @@
         {% case block.type %}
             {% comment %} --- RICH TEXT BLOCK --- {% endcomment %}
           {% when 'rich_text' %}
-            <div class="article-content-block rte {{ block.settings.content_alignment }} {% if block.settings.is_references %}block-references{% endif %}">
+            <div class="article-content-block rte page-width {{ block.settings.content_alignment }} {% if block.settings.is_references %}block-references{% endif %}">
               {{ block.settings.content }}
             </div>
 
