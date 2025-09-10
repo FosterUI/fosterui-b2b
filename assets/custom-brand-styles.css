@@ -363,9 +363,15 @@ body {
     color: #333333;
 }
 
+@media  screen and (min-width: 990px) {
+    .header__custom-block-item-desktop--cta {
+        display: flex;
+    }
+}
+
 /* Hide the custom CTA on mobile/tablet, as the space is limited */
 @media screen and (max-width: 989px) {
-    .header__custom-block-item {
+    .menu-drawer__cta {
         display: none;
     }
 }
