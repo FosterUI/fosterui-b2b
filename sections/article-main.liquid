@@ -150,6 +150,16 @@
         </div>
       </div>
     {% endif %}
+
+    {% comment %} --- REFERENCES --- {% endcomment %}
+    {%- if article.metafields.custom.article_references != blank -%}
+      <div class="page-width references-section">
+        <h2 class="h3">References</h2>
+        <div class="rte">
+          {{ article.metafields.custom.article_references }}
+        </div>
+      </div>
+    {%- endif -%}
   </div>
 </article>
 
