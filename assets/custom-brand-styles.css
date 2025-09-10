@@ -369,7 +369,7 @@ body {
         display: none;
     }
     .article-cta-button {
-        justify-content: center;
+        justify-content: center; 
     }
 }
 
