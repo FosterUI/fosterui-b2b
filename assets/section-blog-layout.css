@@ -245,8 +245,8 @@
 
 .article-enhanced-cta {
     /* Increased vertical spacing to break the flow of the article */
-    margin-top: 5rem;
-    margin-bottom: 5rem;
+    margin-top: 12rem;
+    margin-bottom: 12rem;
     padding: 4rem;
     border-radius: 8px;
     text-align: center;
