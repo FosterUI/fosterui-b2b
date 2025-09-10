@@ -368,7 +368,7 @@ body {
     .header__custom-block-item-desktop--cta {
         display: none;
     }
-    .article-cta-button.text-center {
+    .article-cta-button {
         justify-content: center;
     }
 }
