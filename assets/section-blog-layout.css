@@ -487,6 +487,10 @@
     color: #64748b;
 }
 
+.reference-section {
+    margin-top: 4rem;
+}
+
 /* Newsletter */
 .template-article .fui-newsletter {
     padding-top: 100px;
