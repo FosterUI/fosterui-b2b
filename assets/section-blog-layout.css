@@ -434,6 +434,25 @@
         font-size: 2.8rem;
     }
 
+    /* Enhanced CTA mobile adjustments */
+    .article-enhanced-cta {
+        padding: 3rem;
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+    }
+
+    .article-enhanced-cta__content {
+        font-size: 1.6rem;
+        /* Match responsive body font size */
+    }
+
+    .article-enhanced-cta__content h2,
+    .article-enhanced-cta__content h3,
+    .article-enhanced-cta__content h4,
+    .article-enhanced-cta__content h5 {
+        font-size: 2.2rem;
+    }
+
     /* Stack the Author CTA on mobile */
     .article-author-cta {
         flex-direction: column;
