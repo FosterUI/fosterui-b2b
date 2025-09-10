@@ -153,13 +153,11 @@
 
     {% comment %} --- REFERENCES --- {% endcomment %}
     {%- if article.metafields.custom.article_references != blank -%}
-      <div class="block-references">
-        <div class="article-content-block page-width">
-          <div class="rich-text__text rte">
-            <h2 class="h3 rich-text__heading article-content-heading">References</h2>
-            <div class="rte">
-              {{ article.metafields.custom.article_references | metafield_tag }}
-            </div>
+      <div class="article-content-block page-width block-references">
+        <div class="rich-text__text rte">
+          <h2 class="h3 rich-text__heading article-content-heading">References</h2>
+          <div class="rte">
+            {{ article.metafields.custom.article_references | metafield_tag }}
           </div>
         </div>
       </div>
