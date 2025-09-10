@@ -415,6 +415,12 @@
 }
 
 /* 3. Mobile Responsiveness */
+@media screen and (min-width: 990px) {
+    .article-container .article-block:nth-child(2) {
+        margin-bottom: 12rem;
+    }
+}
+
 @media screen and (max-width: 989px) {
 
     .blog-header h1,
