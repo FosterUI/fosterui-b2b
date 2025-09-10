@@ -425,6 +425,7 @@
 
 .article-enhanced-cta .btn-brand-secondary {
     color: var(--color-brand-primary-dark);
+    text-decoration: none;
 }
 
 /* --- Article Content Typography (Applied to Rich Text Blocks) --- */
