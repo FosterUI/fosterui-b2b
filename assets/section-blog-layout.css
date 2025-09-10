@@ -423,6 +423,10 @@
     color: var(--color-brand-white);
 }
 
+.article-enhanced-cta.btn-brand-secondary {
+    color: var(--color-brand-primary-dark);
+}
+
 /* --- Article Content Typography (Applied to Rich Text Blocks) --- */
 
 .article-content-block {
