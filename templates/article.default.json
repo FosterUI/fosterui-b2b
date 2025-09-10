@@ -60,6 +60,17 @@
             "content_alignment": "text-left"
           }
         },
+        "enhanced_cta_UCJrKR": {
+          "type": "enhanced_cta",
+          "settings": {
+            "content": "<h3>See Where Your Integration Stands (Free 5‑Minute Video)</h3><p>Get a <strong>short, personalized Loom video</strong> assessing your <strong>Shopify Plus B2B setup and key data flows</strong> (not just your ERP settings). You’ll see the <strong>top bottlenecks</strong> slowing wholesale efficiency and <strong>where a paid Roadmap would focus</strong>.<br/><br/>Delivered within <strong>2 business days</strong>. No sales pitch—just clear next steps. If the snapshot shows meaningful ROI, we’ll recommend the <strong>$1,950 B2B & AI Opportunity Roadmap</strong>; if not, you still get a punch list.</p><p></p>",
+            "button_label": "Take Action Now",
+            "button_link": "/#contacts",
+            "secondary_button_label": "",
+            "secondary_button_link": "",
+            "style": "style-card"
+          }
+        },
         "rich_text_UXVji6": {
           "type": "rich_text",
           "settings": {
@@ -138,6 +149,7 @@
         "rich_text_xiBAHQ",
         "rich_text_xgjMU9",
         "cta_button_AqtdAT",
+        "enhanced_cta_UCJrKR",
         "rich_text_UXVji6",
         "rich_text_Gc6F9G",
         "rich_text_PUrBJW",
