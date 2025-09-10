@@ -92,28 +92,71 @@
 }
 
 
+/* 2. Blog Article (Detail Page) Styles */
 
+/* Article Header - OPTION 1: Deep Navy */
+.article-header {
+    padding: 8rem 0;
+    text-align: center;
+    /* Changed: Use the dark brand color for the background */
+    background-color: var(--color-brand-primary-dark);
+    /* Removed: The light border is unnecessary with the high contrast */
+    border-bottom: none;
+}
+
+.article-header h1 {
+    font-size: 4.8rem;
+    font-weight: 900;
+    /* Changed: Title needs to be white for readability */
+    color: var(--color-brand-white);
+    max-width: 100rem;
+    margin: 0 auto 3.5rem;
+}
+
+.article-header__meta-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.article-header__headshot {
+    border-radius: 50%;
+    width: 6rem;
+    height: 6rem;
+    object-fit: cover;
+    /* Added: A subtle border helps the headshot stand out against the dark background */
+    border: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+.article-header__meta {
+    font-size: 1.6rem;
+    /* Changed: Use a slightly dimmed white for secondary info (date/time) */
+    /* This maintains readability while keeping the hierarchy clear */
+    color: rgba(255, 255, 255, 0.75);
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.article-header__author {
+    font-weight: 700;
+    /* Changed: Author name should be prominent (bright white) */
+    color: var(--color-brand-white);
+}
 
 /* 2. Blog Article (Detail Page) Styles */
 
 /* Article Header - OPTION 2: Subtle Pattern */
-.article-header {
+/* (Uncomment to use), comment out the default option 1 above */
+/* .article-header {
     padding: 8rem 0;
     text-align: center;
-
-    /* Changed: Using a very light gray base instead of stark white */
     background-color: #f9fafb;
-    /* Adjust this color or variable if needed */
-
-    /* Added: Subtle CSS Grid Pattern */
-    /* Uses light gray lines (#e5e7eb) to create the grid effect */
     background-image:
         linear-gradient(to right, #e5e7eb 1px, transparent 1px),
         linear-gradient(to bottom, #e5e7eb 1px, transparent 1px);
-    /* Adjust the '40px 40px' to make the grid tighter or looser */
     background-size: 40px 40px;
-
-    /* Changed: Ensure the border matches the pattern color */
     border-bottom: 1px solid #e5e7eb;
 }
 
@@ -150,7 +193,7 @@
 .article-header__author {
     font-weight: 700;
     color: var(--color-brand-primary-dark);
-}
+} */
 
 
 /* --- Article Layout & Wrapper --- */
