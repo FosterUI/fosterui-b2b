@@ -228,7 +228,7 @@
       {%- for block in section.blocks -%}
         {%- case block.type -%}
           {%- when 'cta_button' -%}
-            <div class="header__custom-block-item" {{ block.shopify_attributes }}>
+            <div class="header__custom-block-item header__custom-block-item-desktop--cta" {{ block.shopify_attributes }}>
               <a href="{{ block.settings.button_link }}" class="btn-brand btn-brand-primary header-cta-btn">
                 {{ block.settings.button_label }}
               </a>
