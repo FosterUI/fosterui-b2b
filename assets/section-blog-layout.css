@@ -241,6 +241,115 @@
     margin-bottom: 2.5rem;
 }
 
+/* --- Enhanced CTA Box (New) --- */
+
+.article-enhanced-cta {
+    /* Increased vertical spacing to break the flow of the article */
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    padding: 4rem;
+    border-radius: 8px;
+    text-align: center;
+    /* Center alignment naturally draws the eye */
+    position: relative;
+}
+
+/* Style 1: Card (Subtle) - Matches other callouts (Pillar, Author Bio) */
+.article-enhanced-cta.style-card {
+    background-color: var(--color-brand-white);
+    box-shadow: var(--shadow-brand);
+    /* Using a prominent top border draws the eye effectively */
+    border-top: 5px solid var(--color-brand-accent);
+}
+
+/* Style 2: Contrast (Bold) - Maximum impact */
+.article-enhanced-cta.style-contrast {
+    background-color: var(--color-brand-primary-dark);
+    color: var(--color-brand-white);
+    box-shadow: var(--shadow-brand);
+}
+
+/* Typography within the CTA Box */
+.article-enhanced-cta__content {
+    font-size: 1.8rem;
+    line-height: 1.6;
+    margin-bottom: 3rem;
+}
+
+.article-enhanced-cta__content p {
+    margin-bottom: 1.5rem;
+}
+
+/* Adjust headings within the CTA for better hierarchy */
+.article-enhanced-cta__content h2,
+.article-enhanced-cta__content h3,
+.article-enhanced-cta__content h4,
+.article-enhanced-cta__content h5 {
+    font-size: 2.6rem;
+    /* Slightly larger to emphasize the offer */
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    margin-top: 2rem;
+    line-height: 1.3;
+    /* Ensure these headings don't inherit the large margins/borders of main article headings */
+    padding-top: 0;
+    border-top: none;
+}
+
+/* Color handling for the different styles */
+.article-enhanced-cta.style-card h2,
+.article-enhanced-cta.style-card h3,
+.article-enhanced-cta.style-card h4,
+.article-enhanced-cta.style-card h5 {
+    color: var(--color-brand-primary-dark);
+}
+
+.article-enhanced-cta.style-contrast h2,
+.article-enhanced-cta.style-contrast h3,
+.article-enhanced-cta.style-contrast h4,
+.article-enhanced-cta.style-contrast h5,
+.article-enhanced-cta.style-contrast p,
+.article-enhanced-cta.style-contrast li {
+    color: var(--color-brand-white);
+}
+
+/* Style lists (like the Roadmap deliverables) within the CTA */
+.article-enhanced-cta__content ul,
+.article-enhanced-cta__content ol {
+    list-style-type: none;
+    padding: 0;
+    margin: 2.5rem 0;
+    text-align: left;
+    /* Keep lists left-aligned for readability */
+    display: inline-block;
+    /* Allows the left-aligned list block to be centered on the page */
+}
+
+.article-enhanced-cta__content li {
+    margin-bottom: 1rem;
+    padding-left: 2.5rem;
+    position: relative;
+}
+
+/* Add a checkmark indicator for emphasis */
+.article-enhanced-cta__content ul li::before {
+    content: '✓';
+    /* Using a checkmark adds a professional touch */
+    color: var(--color-brand-accent);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+/* Button alignment and spacing */
+.article-enhanced-cta__buttons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    /* Allow wrapping if needed */
+}
+
 
 /* --- Article Content Typography (Applied to Rich Text Blocks) --- */
 
