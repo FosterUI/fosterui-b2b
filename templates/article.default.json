@@ -9,6 +9,15 @@
  */
 {
   "sections": {
+    "article_header_Ky3bYB": {
+      "type": "article-header",
+      "name": "Article Header",
+      "settings": {
+        "show_date": true,
+        "show_read_time": true,
+        "show_author": true
+      }
+    },
     "main_wrapper": {
       "type": "article-wrapper",
       "blocks": {
@@ -225,6 +234,7 @@
     }
   },
   "order": [
+    "article_header_Ky3bYB",
     "main_wrapper",
     "newsletter",
     "rich_text_3nTpNW"
