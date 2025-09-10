@@ -725,10 +725,6 @@ body {
     .header__custom-block-item-desktop--cta {
         display: none;
     }
-
-    .article-block .article-cta-button {
-        justify-content: center;
-    }
 }
 
 /* Mobile Adjustments */
