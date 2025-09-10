@@ -371,6 +371,7 @@
 .rte .article-enhanced-cta.style-contrast p,
 .rte .article-enhanced-cta.style-contrast li {
     color: var(--color-brand-white);
+    border-top: none;
 }
 
 /* Style lists (like the Roadmap deliverables) within the CTA */
