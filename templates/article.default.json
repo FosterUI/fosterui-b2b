@@ -124,6 +124,13 @@
         "custom_css": ""
       }
     },
+    "article_main_WHEhmt": {
+      "type": "article-main",
+      "name": "B2B Article Main Content",
+      "settings": {
+        "custom_css": ""
+      }
+    },
     "newsletter": {
       "type": "newsletter",
       "blocks": {
@@ -196,6 +203,7 @@
   "order": [
     "article_header_Ky3bYB",
     "main_wrapper",
+    "article_main_WHEhmt",
     "newsletter",
     "rich_text_3nTpNW"
   ]
