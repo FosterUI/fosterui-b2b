@@ -329,10 +329,6 @@
     box-shadow: var(--shadow-brand);
 }
 
-.article-enhanced-cta.style-contrast h2 {
-    color: var(--color-brand-white);
-}
-
 /* Typography within the CTA Box */
 .article-enhanced-cta__content {
     font-size: 1.8rem;
