@@ -413,6 +413,10 @@
     /* Allow wrapping if needed */
 }
 
+.article-enhanced-cta__buttons a {
+    color: var(--color-brand-white);
+}
+
 
 /* --- Article Content Typography (Applied to Rich Text Blocks) --- */
 
