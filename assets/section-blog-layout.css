@@ -395,7 +395,8 @@
 }
 
 /* Add a checkmark indicator for emphasis */
-.article-enhanced-cta__content ul li::marker {
+.article-enhanced-cta__content ul li::marker,
+.article-enhanced-cta__content ul li::before {
     content: '✓';
     /* Using a checkmark adds a professional touch */
     color: var(--color-brand-accent);
