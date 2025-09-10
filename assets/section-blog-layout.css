@@ -316,6 +316,7 @@
 
 /* Style 1: Card (Subtle) - Matches other callouts (Pillar, Author Bio) */
 .article-enhanced-cta.style-card {
+    margin-bottom: 12rem;
     background-color: var(--color-brand-white);
     box-shadow: var(--shadow-brand);
     /* Using a prominent top border draws the eye effectively */
