@@ -251,6 +251,10 @@ body {
 }
 
 /* --- Header Customization (From previous steps) --- */
+.header__icon--menu[aria-expanded=true]:before {
+    background: initial;
+}
+
 .header__menu-item:hover span,
 .footer-block .footer-block__details-content .list-menu__item--link:hover,
 .copyright__content a:hover {
