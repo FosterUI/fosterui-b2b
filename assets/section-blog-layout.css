@@ -300,6 +300,11 @@
     color: #64748b;
 }
 
+/* Newsletter */
+.template-article .fui-newsletter {
+    padding-top: 100px;
+}
+
 /* 3. Mobile Responsiveness */
 @media screen and (max-width: 989px) {
 
