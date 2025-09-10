@@ -745,3 +745,12 @@ body {
 .block-references li {
     margin-bottom: 1rem;
 }
+
+/* --- Mobile Drawer CTA Button --- */
+.menu-drawer__menu-item--cta {
+  padding: 1.5rem 2.5rem;
+}
+
+.menu-drawer__menu-item--cta .btn-brand {
+  width: 100%;
+}
