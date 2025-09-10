@@ -136,6 +136,16 @@
             </ul>
           </nav>
           <div class="menu-drawer__utility-links">
+            {%- for block in section.blocks -%}
+              {%- case block.type -%}
+                {%- when 'cta_button' -%}
+                  <div class="header__custom-block-item menu-drawer__cta" {{ block.shopify_attributes }}>
+                    <a href="{{ block.settings.button_link }}" class="btn-brand btn-brand-primary">
+                      {{ block.settings.button_label }}
+                    </a>
+                  </div>
+              {%- endcase -%}
+            {%- endfor -%}
             {%- if shop.customer_accounts_enabled -%}
               <a
                 href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}"
