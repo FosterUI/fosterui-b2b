@@ -419,6 +419,9 @@
     transition: background-color .3s ease, transform .3s ease, color .3s ease;
 }
 
+.article-enhanced-cta__buttons a.btn-brand:hover {
+    color: var(--color-brand-white);
+}
 
 /* --- Article Content Typography (Applied to Rich Text Blocks) --- */
 
