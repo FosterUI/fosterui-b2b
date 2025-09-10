@@ -18,7 +18,7 @@
     {% if audio_file %}
       <div class="article-audio-player">
         <label class="article-audio-player__label" for="audio-player-{{ article.id }}">
-          {{- block.settings.audio_player_label -}}
+          {{- section.settings.audio_player_label -}}
         </label>
 
         {% comment %} Try different approaches to get a working audio URL {% endcomment %}
