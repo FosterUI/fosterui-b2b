@@ -156,7 +156,7 @@
       <div class="article-content-blockpage-width references-section">
         <h2 class="h3">References</h2>
         <div class="rte">
-          {{ article.metafields.custom.article_references }}
+          {{ article.metafields.custom.article_references | metafield_tag }}
         </div>
       </div>
     {%- endif -%}
