@@ -438,6 +438,10 @@
     color: var(--color-brand-primary-dark);
 }
 
+.article-content-block .btn-brand-primary {
+    color: var(--color-brand-white);
+}
+
 .article-content-block.rte h2 {
     font-size: 3.2rem;
     font-weight: 700;
