@@ -434,7 +434,7 @@
     color: var(--color-brand-accent-hover);
 }
 
-.article-content-block .article-enhanced-cta__buttons {
+.article-content-block .article-enhanced-cta__buttons { 
     color: var(--color-brand-primary-dark);
 }
 
