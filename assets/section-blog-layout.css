@@ -434,6 +434,10 @@
     color: var(--color-brand-accent-hover);
 }
 
+.article-content-block .article-enhanced-cta__buttons {
+    color: var(--color-brand-primary-dark);
+}
+
 .article-content-block.rte h2 {
     font-size: 3.2rem;
     font-weight: 700;
