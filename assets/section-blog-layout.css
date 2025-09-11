@@ -434,11 +434,11 @@
     color: var(--color-brand-accent-hover);
 }
 
-.article-content-block .article-enhanced-cta__buttons a { 
+.article-content-block .article-enhanced-cta__buttons a {
     color: var(--color-brand-primary-dark);
 }
 
-.article-content-block .btn-brand-primary {
+.article-content-block .article-enhanced-cta__buttons .btn-brand-primary {
     color: var(--color-brand-white);
 }
 
@@ -480,8 +480,8 @@
     color: #64748b;
 }
 
-.references-section { 
-    margin-top: 12rem; 
+.references-section {
+    margin-top: 12rem;
 }
 
 /* Newsletter */
