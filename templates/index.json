@@ -56,7 +56,7 @@
         "custom_class": "",
         "custom_class_heading": "",
         "padding_top": 96,
-        "padding_bottom": 36
+        "padding_bottom": 0
       }
     },
     "rich_text_tmjD6r": {
@@ -79,10 +79,10 @@
         "color_scheme": "",
         "full_width": true,
         "is_references": false,
-        "custom_class": "",
+        "custom_class": "fui-outcome-micro-note",
         "custom_class_heading": "",
-        "padding_top": 40,
-        "padding_bottom": 52
+        "padding_top": 0,
+        "padding_bottom": 20
       }
     },
     "multicolumn_w9J7pE": {
