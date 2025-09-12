@@ -11,8 +11,19 @@
   "sections": {
     "main": {
       "type": "custom-contact-page",
-      "settings": {}
+      "settings": {
+        "title": "Let's Discuss Your B2B Growth Strategy",
+        "context_heading": "Direct Access to Specialized Expertise",
+        "context_text": "<p>I specialize exclusively in transforming Shopify DTC stores into AI-powered B2B wholesale engines. If you are looking to professionalize your wholesale channel and eliminate manual processes, let's connect.</p><p>I personally review every inquiry and typically respond within one business day.</p>",
+        "ideal_title": "Is This You?",
+        "ideal_text": "<ul><li>Shopify Plus Merchant</li><li>$1M-$15M Annual GMV</li><li>Primarily DTC, seeking B2B growth</li><li>Struggling with manual wholesale processes or complex integrations</li></ul>",
+        "headshot_image": "shopify://shop_images/robert-profile-blazer.png",
+        "signature_name": "Robert Foster",
+        "signature_title": "Founder & Shopify Plus Consultant"
+      }
     }
   },
-  "order": ["main"]
+  "order": [
+    "main"
+  ]
 }
