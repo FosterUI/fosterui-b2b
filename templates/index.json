@@ -52,7 +52,9 @@
         "content_alignment": "center",
         "color_scheme": "scheme-1",
         "full_width": true,
-        "custom_rt_class": "",
+        "is_references": false,
+        "custom_class": "",
+        "custom_class_heading": "",
         "padding_top": 96,
         "padding_bottom": 36
       }
@@ -232,7 +234,9 @@
         "content_alignment": "center",
         "color_scheme": "",
         "full_width": false,
-        "custom_rt_class": "rich-text--services",
+        "is_references": false,
+        "custom_class": "",
+        "custom_class_heading": "",
         "padding_top": 40,
         "padding_bottom": 52
       }
@@ -241,6 +245,7 @@
       "type": "about-principal",
       "name": "B2B About Principal",
       "settings": {
+        "headshot_image": "shopify://shop_images/robert-profile-blazer.png",
         "intro_title": "Meet Your B2B Growth Partner",
         "intro_subtitle": "I've spent a decade in the Shopify trenches. Now, I'm focused exclusively on your B2B future.",
         "bio_text": "<p>I'm Robert Foster, a founder & Shopify Plus consultant, as well as an expert Shopify Developer—not a large agency where your project gets handed off to junior staff.</p><p>After 10+ years in the ecosystem, I’ve deliberately narrowed my niche to focus on the two most critical growth levers in 2025: <strong>B2B expansion and AI integration.</strong></p><p>When you hire me, you get <em>me</em>—ensuring direct, senior-level strategy and execution throughout our engagement. My reputation is built on delivering results, not just code.</p><p><a href=\"/pages/contact\" title=\"Contact\">Contact Me</a></p>",
