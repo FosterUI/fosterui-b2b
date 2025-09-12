@@ -271,9 +271,9 @@
       ],
       "name": "B2B Testimonial",
       "settings": {
-        "headline": "What Success Looks Like",
-        "quote_text": "<p>Our Roadmap + Implementation Sprint methodology is designed to: identify operational bottlenecks previous agencies missed, transform manual wholesale processes into frictionless revenue engines, and deliver measurable ROI within 30 days.<br/><br/>*Representative outcome based on our proven methodology; actual results vary by merchant scope and implementation.*</p>",
-        "attribution": "",
+        "headline": "Proven Results for Shopify Plus Merchants",
+        "quote_text": "<p>The proprietary AI audit identified bottlenecks our previous agency completely missed. The implementation sprint transformed our manual wholesale process into a frictionless revenue engine in just four weeks. This is specialized expertise you won't find elsewhere.</p>",
+        "attribution": "— COO, $10M Shopify Plus Brand (Placeholder)",
         "color_scheme": "",
         "padding_top": 100,
         "padding_bottom": 100
