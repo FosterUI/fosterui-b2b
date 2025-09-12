@@ -280,6 +280,43 @@
         "padding_bottom": 100
       }
     },
+    "fui_representative_outcome_Rpy4zq": {
+      "type": "fui-representative-outcome",
+      "blocks": {
+        "result_item_tyqzDa": {
+          "type": "result_item",
+          "settings": {
+            "text": "Eliminate manual order entry and quoting friction"
+          }
+        },
+        "result_item_Raxctj": {
+          "type": "result_item",
+          "settings": {
+            "text": "Streamline net terms, PO approvals, and reorders"
+          }
+        },
+        "result_item_qf6FPX": {
+          "type": "result_item",
+          "settings": {
+            "text": "Connect ERP/3PL for accurate pricing, inventory, and invoicing"
+          }
+        }
+      },
+      "block_order": [
+        "result_item_tyqzDa",
+        "result_item_Raxctj",
+        "result_item_qf6FPX"
+      ],
+      "name": "B2B Rep Outcome",
+      "settings": {
+        "headline": "What Success Looks Like",
+        "body_text": "<p>Our B2B & AI Roadmap followed by a 4-week Implementation Sprint is designed to identify bottlenecks missed by prior agencies, move manual wholesale tasks into a frictionless flow, and stand up a revenue engine in under 30 days.</p>",
+        "micro_note": "<p>Representative outcome based on our methodology; actual results vary by merchant, scope, and data quality.</p>",
+        "color_scheme": "",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
     "about_principal_LKJFK6": {
       "type": "about-principal",
       "name": "B2B About Principal",
@@ -556,6 +593,7 @@
     "service_tiers_8jzFQk",
     "rich_text_PKaryz",
     "fui_testimonial_XFmQDd",
+    "fui_representative_outcome_Rpy4zq",
     "about_principal_LKJFK6",
     "contact_split_hybrid_YMBRY8",
     "multicolumn_9JGMiV",
