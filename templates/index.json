@@ -241,6 +241,44 @@
         "padding_bottom": 52
       }
     },
+    "fui_testimonial_XFmQDd": {
+      "type": "fui-testimonial",
+      "blocks": {
+        "logo_image_MiBnbV": {
+          "type": "logo_image",
+          "settings": {}
+        },
+        "logo_image_kk3xHN": {
+          "type": "logo_image",
+          "settings": {}
+        },
+        "logo_image_b8UrD7": {
+          "type": "logo_image",
+          "settings": {}
+        },
+        "shopify_badge_XHtWYM": {
+          "type": "shopify_badge",
+          "settings": {
+            "text": "Shopify Plus Partner"
+          }
+        }
+      },
+      "block_order": [
+        "logo_image_MiBnbV",
+        "logo_image_kk3xHN",
+        "logo_image_b8UrD7",
+        "shopify_badge_XHtWYM"
+      ],
+      "name": "B2B Testimonial",
+      "settings": {
+        "headline": "Proven Results for Shopify Plus Merchants",
+        "quote_text": "<p>The proprietary AI audit identified bottlenecks our previous agency completely missed. The implementation sprint transformed our manual wholesale process into a frictionless revenue engine in just four weeks. This is specialized expertise you won't find elsewhere.</p>",
+        "attribution": "— COO, $10M Shopify Plus Brand (Placeholder)",
+        "color_scheme": "",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
     "about_principal_LKJFK6": {
       "type": "about-principal",
       "name": "B2B About Principal",
@@ -516,6 +554,7 @@
     "methodology_steps_EGJEVf",
     "service_tiers_8jzFQk",
     "rich_text_PKaryz",
+    "fui_testimonial_XFmQDd",
     "about_principal_LKJFK6",
     "contact_split_hybrid_YMBRY8",
     "multicolumn_9JGMiV",
