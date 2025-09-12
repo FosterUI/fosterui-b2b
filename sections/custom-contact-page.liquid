@@ -32,7 +32,13 @@
           {% endif %}
           <div>
             <h4>{{ section.settings.signature_name }}</h4>
-            <p>{{ section.settings.signature_title }}</p>
+            <p>
+              {{ section.settings.signature_title }}
+              {% if section.settings.signature_title_line_2 != blank %}
+                <br>
+                {{ section.settings.signature_title_line_2 }}
+              {% endif %}
+            </p>
           </div>
         </div>
       </div>
