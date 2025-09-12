@@ -1,0 +1,277 @@
+{% comment %}
+  ------------------------------------------------------------------------------
+  Section: FUI Representative Outcome
+  Description: A section detailing the expected outcomes and benefits of the
+               methodology, replacing a traditional testimonial format.
+  ------------------------------------------------------------------------------
+{% endcomment %}
+
+{%- style -%}
+  /* Define CSS variables for padding based on schema settings */
+  #shopify-section-{{ section.id }} {
+    --section-padding-top: {{ section.settings.padding_top }}px;
+    --section-padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+
+  .fui-outcome-section {
+      /* Padding controlled by settings */
+      padding-top: var(--section-padding-top);
+      padding-bottom: var(--section-padding-bottom);
+      text-align: center;
+      /* Background color is handled by the Dawn color scheme system applied to the section wrapper */
+  }
+
+  /* Constrain the main content wrapper */
+  .fui-outcome-content {
+      /* Constrained width for optimal readability (900px) */
+      max-width: 90rem;
+      margin: 0 auto;
+  }
+
+  /* Headline Styling (H2) */
+  .fui-outcome-section__headline {
+      /* H2 Style: Uses brand variables defined in custom-brand-styles.css */
+      /* Note: Dawn uses a 10px root, so 3.6rem = 36px */
+      font-size: 3.6rem;
+      font-weight: 700;
+      color: var(--color-brand-primary-dark, #03045E);
+      margin-bottom: 4rem;
+      line-height: 1.2;
+  }
+
+  /* Body Text Styling */
+  .fui-outcome-body {
+      font-size: 2.0rem; /* 20px */
+      font-weight: 400;
+      /* Color uses the standard text color of the scheme */
+      margin-bottom: 3rem;
+      line-height: 1.6;
+  }
+
+  .fui-outcome-body p {
+      margin: 0;
+  }
+
+  /* Results List Styling */
+  .fui-outcome-results-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 auto 3rem;
+      /* Uses inline-flex to center the block of left-aligned text */
+      display: inline-flex;
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: left;
+  }
+
+  .fui-outcome-results-item {
+      font-size: 1.8rem; /* 18px */
+      font-weight: 600;
+      color: var(--color-brand-primary-dark, #03045E);
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+  }
+
+  /* Custom Checkmark using SVG for high-quality appearance */
+  .fui-outcome-checkmark {
+      color: var(--color-brand-accent, #00B4D8);
+      margin-right: 1.5rem;
+      width: 2.4rem;
+      height: 2.4rem;
+      flex-shrink: 0; /* Prevents the checkmark from shrinking */
+  }
+
+
+  /* Micro Note (Disclaimer) Styling */
+  .fui-outcome-micro-note {
+      font-size: 1.4rem; /* 14px */
+      font-style: italic;
+      opacity: 0.7;
+      margin-top: 3rem;
+      max-width: 70rem;
+      margin-left: auto;
+      margin-right: auto;
+  }
+
+  .fui-outcome-micro-note p {
+      margin: 0;
+  }
+
+
+  /* Responsive Design */
+  @media screen and (max-width: 749px) {
+      /* Adjust padding variables for mobile using Liquid math */
+      #shopify-section-{{ section.id }} {
+        --section-padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+        --section-padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+      }
+
+      .fui-outcome-section__headline {
+          font-size: 2.8rem; /* 28px */
+          margin-bottom: 3rem;
+      }
+      .fui-outcome-body {
+          font-size: 1.8rem;
+      }
+      .fui-outcome-results-list {
+          /* Allow list to use full width on mobile for better alignment */
+          display: flex;
+          width: 100%;
+      }
+      .fui-outcome-results-item {
+          font-size: 1.6rem;
+      }
+  }
+{%- endstyle -%}
+
+<section class="fui-outcome-section color-{{ section.settings.color_scheme }} gradient">
+  <div class="page-width">
+    <div class="fui-outcome-content">
+      {% if section.settings.headline != blank %}
+        <h2 class="fui-outcome-section__headline">{{ section.settings.headline | escape }}</h2>
+      {% endif %}
+
+      {% if section.settings.body_text != blank %}
+        <div class="fui-outcome-body">
+          {{ section.settings.body_text }}
+        </div>
+      {% endif %}
+
+      {% if section.blocks.size > 0 %}
+        <ul class="fui-outcome-results-list">
+          {% for block in section.blocks %}
+            {% if block.settings.text != blank %}
+              <li class="fui-outcome-results-item" {{ block.shopify_attributes }}>
+                <svg
+                  class="fui-outcome-checkmark"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="2.5"
+                  stroke="currentColor"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                </svg>
+                {{ block.settings.text | escape }}
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      {% endif %}
+
+      {% if section.settings.micro_note != blank %}
+        <div class="fui-outcome-micro-note">
+          {{ section.settings.micro_note }}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "B2B Rep Outcome",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "headline",
+      "label": "Headline",
+      "default": "What Success Looks Like (Representative Outcome)"
+    },
+    {
+      "type": "richtext",
+      "id": "body_text",
+      "label": "Body Text",
+      "default": "<p>Our B2B & AI Roadmap followed by a 4-week Implementation Sprint is designed to identify bottlenecks missed by prior agencies, move manual wholesale tasks into a frictionless flow, and stand up a revenue engine in under 30 days.</p>"
+    },
+    {
+      "type": "richtext",
+      "id": "micro_note",
+      "label": "Micro Note (Disclaimer)",
+      "default": "<p>Representative outcome based on our methodology; actual results vary by merchant, scope, and data quality.</p>"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.colors.header"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "background-1"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 100
+    }
+  ],
+  "blocks": [
+    {
+      "type": "result_item",
+      "name": "Result Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Result Text",
+          "default": "Key outcome achieved"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "B2B Rep Outcome",
+      "blocks": [
+        {
+          "type": "result_item",
+          "settings": {
+            "text": "Eliminate manual order entry and quoting friction"
+          }
+        },
+        {
+          "type": "result_item",
+          "settings": {
+            "text": "Streamline net terms, PO approvals, and reorders"
+          }
+        },
+        {
+          "type": "result_item",
+          "settings": {
+            "text": "Deploying a scalable revenue engine that drives growth without increasing headcount."
+          }
+        },
+        {
+          "type": "result_item",
+          "settings": {
+            "text": "Converting manual, high-friction processes into a seamless, self-service wholesale portal"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
