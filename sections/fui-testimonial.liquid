@@ -1,0 +1,290 @@
+{% comment %}
+  ------------------------------------------------------------------------------
+  Section: FUI Testimonial
+  Description: A clean, centered testimonial section with stylized quote and
+               social proof bar, utilizing brand CSS variables and Dawn features.
+  ------------------------------------------------------------------------------
+{% endcomment %}
+
+{%- style -%}
+  /* Define CSS variables for padding based on schema settings */
+  #shopify-section-{{ section.id }} {
+    --section-padding-top: {{ section.settings.padding_top }}px;
+    --section-padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+
+  .fui-testimonial-section {
+      /* Padding controlled by settings */
+      padding-top: var(--section-padding-top);
+      padding-bottom: var(--section-padding-bottom);
+      text-align: center;
+      /* Background color is handled by the Dawn color scheme system applied to the section wrapper */
+  }
+
+  /* Constrain the main content wrapper */
+  .fui-testimonial-content {
+      /* Constrained width for optimal readability (900px) */
+      max-width: 90rem;
+      margin: 0 auto;
+      position: relative;
+  }
+
+  /* Headline Styling (H2) */
+  .fui-testimonial-section__headline {
+      /* H2 Style: Uses brand variables defined in custom-brand-styles.css */
+      /* Note: Dawn uses a 10px root, so 3.6rem = 36px */
+      font-size: 3.6rem;
+      font-weight: 700;
+      color: var(--color-brand-primary-dark, #03045E);
+      margin-bottom: 6rem;
+      line-height: 1.2;
+  }
+
+  /* Quote Styling (Blockquote) */
+  .fui-testimonial-quote {
+      /* Slightly larger than body copy for emphasis (20px) */
+      font-size: 2.0rem;
+      font-weight: 400;
+      /* Color uses the standard text color of the scheme */
+      margin-bottom: 3rem;
+      position: relative;
+      padding: 0 4rem;
+      /* Italicized for visual distinction */
+      font-style: italic;
+      line-height: 1.5;
+  }
+
+  /* Remove default margins from Rich Text paragraphs */
+  .fui-testimonial-quote p {
+      margin: 0;
+  }
+
+  /* Stylized Quotation Mark using pseudo-element */
+  .fui-testimonial-quote::before {
+      content: '“';
+      font-size: 12.8rem; /* 128px */
+      font-weight: 900;
+      color: var(--color-brand-accent, #00B4D8);
+      position: absolute;
+      left: -2rem;
+      top: -5rem;
+      opacity: 0.3; /* Subtle overlay */
+      line-height: 1;
+      font-family: serif; /* Ensures a stylized quote shape */
+  }
+
+  /* Attribution Styling (Cite) */
+  .fui-testimonial-attribution {
+      font-size: 1.6rem; /* 16px */
+      font-weight: 700;
+      color: var(--color-brand-primary-dark, #03045E);
+      font-style: normal;
+  }
+
+  /* Social Proof Bar */
+  .fui-social-proof-bar {
+      margin-top: 6rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 4rem;
+      flex-wrap: wrap;
+  }
+
+  /* Styling for image logos */
+  .fui-logo-image {
+    max-height: 5rem;
+    max-width: 15rem;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+  }
+
+   /* Styling for the Shopify Plus Badge (if used) */
+  .fui-shopify-plus-badge {
+      font-weight: 700;
+      color: var(--color-brand-white, #ffffff);
+      background-color: var(--color-brand-primary-dark, #03045E);
+      padding: 1rem 2rem;
+      border-radius: 4px;
+      font-size: 1.4rem;
+  }
+
+
+  /* Responsive Design */
+  @media screen and (max-width: 749px) {
+      /* Adjust padding variables for mobile using Liquid math */
+      #shopify-section-{{ section.id }} {
+        --section-padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+        --section-padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+      }
+
+      .fui-testimonial-section__headline {
+          font-size: 2.8rem; /* 28px */
+          margin-bottom: 4rem;
+      }
+      .fui-testimonial-quote {
+          font-size: 1.8rem;
+          padding: 0 1rem;
+      }
+       .fui-testimonial-quote::before {
+          font-size: 8rem;
+          left: -1rem;
+          top: -3rem;
+      }
+      .fui-social-proof-bar {
+          gap: 2rem;
+      }
+  }
+{%- endstyle -%}
+
+<section class="fui-testimonial-section color-{{ section.settings.color_scheme }} gradient">
+  <div class="page-width">
+    {% if section.settings.headline != blank %}
+      <h2 class="fui-testimonial-section__headline">{{ section.settings.headline | escape }}</h2>
+    {% endif %}
+
+    <div class="fui-testimonial-content">
+      {% if section.settings.quote_text != blank %}
+        <blockquote class="fui-testimonial-quote">
+          {{ section.settings.quote_text }}
+        </blockquote>
+      {% endif %}
+      {% if section.settings.attribution != blank %}
+        <cite class="fui-testimonial-attribution">{{ section.settings.attribution | escape }}</cite>
+      {% endif %}
+    </div>
+
+    {% if section.blocks.size > 0 %}
+      <div class="fui-social-proof-bar">
+        {% for block in section.blocks %}
+          <div {{ block.shopify_attributes }}>
+            {% case block.type %}
+              {% when 'logo_image' %}
+                {% if block.settings.image != blank %}
+                  {{
+                    block.settings.image
+                    | image_url: width: 300
+                    | image_tag: class: 'fui-logo-image', loading: 'lazy'
+                  }}
+                {% else %}
+                  {{ 'image' | placeholder_svg_tag: 'fui-logo-image placeholder-svg' }}
+                {% endif %}
+
+              {% when 'shopify_badge' %}
+                <div class="fui-shopify-plus-badge">
+                  {{ block.settings.text | escape }}
+                </div>
+            {% endcase %}
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "FUI Testimonial",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "headline",
+      "label": "Headline",
+      "default": "Proven Results for Shopify Plus Merchants"
+    },
+    {
+      "type": "richtext",
+      "id": "quote_text",
+      "label": "Quote Text",
+      "default": "<p>The proprietary AI audit identified bottlenecks our previous agency completely missed. The implementation sprint transformed our manual wholesale process into a frictionless revenue engine in just four weeks. This is specialized expertise you won't find elsewhere.</p>"
+    },
+    {
+      "type": "text",
+      "id": "attribution",
+      "label": "Attribution",
+      "default": "— COO, $10M Shopify Plus Brand (Placeholder)"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.colors.header"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "background-1"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 100
+    }
+  ],
+  "blocks": [
+    {
+      "type": "logo_image",
+      "name": "Logo Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    },
+    {
+      "type": "shopify_badge",
+      "name": "Styled Badge",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Badge Text",
+          "default": "Shopify Plus Partner"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "FUI Testimonial",
+      "blocks": [
+        {
+          "type": "logo_image"
+        },
+        {
+          "type": "logo_image"
+        },
+        {
+          "type": "logo_image"
+        },
+        {
+          "type": "shopify_badge"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
