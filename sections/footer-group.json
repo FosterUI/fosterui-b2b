@@ -52,7 +52,7 @@
         "margin_top": 0,
         "padding_top": 36,
         "padding_bottom": 36,
-        "show_citations": true,
+        "show_citations": false,
         "citation_text": "<p>Sources: Digital Commerce 360 (May 28, 2024; Apr 30, 2024) for U.S. projections; Mordor Intelligence (2025) and ITA (2024) for global CAGR estimates. Figures are the latest publicly reported projections as of 2024–2025 and should be re-validated quarterly.</p>"
       }
     }
