@@ -300,12 +300,19 @@
           "settings": {
             "text": "Connect ERP/3PL for accurate pricing, inventory, and invoicing"
           }
+        },
+        "result_item_JTfgTm": {
+          "type": "result_item",
+          "settings": {
+            "text": "Converting manual, high-friction processes into a seamless, self-service wholesale portal"
+          }
         }
       },
       "block_order": [
         "result_item_tyqzDa",
         "result_item_Raxctj",
-        "result_item_qf6FPX"
+        "result_item_qf6FPX",
+        "result_item_JTfgTm"
       ],
       "name": "B2B Rep Outcome",
       "settings": {
