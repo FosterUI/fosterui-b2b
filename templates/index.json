@@ -53,7 +53,7 @@
         "color_scheme": "scheme-1",
         "full_width": true,
         "is_references": false,
-        "custom_class": "bottleneck-section",
+        "custom_class": "",
         "custom_class_heading": "",
         "padding_top": 96,
         "padding_bottom": 36
