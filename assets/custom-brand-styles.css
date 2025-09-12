@@ -505,7 +505,7 @@ body {
     height: 80px;
     border-radius: 50%;
     border: 2px solid var(--color-brand-accent);
-    object-fit: cover;
+    object-fit: cover; 
 }
 
 /* Final CTA Button (Column 3) */
