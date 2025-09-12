@@ -172,9 +172,11 @@
                 {% endif %}
 
               {% when 'shopify_badge' %}
-                <div class="fui-shopify-plus-badge">
-                  {{ block.settings.text | escape }}
-                </div>
+                {% if block.settings.text != blank %}
+                  <div class="fui-shopify-plus-badge">
+                    {{ block.settings.text | escape }}
+                  </div>
+                {% endif %}
             {% endcase %}
           </div>
         {% endfor %}
