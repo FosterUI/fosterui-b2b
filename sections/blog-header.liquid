@@ -2,18 +2,40 @@
 
 <header class="blog-header">
   <div class="page-width">
-    {% if section.settings.kicker != blank %}
-      <div class="kicker-brand">{{ section.settings.kicker }}</div>
-    {% endif %}
-    
-    {% comment %} Automatically use the Blog title defined in Shopify Admin {% endcomment %}
-    <h1>{{ blog.title }}</h1>
-    
-    {% if section.settings.introduction != blank %}
-      <div class="blog-header__intro">
-          {{ section.settings.introduction }}
-      </div>
-    {% endif %}
+    <div
+      class="blog-header__content"
+      {% if settings.animations_reveal_on_scroll %}
+        data-cascade
+      {% endif %}
+    >
+      {% if section.settings.kicker != blank %}
+        <div 
+          class="kicker-brand{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+          {% if settings.animations_reveal_on_scroll %}
+            style="--animation-order: 1;"
+          {% endif %}
+        >{{ section.settings.kicker }}</div>
+      {% endif %}
+      
+      {% comment %} Automatically use the Blog title defined in Shopify Admin {% endcomment %}
+      <h1 
+        class="{% if settings.animations_reveal_on_scroll %}scroll-trigger animate--slide-in{% endif %}"
+        {% if settings.animations_reveal_on_scroll %}
+          style="--animation-order: 2;"
+        {% endif %}
+      >{{ blog.title }}</h1>
+      
+      {% if section.settings.introduction != blank %}
+        <div 
+          class="blog-header__intro{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+          {% if settings.animations_reveal_on_scroll %}
+            style="--animation-order: 3;"
+          {% endif %}
+        >
+            {{ section.settings.introduction }}
+        </div>
+      {% endif %}
+    </div>
   </div>
 </header>
 

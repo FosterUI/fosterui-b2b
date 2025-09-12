@@ -2,8 +2,18 @@
 
 <div class="hero-b2b">
   <div class="page-width">
-        <div class="hero-b2b-grid" {% if settings.animations_reveal_on_scroll %}data-cascade{% endif %}>
-            <div class="hero-b2b-content{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}" {% if settings.animations_reveal_on_scroll %}style="--animation-order: 1;"{% endif %}>
+    <div
+      class="hero-b2b-grid"
+      {% if settings.animations_reveal_on_scroll %}
+        data-cascade
+      {% endif %}
+    >
+      <div
+        class="hero-b2b-content{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+        {% if settings.animations_reveal_on_scroll %}
+          style="--animation-order: 1;"
+        {% endif %}
+      >
         {% if section.settings.kicker != blank %}
           <div class="kicker-brand">{{ section.settings.kicker }}</div>
         {% endif %}
@@ -28,7 +38,12 @@
         </div>
       </div>
 
-            <div class="hero-b2b-visual{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}" {% if settings.animations_reveal_on_scroll %}style="--animation-order: 2;"{% endif %}>
+      <div
+        class="hero-b2b-visual{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+        {% if settings.animations_reveal_on_scroll %}
+          style="--animation-order: 2;"
+        {% endif %}
+      >
         <div class="money-slide">
           <h3>{{ section.settings.visual_title }}</h3>
           <div

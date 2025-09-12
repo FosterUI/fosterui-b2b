@@ -246,13 +246,15 @@ body {
     max-width: 50rem;
 }
 
-@media screen and (min-width: 750px) {
-    .landing-page-customization .newsletter-form {
-        max-width: 50rem;
-    }
+.newsletter__wrapper h2 {
+    color: var(--color-brand-white);
 }
 
 /* --- Header Customization (From previous steps) --- */
+.header__icon--menu[aria-expanded=true]:before {
+    background: initial;
+}
+
 .header__menu-item:hover span,
 .footer-block .footer-block__details-content .list-menu__item--link:hover,
 .copyright__content a:hover {
@@ -278,42 +280,6 @@ body {
 /* Remove Dawn's default underline effect */
 .header__menu-item span::after {
     display: none !important;
-}
-
-/* Center the Navigation Links using CSS Grid (Desktop) */
-@media screen and (min-width: 990px) {
-
-    .rich-text__wrapper .rich-text__blocks,
-    .newsletter__subheading.rte {
-        max-width: 102rem;
-    }
-
-    sticky-header .header {
-        padding: 15px 0;
-    }
-
-    /* Apply a 3-column grid layout to the header container */
-    .header.header--middle-left {
-        display: grid;
-        /* Col 1 (Logo) | Col 2 (Nav) | Col 3 (CTA/Icons) */
-        grid-template-columns: 1fr auto 1fr;
-    }
-
-    /* Align logo to the start (left) of the first column */
-    .header__heading {
-        justify-self: start;
-    }
-
-    /* Centers the menu in the middle column */
-    .header__inline-menu {
-        justify-self: center;
-        margin: 0 auto;
-    }
-
-    /* Align the CTA and icons to the end (right) of the third column */
-    .header__icons {
-        justify-content: flex-end;
-    }
 }
 
 /* Wrapper for the custom block item added via the editor */
@@ -357,15 +323,6 @@ body {
 
 .newsletter-form__field-wrapper .field__label {
     color: #333333;
-}
-
-/* Hide the custom CTA on mobile/tablet, as the space is limited */
-@media screen and (max-width: 989px) {
-
-    #Details-menu-drawer-container,
-    .header__custom-block-item {
-        display: none;
-    }
 }
 
 /* assets/custom-brand-styles.css (Additions/Updates) */
@@ -413,7 +370,7 @@ body {
 .card__heading a:hover {
     text-decoration: none;
     color: var(--color-brand-accent-hover);
-} 
+}
 
 /* Custom: Services Section */
 .rich-text--services {
@@ -479,32 +436,38 @@ body {
     border-top: none;
 }
 
-/* Override Dawn's default centering and enforce the structured grid on desktop */
-@media screen and (min-width: 750px) {
+/* Footer Citations Styling */
+.footer__citations-wrapper {
+    /* Adds space between main footer and citations */
+    margin-top: 4rem;
+    padding-top: 2.5rem;
+    padding-bottom: 2rem;
+    /* Subtle horizontal line separator (10% opacity white) */
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
 
-    /* Ensure the container is left-aligned */
-    .footer .footer__content-top {
-        text-align: left;
-    }
+.footer__citations-content {
+    text-align: left;
+    /* Constrain width for readability of dense text and center the block */
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
-    /* Implement the 3-Column Grid Layout */
-    /* KEY FIX: Increased specificity (.footer .) and use !important to override Dawn's utility classes (e.g., grid--4-col-tablet) */
-    .footer .footer__blocks-wrapper {
-        display: grid !important;
-        /* Col 1 (Bio) is wider, Cols 2 & 3 (Nav/CTA) are equal */
-        grid-template-columns: 2fr 1fr 1fr !important;
-        gap: 5rem;
-        justify-content: space-between;
-        align-items: start;
-    }
+.footer__citations-content small {
+    /* Small font size (12px equivalent in Dawn's rem system) */
+    font-size: 1.2rem;
+    line-height: 1.6;
+    /* Muted color (60% opacity white) for subtlety */
+    color: rgba(255, 255, 255, 0.6);
+    display: block;
+}
 
-    /* Ensure individual blocks fill the grid cells correctly and align left */
-    .footer .footer-block.grid__item {
-        width: 100%;
-        max-width: 100%;
-        /* Remove potential max-width constraints from Dawn */
-        text-align: left;
-    }
+/* Ensures the richtext paragraph doesn't add extra margins or override styles */
+.footer__citations-content p {
+    margin: 0;
+    font-size: inherit;
+    color: inherit;
 }
 
 /* Ensure footer text is readable (16px) and aligned */
@@ -587,29 +550,6 @@ body {
     font-size: 1.4rem;
 }
 
-/* Mobile Adjustments */
-@media screen and (max-width: 749px) {
-
-    /* Revert to centered alignment on mobile */
-    .footer__content-top,
-    .footer-block {
-        text-align: center;
-    }
-
-    /* Center the profile elements on mobile */
-    .footer-profile {
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    /* Ensure mobile blocks stack correctly using flexbox for better gap control */
-    .footer .footer__blocks-wrapper {
-        display: flex !important;
-        flex-direction: column;
-        gap: 4rem;
-    }
-}
-
 /* assets/custom-brand-styles.css (Additions) */
 
 /* --- Global Form Styling (Used across multiple sections via .fallback-form class) --- */
@@ -658,4 +598,158 @@ body {
     text-align: center;
     font-weight: 600;
     font-size: 1.6rem;
+}
+
+/* --- Article CTA Button --- */
+.article-cta-button {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin: 3rem 0;
+}
+
+.article-cta-button.text-left {
+    justify-content: flex-start;
+}
+
+.article-cta-button.text-center {
+    justify-content: center;
+}
+
+.article-cta-button.text-right {
+    justify-content: flex-end;
+}
+
+/* References Section Styling (De-emphasized) */
+/* Applied via the checkbox setting in the block schema */
+.block-references.article-content-block {
+    font-size: 1.4rem;
+    line-height: 1.5;
+    color: #64748b;
+}
+
+.block-references h2,
+.block-references h3 {
+    font-size: 2.2rem;
+}
+
+.block-references li {
+    margin-bottom: 1rem;
+}
+
+/* --- Mobile Drawer CTA Button --- */
+.menu-drawer__menu-item--cta {
+    padding: 1.5rem 2.5rem;
+}
+
+.menu-drawer__menu-item--cta .btn-brand {
+    width: 100%;
+}
+
+/* Override Dawn's default centering and enforce the structured grid on desktop */
+@media screen and (min-width: 750px) {
+
+    .landing-page-customization .newsletter-form {
+        max-width: 50rem;
+    }
+
+    /* Ensure the container is left-aligned */
+    .footer .footer__content-top {
+        text-align: left;
+    }
+
+    /* Implement the 3-Column Grid Layout */
+    /* KEY FIX: Increased specificity (.footer .) and use !important to override Dawn's utility classes (e.g., grid--4-col-tablet) */
+    .footer .footer__blocks-wrapper {
+        display: grid !important;
+        /* Col 1 (Bio) is wider, Cols 2 & 3 (Nav/CTA) are equal */
+        grid-template-columns: 2fr 1fr 1fr !important;
+        gap: 5rem;
+        justify-content: space-between;
+        align-items: start;
+    }
+
+    /* Ensure individual blocks fill the grid cells correctly and align left */
+    .footer .footer-block.grid__item {
+        width: 100%;
+        max-width: 100%;
+        /* Remove potential max-width constraints from Dawn */
+        text-align: left;
+    }
+
+    .footer__citations-content {
+        text-align: center;
+        /* Center align on desktop for balance */
+    }
+
+    .footer__citations-content small {
+        font-size: 1.3rem;
+    }
+}
+
+/* Center the Navigation Links using CSS Grid (Desktop) */
+@media screen and (min-width: 990px) {
+
+    .rich-text__wrapper .rich-text__blocks,
+    .newsletter__subheading.rte {
+        max-width: 102rem;
+    }
+
+    sticky-header .header {
+        padding: 15px 0;
+    }
+
+    /* Apply a 3-column grid layout to the header container */
+    .header.header--middle-left {
+        display: grid;
+        /* Col 1 (Logo) | Col 2 (Nav) | Col 3 (CTA/Icons) */
+        grid-template-columns: 1fr auto 1fr;
+    }
+
+    /* Align logo to the start (left) of the first column */
+    .header__heading {
+        justify-self: start;
+    }
+
+    /* Centers the menu in the middle column */
+    .header__inline-menu {
+        justify-self: center;
+        margin: 0 auto;
+    }
+
+    /* Align the CTA and icons to the end (right) of the third column */
+    .header__icons {
+        justify-content: flex-end;
+    }
+}
+
+/* Hide the custom CTA on mobile/tablet, as the space is limited */
+@media screen and (max-width: 989px) {
+    .header__custom-block-item-desktop--cta {
+        display: none;
+    }
+}
+
+/* Mobile Adjustments */
+@media screen and (max-width: 749px) {
+
+    /* Revert to centered alignment on mobile */
+    .footer__content-top,
+    .footer-block {
+        text-align: center;
+    }
+
+    /* Center the profile elements on mobile */
+    .footer-profile {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    /* Ensure mobile blocks stack correctly using flexbox for better gap control */
+    .footer .footer__blocks-wrapper {
+        display: flex !important;
+        flex-direction: column;
+        gap: 4rem;
+    }
 }

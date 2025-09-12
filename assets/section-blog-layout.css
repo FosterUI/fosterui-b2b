@@ -1,5 +1,5 @@
 /* 1. Blog Index (Grid) Styles */
-
+/* (Styles for the Blog Index remain unchanged, included here for completeness) */
 .blog-header {
     padding: 6rem 0;
     text-align: center;
@@ -31,7 +31,6 @@
     gap: 4rem;
 }
 
-/* Blog Article Card */
 .blog-card {
     background-color: var(--color-brand-white);
     border-radius: 8px;
@@ -77,11 +76,6 @@
     letter-spacing: 0.5px;
 }
 
-.newsletter__wrapper h2 {
-    color: var(--color-brand-white);
-}
-
-/* Pagination */
 .pagination__list {
     justify-content: center;
     margin-top: 6rem;
@@ -100,15 +94,70 @@
 
 /* 2. Blog Article (Detail Page) Styles */
 
-.article-wrapper {
-    background-color: var(--color-brand-background);
-}
-
+/* Article Header - OPTION 1: Deep Navy */
 .article-header {
     padding: 8rem 0;
     text-align: center;
-    background-color: var(--color-brand-white);
-    border-bottom: 1px solid #e0e0e0;
+    /* Changed: Use the dark brand color for the background */
+    background-color: var(--color-brand-primary-dark);
+    /* Removed: The light border is unnecessary with the high contrast */
+    border-bottom: none;
+}
+
+.article-header h1 {
+    font-size: 4.8rem;
+    font-weight: 900;
+    /* Changed: Title needs to be white for readability */
+    color: var(--color-brand-white);
+    max-width: 100rem;
+    margin: 0 auto 3.5rem;
+}
+
+.article-header__meta-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.article-header__headshot {
+    border-radius: 50%;
+    width: 6rem;
+    height: 6rem;
+    object-fit: cover;
+    /* Added: A subtle border helps the headshot stand out against the dark background */
+    border: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+.article-header__meta {
+    font-size: 1.6rem;
+    /* Changed: Use a slightly dimmed white for secondary info (date/time) */
+    /* This maintains readability while keeping the hierarchy clear */
+    color: rgba(255, 255, 255, 0.75);
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.article-header__author {
+    font-weight: 700;
+    /* Changed: Author name should be prominent (bright white) */
+    color: var(--color-brand-white);
+}
+
+/* 2. Blog Article (Detail Page) Styles */
+
+/* Article Header - OPTION 2: Subtle Pattern */
+/* (Uncomment to use), comment out the default option 1 above */
+/* .article-header {
+    padding: 8rem 0;
+    text-align: center;
+    background-color: #f9fafb;
+    background-image:
+        linear-gradient(to right, #e5e7eb 1px, transparent 1px),
+        linear-gradient(to bottom, #e5e7eb 1px, transparent 1px);
+    background-size: 40px 40px;
+    border-bottom: 1px solid #e5e7eb;
 }
 
 .article-header h1 {
@@ -117,10 +166,8 @@
     color: var(--color-brand-primary-dark);
     max-width: 100rem;
     margin: 0 auto 3.5rem;
-    /* Increased margin below title */
 }
 
-/* NEW: Header Profile Integration */
 .article-header__meta-wrapper {
     display: flex;
     align-items: center;
@@ -139,41 +186,47 @@
     font-size: 1.6rem;
     color: #64748b;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-}
-
-.article-header__author-image {
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-.article-header__meta-text {
-    display: flex;
-    align-items: center;
+    flex-direction: column;
+    text-align: left;
 }
 
 .article-header__author {
     font-weight: 700;
     color: var(--color-brand-primary-dark);
+} */
+
+
+/* --- Article Layout & Wrapper --- */
+
+.article-wrapper-section {
+    background-color: var(--color-brand-background);
+    /* Provides the main vertical spacing for the article */
+    padding-top: 5rem;
+    padding-bottom: 5rem;
 }
 
-
+/* The primary container for alignment and width constraint */
 .article-container {
     max-width: 80rem;
     /* Optimal reading width */
     margin: 0 auto;
-    padding: 6rem 2rem;
 }
 
-/* Strategic Addition: Pillar Link Callout */
+/* Standardized Vertical Spacing between Blocks */
+.article-block {
+    margin-bottom: 3rem;
+}
+
+
+/* --- Component Styling (Used within Blocks) --- */
+
+/* Pillar Link Callout */
 .pillar-link-callout {
     background-color: var(--color-brand-white);
     padding: 2.5rem;
+    margin-bottom: 3rem;
     border-radius: 8px;
     box-shadow: var(--shadow-brand);
-    margin-bottom: 4rem;
     border-left: 4px solid var(--color-brand-accent);
     font-size: 1.6rem;
 }
@@ -192,67 +245,31 @@
     text-decoration: underline;
 }
 
-/* Article Content Typography (FIXED SPACING/STYLING) */
-.article-content {
-    font-size: 1.8rem;
-    line-height: 1.7;
-}
-
-/* Fix bunched paragraphs */
-.article-content p {
-    margin-bottom: 2rem;
-}
-
-.article-content a {
-    color: var(--color-brand-accent);
-    text-decoration: none;
-    font-weight: 700;
-}
-
-.article-content a:hover {
-    color: var(--color-brand-accent-hover);
-}
-
-.article-content h2 {
-    font-size: 3.2rem;
-    font-weight: 700;
-    border-top: 1px solid #e0e0e0;
-    padding-top: 4rem;
-    margin-top: 4rem;
-    margin-bottom: 2.5rem;
-    color: var(--color-brand-primary-dark);
-}
-
-.article-content h3 {
-    font-size: 2.4rem;
-    font-weight: 700;
-    margin-top: 4rem;
-    margin-bottom: 2rem;
-    color: var(--color-brand-primary-dark);
-}
-
-/* Fix list styling (UL and OL) */
-.article-content ul,
-.article-content ol {
-    margin-bottom: 2.5rem;
-}
-
-.article-content li {
-    margin-bottom: 1.5rem;
-}
-
-/* Add styling for blockquotes */
-.article-content blockquote {
+/* Article Audio Player */
+.article-audio-player {
+    background-color: var(--color-brand-white);
+    padding: 2.5rem;
+    margin-bottom: 6rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow-brand);
     border-left: 4px solid var(--color-brand-accent);
-    padding-left: 2rem;
-    margin: 3rem 0;
-    font-style: italic;
-    color: #64748b;
 }
 
-/* Author Bio / CTA (Updated for Image and Layout) */
+.article-audio-player__label {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--color-brand-primary-dark);
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+.article-audio-player audio {
+    width: 100%;
+    height: 5.4rem;
+}
+
+/* Author Bio / CTA */
 .article-author-cta {
-    margin-top: 6rem;
     background-color: var(--color-brand-white);
     padding: 4rem;
     border-radius: 8px;
@@ -261,6 +278,8 @@
     display: flex;
     gap: 3rem;
     align-items: center;
+    margin-top: 4rem;
+    /* Extra space before the bio */
 }
 
 .author-cta__headshot {
@@ -268,7 +287,6 @@
     width: 10rem;
     height: 10rem;
     object-fit: cover;
-    /* Ensure the image doesn't shrink if the text is long */
     flex-shrink: 0;
 }
 
@@ -283,34 +301,201 @@
     margin-bottom: 2.5rem;
 }
 
-/* Article Audio Player Container */
-.article-audio-player {
-    margin-bottom: 4rem;
-    background-color: var(--color-brand-white);
-    padding: 2.5rem;
+/* --- Enhanced CTA Box (New) --- */
+
+.article-enhanced-cta {
+    /* Increased vertical spacing to break the flow of the article */
+    margin-top: 12rem;
+    margin-bottom: 12rem;
+    padding: 4rem;
     border-radius: 8px;
+    text-align: center;
+    /* Center alignment naturally draws the eye */
+    position: relative;
+}
+
+/* Style 1: Card (Subtle) - Matches other callouts (Pillar, Author Bio) */
+.article-enhanced-cta.style-card {
+    margin-bottom: 12rem;
+    background-color: var(--color-brand-white);
     box-shadow: var(--shadow-brand);
-    /* Optional: Add accent border to match other callouts */
-    border-left: 4px solid var(--color-brand-accent);
+    /* Using a prominent top border draws the eye effectively */
+    border-top: 5px solid var(--color-brand-accent);
 }
 
-.article-audio-player__label {
-    font-size: 1.6rem;
-    font-weight: 700;
-    color: var(--color-brand-primary-dark);
+/* Style 2: Contrast (Bold) - Maximum impact */
+.article-enhanced-cta.style-contrast {
+    background-color: var(--color-brand-primary-dark);
+    color: var(--color-brand-white);
+    box-shadow: var(--shadow-brand);
+}
+
+/* Typography within the CTA Box */
+.article-enhanced-cta__content {
+    font-size: 1.8rem;
+    line-height: 1.6;
+    margin-bottom: 3rem;
+}
+
+.article-enhanced-cta__content p {
     margin-bottom: 1.5rem;
-    display: block;
 }
 
-/* Style the native HTML5 Audio Player */
-.article-audio-player audio {
-    width: 100%;
-    height: 5.4rem;
-    /* Standard height for modern browsers */
+/* Adjust headings within the CTA for better hierarchy */
+.article-enhanced-cta__content h2,
+.article-enhanced-cta__content h3,
+.article-enhanced-cta__content h4,
+.article-enhanced-cta__content h5 {
+    font-size: 2.6rem;
+    /* Slightly larger to emphasize the offer */
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    margin-top: 2rem;
+    line-height: 1.3;
+    /* Ensure these headings don't inherit the large margins/borders of main article headings */
+    padding-top: 0;
+    border-top: none;
 }
 
+/* Color handling for the different styles */
+.article-enhanced-cta.style-card h2,
+.article-enhanced-cta.style-card h3,
+.article-enhanced-cta.style-card h4,
+.article-enhanced-cta.style-card h5 {
+    color: var(--color-brand-primary-dark);
+}
+
+.rte .article-enhanced-cta.style-contrast h2,
+.rte .article-enhanced-cta.style-contrast h3,
+.rte .article-enhanced-cta.style-contrast h4,
+.rte .article-enhanced-cta.style-contrast h5,
+.rte .article-enhanced-cta.style-contrast p,
+.rte .article-enhanced-cta.style-contrast li {
+    margin-top: 1rem;
+    padding-top: 0;
+    color: var(--color-brand-white);
+    border-top: none;
+}
+
+/* Style lists (like the Roadmap deliverables) within the CTA */
+.article-enhanced-cta__content ul,
+.article-enhanced-cta__content ol {
+    list-style-type: none;
+    padding: 0;
+    margin: 2.5rem 0;
+    text-align: left;
+    /* Keep lists left-aligned for readability */
+    display: inline-block;
+    /* Allows the left-aligned list block to be centered on the page */
+}
+
+.article-enhanced-cta__content li {
+    margin-bottom: 1rem;
+    padding-left: 2.5rem;
+    position: relative;
+}
+
+/* Add a checkmark indicator for emphasis */
+.article-enhanced-cta__content ul li::before {
+    content: '✓';
+    /* Using a checkmark adds a professional touch */
+    color: var(--color-brand-accent);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+/* Button alignment and spacing */
+.article-enhanced-cta__buttons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    /* Allow wrapping if needed */
+}
+
+/* --- Article Content Typography (Applied to Rich Text Blocks) --- */
+
+.article-content-block {
+    font-size: 1.8rem;
+    line-height: 1.7;
+}
+
+.article-content-block p {
+    margin-bottom: 2rem;
+}
+
+.article-content-block a {
+    color: var(--color-brand-accent);
+    text-decoration: none;
+}
+
+.article-content-block a:hover {
+    color: var(--color-brand-accent-hover);
+}
+
+.article-content-block .article-enhanced-cta__buttons a {
+    color: var(--color-brand-primary-dark);
+}
+
+.article-content-block .article-enhanced-cta__buttons .btn-brand-primary {
+    color: var(--color-brand-white);
+}
+
+.article-content-block.rte h2 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    border-top: 1px solid #e0e0e0;
+    padding-top: 6rem;
+    margin-top: 6rem;
+    margin-bottom: 2.5rem;
+    color: var(--color-brand-primary-dark);
+}
+
+.article-content-block h3 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    color: var(--color-brand-primary-dark);
+}
+
+/* FIX: Ensure correct list indentation and wrapping */
+.article-content-block ul,
+.article-content-block ol {
+    margin-bottom: 2.5rem;
+    padding-left: 4rem;
+    list-style-position: outside;
+}
+
+.article-content-block li {
+    margin-bottom: 1rem;
+}
+
+.article-content-block blockquote {
+    border-left: 4px solid var(--color-brand-accent);
+    padding-left: 2rem;
+    margin: 3rem 0;
+    font-style: italic;
+    color: #64748b;
+}
+
+.references-section {
+    margin-top: 12rem;
+}
+
+/* Newsletter */
+.template-article .fui-newsletter {
+    padding-top: 100px;
+}
 
 /* 3. Mobile Responsiveness */
+@media screen and (min-width: 990px) {
+    .article-container .article-block:nth-child(2) {
+        margin-bottom: 6rem;
+    }
+}
+
 @media screen and (max-width: 989px) {
 
     .blog-header h1,
@@ -322,12 +507,31 @@
         grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
     }
 
-    .article-content {
+    .article-content-block {
         font-size: 1.6rem;
     }
 
-    .article-content h2 {
+    .article-content-block h2 {
         font-size: 2.8rem;
+    }
+
+    /* Enhanced CTA mobile adjustments */
+    .article-enhanced-cta {
+        padding: 3rem;
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+    }
+
+    .article-enhanced-cta__content {
+        font-size: 1.6rem;
+        /* Match responsive body font size */
+    }
+
+    .article-enhanced-cta__content h2,
+    .article-enhanced-cta__content h3,
+    .article-enhanced-cta__content h4,
+    .article-enhanced-cta__content h5 {
+        font-size: 2.2rem;
     }
 
     /* Stack the Author CTA on mobile */
@@ -335,5 +539,11 @@
         flex-direction: column;
         text-align: center;
         padding: 3rem;
+    }
+
+    /* Adjust top spacing for mobile */
+    .article-wrapper-section {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
     }
 }

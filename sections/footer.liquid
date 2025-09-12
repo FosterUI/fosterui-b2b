@@ -254,6 +254,17 @@
     {%- endunless -%}
   {%- endif -%}
 
+  {% comment %} Custom: Add citation section {% endcomment %}
+  {%- if section.settings.show_citations and section.settings.citation_text != blank -%}
+    <div class="footer__citations-wrapper page-width">
+      <div class="footer__citations-content rte">
+        <small>
+          {{ section.settings.citation_text }}
+        </small>
+      </div>
+    </div>
+  {%- endif -%}
+
   <div
     class="footer__content-bottom{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
     {% if settings.animations_reveal_on_scroll %}
@@ -545,6 +556,23 @@
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
       "default": 36
+    },
+    {
+      "type": "header",
+      "content": "Citations and Disclaimers"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_citations",
+      "label": "Show citation block",
+      "default": true
+    },
+    {
+      "type": "richtext",
+      "id": "citation_text",
+      "label": "Citation Text",
+      "info": "Enter source citations here. They will appear above the copyright.",
+      "default": "<p>Sources: Digital Commerce 360 (May 28, 2024; Apr 30, 2024) for U.S. projections; Mordor Intelligence (2025) and ITA (2024) for global CAGR estimates. Figures are the latest publicly reported projections as of 2024–2025 and should be re-validated quarterly.</p>"
     }
   ],
   "default": {

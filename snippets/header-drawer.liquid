@@ -133,6 +133,16 @@
                   {%- endif -%}
                 </li>
               {%- endfor -%}
+            {%- for block in section.blocks -%}
+                {%- case block.type -%}
+                  {%- when 'cta_button' -%}
+                    <li class="menu-drawer__menu-item--cta">
+                      <a href="{{ block.settings.button_link }}" class="btn-brand btn-brand-primary">
+                        {{ block.settings.button_label }}
+                      </a>
+                    </li>
+                {%- endcase -%}
+              {%- endfor -%}
             </ul>
           </nav>
           <div class="menu-drawer__utility-links">

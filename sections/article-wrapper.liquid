@@ -1,0 +1,448 @@
+{{ 'section-blog-layout.css' | asset_url | stylesheet_tag }}
+
+<section class="article-wrapper-section">
+  <div class="article-container {{ section.settings.custom_css }}">
+    {% comment %} Iterate through all blocks within this section {% endcomment %}
+    {% for block in section.blocks %}
+      <div class="article-block" {{ block.shopify_attributes }}>
+        {% case block.type %}
+            {% comment %} --- RICH TEXT BLOCK --- {% endcomment %}
+          {% when 'rich_text' %}
+            <div class="article-content-block rte page-width {{ block.settings.content_alignment }} {% if block.settings.is_references %}block-references{% endif %}">
+              {{ block.settings.content }}
+            </div>
+
+            {% comment %} --- PILLAR CALLOUT BLOCK --- {% endcomment %}
+          {% when 'pillar_callout' %}
+            <div class="pillar-link-callout">
+              <p>
+                {{ block.settings.pillar_link_text }}
+                <a href="{{ block.settings.pillar_link_url }}">{{ block.settings.pillar_link_title }}</a>
+              </p>
+            </div>
+
+            {% comment %} --- AUDIO PLAYER BLOCK --- {% endcomment %}
+          {% when 'audio_player' %}
+            {% comment %} Check if the metafield 'custom.audio_overview' has a value and assign the file object {% endcomment %}
+            {% assign audio_file = article.metafields.custom.audio_overview.value %}
+
+            {% if audio_file %}
+              <div class="article-container section-container-spacing">
+                <div class="article-audio-player">
+                  <label class="article-audio-player__label" for="audio-player-{{ article.id }}">
+                    {{- block.settings.audio_player_label -}}
+                  </label>
+
+                  {% comment %} Try different approaches to get a working audio URL {% endcomment %}
+                  {% assign audio_url_method1 = audio_file | file_url %}
+                  {% assign audio_url_method2 = audio_file.url %}
+                  {% assign audio_url_method3 = audio_file | image_url %}
+
+                  {% comment %} Use the first available URL method {% endcomment %}
+                  {% if audio_url_method2 != blank %}
+                    {% assign audio_url = audio_url_method2 %}
+                  {% elsif audio_url_method1 != blank %}
+                    {% assign audio_url = audio_url_method1 %}
+                  {% else %}
+                    {% assign audio_url = audio_url_method3 %}
+                  {% endif %}
+
+                  {% comment %} Ensure HTTPS protocol {% endcomment %}
+                  {% if audio_url contains '//' and audio_url contains 'fosterui.com' %}
+                    {% assign audio_url = 'https:' | append: audio_url %}
+                  {% endif %}
+
+                  {% comment %} Render audio player with comprehensive format support {% endcomment %}
+                  <audio id="audio-player-{{ article.id }}" controls preload="metadata" crossorigin="anonymous">
+                    <source src="{{ audio_url }}" type="audio/m4a">
+                    <source src="{{ audio_url }}" type="audio/x-m4a">
+                    <source src="{{ audio_url }}" type="audio/mp4">
+                    <source src="{{ audio_url }}" type="audio/mpeg">
+                    <source src="{{ audio_url }}" type="audio/wav">
+                    Your browser does not support the audio element.
+                  </audio>
+
+                  {% comment %} Enhanced JavaScript error handling and debugging {% endcomment %}
+                  <script>
+                    document.addEventListener('DOMContentLoaded', function () {
+                      const audio = document.getElementById('audio-player-{{ article.id }}');
+                      if (!audio) {
+                        console.error('Audio element not found!');
+                        return;
+                      }
+                      const audioContainer = audio.closest('.article-audio-player');
+                      let errorShown = false;
+
+                      // Function to show error message
+                      function showError(message) {
+                        if (!errorShown) {
+                          errorShown = true;
+                          const errorDiv = document.createElement('div');
+                          errorDiv.style.cssText =
+                            'padding: 1rem; background: #fee; border: 1px solid #fcc; border-radius: 4px; color: #c33; margin-top: 1rem;';
+                          errorDiv.innerHTML =
+                            '<strong>Audio Error:</strong> ' +
+                            message +
+                            '<br><small>Please try re-uploading the audio file or contact support.</small>';
+                          audioContainer.appendChild(errorDiv);
+                        }
+                      }
+
+                      // Handle various audio events
+                      audio.addEventListener('error', function (e) {
+                        console.error('Audio error event:', e);
+                        showError('The audio file could not be loaded.');
+                      });
+
+                      let audioLoaded = false;
+
+                      audio.addEventListener('loadstart', function () {
+                        console.log('Audio loading started for URL:', audio.currentSrc || '{{ audio_url }}');
+                      });
+
+                      audio.addEventListener('loadeddata', function () {
+                        audioLoaded = true;
+                        console.log('Audio data loaded successfully');
+                      });
+
+                      audio.addEventListener('canplay', function () {
+                        audioLoaded = true;
+                        console.log('Audio ready to play');
+                      });
+
+                      // Only show error if audio truly fails to load
+                      setTimeout(function () {
+                        if (audio.readyState === 0 && !audioLoaded) {
+                          console.error('Audio failed to load after timeout');
+                          showError('Audio file is not accessible at the current URL.');
+                        }
+                      }, 8000);
+                    });
+                  </script>
+                </div>
+              </div>
+            {% endif %}
+
+            {% comment %} --- AUTHOR BIO BLOCK --- {% endcomment %}
+          {% when 'author_bio' %}
+            <div class="article-author-cta">
+              {% if block.settings.author_cta_headshot != blank %}
+                <div class="article-author-cta__image">
+                  <img
+                    src="{{ block.settings.author_cta_headshot | image_url: width: 100, height: 100 }}"
+                    alt="{{ article.author }}"
+                    class="author-cta__headshot"
+                    width="100"
+                    height="100"
+                    loading="lazy"
+                  >
+                </div>
+              {% endif %}
+              <div class="article-author-cta__content">
+                <div class="article-author-cta__bio">
+                  <h3>{{ block.settings.author_cta_title }}</h3>
+                  <p>{{ block.settings.author_cta_text }}</p>
+                </div>
+                {% if block.settings.author_cta_button_label != blank
+                  and block.settings.author_cta_button_link != blank
+                %}
+                  <div class="article-author-cta__action">
+                    <a href="{{ block.settings.author_cta_button_link }}" class="btn-brand btn-brand-primary">
+                      {{ block.settings.author_cta_button_label }}
+                    </a>
+                  </div>
+                {% endif %}
+              </div>
+            </div>
+
+            {% comment %} --- ENHANCED CTA BLOCK (New) --- {% endcomment %}
+          {% when 'enhanced_cta' %}
+            <div class="article-enhanced-cta {{ block.settings.style }}">
+              {% if block.settings.content != blank %}
+                <div class="article-enhanced-cta__content rte">
+                  {{ block.settings.content }}
+                </div>
+              {% endif %}
+              <div class="article-enhanced-cta__buttons">
+                {% if block.settings.button_label != blank and block.settings.button_link != blank %}
+                  <a href="{{ block.settings.button_link }}" class="btn-brand btn-brand-primary">
+                    {{ block.settings.button_label }}
+                  </a>
+                {% endif %}
+                {% if block.settings.secondary_button_label != blank
+                  and block.settings.secondary_button_link != blank
+                %}
+                  <a href="{{ block.settings.secondary_button_link }}" class="btn-brand btn-brand-secondary">
+                    {{ block.settings.secondary_button_label }}
+                  </a>
+                {% endif %}
+              </div>
+            </div>
+
+            {% comment %} --- CTA BUTTON BLOCK --- {% endcomment %}
+          {% when 'cta_button' %}
+            <div class="article-cta-button {{ block.settings.content_alignment }}">
+              {% if block.settings.button_label != blank and block.settings.button_link != blank %}
+                <a href="{{ block.settings.button_link }}" class="btn-brand btn-brand-primary">
+                  {{ block.settings.button_label }}
+                </a>
+              {% endif %}
+              {% if block.settings.secondary_button_label != blank and block.settings.secondary_button_link != blank %}
+                <a href="{{ block.settings.secondary_button_link }}" class="btn-brand btn-brand-secondary">
+                  {{ block.settings.secondary_button_label }}
+                </a>
+              {% endif %}
+            </div>
+        {% endcase %}
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Article Content Wrapper",
+  "settings": [
+    {
+      "type": "text",
+      "id": "custom_css",
+      "label": "Custom CSS"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "rich_text",
+      "name": "Rich Text Content",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content"
+        },
+        {
+          "type": "checkbox",
+          "id": "is_references",
+          "label": "Style as References (Smaller Text)",
+          "default": false
+        },
+        {
+          "type": "select",
+          "id": "content_alignment",
+          "options": [
+            {
+              "value": "text-left",
+              "label": "Left"
+            },
+            {
+              "value": "text-center",
+              "label": "Center"
+            },
+            {
+              "value": "text-right",
+              "label": "Right"
+            }
+          ],
+          "default": "text-left",
+          "label": "Content Alignment"
+        }
+      ]
+    },
+    {
+      "type": "enhanced_cta",
+      "name": "Enhanced CTA-Callout Box",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Content"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "CTA Content (Headings, Text, Lists)",
+          "info": "Use H3/H4 for titles. Bullet lists will automatically get checkmarks."
+        },
+        {
+          "type": "header",
+          "content": "Primary Button"
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "Primary Button Label",
+          "default": "Take Action Now"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Primary Button Link"
+        },
+        {
+          "type": "header",
+          "content": "Secondary Button"
+        },
+        {
+          "type": "text",
+          "id": "secondary_button_label",
+          "label": "Secondary Button Label"
+        },
+        {
+          "type": "url",
+          "id": "secondary_button_link",
+          "label": "Secondary Button Link"
+        },
+        {
+          "type": "header",
+          "content": "Appearance"
+        },
+        {
+          "type": "select",
+          "id": "style",
+          "options": [
+            {
+              "value": "style-card",
+              "label": "Card Style (Subtle)"
+            },
+            {
+              "value": "style-contrast",
+              "label": "Contrast Style (Bold)"
+            }
+          ],
+          "default": "style-card",
+          "label": "Visual Style"
+        }
+      ]
+    },
+    {
+      "type": "pillar_callout",
+      "name": "Pillar Link Callout",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "pillar_link_text",
+          "label": "Intro Text",
+          "default": "This article is part of my comprehensive resource:"
+        },
+        {
+          "type": "text",
+          "id": "pillar_link_title",
+          "label": "Pillar Page Title",
+          "default": "The Definitive Guide to AI-Powered B2B on Shopify Plus."
+        },
+        {
+          "type": "url",
+          "id": "pillar_link_url",
+          "label": "Pillar Page URL"
+        }
+      ]
+    },
+    {
+      "type": "audio_player",
+      "name": "Audio Player",
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "The audio player automatically appears if the 'Article Audio Overview' metafield (custom.audio_overview) is populated on the blog post."
+        },
+        {
+          "type": "text",
+          "id": "audio_player_label",
+          "label": "Audio Player Label",
+          "default": "Listen to the Audio Overview:"
+        }
+      ]
+    },
+    {
+      "type": "author_bio",
+      "name": "Author Bio & CTA",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "author_cta_headshot",
+          "label": "Author Headshot (Bio)"
+        },
+        {
+          "type": "text",
+          "id": "author_cta_title",
+          "label": "Title",
+          "default": "About the Author & Expert"
+        },
+        {
+          "type": "textarea",
+          "id": "author_cta_text",
+          "label": "Bio/Pitch Text",
+          "default": "With over a decade of specialized experience deep within the Shopify ecosystem, I am a principal consultant focused exclusively on transforming DTC stores into AI-powered B2B wholesale engines. My methodology leverages this deep expertise to deliver specialized revenue acceleration, velocity, and precision."
+        },
+        {
+          "type": "text",
+          "id": "author_cta_button_label",
+          "label": "Button Label",
+          "default": "Book My $1,950 Roadmap"
+        },
+        {
+          "type": "url",
+          "id": "author_cta_button_link",
+          "label": "Button Link"
+        }
+      ]
+    },
+    {
+      "type": "cta_button",
+      "name": "CTA Button (Simple)",
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "NOTE: This is for simple, unstyled buttons. For prominent CTAs with text, use the 'Enhanced CTA (Callout Box)' block instead."
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "Primary Button Label",
+          "default": "Click me"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Primary Button Link"
+        },
+        {
+          "type": "text",
+          "id": "secondary_button_label",
+          "label": "Secondary Button Label"
+        },
+        {
+          "type": "url",
+          "id": "secondary_button_link",
+          "label": "Secondary Button Link"
+        },
+        {
+          "type": "select",
+          "id": "content_alignment",
+          "options": [
+            {
+              "value": "text-left",
+              "label": "Left"
+            },
+            {
+              "value": "text-center",
+              "label": "Center"
+            },
+            {
+              "value": "text-right",
+              "label": "Right"
+            }
+          ],
+          "default": "text-center",
+          "label": "Button Alignment"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "B2B Article Content Wrapper"
+    }
+  ]
+}
+{% endschema %}

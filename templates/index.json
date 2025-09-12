@@ -31,14 +31,14 @@
         "heading_gf3cPh": {
           "type": "heading",
           "settings": {
-            "heading": "Is Your Wholesale Channel Built to Scale or Built to Fail?",
+            "heading": "The $2.61T U.S. B2B Ecommerce Wave Your Manual Processes Are Missing",
             "heading_size": "h1"
           }
         },
         "text_db6PAV": {
           "type": "text",
           "settings": {
-            "text": "<p>Many successful DTC brands hit a revenue ceiling. When they attempt to expand into wholesale, they rely on outdated, manual processes that kill margins, frustrate B2B buyers, and prevent scalable growth. If you recognize these bottlenecks, your operation is leaking revenue.</p>"
+            "text": "<p>The shift to B2B ecommerce isn’t a future trend—it’s here. In 2024, <strong>U.S.</strong> B2B ecommerce is <strong>projected</strong> to total <strong>$2.61 trillion</strong>, growing about <strong>8× faster</strong> than total B2B sales. Globally, B2B ecommerce is on track to expand at a <strong>mid-teens CAGR (~14–15%)</strong> through 2030.</p><p>Yet many successful DTC brands are missing this revenue. When they move into wholesale, they rely on manual, offline workflows that destroy margins, frustrate B2B buyers, and block scale. If you recognize these bottlenecks, your operation can’t scale—and you’re leaving seven-figure revenue on the table.</p>"
           }
         }
       },
@@ -452,6 +452,7 @@
         "paragraph_RMfxGn",
         "email_form_43Ljn9"
       ],
+      "disabled": true,
       "name": "t:sections.newsletter.presets.name",
       "settings": {
         "color_scheme": "",
@@ -459,6 +460,41 @@
         "custom_css_class": "landing-page-customization",
         "padding_top": 40,
         "padding_bottom": 0
+      }
+    },
+    "newsletter_FaJz7k": {
+      "type": "newsletter",
+      "blocks": {
+        "heading_fiVaTz": {
+          "type": "heading",
+          "settings": {
+            "heading": "Subscribe to the \"B2B AI Edge\" Newsletter",
+            "heading_size": "h1"
+          }
+        },
+        "paragraph_W8Pxqj": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Get specialized insights and implementation tactics for Shopify merchants, delivered weekly.</p>"
+          }
+        },
+        "email_form_FFpb3T": {
+          "type": "email_form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "heading_fiVaTz",
+        "paragraph_W8Pxqj",
+        "email_form_FFpb3T"
+      ],
+      "name": "t:sections.newsletter.presets.name",
+      "settings": {
+        "color_scheme": "",
+        "full_width": false,
+        "custom_css_class": "landing-page-customization fui-newsletter",
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     },
     "newsletter_section_izCYan": {
@@ -482,6 +518,7 @@
     "newsletter_cQ4kTJ",
     "homepage_faq_k4mwX6",
     "newsletter_HPecCR",
+    "newsletter_FaJz7k",
     "newsletter_section_izCYan"
   ]
 }
