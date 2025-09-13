@@ -38,7 +38,7 @@
         "text_db6PAV": {
           "type": "text",
           "settings": {
-            "text": "<p>The shift to B2B ecommerce isn’t a future trend—it’s here. In 2024, <strong>U.S.</strong> B2B ecommerce is <strong>projected</strong> to total <strong>$2.61 trillion</strong>, growing about <strong>8× faster</strong> than total B2B sales. Globally, B2B ecommerce is on track to expand at a <strong>mid-teens CAGR (~14–15%)</strong> through 2030.</p><p>Yet many successful DTC brands are missing this revenue. When they move into wholesale, they rely on manual, offline workflows that destroy margins, frustrate B2B buyers, and block scale. If you recognize these bottlenecks, your operation can’t scale—and you’re leaving seven-figure revenue on the table.</p>"
+            "text": "<p>The shift to B2B ecommerce isn’t a future trend—it’s here. In <strong>2024</strong>, U.S. B2B ecommerce is <strong>projected to total $2.61Tand grow about 8× faster than total B2B sales[1][2]</strong>. Globally, B2B ecommerce is on track to expand at a <strong>mid‑teens CAGR (~14–15%) through 2030[3][4]</strong>.</p><p>Yet many successful DTC brands are missing this revenue. When they move into wholesale, they rely on manual, offline workflows that destroy margins, frustrate B2B buyers, and block scale. If you recognize these bottlenecks, your operation can’t scale—and you’re leaving seven-figure revenue on the table.</p>"
           }
         }
       },
@@ -52,9 +52,37 @@
         "content_alignment": "center",
         "color_scheme": "scheme-1",
         "full_width": true,
-        "custom_rt_class": "",
+        "is_references": false,
+        "custom_class": "",
+        "custom_class_heading": "",
         "padding_top": 96,
-        "padding_bottom": 36
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_tmjD6r": {
+      "type": "rich-text",
+      "blocks": {
+        "text_Jyxt3y": {
+          "type": "text",
+          "settings": {
+            "text": "<p><em>Notes:</em><br/><strong>[1]</strong> and <strong>[2]</strong> both cover the <strong>$2.61T</strong> projection and the <strong>“eight times faster”</strong> comparison. <strong>[3]</strong> anchors <strong>~14–15% CAGR to 2030</strong>; <strong>[4]</strong> corroborates with official U.S. government (ITA) forecasting language (14.5% CAGR to 2026), supporting the “mid‑teens” phrasing.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_Jyxt3y"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "is_references": false,
+        "custom_class": "fui-outcome-micro-note",
+        "custom_class_heading": "",
+        "padding_top": 0,
+        "padding_bottom": 20
       }
     },
     "multicolumn_w9J7pE": {
@@ -123,7 +151,7 @@
           "type": "step",
           "settings": {
             "step_title": "Proprietary AI Audit System",
-            "step_text": "I leverage my proprietary audit system, which utilizes the latest AI models for analysis, to rapidly identify B2B bottlenecks and operational inefficiencies that traditional consultants often miss."
+            "step_text": "I use my proprietary 5-Day Audit—an integrated methodology combining specialized AI analysis (using my custom-tuned models for technical architecture and revenue modeling) and 10 years of Shopify experience—to identify bottlenecks that generic agencies miss."
           }
         },
         "step_7FwHmK": {
@@ -149,7 +177,7 @@
       "name": "B2B Methodology Steps",
       "settings": {
         "title": "My Methodology: Specialized Revenue Acceleration",
-        "text": "<p>I am not a generic “Shopify developer.” I am a specialized revenue accelerator focusing on the two most critical growth levers today: <strong>B2B expansion and AI integration.</strong></p><p>I don't just connect apps; <strong>I professionalize your entire wholesale channel. </strong>My methodology integrates the robustness of the Shopify B2B suite with the precision of strategic AI automation.</p>",
+        "text": "<p>I leverage a decade of Shopify development and consulting expertise to act as a specialized revenue accelerator. My focus is on the two most critical growth levers today: <strong>B2B expansion and AI integration</strong>.</p><p>I don't just connect apps; <strong>I professionalize your entire wholesale channel. </strong>My methodology integrates the robustness of the Shopify B2B suite with the precision of strategic AI automation.</p>",
         "execution_title": "How I Execute"
       }
     },
@@ -232,20 +260,106 @@
         "content_alignment": "center",
         "color_scheme": "",
         "full_width": false,
-        "custom_rt_class": "rich-text--services",
-        "padding_top": 40,
+        "is_references": false,
+        "custom_class": "fui-outcome-micro-note",
+        "custom_class_heading": "",
+        "padding_top": 0,
         "padding_bottom": 52
+      }
+    },
+    "fui_testimonial_XFmQDd": {
+      "type": "fui-testimonial",
+      "blocks": {
+        "logo_image_MiBnbV": {
+          "type": "logo_image",
+          "settings": {}
+        },
+        "logo_image_kk3xHN": {
+          "type": "logo_image",
+          "settings": {}
+        },
+        "logo_image_b8UrD7": {
+          "type": "logo_image",
+          "settings": {}
+        },
+        "shopify_badge_XHtWYM": {
+          "type": "shopify_badge",
+          "settings": {
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo_image_MiBnbV",
+        "logo_image_kk3xHN",
+        "logo_image_b8UrD7",
+        "shopify_badge_XHtWYM"
+      ],
+      "disabled": true,
+      "name": "B2B Testimonial",
+      "settings": {
+        "headline": "Proven Results for Shopify Plus Merchants",
+        "quote_text": "<p>The proprietary AI audit identified bottlenecks our previous agency completely missed. The implementation sprint transformed our manual wholesale process into a frictionless revenue engine in just four weeks. This is specialized expertise you won't find elsewhere.</p>",
+        "attribution": "— COO, $10M Shopify Plus Brand (Placeholder)",
+        "color_scheme": "",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "fui_representative_outcome_Rpy4zq": {
+      "type": "fui-representative-outcome",
+      "blocks": {
+        "result_item_tyqzDa": {
+          "type": "result_item",
+          "settings": {
+            "text": "Eliminate manual order entry and quoting friction"
+          }
+        },
+        "result_item_Raxctj": {
+          "type": "result_item",
+          "settings": {
+            "text": "Streamline net terms, PO approvals, and reorders"
+          }
+        },
+        "result_item_qf6FPX": {
+          "type": "result_item",
+          "settings": {
+            "text": "Connect ERP/3PL for accurate pricing, inventory, and invoicing"
+          }
+        },
+        "result_item_JTfgTm": {
+          "type": "result_item",
+          "settings": {
+            "text": "Converting manual, high-friction processes into a seamless, self-service wholesale portal"
+          }
+        }
+      },
+      "block_order": [
+        "result_item_tyqzDa",
+        "result_item_Raxctj",
+        "result_item_qf6FPX",
+        "result_item_JTfgTm"
+      ],
+      "name": "B2B Rep Outcome",
+      "settings": {
+        "headline": "What Success Looks Like",
+        "body_text": "<p>Our B2B & AI Roadmap followed by a 4-week Implementation Sprint is designed to identify bottlenecks missed by prior agencies, move manual wholesale tasks into a frictionless flow, and stand up a revenue engine in under 30 days.</p>",
+        "micro_note": "<p>Representative outcome based on my methodology; actual results vary by merchant, scope, and data quality.</p>",
+        "color_scheme": "",
+        "padding_top": 100,
+        "padding_bottom": 100
       }
     },
     "about_principal_LKJFK6": {
       "type": "about-principal",
       "name": "B2B About Principal",
       "settings": {
+        "headshot_image": "shopify://shop_images/robert-profile-blazer.png",
         "intro_title": "Meet Your B2B Growth Partner",
         "intro_subtitle": "I've spent a decade in the Shopify trenches. Now, I'm focused exclusively on your B2B future.",
-        "bio_text": "<p>I'm Robert Foster, a founder & Shopify Plus consultant, as well as an expert Shopify Developer—not a large agency where your project gets handed off to junior staff.</p><p>After 10+ years in the ecosystem, I’ve deliberately narrowed my niche to focus on the two most critical growth levers in 2025: <strong>B2B expansion and AI integration.</strong></p><p>When you hire me, you get <em>me</em>—ensuring direct, senior-level strategy and execution throughout our engagement. My reputation is built on delivering results, not just code.</p><p><a href=\"/pages/contact\" title=\"Contact\">Contact Me</a></p>",
+        "bio_text": "<p>I'm Robert Foster, a founder & Shopify Plus consultant, as well as an expert Shopify Developer—not a large agency where your project gets handed off to junior staff.</p><p>After 10+ years building high-volume Shopify stores and guiding DTC brands through every technical challenge imaginable, I saw one obstacle coming up again and again: B2B expansion and AI integration. <br/><br/>While my career started in Shopify development, I’ve helped clients bridge wholesale gaps—and realized this is the highest-leverage opportunity most established brands are overlooking. That’s why FosterUI now exists: to partner directly with founders ready to go all-in on B2B and automation, and to show just how seamless the transition can be—with the right strategy.</p><p>When you hire me, you get me—ensuring direct, senior-level strategy and execution throughout our engagement. My reputation is built on delivering results, not just code.</p><p>— Robert Foster</p><p><a href=\"/pages/contact\" title=\"Contact\">Contact Me</a></p>",
         "highlight_title": "My Advantage: Velocity and Precision",
-        "highlight_text": "<p>My advantage isn't just access to advanced AI like Gemini and Claude; it's the proprietary methodology I've built to apply them. My system analyzes, architects, and executes strategies with a velocity that simulates a 3-5 person team.</p><p>I don't believe in endless development cycles. I execute rapid, strategic implementation sprints focused on delivering quantifiable revenue lift.</p>"
+        "highlight_text": "<p>My advantage lies in the combination of deep Shopify expertise and execution velocity. I utilize my own advanced AI stack (Gemini, Claude, Perplexity) to analyze and architect strategies faster. <strong>But AI is only as effective as the expert directing it—my 10 years of pattern recognition in the DTC space ensures the strategies are technically sound and built for scale.</strong></p><p>I don't believe in endless development cycles. I execute rapid, strategic implementation sprints focused on delivering quantifiable revenue lift.</p>"
       }
     },
     "contact_split_hybrid_YMBRY8": {
@@ -253,7 +367,7 @@
       "name": "B2B Contact Split (Hybrid)",
       "settings": {
         "title": "Ready to Transform Your Wholesale Channel into an AI-Powered Powerhouse?",
-        "text": "<p>Don't let manual processes stunt your growth. If you are a Shopify Plus merchant between $1M-$15M GMV, the Roadmap is your first step.</p><h3>What You Get in 5 Days:</h3><ul><li>A clear 90-Day Implementation Plan</li><li>A tailored Revenue Impact Model</li><li>A customized AI Opportunity Matrix</li></ul><p>If you prefer a quick overview first, request a personalized video audit, and I will send you a 5-minute Loom video highlighting specific bottlenecks in your current setup.</p>",
+        "text": "<p>Don't let manual processes stunt your growth. If you are a Shopify Plus merchant between $1M-$15M GMV, the Roadmap is your first step.</p><h3>What You Get in 5 Days:</h3><ul><li>A clear 90-Day Implementation Plan</li><li>The 'Money Slide'—a tailored Revenue Impact Model that quantifies the exact dollar value of automating <em>your</em> specific bottlenecks.</li><li>A customized AI Opportunity Matrix</li></ul><p>If you prefer a quick overview first, request a personalized video audit, and I will send you a 5-minute Loom video highlighting specific bottlenecks in your current setup.</p>",
         "use_hubspot": false,
         "native_form_title": "Book Your Roadmap or Request Audit",
         "roadmap_title": "The Essential First Step",
@@ -507,10 +621,13 @@
   "order": [
     "hero_b2b_ai_LgcCEn",
     "rich_text_KmpwiU",
+    "rich_text_tmjD6r",
     "multicolumn_w9J7pE",
     "methodology_steps_EGJEVf",
     "service_tiers_8jzFQk",
     "rich_text_PKaryz",
+    "fui_testimonial_XFmQDd",
+    "fui_representative_outcome_Rpy4zq",
     "about_principal_LKJFK6",
     "contact_split_hybrid_YMBRY8",
     "multicolumn_9JGMiV",
