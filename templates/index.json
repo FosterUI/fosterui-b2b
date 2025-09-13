@@ -151,7 +151,7 @@
           "type": "step",
           "settings": {
             "step_title": "Proprietary AI Audit System",
-            "step_text": "I leverage my proprietary audit system, which utilizes the latest AI models for analysis, to rapidly identify B2B bottlenecks and operational inefficiencies that traditional consultants often miss."
+            "step_text": "I use my proprietary 5-Day Audit—an integrated methodology combining specialized AI analysis (using my custom-tuned models for technical architecture and revenue modeling) and 10 years of Shopify experience—to identify bottlenecks that generic agencies miss."
           }
         },
         "step_7FwHmK": {
@@ -177,7 +177,7 @@
       "name": "B2B Methodology Steps",
       "settings": {
         "title": "My Methodology: Specialized Revenue Acceleration",
-        "text": "<p>I am not a generic “Shopify developer.” I am a specialized revenue accelerator focusing on the two most critical growth levers today: <strong>B2B expansion and AI integration.</strong></p><p>I don't just connect apps; <strong>I professionalize your entire wholesale channel. </strong>My methodology integrates the robustness of the Shopify B2B suite with the precision of strategic AI automation.</p>",
+        "text": "<p>I leverage a decade of Shopify development and consulting expertise to act as a specialized revenue accelerator. My focus is on the two most critical growth levers today: <strong>B2B expansion and AI integration</strong>.</p><p>I don't just connect apps; <strong>I professionalize your entire wholesale channel. </strong>My methodology integrates the robustness of the Shopify B2B suite with the precision of strategic AI automation.</p>",
         "execution_title": "How I Execute"
       }
     },
@@ -357,9 +357,9 @@
         "headshot_image": "shopify://shop_images/robert-profile-blazer.png",
         "intro_title": "Meet Your B2B Growth Partner",
         "intro_subtitle": "I've spent a decade in the Shopify trenches. Now, I'm focused exclusively on your B2B future.",
-        "bio_text": "<p>I'm Robert Foster, a founder & Shopify Plus consultant, as well as an expert Shopify Developer—not a large agency where your project gets handed off to junior staff.</p><p><em>After 10+ years building high-volume Shopify stores and guiding DTC brands through every technical challenge imaginable, I saw one obstacle coming up again and again: B2B expansion and AI integration. <br/><br/>While my career started in Shopify development, I’ve helped clients bridge wholesale gaps—and realized this is the highest-leverage opportunity most established brands are overlooking. That’s why FosterUI now exists: to partner directly with founders ready to go all-in on B2B and automation, and to show just how seamless the transition can be—with the right strategy.</em></p><p>When you hire me, you get <em>me</em>—ensuring direct, senior-level strategy and execution throughout our engagement. My reputation is built on delivering results, not just code.</p><p>— Robert Foster</p><p><a href=\"/pages/contact\" title=\"Contact\">Contact Me</a></p>",
+        "bio_text": "<p>I'm Robert Foster, a founder & Shopify Plus consultant, as well as an expert Shopify Developer—not a large agency where your project gets handed off to junior staff.</p><p>After 10+ years building high-volume Shopify stores and guiding DTC brands through every technical challenge imaginable, I saw one obstacle coming up again and again: B2B expansion and AI integration. <br/><br/>While my career started in Shopify development, I’ve helped clients bridge wholesale gaps—and realized this is the highest-leverage opportunity most established brands are overlooking. That’s why FosterUI now exists: to partner directly with founders ready to go all-in on B2B and automation, and to show just how seamless the transition can be—with the right strategy.</p><p>When you hire me, you get me—ensuring direct, senior-level strategy and execution throughout our engagement. My reputation is built on delivering results, not just code.</p><p>— Robert Foster</p><p><a href=\"/pages/contact\" title=\"Contact\">Contact Me</a></p>",
         "highlight_title": "My Advantage: Velocity and Precision",
-        "highlight_text": "<p>My advantage isn't just access to advanced AI like Gemini and Claude; it's the proprietary methodology I've built to apply them. My system analyzes, architects, and executes strategies with a velocity that simulates a 3-5 person team.</p><p>I don't believe in endless development cycles. I execute rapid, strategic implementation sprints focused on delivering quantifiable revenue lift.</p>"
+        "highlight_text": "<p>My advantage lies in the combination of deep Shopify expertise and execution velocity. I utilize my own advanced AI stack (Gemini, Claude, Perplexity) to analyze and architect strategies faster. <strong>But AI is only as effective as the expert directing it—my 10 years of pattern recognition in the DTC space ensures the strategies are technically sound and built for scale.</strong></p><p>I don't believe in endless development cycles. I execute rapid, strategic implementation sprints focused on delivering quantifiable revenue lift.</p>"
       }
     },
     "contact_split_hybrid_YMBRY8": {
@@ -367,7 +367,7 @@
       "name": "B2B Contact Split (Hybrid)",
       "settings": {
         "title": "Ready to Transform Your Wholesale Channel into an AI-Powered Powerhouse?",
-        "text": "<p>Don't let manual processes stunt your growth. If you are a Shopify Plus merchant between $1M-$15M GMV, the Roadmap is your first step.</p><h3>What You Get in 5 Days:</h3><ul><li>A clear 90-Day Implementation Plan</li><li>A tailored Revenue Impact Model</li><li>A customized AI Opportunity Matrix</li></ul><p>If you prefer a quick overview first, request a personalized video audit, and I will send you a 5-minute Loom video highlighting specific bottlenecks in your current setup.</p>",
+        "text": "<p>Don't let manual processes stunt your growth. If you are a Shopify Plus merchant between $1M-$15M GMV, the Roadmap is your first step.</p><h3>What You Get in 5 Days:</h3><ul><li>A clear 90-Day Implementation Plan</li><li>The 'Money Slide'—a tailored Revenue Impact Model that quantifies the exact dollar value of automating <em>your</em> specific bottlenecks.</li><li>A customized AI Opportunity Matrix</li></ul><p>If you prefer a quick overview first, request a personalized video audit, and I will send you a 5-minute Loom video highlighting specific bottlenecks in your current setup.</p>",
         "use_hubspot": false,
         "native_form_title": "Book Your Roadmap or Request Audit",
         "roadmap_title": "The Essential First Step",
