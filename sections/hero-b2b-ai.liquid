@@ -44,23 +44,154 @@
           style="--animation-order: 2;"
         {% endif %}
       >
-        <div class="money-slide">
-          <h3>{{ section.settings.visual_title }}</h3>
+        {% if section.settings.video_thumbnail != blank and section.settings.video_url != blank %}
           <div
-            class="money-slide-svg"
-            role="img"
-            aria-labelledby="svg-title-{{ section.id }}"
-            aria-describedby="svg-desc-{{ section.id }}"
+            class="hero-video-wrapper"
+            id="hero-video-trigger-{{ section.id }}"
+            role="button"
+            aria-label="Play Founder Greeting Video"
+            tabindex="0"
           >
-            <span id="svg-title-{{ section.id }}" hidden>{{ section.settings.visual_title }}</span>
-            <span id="svg-desc-{{ section.id }}" hidden>{{ section.settings.visual_accessibility_text }}</span>
-            {{ section.settings.visual_svg }}
+            <img
+              srcset="
+                {%- if section.settings.video_thumbnail.width >= 375 -%}{{ section.settings.video_thumbnail | image_url: width: 375 }} 375w,{%- endif -%}
+                {%- if section.settings.video_thumbnail.width >= 550 -%}{{ section.settings.video_thumbnail | image_url: width: 550 }} 550w,{%- endif -%}
+                {%- if section.settings.video_thumbnail.width >= 750 -%}{{ section.settings.video_thumbnail | image_url: width: 750 }} 750w,{%- endif -%}
+                {%- if section.settings.video_thumbnail.width >= 1100 -%}{{ section.settings.video_thumbnail | image_url: width: 1100 }} 1100w,{%- endif -%}
+              "
+              src="{{ section.settings.video_thumbnail | image_url: width: 800 }}"
+              alt="{{ section.settings.video_thumbnail.alt | default: 'Founder Robert Foster' | escape }}"
+              width="{{ section.settings.video_thumbnail.width }}"
+              height="{{ section.settings.video_thumbnail.height }}"
+              class="hero-video-thumbnail"
+              loading="eager"
+            >
+            <div class="hero-video-play-button">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48" fill="currentColor">
+                <path d="M8 5v14l11-7z"/>
+              </svg>
+            </div>
           </div>
-        </div>
+          {% if section.settings.video_caption != blank %}
+            <p class="hero-video-caption">{{ section.settings.video_caption }}</p>
+          {% endif %}
+        {% elsif section.settings.video_thumbnail == blank %}
+          <div class="hero-video-wrapper hero-video-placeholder">
+            {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+          </div>
+        {% endif %}
       </div>
     </div>
   </div>
 </div>
+
+<div
+  class="hero-video-lightbox"
+  id="hero-video-lightbox-{{ section.id }}"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="hero-video-title-{{ section.id }}"
+>
+  <div class="hero-video-lightbox-content">
+    <h2 id="hero-video-title-{{ section.id }}" class="visually-hidden">Founder Greeting Video</h2>
+    <button class="hero-video-lightbox-close" id="hero-video-close-{{ section.id }}" aria-label="Close video">
+      &times;
+    </button>
+    <div class="hero-video-container"></div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const sectionId = '{{ section.id }}';
+    const trigger = document.getElementById('hero-video-trigger-' + sectionId);
+    const lightbox = document.getElementById('hero-video-lightbox-' + sectionId);
+    const closeBtn = document.getElementById('hero-video-close-' + sectionId);
+
+    // Exit early if elements don't exist (e.g. user didn't configure thumbnail/URL)
+    if (!trigger || !lightbox) return;
+
+    const videoContainer = lightbox.querySelector('.hero-video-container');
+    const videoUrl = '{{ section.settings.video_url }}';
+
+    if (!videoUrl || videoUrl === '') return;
+
+    // Function to generate embed URL based on provider
+    function getEmbedUrl(url) {
+      // Handle YouTube
+      if (url.includes('youtube.com') || url.includes('youtu.be')) {
+        let videoId = '';
+        if (url.includes('v=')) {
+          videoId = url.split('v=')[1].split('&')[0];
+        } else if (url.includes('youtu.be/')) {
+          videoId = url.split('youtu.be/')[1].split('?')[0];
+        }
+        if (videoId) {
+          // Autoplay=1 is crucial for the lightbox experience
+          return `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1`;
+        }
+      }
+
+      // Handle Vimeo (using regex for robustness)
+      if (url.includes('vimeo.com')) {
+        const match = url.match(/vimeo\.com\/(\d+)/);
+        if (match && match[1]) {
+          return `https://player.vimeo.com/video/${match[1]}?autoplay=1`;
+        }
+      }
+
+      // Fallback for direct links or already formatted embed URLs
+      return url;
+    }
+
+    // Function to open lightbox and load video
+    function openLightbox() {
+      const embedUrl = getEmbedUrl(videoUrl);
+
+      // Inject the iframe dynamically
+      videoContainer.innerHTML = `
+      <iframe src="${embedUrl}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen title="Founder Greeting Video"></iframe>
+    `;
+      lightbox.style.display = 'flex';
+      document.body.style.overflow = 'hidden'; // Prevent background scrolling
+      closeBtn.focus(); // Accessibility: Focus the close button
+    }
+
+    // Function to close lightbox and stop video
+    function closeLightbox() {
+      lightbox.style.display = 'none';
+      videoContainer.innerHTML = ''; // Stops the video by removing the iframe
+      document.body.style.overflow = '';
+      trigger.focus(); // Accessibility: Return focus to the trigger
+    }
+
+    // Event Listeners
+    trigger.addEventListener('click', openLightbox);
+    // Handle 'Enter' or 'Space' key press for accessibility
+    trigger.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        openLightbox();
+      }
+    });
+
+    closeBtn.addEventListener('click', closeLightbox);
+
+    // Close if clicking outside the video content (on the overlay)
+    lightbox.addEventListener('click', function (e) {
+      if (e.target === lightbox) {
+        closeLightbox();
+      }
+    });
+
+    // Close with ESC key
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && lightbox.style.display === 'flex') {
+        closeLightbox();
+      }
+    });
+  });
+</script>
 
 {% schema %}
 {
@@ -114,26 +245,25 @@
     },
     {
       "type": "header",
-      "content": "Visual (Money Slide)"
+      "content": "Founder Video"
+    },
+    {
+      "type": "image_picker",
+      "id": "video_thumbnail",
+      "label": "Video Thumbnail Image",
+      "info": "Upload a high-quality image of the founder. This acts as the portrait and the video placeholder. (Recommended: 16:9 aspect ratio)"
+    },
+    {
+      "type": "url",
+      "id": "video_url",
+      "label": "Video URL",
+      "info": "Paste the URL of the video (e.g., YouTube watch link, Vimeo link)."
     },
     {
       "type": "text",
-      "id": "visual_title",
-      "label": "Visual Title",
-      "default": "The Impact of Frictionless B2B"
-    },
-    {
-      "type": "textarea",
-      "id": "visual_accessibility_text",
-      "label": "Visual Accessibility Description",
-      "default": "A chart showing the significant revenue increase of AI-Powered B2B versus stagnant Manual Wholesale revenue."
-    },
-    {
-      "type": "html",
-      "id": "visual_svg",
-      "label": "SVG Code",
-      "info": "Paste the SVG code here.",
-      "default": "<svg width=\"100%\" height=\"200\" viewBox=\"0 0 300 200\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family: 'Inter', sans-serif;\"><line x1=\"30\" y1=\"180\" x2=\"280\" y2=\"180\" stroke=\"#ccc\" stroke-width=\"1\"/><line x1=\"30\" y1=\"20\" x2=\"30\" y2=\"180\" stroke=\"#ccc\" stroke-width=\"1\"/><text x=\"10\" y=\"25\" fill=\"#666\" font-size=\"12\">Revenue</text><path d=\"M30 140 Q 80 130, 130 135 Q 180 140, 230 138 Q 250 137, 280 138\" stroke=\"#03045E\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"5,5\"/><text x=\"50\" y=\"125\" fill=\"#03045E\" font-size=\"12\" font-weight=\"bold\">Manual Wholesale</text><path d=\"M30 140 C 80 120, 130 90, 180 70 C 230 50, 280 40\" stroke=\"#00B4D8\" stroke-width=\"3\" fill=\"none\"/><text x=\"180\" y=\"35\" fill=\"#00B4D8\" font-size=\"14\" font-weight=\"bold\">AI-Powered B2B</text></svg>"
+      "id": "video_caption",
+      "label": "Video Caption (Optional)",
+      "default": "A Personal Welcome (60s) from Robert Foster"
     }
   ],
   "presets": [

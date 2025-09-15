@@ -20,9 +20,8 @@
         "button_link_1": "/#contact",
         "button_label_2": "Request a Personalized Video Audit",
         "button_link_2": "/#contact",
-        "visual_title": "The Impact of Frictionless B2B",
-        "visual_accessibility_text": "A chart showing the significant revenue increase of AI-Powered B2B versus stagnant Manual Wholesale revenue.",
-        "visual_svg": "<svg width=\"100%\" height=\"200\" viewbox=\"0 0 300 200\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family: 'Inter', sans-serif;\"><line x1=\"30\" y1=\"180\" x2=\"280\" y2=\"180\" stroke=\"#ccc\" stroke-width=\"1\"></line><line x1=\"30\" y1=\"20\" x2=\"30\" y2=\"180\" stroke=\"#ccc\" stroke-width=\"1\"></line><text x=\"10\" y=\"25\" fill=\"#666\" font-size=\"12\">Revenue</text><path d=\"M30 140 Q 80 130, 130 135 Q 180 140, 230 138 Q 250 137, 280 138\" stroke=\"#03045E\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"5,5\"></path><text x=\"50\" y=\"125\" fill=\"#03045E\" font-size=\"12\" font-weight=\"bold\">Manual Wholesale</text><path d=\"M30 140 C 80 120, 130 90, 180 70 C 230 50, 280 40\" stroke=\"#00B4D8\" stroke-width=\"3\" fill=\"none\"></path><text x=\"180\" y=\"35\" fill=\"#00B4D8\" font-size=\"14\" font-weight=\"bold\">AI-Powered B2B</text></svg>"
+        "video_url": "",
+        "video_caption": "A Personal Welcome (60s) from Robert Foster"
       }
     },
     "rich_text_KmpwiU": {
@@ -65,7 +64,7 @@
         "text_Jyxt3y": {
           "type": "text",
           "settings": {
-            "text": "<p><em>Notes:</em><br/><strong>[1]</strong> and <strong>[2]</strong> both cover the <strong>$2.61T</strong> projection and the <strong>“eight times faster”</strong> comparison. <strong>[3]</strong> anchors <strong>~14–15% CAGR to 2030</strong>; <strong>[4]</strong> corroborates with official U.S. government (ITA) forecasting language (14.5% CAGR to 2026), supporting the “mid‑teens” phrasing.</p>"
+            "text": "<ol><li>11: <a href=\"https://www.digitalcommerce360.com/2024/05/28/b2b-ecommerce-sales-will-build-slowly-but-steadily-in-2024/\" target=\"_blank\">Digital Commerce 360, May 28, 2024</a> — $2.61T projection & “eight times faster” growth</li><li>22: <a href=\"https://www.digitalcommerce360.com/2024/04/30/b2b-ecommerce-manufacturing-distribution-2024/\" target=\"_blank\">Digital Commerce 360, Apr 30, 2024</a> — Confirms $2.61T for 2024</li><li>33: <a href=\"https://www.mordorintelligence.com/industry-reports/global-b2b-ecommerce-market\" target=\"_blank\">Mordor Intelligence (2025)</a> — Global CAGR (~14.5%) to 2030</li><li>44: <a href=\"https://www.trade.gov/ecommerce-sales-size-forecast\" target=\"_blank\">International Trade Administration (2024)</a> — Official 14.5% CAGR global forecast to 2026</li></ol>"
           }
         }
       },
@@ -75,7 +74,7 @@
       "name": "t:sections.rich-text.presets.name",
       "settings": {
         "desktop_content_position": "center",
-        "content_alignment": "center",
+        "content_alignment": "left",
         "color_scheme": "",
         "full_width": true,
         "is_references": false,
