@@ -37,7 +37,7 @@
         "text_db6PAV": {
           "type": "text",
           "settings": {
-            "text": "<p>The shift to B2B ecommerce isn’t a future trend—it’s here. In <strong>2024</strong>, U.S. B2B ecommerce is <strong>projected to total $2.61Tand grow about 8× faster than total B2B sales[1][2]</strong>. Globally, B2B ecommerce is on track to expand at a <strong>mid‑teens CAGR (~14–15%) through 2030[3][4]</strong>.</p><p>Yet many successful DTC brands are missing this revenue. When they move into wholesale, they rely on manual, offline workflows that destroy margins, frustrate B2B buyers, and block scale. If you recognize these bottlenecks, your operation can’t scale—and you’re leaving seven-figure revenue on the table.</p>"
+            "text": "<p>The shift to B2B ecommerce isn’t a future trend—it’s here. In <strong>2024</strong>, U.S. B2B ecommerce is <strong>projected to total $2.61Tand grow about 8× faster than total B2B sales[1][2]</strong>. Globally, B2B ecommerce is on track to expand at a <strong>mid‑teens CAGR (~14–15%) through 2030[3][4]</strong>.</p><p>Yet many successful DTC brands are missing this revenue. When they move into wholesale, they rely on manual, offline workflows that destroy margins, frustrate B2B buyers, and block scale. If you recognize these bottlenecks, your operation can’t scale—and you’re leaving seven-figure revenue on the table [5].</p><p>The market is shifting, but most attempts to leverage AI are failing. The media reports that 95% of enterprise AI pilots fail because they lack focus and a clear ROI—a costly mistake you can't afford to make.</p>"
           }
         }
       },
@@ -64,7 +64,7 @@
         "text_Jyxt3y": {
           "type": "text",
           "settings": {
-            "text": "<ol><li>11: <a href=\"https://www.digitalcommerce360.com/2024/05/28/b2b-ecommerce-sales-will-build-slowly-but-steadily-in-2024/\" target=\"_blank\">Digital Commerce 360, May 28, 2024</a> — $2.61T projection & “eight times faster” growth</li><li>22: <a href=\"https://www.digitalcommerce360.com/2024/04/30/b2b-ecommerce-manufacturing-distribution-2024/\" target=\"_blank\">Digital Commerce 360, Apr 30, 2024</a> — Confirms $2.61T for 2024</li><li>33: <a href=\"https://www.mordorintelligence.com/industry-reports/global-b2b-ecommerce-market\" target=\"_blank\">Mordor Intelligence (2025)</a> — Global CAGR (~14.5%) to 2030</li><li>44: <a href=\"https://www.trade.gov/ecommerce-sales-size-forecast\" target=\"_blank\">International Trade Administration (2024)</a> — Official 14.5% CAGR global forecast to 2026</li></ol>"
+            "text": "<ol><li>11: <a href=\"https://www.digitalcommerce360.com/2024/05/28/b2b-ecommerce-sales-will-build-slowly-but-steadily-in-2024/\" target=\"_blank\">Digital Commerce 360, May 28, 2024</a> — $2.61T projection & “eight times faster” growth</li><li>22: <a href=\"https://www.digitalcommerce360.com/2024/04/30/b2b-ecommerce-manufacturing-distribution-2024/\" target=\"_blank\">Digital Commerce 360, Apr 30, 2024</a> — Confirms $2.61T for 2024</li><li>33: <a href=\"https://www.mordorintelligence.com/industry-reports/global-b2b-ecommerce-market\" target=\"_blank\">Mordor Intelligence (2025)</a> — Global CAGR (~14.5%) to 2030</li><li>44: <a href=\"https://www.trade.gov/ecommerce-sales-size-forecast\" target=\"_blank\">International Trade Administration (2024)</a> — Official 14.5% CAGR global forecast to 2026</li><li>MIT NANDA — <em>The GenAI Divide: State of AI in Business 2025</em> (95% no measurable P&L impact; causes).</li></ol>"
           }
         }
       },
@@ -176,7 +176,7 @@
       "name": "B2B Methodology Steps",
       "settings": {
         "title": "My Methodology: Specialized Revenue Acceleration",
-        "text": "<p>I leverage a decade of Shopify development and consulting expertise to act as a specialized revenue accelerator. My focus is on the two most critical growth levers today: <strong>B2B expansion and AI integration</strong>.</p><p>I don't just connect apps; <strong>I professionalize your entire wholesale channel. </strong>My methodology integrates the robustness of the Shopify B2B suite with the precision of strategic AI automation.</p>",
+        "text": "<p>While 95% of corporate AI pilots fail [1], my specialized methodology delivers quantifiable B2B revenue lift on Shopify Plus.</p><p>I leverage a decade of expertise in Shopify development and consulting to act as a specialized revenue accelerator. My focus is on the two most critical growth levers today: <strong>B2B expansion and AI integration</strong>.</p><p>I don't just connect apps; <strong>I professionalize your entire wholesale channel. </strong>My methodology integrates the robustness of the Shopify B2B suite with the precision of strategic AI automation.</p><p>[1] MIT NANDA — <em>The GenAI Divide: State of AI in Business 2025</em> (95% no measurable P&L impact; causes).</p>",
         "execution_title": "How I Execute"
       }
     },
