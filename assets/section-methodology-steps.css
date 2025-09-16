@@ -42,7 +42,7 @@
     color: var(--color-brand-primary-dark);
 }
 
-.fui-methodology-micro-note {
+.fui-outcome-micro-note.fui-methodology-micro-note {
     margin-top: -8rem;
     max-width: inherit;
 }
