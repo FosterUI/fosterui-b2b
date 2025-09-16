@@ -180,32 +180,6 @@
         "execution_title": "How I Execute"
       }
     },
-    "rich_text_49bmzq": {
-      "type": "rich-text",
-      "blocks": {
-        "text_CVbejg": {
-          "type": "text",
-          "settings": {
-            "text": "<p>[1] MIT NANDA — <em>The GenAI Divide: State of AI in Business 2025</em> (95% no measurable P&L impact; causes).</p>"
-          }
-        }
-      },
-      "block_order": [
-        "text_CVbejg"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "left",
-        "color_scheme": "scheme-2",
-        "full_width": true,
-        "is_references": false,
-        "custom_class": "fui-outcome-micro-note fui-methodology-micro-note",
-        "custom_class_heading": "",
-        "padding_top": 0,
-        "padding_bottom": 52
-      }
-    },
     "service_tiers_8jzFQk": {
       "type": "service-tiers",
       "blocks": {
@@ -649,7 +623,6 @@
     "rich_text_tmjD6r",
     "multicolumn_w9J7pE",
     "methodology_steps_EGJEVf",
-    "rich_text_49bmzq",
     "service_tiers_8jzFQk",
     "rich_text_PKaryz",
     "fui_testimonial_XFmQDd",
