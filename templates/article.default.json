@@ -13,6 +13,7 @@
       "type": "article-header",
       "name": "Article Header",
       "settings": {
+        "author_headshot": "shopify://shop_images/robert-profile-blazer.png",
         "show_date": true,
         "show_read_time": true,
         "show_author": true
