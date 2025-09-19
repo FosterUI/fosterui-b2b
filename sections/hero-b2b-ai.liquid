@@ -44,25 +44,62 @@
           style="--animation-order: 2;"
         {% endif %}
       >
-        {% if section.settings.video_thumbnail != blank and section.settings.video_url != blank %}
+        {% assign video_thumbnail = section.settings.video_thumbnail %}
+        {% if video_thumbnail == blank and section.settings.video_upload != blank and section.settings.video_upload.preview_image != blank %}
+          {% assign video_thumbnail = section.settings.video_upload.preview_image %}
+        {% endif %}
+
+        {% assign has_thumbnail = false %}
+        {% if video_thumbnail != blank %}
+          {% assign has_thumbnail = true %}
+        {% endif %}
+
+        {% assign mp4_source_url = '' %}
+        {% if section.settings.video_upload != blank %}
+          {% assign mp4_sources = section.settings.video_upload.sources | where: 'format', 'mp4' %}
+          {% assign mp4_source = mp4_sources | first %}
+          {% if mp4_source %}
+            {% assign mp4_source_url = mp4_source.url %}
+          {% elsif section.settings.video_upload.sources != blank %}
+            {% assign fallback_source = section.settings.video_upload.sources | first %}
+            {% if fallback_source %}
+              {% assign mp4_source_url = fallback_source.url %}
+            {% endif %}
+          {% endif %}
+        {% endif %}
+
+        {% assign has_video_link = false %}
+        {% if section.settings.video_url != blank %}
+          {% assign has_video_link = true %}
+        {% endif %}
+
+        {% assign has_video_content = has_video_link %}
+        {% if mp4_source_url != '' %}
+          {% assign has_video_content = true %}
+        {% endif %}
+
+        {% if has_thumbnail and has_video_content %}
           <div
             class="hero-video-wrapper"
             id="hero-video-trigger-{{ section.id }}"
             role="button"
             aria-label="Play Founder Greeting Video"
             tabindex="0"
+            data-video-url="{{ section.settings.video_url | escape }}"
+            data-video-upload="{{ mp4_source_url | escape }}"
+            data-video-poster="{{ video_thumbnail | image_url: width: 1600 | escape }}"
           >
             <img
               srcset="
-                {%- if section.settings.video_thumbnail.width >= 375 -%}{{ section.settings.video_thumbnail | image_url: width: 375 }} 375w,{%- endif -%}
-                {%- if section.settings.video_thumbnail.width >= 550 -%}{{ section.settings.video_thumbnail | image_url: width: 550 }} 550w,{%- endif -%}
-                {%- if section.settings.video_thumbnail.width >= 750 -%}{{ section.settings.video_thumbnail | image_url: width: 750 }} 750w,{%- endif -%}
-                {%- if section.settings.video_thumbnail.width >= 1100 -%}{{ section.settings.video_thumbnail | image_url: width: 1100 }} 1100w,{%- endif -%}
+                {%- if video_thumbnail.width >= 375 -%}{{ video_thumbnail | image_url: width: 375 }} 375w,{%- endif -%}
+                {%- if video_thumbnail.width >= 550 -%}{{ video_thumbnail | image_url: width: 550 }} 550w,{%- endif -%}
+                {%- if video_thumbnail.width >= 750 -%}{{ video_thumbnail | image_url: width: 750 }} 750w,{%- endif -%}
+                {%- if video_thumbnail.width >= 1100 -%}{{ video_thumbnail | image_url: width: 1100 }} 1100w,{%- endif -%}
               "
-              src="{{ section.settings.video_thumbnail | image_url: width: 800 }}"
-              alt="{{ section.settings.video_thumbnail.alt | default: 'Founder Robert Foster' | escape }}"
-              width="{{ section.settings.video_thumbnail.width }}"
-              height="{{ section.settings.video_thumbnail.height }}"
+              src="{{ video_thumbnail | image_url: width: 800 }}"
+              alt="{{ video_thumbnail.alt | default: 'Founder Robert Foster' | escape }}"
+              width="{{ video_thumbnail.width }}"
+              height="{{ video_thumbnail.height }}"
               class="hero-video-thumbnail"
               loading="eager"
             >
@@ -75,7 +112,7 @@
           {% if section.settings.video_caption != blank %}
             <p class="hero-video-caption">{{ section.settings.video_caption }}</p>
           {% endif %}
-        {% elsif section.settings.video_thumbnail == blank %}
+        {% elsif video_thumbnail == blank %}
           <div class="hero-video-wrapper hero-video-placeholder">
             {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
           </div>
@@ -112,9 +149,11 @@
     if (!trigger || !lightbox) return;
 
     const videoContainer = lightbox.querySelector('.hero-video-container');
-    const videoUrl = '{{ section.settings.video_url }}';
+    const videoUrl = trigger ? trigger.getAttribute('data-video-url') || '' : '';
+    const videoUpload = trigger ? trigger.getAttribute('data-video-upload') || '' : '';
+    const videoPoster = trigger ? trigger.getAttribute('data-video-poster') || '' : '';
 
-    if (!videoUrl || videoUrl === '') return;
+    if (!videoUrl && !videoUpload) return;
 
     // Function to generate embed URL based on provider
     function getEmbedUrl(url) {
@@ -146,15 +185,33 @@
 
     // Function to open lightbox and load video
     function openLightbox() {
-      const embedUrl = getEmbedUrl(videoUrl);
-
-      // Inject the iframe dynamically
-      videoContainer.innerHTML = `
-      <iframe src="${embedUrl}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen title="Founder Greeting Video"></iframe>
-    `;
+      if (videoUpload) {
+        const posterAttr = videoPoster ? ` poster="${videoPoster}"` : '';
+        videoContainer.innerHTML = `
+        <video controls autoplay playsinline${posterAttr}>
+          <source src="${videoUpload}" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      `;
+      } else {
+        const embedUrl = getEmbedUrl(videoUrl);
+        videoContainer.innerHTML = `
+        <iframe src="${embedUrl}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen title="Founder Greeting Video"></iframe>
+      `;
+      }
       lightbox.style.display = 'flex';
       document.body.style.overflow = 'hidden'; // Prevent background scrolling
       closeBtn.focus(); // Accessibility: Focus the close button
+
+      if (videoUpload) {
+        const inlineVideo = videoContainer.querySelector('video');
+        if (inlineVideo && typeof inlineVideo.play === 'function') {
+          const playPromise = inlineVideo.play();
+          if (playPromise && typeof playPromise.catch === 'function') {
+            playPromise.catch(() => {});
+          }
+        }
+      }
     }
 
     // Function to close lightbox and stop video
@@ -254,10 +311,16 @@
       "info": "Upload a high-quality image of the founder. This acts as the portrait and the video placeholder. (Recommended: 16:9 aspect ratio)"
     },
     {
+      "type": "video",
+      "id": "video_upload",
+      "label": "Uploaded video",
+      "info": "Upload an MP4 (or MOV) file from your Shopify Files library."
+    },
+    {
       "type": "url",
       "id": "video_url",
       "label": "Video URL",
-      "info": "Paste the URL of the video (e.g., YouTube watch link, Vimeo link)."
+      "info": "Paste the URL of the video (e.g., YouTube watch link, Vimeo link). Used if no uploaded video is provided."
     },
     {
       "type": "text",
