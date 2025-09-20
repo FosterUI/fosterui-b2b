@@ -619,7 +619,7 @@
         "color_scheme": "",
         "full_width": true,
         "is_references": false,
-        "custom_class": "fui-outcome-micro-note footer-source",
+        "custom_class": "fui-outcome-micro-note",
         "custom_class_heading": "",
         "padding_top": 0,
         "padding_bottom": 100
