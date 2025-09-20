@@ -44,98 +44,102 @@
           style="--animation-order: 2;"
         {% endif %}
       >
+        {% assign visual_display = section.settings.visual_display | default: 'video' %}
 
-      <div class="money-slide">
-          <h3>{{ section.settings.visual_title }}</h3>
-          <div
-            class="money-slide-svg" 
-            role="img"
-            aria-labelledby="svg-title-{{ section.id }}"
-            aria-describedby="svg-desc-{{ section.id }}"
-          >
-            <span id="svg-title-{{ section.id }}" hidden>{{ section.settings.visual_title }}</span>
-            <span id="svg-desc-{{ section.id }}" hidden>{{ section.settings.visual_accessibility_text }}</span>
-            {{ section.settings.visual_svg }}
-          </div>
-        
-        {% assign video_thumbnail = section.settings.video_thumbnail %}
-        {% if video_thumbnail == blank and section.settings.video_upload != blank and section.settings.video_upload.preview_image != blank %}
-          {% assign video_thumbnail = section.settings.video_upload.preview_image %}
-        {% endif %}
-
-        {% assign has_thumbnail = false %}
-        {% if video_thumbnail != blank %}
-          {% assign has_thumbnail = true %}
-        {% endif %}
-
-        {% assign mp4_source_url = '' %}
-        {% if section.settings.video_upload != blank %}
-          {% assign mp4_sources = section.settings.video_upload.sources | where: 'format', 'mp4' %}
-          {% assign mp4_source = mp4_sources | first %}
-          {% if mp4_source %}
-            {% assign mp4_source_url = mp4_source.url %}
-          {% elsif section.settings.video_upload.sources != blank %}
-            {% assign fallback_source = section.settings.video_upload.sources | first %}
-            {% if fallback_source %}
-              {% assign mp4_source_url = fallback_source.url %}
-            {% endif %}
-          {% endif %}
-        {% endif %}
-
-        {% assign has_video_link = false %}
-        {% if section.settings.video_url != blank %}
-          {% assign has_video_link = true %}
-        {% endif %}
-
-        {% assign has_video_content = has_video_link %}
-        {% if mp4_source_url != '' %}
-          {% assign has_video_content = true %}
-        {% endif %}
-
-        {% if has_thumbnail and has_video_content %}
-          <div
-            class="hero-video-wrapper"
-            id="hero-video-trigger-{{ section.id }}"
-            role="button"
-            aria-label="Play Founder Greeting Video"
-            tabindex="0"
-            data-video-url="{{ section.settings.video_url | escape }}"
-            data-video-upload="{{ mp4_source_url | escape }}"
-            data-video-poster="{{ video_thumbnail | image_url: width: 1600 | escape }}"
-          >
-            <img
-              srcset="
-                {%- if video_thumbnail.width >= 375 -%}{{ video_thumbnail | image_url: width: 375 }} 375w,{%- endif -%}
-                {%- if video_thumbnail.width >= 550 -%}{{ video_thumbnail | image_url: width: 550 }} 550w,{%- endif -%}
-                {%- if video_thumbnail.width >= 750 -%}{{ video_thumbnail | image_url: width: 750 }} 750w,{%- endif -%}
-                {%- if video_thumbnail.width >= 1100 -%}{{ video_thumbnail | image_url: width: 1100 }} 1100w,{%- endif -%}
-              "
-              src="{{ video_thumbnail | image_url: width: 800 }}"
-              alt="{{ video_thumbnail.alt | default: 'Founder Robert Foster' | escape }}"
-              width="{{ video_thumbnail.width }}"
-              height="{{ video_thumbnail.height }}"
-              class="hero-video-thumbnail"
-              loading="eager"
+        {% if visual_display == 'svg' %}
+          <div class="money-slide">
+            <h3>{{ section.settings.visual_title }}</h3>
+            <div
+              class="money-slide-svg"
+              role="img"
+              aria-labelledby="svg-title-{{ section.id }}"
+              aria-describedby="svg-desc-{{ section.id }}"
             >
-            <div class="hero-video-play-button">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48" fill="currentColor">
-                <path d="M8 5v14l11-7z"/>
-              </svg>
+              <span id="svg-title-{{ section.id }}" hidden>{{ section.settings.visual_title }}</span>
+              <span id="svg-desc-{{ section.id }}" hidden>{{ section.settings.visual_accessibility_text }}</span>
+              {{ section.settings.visual_svg }}
             </div>
           </div>
-          {% if section.settings.video_caption != blank %}
-            <p class="hero-video-caption">{{ section.settings.video_caption }}</p>
+        {% else %}
+          {% assign video_thumbnail = section.settings.video_thumbnail %}
+          {% if video_thumbnail == blank and section.settings.video_upload != blank and section.settings.video_upload.preview_image != blank %}
+            {% assign video_thumbnail = section.settings.video_upload.preview_image %}
           {% endif %}
-        {% elsif video_thumbnail == blank %}
-          <div class="hero-video-wrapper hero-video-placeholder">
-            {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
-          </div>
+
+          {% assign has_thumbnail = false %}
+          {% if video_thumbnail != blank %}
+            {% assign has_thumbnail = true %}
+          {% endif %}
+
+          {% assign mp4_source_url = '' %}
+          {% if section.settings.video_upload != blank %}
+            {% assign mp4_sources = section.settings.video_upload.sources | where: 'format', 'mp4' %}
+            {% assign mp4_source = mp4_sources | first %}
+            {% if mp4_source %}
+              {% assign mp4_source_url = mp4_source.url %}
+            {% elsif section.settings.video_upload.sources != blank %}
+              {% assign fallback_source = section.settings.video_upload.sources | first %}
+              {% if fallback_source %}
+                {% assign mp4_source_url = fallback_source.url %}
+              {% endif %}
+            {% endif %}
+          {% endif %}
+
+          {% assign has_video_link = false %}
+          {% if section.settings.video_url != blank %}
+            {% assign has_video_link = true %}
+          {% endif %}
+
+          {% assign has_video_content = has_video_link %}
+          {% if mp4_source_url != '' %}
+            {% assign has_video_content = true %}
+          {% endif %}
+
+          {% if has_thumbnail and has_video_content %}
+            <div
+              class="hero-video-wrapper"
+              id="hero-video-trigger-{{ section.id }}"
+              role="button"
+              aria-label="Play Founder Greeting Video"
+              tabindex="0"
+              data-video-url="{{ section.settings.video_url | escape }}"
+              data-video-upload="{{ mp4_source_url | escape }}"
+              data-video-poster="{{ video_thumbnail | image_url: width: 1600 | escape }}"
+            >
+              <img
+                srcset="
+                  {%- if video_thumbnail.width >= 375 -%}{{ video_thumbnail | image_url: width: 375 }} 375w,{%- endif -%}
+                  {%- if video_thumbnail.width >= 550 -%}{{ video_thumbnail | image_url: width: 550 }} 550w,{%- endif -%}
+                  {%- if video_thumbnail.width >= 750 -%}{{ video_thumbnail | image_url: width: 750 }} 750w,{%- endif -%}
+                  {%- if video_thumbnail.width >= 1100 -%}{{ video_thumbnail | image_url: width: 1100 }} 1100w,{%- endif -%}
+                "
+                src="{{ video_thumbnail | image_url: width: 800 }}"
+                alt="{{ video_thumbnail.alt | default: 'Founder Robert Foster' | escape }}"
+                width="{{ video_thumbnail.width }}"
+                height="{{ video_thumbnail.height }}"
+                class="hero-video-thumbnail"
+                loading="eager"
+              >
+              <div class="hero-video-play-button">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48" fill="currentColor">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+              </div>
+            </div>
+            {% if section.settings.video_caption != blank %}
+              <p class="hero-video-caption">{{ section.settings.video_caption }}</p>
+            {% endif %}
+          {% elsif video_thumbnail == blank %}
+            <div class="hero-video-wrapper hero-video-placeholder">
+              {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+            </div>
+          {% endif %}
         {% endif %}
       </div>
     </div>
   </div>
 </div>
-
+{% if visual_display != 'svg' %}
 <div
   class="hero-video-lightbox"
   id="hero-video-lightbox-{{ section.id }}"
@@ -263,6 +267,7 @@
     });
   });
 </script>
+{% endif %}
 
 {% schema %}
 {
@@ -313,6 +318,27 @@
       "type": "url",
       "id": "button_link_2",
       "label": "Secondary button link"
+    },
+    {
+      "type": "header",
+      "content": "Visual Content"
+    },
+    {
+      "type": "select",
+      "id": "visual_display",
+      "label": "Hero visual",
+      "options": [
+        {
+          "value": "video",
+          "label": "Founder video"
+        },
+        {
+          "value": "svg",
+          "label": "\"Money Slide\" chart"
+        }
+      ],
+      "default": "video",
+      "info": "Choose which visual to display on the right side of the hero section."
     },
     {
       "type": "header",
