@@ -594,6 +594,13 @@
     "rich_text_tmjD6r": {
       "type": "rich-text",
       "blocks": {
+        "heading_dxUDhq": {
+          "type": "heading",
+          "settings": {
+            "heading": "References",
+            "heading_size": "h2"
+          }
+        },
         "text_Jyxt3y": {
           "type": "text",
           "settings": {
@@ -602,6 +609,7 @@
         }
       },
       "block_order": [
+        "heading_dxUDhq",
         "text_Jyxt3y"
       ],
       "name": "t:sections.rich-text.presets.name",
