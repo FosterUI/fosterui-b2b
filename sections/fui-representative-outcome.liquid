@@ -129,7 +129,7 @@
   <div class="page-width">
     <div class="fui-outcome-content">
       {% if section.settings.headline != blank %}
-        <h2 class="fui-outcome-section__headline">{{ section.settings.headline | escape }}</h2>
+        <h2 class="fui-outcome-section__headline {{ section.settings.headline | escape }} {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"></h2>
       {% endif %}
 
       {% if section.settings.body_text != blank %}
