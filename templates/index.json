@@ -59,32 +59,6 @@
         "padding_bottom": 0
       }
     },
-    "rich_text_tmjD6r": {
-      "type": "rich-text",
-      "blocks": {
-        "text_Jyxt3y": {
-          "type": "text",
-          "settings": {
-            "text": "<ol><li>11: <a href=\"https://www.digitalcommerce360.com/2024/05/28/b2b-ecommerce-sales-will-build-slowly-but-steadily-in-2024/\" target=\"_blank\">Digital Commerce 360, May 28, 2024</a> — $2.61T projection & “eight times faster” growth</li><li>22: <a href=\"https://www.digitalcommerce360.com/2024/04/30/b2b-ecommerce-manufacturing-distribution-2024/\" target=\"_blank\">Digital Commerce 360, Apr 30, 2024</a> — Confirms $2.61T for 2024</li><li>33: <a href=\"https://www.mordorintelligence.com/industry-reports/global-b2b-ecommerce-market\" target=\"_blank\">Mordor Intelligence (2025)</a> — Global CAGR (~14.5%) to 2030</li><li>44: <a href=\"https://www.trade.gov/ecommerce-sales-size-forecast\" target=\"_blank\">International Trade Administration (2024)</a> — Official 14.5% CAGR global forecast to 2026</li><li>MIT NANDA — <em>The GenAI Divide: State of AI in Business 2025</em> (95% no measurable P&L impact; causes).</li></ol>"
-          }
-        }
-      },
-      "block_order": [
-        "text_Jyxt3y"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "left",
-        "color_scheme": "",
-        "full_width": true,
-        "is_references": false,
-        "custom_class": "fui-outcome-micro-note",
-        "custom_class_heading": "",
-        "padding_top": 0,
-        "padding_bottom": 20
-      }
-    },
     "multicolumn_w9J7pE": {
       "type": "multicolumn",
       "blocks": {
@@ -616,12 +590,37 @@
       "disabled": true,
       "name": "B2B Newsletter Signup",
       "settings": {}
+    },
+    "rich_text_tmjD6r": {
+      "type": "rich-text",
+      "blocks": {
+        "text_Jyxt3y": {
+          "type": "text",
+          "settings": {
+            "text": "<ol><li>11: <a href=\"https://www.digitalcommerce360.com/2024/05/28/b2b-ecommerce-sales-will-build-slowly-but-steadily-in-2024/\" target=\"_blank\">Digital Commerce 360, May 28, 2024</a> — $2.61T projection & “eight times faster” growth</li><li>22: <a href=\"https://www.digitalcommerce360.com/2024/04/30/b2b-ecommerce-manufacturing-distribution-2024/\" target=\"_blank\">Digital Commerce 360, Apr 30, 2024</a> — Confirms $2.61T for 2024</li><li>33: <a href=\"https://www.mordorintelligence.com/industry-reports/global-b2b-ecommerce-market\" target=\"_blank\">Mordor Intelligence (2025)</a> — Global CAGR (~14.5%) to 2030</li><li>44: <a href=\"https://www.trade.gov/ecommerce-sales-size-forecast\" target=\"_blank\">International Trade Administration (2024)</a> — Official 14.5% CAGR global forecast to 2026</li><li>MIT NANDA — <em>The GenAI Divide: State of AI in Business 2025</em> (95% no measurable P&L impact; causes).</li></ol>"
+          }
+        }
+      },
+      "block_order": [
+        "text_Jyxt3y"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "is_references": false,
+        "custom_class": "fui-outcome-micro-note",
+        "custom_class_heading": "",
+        "padding_top": 0,
+        "padding_bottom": 20
+      }
     }
   },
   "order": [
     "hero_b2b_ai_LgcCEn",
     "rich_text_KmpwiU",
-    "rich_text_tmjD6r",
     "multicolumn_w9J7pE",
     "methodology_steps_EGJEVf",
     "service_tiers_8jzFQk",
@@ -636,6 +635,7 @@
     "homepage_faq_k4mwX6",
     "newsletter_HPecCR",
     "newsletter_FaJz7k",
-    "newsletter_section_izCYan"
+    "newsletter_section_izCYan",
+    "rich_text_tmjD6r"
   ]
 }
