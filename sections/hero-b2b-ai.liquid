@@ -62,7 +62,10 @@
           </div>
         {% else %}
           {% assign video_thumbnail = section.settings.video_thumbnail %}
-          {% if video_thumbnail == blank and section.settings.video_upload != blank and section.settings.video_upload.preview_image != blank %}
+          {% if video_thumbnail == blank
+            and section.settings.video_upload != blank
+            and section.settings.video_upload.preview_image != blank
+          %}
             {% assign video_thumbnail = section.settings.video_upload.preview_image %}
           {% endif %}
 
@@ -140,133 +143,133 @@
   </div>
 </div>
 {% if visual_display != 'svg' %}
-<div
-  class="hero-video-lightbox"
-  id="hero-video-lightbox-{{ section.id }}"
-  role="dialog"
-  aria-modal="true"
-  aria-labelledby="hero-video-title-{{ section.id }}"
->
-  <div class="hero-video-lightbox-content">
-    <h2 id="hero-video-title-{{ section.id }}" class="visually-hidden">Founder Greeting Video</h2>
-    <button class="hero-video-lightbox-close" id="hero-video-close-{{ section.id }}" aria-label="Close video">
-      &times;
-    </button>
-    <div class="hero-video-container"></div>
+  <div
+    class="hero-video-lightbox"
+    id="hero-video-lightbox-{{ section.id }}"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="hero-video-title-{{ section.id }}"
+  >
+    <div class="hero-video-lightbox-content">
+      <h2 id="hero-video-title-{{ section.id }}" class="visually-hidden">Founder Greeting Video</h2>
+      <button class="hero-video-lightbox-close" id="hero-video-close-{{ section.id }}" aria-label="Close video">
+        &times;
+      </button>
+      <div class="hero-video-container"></div>
+    </div>
   </div>
-</div>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const sectionId = '{{ section.id }}';
-    const trigger = document.getElementById('hero-video-trigger-' + sectionId);
-    const lightbox = document.getElementById('hero-video-lightbox-' + sectionId);
-    const closeBtn = document.getElementById('hero-video-close-' + sectionId);
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const sectionId = '{{ section.id }}';
+      const trigger = document.getElementById('hero-video-trigger-' + sectionId);
+      const lightbox = document.getElementById('hero-video-lightbox-' + sectionId);
+      const closeBtn = document.getElementById('hero-video-close-' + sectionId);
 
-    // Exit early if elements don't exist (e.g. user didn't configure thumbnail/URL)
-    if (!trigger || !lightbox) return;
+      // Exit early if elements don't exist (e.g. user didn't configure thumbnail/URL)
+      if (!trigger || !lightbox) return;
 
-    const videoContainer = lightbox.querySelector('.hero-video-container');
-    const videoUrl = trigger ? trigger.getAttribute('data-video-url') || '' : '';
-    const videoUpload = trigger ? trigger.getAttribute('data-video-upload') || '' : '';
-    const videoPoster = trigger ? trigger.getAttribute('data-video-poster') || '' : '';
+      const videoContainer = lightbox.querySelector('.hero-video-container');
+      const videoUrl = trigger ? trigger.getAttribute('data-video-url') || '' : '';
+      const videoUpload = trigger ? trigger.getAttribute('data-video-upload') || '' : '';
+      const videoPoster = trigger ? trigger.getAttribute('data-video-poster') || '' : '';
 
-    if (!videoUrl && !videoUpload) return;
+      if (!videoUrl && !videoUpload) return;
 
-    // Function to generate embed URL based on provider
-    function getEmbedUrl(url) {
-      // Handle YouTube
-      if (url.includes('youtube.com') || url.includes('youtu.be')) {
-        let videoId = '';
-        if (url.includes('v=')) {
-          videoId = url.split('v=')[1].split('&')[0];
-        } else if (url.includes('youtu.be/')) {
-          videoId = url.split('youtu.be/')[1].split('?')[0];
+      // Function to generate embed URL based on provider
+      function getEmbedUrl(url) {
+        // Handle YouTube
+        if (url.includes('youtube.com') || url.includes('youtu.be')) {
+          let videoId = '';
+          if (url.includes('v=')) {
+            videoId = url.split('v=')[1].split('&')[0];
+          } else if (url.includes('youtu.be/')) {
+            videoId = url.split('youtu.be/')[1].split('?')[0];
+          }
+          if (videoId) {
+            // Autoplay=1 is crucial for the lightbox experience
+            return `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1`;
+          }
         }
-        if (videoId) {
-          // Autoplay=1 is crucial for the lightbox experience
-          return `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1`;
+
+        // Handle Vimeo (using regex for robustness)
+        if (url.includes('vimeo.com')) {
+          const match = url.match(/vimeo\.com\/(\d+)/);
+          if (match && match[1]) {
+            return `https://player.vimeo.com/video/${match[1]}?autoplay=1`;
+          }
         }
+
+        // Fallback for direct links or already formatted embed URLs
+        return url;
       }
 
-      // Handle Vimeo (using regex for robustness)
-      if (url.includes('vimeo.com')) {
-        const match = url.match(/vimeo\.com\/(\d+)/);
-        if (match && match[1]) {
-          return `https://player.vimeo.com/video/${match[1]}?autoplay=1`;
-        }
-      }
-
-      // Fallback for direct links or already formatted embed URLs
-      return url;
-    }
-
-    // Function to open lightbox and load video
-    function openLightbox() {
-      if (videoUpload) {
-        const posterAttr = videoPoster ? ` poster="${videoPoster}"` : '';
-        videoContainer.innerHTML = `
+      // Function to open lightbox and load video
+      function openLightbox() {
+        if (videoUpload) {
+          const posterAttr = videoPoster ? ` poster="${videoPoster}"` : '';
+          videoContainer.innerHTML = `
         <video controls autoplay playsinline${posterAttr}>
           <source src="${videoUpload}" type="video/mp4">
           Your browser does not support the video tag.
         </video>
       `;
-      } else {
-        const embedUrl = getEmbedUrl(videoUrl);
-        videoContainer.innerHTML = `
+        } else {
+          const embedUrl = getEmbedUrl(videoUrl);
+          videoContainer.innerHTML = `
         <iframe src="${embedUrl}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen title="Founder Greeting Video"></iframe>
       `;
-      }
-      lightbox.style.display = 'flex';
-      document.body.style.overflow = 'hidden'; // Prevent background scrolling
-      closeBtn.focus(); // Accessibility: Focus the close button
+        }
+        lightbox.style.display = 'flex';
+        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        closeBtn.focus(); // Accessibility: Focus the close button
 
-      if (videoUpload) {
-        const inlineVideo = videoContainer.querySelector('video');
-        if (inlineVideo && typeof inlineVideo.play === 'function') {
-          const playPromise = inlineVideo.play();
-          if (playPromise && typeof playPromise.catch === 'function') {
-            playPromise.catch(() => {});
+        if (videoUpload) {
+          const inlineVideo = videoContainer.querySelector('video');
+          if (inlineVideo && typeof inlineVideo.play === 'function') {
+            const playPromise = inlineVideo.play();
+            if (playPromise && typeof playPromise.catch === 'function') {
+              playPromise.catch(() => {});
+            }
           }
         }
       }
-    }
 
-    // Function to close lightbox and stop video
-    function closeLightbox() {
-      lightbox.style.display = 'none';
-      videoContainer.innerHTML = ''; // Stops the video by removing the iframe
-      document.body.style.overflow = '';
-      trigger.focus(); // Accessibility: Return focus to the trigger
-    }
-
-    // Event Listeners
-    trigger.addEventListener('click', openLightbox);
-    // Handle 'Enter' or 'Space' key press for accessibility
-    trigger.addEventListener('keydown', function (e) {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        openLightbox();
+      // Function to close lightbox and stop video
+      function closeLightbox() {
+        lightbox.style.display = 'none';
+        videoContainer.innerHTML = ''; // Stops the video by removing the iframe
+        document.body.style.overflow = '';
+        trigger.focus(); // Accessibility: Return focus to the trigger
       }
-    });
 
-    closeBtn.addEventListener('click', closeLightbox);
+      // Event Listeners
+      trigger.addEventListener('click', openLightbox);
+      // Handle 'Enter' or 'Space' key press for accessibility
+      trigger.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          openLightbox();
+        }
+      });
 
-    // Close if clicking outside the video content (on the overlay)
-    lightbox.addEventListener('click', function (e) {
-      if (e.target === lightbox) {
-        closeLightbox();
-      }
-    });
+      closeBtn.addEventListener('click', closeLightbox);
 
-    // Close with ESC key
-    document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape' && lightbox.style.display === 'flex') {
-        closeLightbox();
-      }
+      // Close if clicking outside the video content (on the overlay)
+      lightbox.addEventListener('click', function (e) {
+        if (e.target === lightbox) {
+          closeLightbox();
+        }
+      });
+
+      // Close with ESC key
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && lightbox.style.display === 'flex') {
+          closeLightbox();
+        }
+      });
     });
-  });
-</script>
+  </script>
 {% endif %}
 
 {% schema %}
@@ -367,6 +370,22 @@
       "id": "video_caption",
       "label": "Video Caption (Optional)",
       "default": "A Personal Welcome (60s) from Robert Foster"
+    },
+    {
+      "type": "header",
+      "content": "Visual (Money Slide)"
+    },
+    {
+      "type": "text",
+      "id": "visual_title",
+      "label": "Visual Title",
+      "default": "The Impact of Frictionless B2B"
+    },
+    {
+      "type": "textarea",
+      "id": "visual_accessibility_text",
+      "label": "Visual Accessibility Description",
+      "default": "A chart showing the significant revenue increase of AI-Powered B2B versus stagnant Manual Wholesale revenue."
     },
     {
       "type": "html",
