@@ -127,13 +127,28 @@
 
 <section class="fui-outcome-section color-{{ section.settings.color_scheme }} gradient">
   <div class="page-width">
-    <div class="fui-outcome-content">
+    <div class="fui-outcome-content"{% if settings.animations_reveal_on_scroll %} data-cascade{% endif %}>
+      {% assign animation_order = 0 %}
       {% if section.settings.headline != blank %}
-        <h2 class="fui-outcome-section__headline">{{ section.settings.headline | escape }}</h2>
+        {% assign animation_order = animation_order | plus: 1 %}
+        <h2
+          class="fui-outcome-section__headline{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+          {% if settings.animations_reveal_on_scroll %}
+            style="--animation-order: {{ animation_order }};"
+          {% endif %}
+        >
+          {{ section.settings.headline | escape }}
+        </h2>
       {% endif %}
 
       {% if section.settings.body_text != blank %}
-        <div class="fui-outcome-body">
+        {% assign animation_order = animation_order | plus: 1 %}
+        <div
+          class="fui-outcome-body rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+          {% if settings.animations_reveal_on_scroll %}
+            style="--animation-order: {{ animation_order }};"
+          {% endif %}
+        >
           {{ section.settings.body_text }}
         </div>
       {% endif %}
@@ -142,7 +157,14 @@
         <ul class="fui-outcome-results-list">
           {% for block in section.blocks %}
             {% if block.settings.text != blank %}
-              <li class="fui-outcome-results-item" {{ block.shopify_attributes }}>
+              {% assign animation_order = animation_order | plus: 1 %}
+              <li
+                class="fui-outcome-results-item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                {{ block.shopify_attributes }}
+                {% if settings.animations_reveal_on_scroll %}
+                  style="--animation-order: {{ animation_order }};"
+                {% endif %}
+              >
                 <svg
                   class="fui-outcome-checkmark"
                   xmlns="http://www.w3.org/2000/svg"
@@ -161,7 +183,13 @@
       {% endif %}
 
       {% if section.settings.micro_note != blank %}
-        <div class="fui-outcome-micro-note">
+        {% assign animation_order = animation_order | plus: 1 %}
+        <div
+          class="fui-outcome-micro-note rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+          {% if settings.animations_reveal_on_scroll %}
+            style="--animation-order: {{ animation_order }};"
+          {% endif %}
+        >
           {{ section.settings.micro_note }}
         </div>
       {% endif %}

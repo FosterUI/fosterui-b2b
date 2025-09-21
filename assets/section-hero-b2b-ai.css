@@ -44,6 +44,22 @@ h1.hero-b2b-title {
     align-items: center;
 }
 
+/* Money Slide Styling */
+.money-slide {
+    background-color: var(--color-brand-white);
+    padding: 3rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow-brand);
+    text-align: center;
+}
+
+.money-slide h3 {
+    margin-bottom: 2rem;
+    color: var(--color-brand-primary-dark);
+    /* Explicitly defining size for the visual title */
+    font-size: 2.2rem;
+}
+
 /* --- NEW: Founder Video Styling --- */
 
 .hero-b2b-visual {
