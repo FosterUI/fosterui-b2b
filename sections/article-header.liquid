@@ -32,6 +32,9 @@
           <div class="article-header__meta">
               {% if section.settings.show_author %}
                   <span class="article-header__author">{{ article.author }}</span>
+                  {% if section.settings.author_title != blank %}
+                      <span class="article-header__author-title">{{ section.settings.author_title }}</span>
+                  {% endif %}
               {% endif %}
               
               <span class="article-header__date-time">
@@ -78,6 +81,11 @@
       "id": "show_author",
       "label": "Show author",
       "default": true
+    },
+    {
+      "type": "text",
+      "id": "author_title",
+      "label": "Author title"
     }
   ],
     "presets": [

@@ -145,6 +145,10 @@
     color: var(--color-brand-white);
 }
 
+.article-header__author-title {
+    color: rgba(255, 255, 255, 0.85);
+}
+
 /* 2. Blog Article (Detail Page) Styles */
 
 /* Article Header - OPTION 2: Subtle Pattern */
