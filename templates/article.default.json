@@ -16,7 +16,8 @@
         "author_headshot": "shopify://shop_images/robert-profile-blazer.png",
         "show_date": true,
         "show_read_time": true,
-        "show_author": true
+        "show_author": true,
+        "author_title": "Founder & Shopify Plus Consultant | B2B & AI Growth Strategy"
       }
     },
     "main_wrapper": {
