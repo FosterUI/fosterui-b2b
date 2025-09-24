@@ -30,7 +30,7 @@
         "liquid_ytTbWQ": {
           "type": "liquid",
           "settings": {
-            "custom_liquid": "<div class=\"footer-custom-liquid\">\n  <h3>Ready to Scale?</h3>\n  <p>Stop struggling with patchwork solutions. Let's transform your wholesale channel.</p>\n  \n  <a href=\"#contact\" class=\"btn-brand btn-brand-primary footer-cta-btn\">\n    Book the $1,950 Roadmap →\n  </a>\n\n  <h3 style=\"margin-top: 4rem;\">Connect</h3>\n   <p>\n    <a href=\"https://www.linkedin.com/in/robert-fosterui\" target=\"_blank\" rel=\"noopener noreferrer\">\n      Follow on LinkedIn\n    </a>\n  </p>\n</div>"
+            "custom_liquid": "<div class=\"footer-custom-liquid\">\n  <h3>Ready to Scale?</h3>\n  <p>Stop struggling with patchwork solutions. Let's transform your wholesale channel.</p>\n  \n  <a href=\"/#contact\" class=\"btn-brand btn-brand-primary footer-cta-btn\">\n    Book the $1,950 Roadmap →\n  </a>\n\n  <h3 style=\"margin-top: 4rem;\">Connect</h3>\n   <p>\n    <a href=\"https://www.linkedin.com/in/robert-fosterui\" target=\"_blank\" rel=\"noopener noreferrer\">\n      Follow on LinkedIn\n    </a>\n  </p>\n</div>"
           }
         }
       },
