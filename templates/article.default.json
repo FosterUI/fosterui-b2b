@@ -131,7 +131,7 @@
       "type": "article-main",
       "name": "B2B Article Main Content",
       "settings": {
-        "custom_css": "",
+        "custom_css": "pillar-content",
         "pillar_link_text": "This article is part of my comprehensive resource:",
         "pillar_link_title": "The Definitive Guide to AI-Powered B2B on Shopify Plus.",
         "pillar_link_url": "shopify://pages/the-definitive-guide-to-ai-powered-b2b-on-shopify-plus",
